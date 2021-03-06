@@ -10,12 +10,12 @@ import Exhibition from './views/Exhibition'
 export default {
   name: 'App',
   components: {
-    Exhibition
+    Exhibition,
   }
 }
 </script>
 
-<style>
+<style scoped>
 body{
   margin: 0;
   width: 100vw;
