@@ -10,7 +10,7 @@ import Exhibition from './views/Exhibition'
 export default {
   name: 'App',
   components: {
-    Exhibition,
+    Exhibition
   }
 }
 </script>
