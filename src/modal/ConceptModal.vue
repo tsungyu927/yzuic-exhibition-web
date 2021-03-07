@@ -44,7 +44,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(89,89,89,0.5);
+  background-color: rgba(0,0,0,0.5);
 }
 .concept-modal .container{
   padding: 0;
