@@ -1,32 +1,43 @@
 <template>
   <div id="app">
-    <Exhibition />
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/exhibition">Exhibition</router-link>
+    </div>
+    <router-view/>
   </div>
 </template>
 
-<script>
-import Exhibition from './views/Exhibition'
-
-export default {
-  name: 'App',
-  components: {
-    Exhibition
-  }
-}
-</script>
-
-<style scoped>
+<style>
 body{
   margin: 0;
   width: 100vw;
   height: 100vh;
 }
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  color: #2c3e50;
   width: 100%;
   height: 100%;
+}
+
+#nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
