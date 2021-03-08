@@ -1,0 +1,83 @@
+<template>
+  <div class="concept-modal">
+    <div class="container">
+      <div class="title">
+        <button type="button" @click="handleClose()">
+          <img src="../assets/logo/closeBtn_pink.svg" />
+        </button>
+      </div>
+      <div class="content">
+        {{content}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+// example of component
+// <ConceptModal content="在自己所愛之事時，情緒在激動、興奮的狀態下，瞳孔會隨之放大，相反地，遇到挫。嗚嗚嗚眼睛的瞳孔縮放是什麼意思.....？眼睛的瞳孔縮放是什麼意思？當沈浸在自己所愛之事時，情緒在激動、興奮的狀態下，瞳孔會隨之放大，相反地，遇到挫。嗚嗚嗚眼睛的瞳孔縮放是什麼意思.....？眼睛的瞳孔縮放是什麼意思？當沈浸在自己所愛之事時，情緒在激動、興奮的狀態下，瞳孔會隨之放大，相反地，遇到挫。嗚嗚嗚眼睛的瞳孔縮放是什麼意思.....？眼睛的瞳孔縮放是什麼意思？當沈浸在自己所愛之事時，情緒在激動、興奮的狀態下，瞳孔會隨之放大，相反地，遇到挫。嗚嗚嗚眼睛的瞳孔縮放是什麼意思.....？" />
+
+export default {
+  name: 'ConceptModal',
+  props: {
+    content: {
+      type: String,
+      required: true,
+    }
+  },
+  methods: {
+    handleClose: () => {
+      console.log('close modal')
+    }
+  }
+}
+</script>
+
+<style scoped>
+.concept-modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.5);
+}
+.concept-modal .container{
+  padding: 0;
+  margin: 0;
+  width: 80vw;
+  height: 60vh;
+  background-color: #fff;
+  border-radius: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+/* title */
+.concept-modal .title{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.concept-modal .title button{
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  margin-right: 2%;
+}
+/* content */
+.concept-modal .content{
+  width: 80%;
+  height: 80%;
+  font-size: 20px;
+  line-height: 48px;
+  color: #595757;
+}
+</style>
