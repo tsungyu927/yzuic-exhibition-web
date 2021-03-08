@@ -1,22 +1,28 @@
 <template>
   <div class="selector-container">
     <button type="button" class="selector-btn" @click="handleClick('全部')">
-      全部
+      <div class="ch">全部</div>
+      <div class="en">All</div>
     </button>
     <button type="button" class="selector-btn" @click="handleClick('互動')">
-      互動
+      <div class="ch">互動</div>
+      <div class="en">Interactive</div>
     </button>
     <button type="button" class="selector-btn" @click="handleClick('影視')">
-      影視
+      <div class="ch">影視</div>
+      <div class="en">Film</div>
     </button>
     <button type="button" class="selector-btn" @click="handleClick('遊戲')">
-      遊戲
+      <div class="ch">遊戲</div>
+      <div class="en">Game</div>
     </button>
     <button type="button" class="selector-btn" @click="handleClick('行銷')">
-      行銷
+      <div class="ch">行銷</div>
+      <div class="en">Marketing</div>
     </button>
     <button type="button" class="selector-btn" @click="handleClick('專題')">
-      專題
+      <div class="ch">專題</div>
+      <div class="en">Project </div>
     </button>
   </div>
 </template>
@@ -37,37 +43,7 @@ export default {
 }
 </script>
 
+
 <style scoped>
-.selector-container{
-  position: absolute;
-  top: 5%;
-  left: 0;
-  z-index: 5;
-  width: 95%;
-  padding-right: 5%;
-  height: fit-content;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.selector-btn{
-  cursor: pointer;
-  margin-right: 20px;
-  width: 125px;
-  height: 125px;
-  border: none;
-  border-radius: 50%;
-  background-color: #FF1A85;
-  color: white;
-  font-size: 1.5em;
-  font-weight: bold;
-  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.7);
-}
-.selector-btn:focus{
-  outline: none;
-}
-.selector-btn:hover{
-  background-color: white;
-  color: #FF1A85;
-}
+
 </style>

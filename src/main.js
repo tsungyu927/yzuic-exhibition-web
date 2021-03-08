@@ -10,6 +10,8 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import router from './router'
 // css
 
+import "@/scss/all.scss"
+
 Vue.config.productionTip = false
 
 Vue.use(VueFullPage)
