@@ -1,6 +1,15 @@
 <template>
   <div class="photo-grid-container">
-    <NavBar />
+    <!-- 手機板才有 -->
+    <div class="waterFall-header">
+      <img class="waterFall-header-previous" src="../assets/icons/phone-arrow_pink.svg" />
+      <p class="waterFall-header-title">展覽作品</p>
+      <img class="waterFall-header-menu" src="../assets/icons/phone-menu_pink.svg" />
+    </div>
+    <div class="waterFall-navbar">
+      <NavBar/>
+    </div>
+
     <div class="photo-grid">
       <div v-masonry item-selector=".photo" column-width=".photo" class="scroll-content">
         <div v-masonry-tile class="photo" :key="imahe.title" v-for="imahe in images">
@@ -12,7 +21,7 @@
 </template>
 
 <script>
-import NavBar from './NavBar'
+import NavBar from '../components/NavBar'
 import image from '../data/galleryData'
 
 export default {
@@ -26,12 +35,15 @@ export default {
 
   },
   components: {
-    NavBar
+    NavBar,
   }
 }
 </script>
 
-<style scoped>
+<style>
+@import '../scss/all.scss';
+@import '../scss/pages/waterFall.scss';
+
 .photo-grid-container{
   position: relative;
   width: 100%;
