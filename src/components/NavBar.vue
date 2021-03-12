@@ -44,6 +44,67 @@ export default {
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
+  @import "../scss/all.scss";
+  .selector-container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: .3rem;
+    padding: .3rem 0;
+    @include md-width() {
+      display: flex;
+      position: absolute;
+      top: 2%;
+      left: 0;
+      z-index: 5;
+      width: 95%;
+      height: fit-content;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
 
+  .selector-btn{
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    background-color: $exhibition-mainColor;
+    color: white;
+    height: fit-content;
+    padding: .8rem 0;
+    @include md-width() {
+      border-radius: 50%;
+      margin-right: 20px;
+      width: 6rem;
+      height: 6rem;
+      font-size: 1.3rem;
+    }
+    .en {
+      display: none;
+    }
+
+    &:focus{
+        outline: none;
+    }
+
+    &:hover{
+        background-color: white;
+        color: $exhibition-mainColor;
+        @include md-width() {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          .en {
+            display: block;
+            font-weight: normal;
+            font-size: .9rem;
+          }
+          .ch {
+            font-size: 1.5rem;
+          }
+        }
+    }
+  }
 </style>
