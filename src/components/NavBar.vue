@@ -1,28 +1,40 @@
 <template>
   <div class="selector-container">
     <button type="button" class="selector-btn" @click="handleClick('全部')">
-      <div class="ch">全部</div>
-      <div class="en">All</div>
+      <router-link to="/exhibition">
+        <div class="ch">全部</div>
+        <div class="en">All</div>
+      </router-link>
     </button>
     <button type="button" class="selector-btn" @click="handleClick('互動')">
-      <div class="ch">互動</div>
-      <div class="en">Interactive</div>
+      <router-link to="/worksGrid">
+        <div class="ch">互動</div>
+        <div class="en">Interactive</div>
+      </router-link>
     </button>
     <button type="button" class="selector-btn" @click="handleClick('影視')">
-      <div class="ch">影視</div>
-      <div class="en">Film</div>
+      <router-link to="/worksGrid">
+        <div class="ch">影視</div>
+        <div class="en">Film</div>
+      </router-link>
     </button>
     <button type="button" class="selector-btn" @click="handleClick('遊戲')">
-      <div class="ch">遊戲</div>
-      <div class="en">Game</div>
+      <router-link to="/worksGrid">
+        <div class="ch">遊戲</div>
+        <div class="en">Game</div>
+       </router-link>
     </button>
     <button type="button" class="selector-btn" @click="handleClick('行銷')">
-      <div class="ch">行銷</div>
-      <div class="en">Marketing</div>
+      <router-link to="/worksGrid">
+        <div class="ch">行銷</div>
+        <div class="en">Marketing</div>
+      </router-link>
     </button>
     <button type="button" class="selector-btn" @click="handleClick('專題')">
-      <div class="ch">專題</div>
-      <div class="en">Project </div>
+      <router-link to="/worksGrid">
+        <div class="ch">專題</div>
+        <div class="en">Project </div>
+      </router-link>
     </button>
   </div>
 </template>
@@ -70,7 +82,6 @@ export default {
     font-weight: bold;
     border: none;
     background-color: $exhibition-mainColor;
-    color: white;
     height: fit-content;
     padding: .8rem 0;
     @include md-width() {
@@ -80,31 +91,37 @@ export default {
       height: 6rem;
       font-size: 1.3rem;
     }
+    a {
+      color: white;
+    }
+
     .en {
       display: none;
     }
 
     &:focus{
-        outline: none;
+      outline: none;
     }
 
     &:hover{
         background-color: white;
-        color: $exhibition-mainColor;
-        @include md-width() {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-          align-items: center;
-          .en {
-            display: block;
-            font-weight: normal;
-            font-size: .9rem;
-          }
-          .ch {
-            font-size: 1.5rem;
+        a {
+          color: $exhibition-mainColor;
+          text-decoration: none;
+          @include md-width() {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 70%;
+            align-items: center;
+            .en {
+              display: block;
+              font-weight: normal;
+              font-size: .9rem;
+            }
           }
         }
+        
     }
   }
 </style>

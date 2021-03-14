@@ -4,12 +4,32 @@
 	padding: 0;
 }
 
-body {
+.app {
    color: $font-color;
+   font-family: Avenir, Helvetica, Arial, sans-serif;
    font-size: 16px;
+   margin: 0;
+   width: 100vw;
+   height: 100vh;
    @include md-width() {
     font-size: 20px;
    }
+}
+
+a {
+    text-decoration: none;
+}
+
+div, button {
+    &:hover {
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+a.router-link-exact-active {
+    text-decoration: none;
 }
 
 .d-grid {

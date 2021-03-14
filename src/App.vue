@@ -1,9 +1,11 @@
 <template>
   <div id="app" class="app">
     <!-- 右上角的btn -->
-    <button class="menu-btn">目錄</button>
+    <button class="menu-btn">
+      <router-link to="/">目錄</router-link>
+    </button>
     
-    <div>
+    <div class="app-container">
       <router-view/>
     </div>
 
@@ -37,25 +39,18 @@
 <style lang="scss">
   @import "./scss/all.scss";
 
-  body{
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-  }
-
   #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
-    width: 100%;
-    height: 100%;
-  
   }
 
   .app {
     position: relative;
+    &-container {
+      width: 100%;
+      height: 100%;
+    }
     &-bar {
       display: none;
       @include md-width() {
@@ -97,7 +92,6 @@
       display: flex;
       position: fixed;
       z-index: 1;
-      color: $exhibition-mainColor;
       font-weight: bold;
       line-height: 2.8rem;
       justify-content: center;
@@ -109,6 +103,15 @@
       top: 2%;
       right: 2%;  
       background-color: transparent;
+    }
+    a {
+      color: $exhibition-mainColor;
+    }
+    &:hover {
+      background-color: $exhibition-mainColor;
+      a {
+        color: white;
+      }
     }
   }
 

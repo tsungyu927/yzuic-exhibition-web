@@ -1,12 +1,12 @@
 <template>
   <div class="photo-grid-container">
     <!-- 手機板才有 -->
-    <div class="waterFall-header">
-      <img class="waterFall-header-previous" src="../assets/icons/phone-arrow_pink.svg" />
-      <p class="waterFall-header-title">展覽作品</p>
-      <img class="waterFall-header-menu" src="../assets/icons/phone-menu_pink.svg" />
+    <div class="header">
+      <img class="header-previous" src="../assets/icons/phone-arrow_white.svg" />
+      <p class="header-title">展覽作品</p>
+      <img class="header-menu" src="../assets/icons/phone-menu_pink.svg" />
     </div>
-    <div class="waterFall-navbar">
+    <div class="navbar">
       <NavBar/>
     </div>
 
@@ -40,11 +40,11 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @import "../scss/all.scss";
 
   // waterFall-header
-  .waterFall-header {
+  .header {
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 4fr 1fr;
