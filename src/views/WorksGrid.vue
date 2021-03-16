@@ -1,27 +1,280 @@
 <template>
-  <div class="">
-   
+  <div class="works-grid">
+    <!-- 網頁版 上一頁 -->
+    <img
+      class="pre-arrow"
+      src="../assets/icons/web-arrow_pink.svg"
+      @click="previous"
+    />
+    <!-- 手機板 header -->
+    <div class="works-grid-header">
+      <img
+        class="previous"
+        src="../assets/icons/phone-arrow_pink.svg"
+        @click="previous"
+      />
+      <div class="title">遊戲</div>
+      <img class="menu" src="../assets/icons/phone-menu_white.svg" />
+    </div>
+
+    <div class="works-grid-container">
+      <div class="type-box">
+        <img src="../assets/icons/typeBox-bg_pink.svg" />
+      </div>
+      <div class="cards-group">
+        <div class="card">
+          <div class="card-img"></div>
+          <div class="card-text">
+            <div class="title">Mirror xd</div>
+            <div class="team">無情浣熊工作室</div>
+            <div class="tag">＃2D#解謎＃惡搞的東西哈哈哈</div>
+            <div class="intro">
+              眼睛的瞳孔縮放是什麼意思？當沈浸在自己所愛之事時，情緒在激動、興奮的狀態下，瞳孔會隨之放大，相反地，遇到挫。嗚嗚嗚....
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img"></div>
+          <div class="card-text">
+            <div class="title">Mirror xd</div>
+            <div class="team">無情浣熊工作室</div>
+            <div class="tag">＃2D#解謎＃惡搞的東西哈哈哈</div>
+            <div class="intro">
+              眼睛的瞳孔縮放是什麼意思？當沈浸在自己所愛之事時，情緒在激動、興奮的狀態下，瞳孔會隨之放大，相反地，遇到挫。嗚嗚嗚....
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img"></div>
+          <div class="card-text">
+            <div class="title">Mirror xd</div>
+            <div class="team">無情浣熊工作室</div>
+            <div class="tag">＃2D#解謎＃惡搞的東西哈哈哈</div>
+            <div class="intro">
+              眼睛的瞳孔縮放是什麼意思？當沈浸在自己所愛之事時，情緒在激動、興奮的狀態下，瞳孔會隨之放大，相反地，遇到挫。嗚嗚嗚....
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img"></div>
+          <div class="card-text">
+            <div class="title">Mirror xd</div>
+            <div class="team">無情浣熊工作室</div>
+            <div class="tag">＃2D#解謎＃惡搞的東西哈哈哈</div>
+            <div class="intro">
+              眼睛的瞳孔縮放是什麼意思？當沈浸在自己所愛之事時，情緒在激動、興奮的狀態下，瞳孔會隨之放大，相反地，遇到挫。嗚嗚嗚....
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img"></div>
+          <div class="card-text">
+            <div class="title">Mirror xd</div>
+            <div class="team">無情浣熊工作室</div>
+            <div class="tag">＃2D#解謎＃惡搞的東西哈哈哈</div>
+            <div class="intro">
+              眼睛的瞳孔縮放是什麼意思？當沈浸在自己所愛之事時，情緒在激動、興奮的狀態下，瞳孔會隨之放大，相反地，遇到挫。嗚嗚嗚....
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img"></div>
+          <div class="card-text">
+            <div class="title">Mirror xd</div>
+            <div class="team">無情浣熊工作室</div>
+            <div class="tag">＃2D#解謎＃惡搞的東西哈哈哈</div>
+            <div class="intro">
+              眼睛的瞳孔縮放是什麼意思？當沈浸在自己所愛之事時，情緒在激動、興奮的狀態下，瞳孔會隨之放大，相反地，遇到挫。嗚嗚嗚....
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-
 export default {
   name: 'WorksGrid',
-  data(){
-    return {
-     
-    }
+  data() {
+    return {};
   },
   methods: {
-    
+    previous() {
+      console.log('click');
+      return this.$router.push('Exhibition');
+    },
   },
-  components: {
-  },
-}
+  components: {},
+};
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '../scss/all.scss';
+.works-grid {
+  position: relative;
+  width: 100%;
+  height: 100%;
 
+  .pre-arrow {
+    display: none;
+    @include md-width() {
+      cursor: pointer;
+      display: flex;
+      position: fixed;
+      top: 3%;
+      left: 2%;
+      height: 2.5rem;
+    }
+  }
 
+  &-header {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 4fr 1fr;
+    background-color: white;
+    height: fit-content;
+    padding: 1.5rem 0;
+    @include md-width() {
+      display: none;
+    }
+  }
+  &-container {
+    height: 100%;
+    padding: 0 2rem 0 2rem;
+    @include md-width() {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      grid-gap: 2rem;
+      height: 100%;
+      padding: 5rem 3rem 0 3rem;
+    }
+    @include lg-width() {
+      grid-gap: 0;
+      padding: 5rem 5rem 0 3rem;
+    }
+  }
+}
+
+.title {
+  position: relative;
+  color: $exhibition-mainColor;
+  font-size: 2.5rem;
+  font-weight: bold;
+  word-break: keep-all;
+  @include md-width() {
+    font-size: 3.2rem;
+  }
+}
+
+.previous,
+.menu {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: auto;
+}
+
+.type-box {
+  display: none;
+  @include md-width() {
+    position: relative;
+    display: flex;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    color: white;
+    background-size: contain;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 19rem;
+    &::before {
+      position: absolute;
+      content: '遊戲';
+      writing-mode: vertical-rl;
+      margin-bottom: 1rem;
+      top: 24%;
+      right: 38%;
+      font-weight: bold;
+      font-size: 3.2rem;
+      @include lg-width() {
+        right: 42%;
+        top: 20%;
+        font-size: 3.5rem;
+      }
+    }
+    &::after {
+      position: absolute;
+      content: 'Game';
+      font-size: 1.8rem;
+      right: 29%;
+      bottom: 25%;
+      @include lg-width() {
+        right: 35%;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.cards-group {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-gap: 1rem;
+  @include md-width() {
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+  }
+  @include lg-width() {
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  background-color: #eaebeb;
+  @include md-width() {
+    border-bottom: $exhibition-mainColor 1px solid;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  //預覽作品圖
+  &-img {
+    width: 60%;
+    // background-color: pink;
+    background: url('../assets/img/TeamPoster1.jpg') center center no-repeat;
+    background-size: cover;
+    @include md-width() {
+      width: 100%;
+      height: 200px;
+    }
+  }
+  &-text {
+    margin: 2rem;
+    text-align: left;
+    .title {
+      color: $exhibition-mainColor;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .team {
+      color: $exhibition-mainColor;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .tag {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .intro {
+      font-size: 0.6rem;
+      line-height: 1.2rem;
+    }
+  }
+}
 </style>
