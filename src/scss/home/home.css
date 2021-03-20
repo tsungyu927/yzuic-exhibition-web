@@ -1,0 +1,123 @@
+.con{
+  width: 100vw;
+  height: max-content;
+}
+/* 最上面液態金屬 */
+.home-top{
+  width: 100vw;
+  height: 100vh;
+}
+.home-top img{
+  width: 100%;
+  height: 100%;
+}
+/* 內容 */
+.home-container{
+  position: relative;
+  width: 100vw;
+  height: 700vh;
+  background-color: white;
+  background-image: url('../../assets/home/home_back_texture.png');
+  background-size: cover;
+  background-repeat: repeat-y;
+  overflow-x: hidden;
+}
+/* static */
+.home-blueback{
+  position: absolute;
+  top: 50vh;
+  right: -7vw;
+  width: 85vw;
+  height: auto;
+}
+/* 每一刻的 */
+.home-text00-1{
+  position: absolute;
+  top: 40vh;
+  left: 21vw;
+  width: 8vw;
+  height: auto;
+}
+.home-text00-2{
+  position: absolute;
+  z-index: 10;
+  top: 45vh;
+  left: 29vw;
+  width: 27vw;
+  height: auto;
+}
+/* 大膽狂放文字 */
+.home-text01{
+  position: absolute;
+  top: 63vh;
+  right: 10vw;
+  width: 70vw;
+  height: auto;
+  transform: scale(0);
+  filter: brightness(1.1);
+}
+.home-text01-outline{
+  position: absolute;
+  top: 69vh;
+  right: 10vw;
+  width: 35vw;
+  height: auto;
+  opacity: 0;
+}
+.home-text{
+  position: absolute;
+  opacity: 0;
+  z-index: 10;
+}
+/* 一圈圈的圓 */
+.home-circle{
+  position: absolute;
+  left: 31vw;
+  top: 218vh;
+  width: 30vw;
+  height: 10vw;
+  border: 3px solid #FF1A83;
+  border-radius: 50%;
+  transform: rotateZ(-9.93deg);
+  opacity: 0;
+}
+/* 用力生活 */
+.home-text03-1{
+  position: absolute;
+  top: 240vh;
+  left: 19vw;
+  width: 8vw;
+  height: auto;
+}
+.home-text03-2, .home-text03-3, .home-text03-4, .home-text03-5{
+  position: absolute;
+  top: 245vh;
+  left: 22vw;
+  width: 60vw;
+  height: auto;
+}
+/* 造就了形態的轉變 */
+.home-pink-circle{
+  position: absolute;
+  top: 270vh;
+  left: 20vw;
+  width: 80vw;
+  height: 80vw;
+  opacity: 0.9;
+}
+.home-text04{
+  position: absolute;
+  opacity: 1;
+  z-index: 10;
+  width: 8vw;
+  height: auto;
+}
+/* 粉紅區域 執著執著 痴狂痴狂 */
+.pink-back{
+  position: absolute;
+  top: 375vh;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  opacity: 0.8;
+}
