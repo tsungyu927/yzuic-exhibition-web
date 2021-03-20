@@ -56,21 +56,27 @@ export default {
 <style lang="scss" scoped>
 @import '../scss/all.scss';
 .selector-container {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 0.3rem;
-  padding: 0.3rem 0;
+  // display: grid;
+  // width: 100%;
+  // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  // grid-gap: 0.2rem;
+  // padding: 0.2rem 0;
+  // @include md-width() {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 3%;
+  left: 0;
+  z-index: 1;
+  width: 95%;
+  height: fit-content;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+
   @include md-width() {
-    display: flex;
-    position: absolute;
-    top: 3%;
-    left: 0;
-    z-index: 1;
-    width: 95%;
-    height: fit-content;
+    flex-direction: row;
     justify-content: flex-end;
-    align-items: center;
   }
 }
 
@@ -80,10 +86,14 @@ export default {
   border: none;
   background-color: $exhibition-mainColor;
   height: fit-content;
-  padding: 0.8rem 0;
+  padding: 0.5rem 0;
+  border-radius: 50%;
+  margin-right: 20px;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1rem;
+
   @include md-width() {
-    border-radius: 50%;
-    margin-right: 20px;
     width: 6rem;
     height: 6rem;
     font-size: 1.3rem;
@@ -105,6 +115,7 @@ export default {
     a {
       color: $exhibition-mainColor;
       text-decoration: none;
+      font-size: 1rem;
       @include md-width() {
         display: flex;
         flex-direction: column;

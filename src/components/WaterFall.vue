@@ -5,6 +5,7 @@
       <img
         class="header-previous"
         src="../assets/icons/phone-arrow_white.svg"
+        @click="previous"
       />
       <p class="header-title">展覽作品</p>
       <img class="header-menu" src="../assets/icons/phone-menu_pink.svg" />
@@ -44,7 +45,11 @@ export default {
       images: image,
     };
   },
-  methods: {},
+  methods: {
+    previous() {
+      return this.$router.push('Home');
+    },
+  },
   components: {
     NavBar,
   },
@@ -61,7 +66,8 @@ export default {
   grid-template-columns: 1fr 4fr 1fr;
   background-color: $exhibition-mainColor;
   height: fit-content;
-  padding: 1.5rem 0;
+  padding: 0.8rem 0;
+  align-items: center;
   @include md-width() {
     display: none;
   }
@@ -69,8 +75,7 @@ export default {
   &-title {
     position: relative;
     color: white;
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 2.2rem;
     word-break: keep-all;
     @include md-width() {
       font-size: 3.2rem;
@@ -106,7 +111,10 @@ export default {
   max-width: 100%;
 }
 .photo {
-  width: 25%;
+  width: 50%;
+  @include md-width() {
+    width: 20%;
+  }
   height: max-content;
   display: flex;
   flex-direction: column;
@@ -114,5 +122,20 @@ export default {
 .photo img {
   width: 100%;
   height: auto;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 1;
+  right: 7%;
+  height: 60%;
+  bottom: -97%;
+  @include md-width() {
+    position: absolute;
+    z-index: 1;
+    top: -20%;
+    width: 100%;
+    right: 0;
+  }
 }
 </style>

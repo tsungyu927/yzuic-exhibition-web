@@ -25,8 +25,10 @@
         <div class="card">
           <div class="card-img"></div>
           <div class="card-text">
-            <div class="title">Mirror xd</div>
-            <div class="team">無情浣熊工作室</div>
+            <div class="title">
+              <p>Mirror xd</p>
+              <p>無情浣熊工作室</p>
+            </div>
             <div class="tag">＃2D#解謎＃惡搞的東西哈哈哈</div>
             <div class="intro">
               眼睛的瞳孔縮放是什麼意思？當沈浸在自己所愛之事時，情緒在激動、興奮的狀態下，瞳孔會隨之放大，相反地，遇到挫。嗚嗚嗚....
@@ -36,8 +38,10 @@
         <div class="card">
           <div class="card-img"></div>
           <div class="card-text">
-            <div class="title">Mirror xd</div>
-            <div class="team">無情浣熊工作室</div>
+            <div class="title">
+              <p>Mirror xd</p>
+              <p>無情浣熊工作室</p>
+            </div>
             <div class="tag">＃2D#解謎＃惡搞的東西哈哈哈</div>
             <div class="intro">
               眼睛的瞳孔縮放是什麼意思？當沈浸在自己所愛之事時，情緒在激動、興奮的狀態下，瞳孔會隨之放大，相反地，遇到挫。嗚嗚嗚....
@@ -47,8 +51,10 @@
         <div class="card">
           <div class="card-img"></div>
           <div class="card-text">
-            <div class="title">Mirror xd</div>
-            <div class="team">無情浣熊工作室</div>
+            <div class="title">
+              <p>Mirror xd</p>
+              <p>無情浣熊工作室</p>
+            </div>
             <div class="tag">＃2D#解謎＃惡搞的東西哈哈哈</div>
             <div class="intro">
               眼睛的瞳孔縮放是什麼意思？當沈浸在自己所愛之事時，情緒在激動、興奮的狀態下，瞳孔會隨之放大，相反地，遇到挫。嗚嗚嗚....
@@ -58,8 +64,10 @@
         <div class="card">
           <div class="card-img"></div>
           <div class="card-text">
-            <div class="title">Mirror xd</div>
-            <div class="team">無情浣熊工作室</div>
+            <div class="title">
+              <p>Mirror xd</p>
+              <p>無情浣熊工作室</p>
+            </div>
             <div class="tag">＃2D#解謎＃惡搞的東西哈哈哈</div>
             <div class="intro">
               眼睛的瞳孔縮放是什麼意思？當沈浸在自己所愛之事時，情緒在激動、興奮的狀態下，瞳孔會隨之放大，相反地，遇到挫。嗚嗚嗚....
@@ -69,8 +77,10 @@
         <div class="card">
           <div class="card-img"></div>
           <div class="card-text">
-            <div class="title">Mirror xd</div>
-            <div class="team">無情浣熊工作室</div>
+            <div class="title">
+              <p>Mirror xd</p>
+              <p>無情浣熊工作室</p>
+            </div>
             <div class="tag">＃2D#解謎＃惡搞的東西哈哈哈</div>
             <div class="intro">
               眼睛的瞳孔縮放是什麼意思？當沈浸在自己所愛之事時，情緒在激動、興奮的狀態下，瞳孔會隨之放大，相反地，遇到挫。嗚嗚嗚....
@@ -80,8 +90,10 @@
         <div class="card">
           <div class="card-img"></div>
           <div class="card-text">
-            <div class="title">Mirror xd</div>
-            <div class="team">無情浣熊工作室</div>
+            <div class="title">
+              <p>Mirror xd</p>
+              <p>無情浣熊工作室</p>
+            </div>
             <div class="tag">＃2D#解謎＃惡搞的東西哈哈哈</div>
             <div class="intro">
               眼睛的瞳孔縮放是什麼意思？當沈浸在自己所愛之事時，情緒在激動、興奮的狀態下，瞳孔會隨之放大，相反地，遇到挫。嗚嗚嗚....
@@ -134,14 +146,15 @@ export default {
     grid-template-columns: 1fr 4fr 1fr;
     background-color: white;
     height: fit-content;
-    padding: 1.5rem 0;
+    padding: 0.8rem 0;
+    align-items: center;
     @include md-width() {
       display: none;
     }
   }
   &-container {
     height: 100%;
-    padding: 0 2rem 0 2rem;
+    padding: 0 1rem;
     @include md-width() {
       display: grid;
       grid-template-columns: 1fr 3fr;
@@ -159,11 +172,10 @@ export default {
 .title {
   position: relative;
   color: $exhibition-mainColor;
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 2rem;
   word-break: keep-all;
   @include md-width() {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
 }
 
@@ -196,7 +208,7 @@ export default {
       margin-bottom: 1rem;
       top: 24%;
       right: 38%;
-      font-weight: bold;
+      // font-weight: bold;
       font-size: 3.2rem;
       @include lg-width() {
         right: 42%;
@@ -226,7 +238,7 @@ export default {
   @include md-width() {
     grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
   }
-  @include lg-width() {
+  @include xl-width() {
     grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   }
 }
@@ -236,44 +248,64 @@ export default {
   flex-direction: row;
   height: fit-content;
   background-color: #eaebeb;
+  flex-direction: column;
   @include md-width() {
     border-bottom: $exhibition-mainColor 1px solid;
     background-color: white;
     display: flex;
-    flex-direction: column;
+    border-radius: 0;
   }
   //預覽作品圖
   &-img {
-    width: 60%;
-    // background-color: pink;
-    background: url('../assets/img/TeamPoster1.jpg') center center no-repeat;
+    width: 100%;
+    background: url(/img/TeamPoster7.59df26f9.jpg) center center no-repeat;
     background-size: cover;
+    height: 220px;
     @include md-width() {
       width: 100%;
       height: 200px;
     }
   }
   &-text {
-    margin: 2rem;
+    margin: 1.2rem;
     text-align: left;
     .title {
       color: $exhibition-mainColor;
       font-size: 1.5rem;
       font-weight: bold;
-      margin-bottom: 1rem;
-    }
-    .team {
-      color: $exhibition-mainColor;
-      font-size: 1rem;
       margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      p:last-child {
+        font-size: 0.8rem;
+      }
+
+      @include md-width() {
+        flex-direction: column;
+        align-items: flex-start;
+        p:last-child {
+          font-size: 1rem;
+          margin-top: 1rem;
+          @include md-width() {
+            font-size: 0.8rem;
+          }
+        }
+      }
     }
     .tag {
-      font-size: 1rem;
+      font-size: 0.8rem;
       margin-bottom: 1rem;
+      @include md-width() {
+        font-size: 1rem;
+      }
     }
     .intro {
-      font-size: 0.6rem;
+      font-size: 1rem;
       line-height: 1.2rem;
+      @include md-width() {
+        font-size: 0.8rem;
+      }
     }
   }
 }
