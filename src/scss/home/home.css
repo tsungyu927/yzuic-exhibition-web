@@ -15,7 +15,7 @@
 .home-container{
   position: relative;
   width: 100vw;
-  height: 700vh;
+  height: 1300vh;
   background-color: white;
   background-image: url('../../assets/home/home_back_texture.png');
   background-size: cover;
@@ -112,6 +112,21 @@
   width: 8vw;
   height: auto;
 }
+/* 意念堅持 */
+.qq-line{
+  position: absolute;
+  top: 300vh;
+  left: -5vw;
+  width: 95vw;
+  height: auto;
+}
+.home-text05{
+  position: absolute;
+  top: 350vh;
+  right: 20vw;
+  width: 50vw;
+  height: auto;
+}
 /* 粉紅區域 執著執著 痴狂痴狂 */
 .pink-back{
   position: absolute;
@@ -120,4 +135,200 @@
   width: 100vw;
   height: auto;
   opacity: 0.8;
+}
+.home-text06{
+  position: absolute;
+  top: 420vh;
+  left: 15vw;
+  width: 42vw;
+  height: auto;
+}
+.home-text07{
+  transform-origin: bottom right;
+  position: absolute;
+  top: 485vh;
+  right: 5vw;
+  width: 30vw;
+  height: auto;
+}
+.home-text07-border{
+  transform-origin: bottom right;
+  position: absolute;
+  top: 463vh;
+  right: 5vw;
+  width: 60vw;
+  height: auto;
+}
+.home-text07-line1{
+  transform-origin: bottom center;
+  position: absolute;
+  top: 423.5vh;
+  right: 39.1vw;
+  border-right: 3px solid #00cbf4;
+  background-color: transparent;
+  width: 1vw;
+  height: 52vh;
+}
+.home-text07-line2{
+  transform-origin: center right;
+  position: absolute;
+  top: 499.5vh;
+  right: 63.5vw;
+  border-bottom: 3px solid #00cbf4;
+  background-color: transparent;
+  width: 30vw;
+  height: 1vh;
+}
+.home-text07-line3{
+  transform-origin: bottom left;
+  position: absolute;
+  top: 507vh;
+  right: 4vw;
+  border-bottom: 3px solid #00cbf4;
+  background-color: transparent;
+  width: 20vw;
+  height: 1vh;
+}
+/* 無所畏懼 ＆ QQ線 */
+.home-text08{
+  position: absolute;
+  top: 570vh;
+  left: 20vw;
+  width: 60vw;
+  height: auto;
+}
+.qq-line-2{
+  position: absolute;
+  top: 550vh;
+  left: 0;
+  width: 95vw;
+  height: auto;
+}
+.home-text09{
+  position: absolute;
+  top: 680vh;
+  left: 30vw;
+  width: 8vw;
+  height: auto;
+}
+.home-text10{
+  position: absolute;
+  top: 665vh;
+  left: 40vw;
+  width: 25vw;
+  height: auto;
+}
+.home-text10-1{
+  position: absolute;
+  top: 663vh;
+  left: 38vw;
+  width: 17vw;
+  height: auto;
+}
+.home-text10-2{
+  transform: rotate(-5deg);
+  position: absolute;
+  top: 662vh;
+  left: 50vw;
+  width: 17vw;
+  height: auto;
+}
+/* 海報 */
+.pink-back2{
+  position: absolute;
+  top: 710vh;
+  left: 0;
+  width: 100vw;
+  height: auto;
+}
+.pink-poster{
+  cursor: pointer;
+  position: absolute;
+  top: 745vh;
+  left: 35vw;
+  width: 30vw;
+  height: auto;
+}
+.shake-poster{
+  animation: shake 0.5s; 
+  animation-iteration-count: infinite; 
+}
+/* shake image */
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+/* 策展資訊 */
+.home-text11{
+  position: absolute;
+  top: 870vh;
+  left: 10vw;
+  width: 15vw;
+  height: auto;
+}
+.home-text11-date1{
+  position: absolute;
+  top: 885vh;
+  left: 32vw;
+  width: 25vw;
+  height: auto;
+}
+.home-text11-date2{
+  position: absolute;
+  top: 896vh;
+  left: 47vw;
+  width: 3vw;
+  height: auto;
+}
+.home-text11-date3{
+  position: absolute;
+  top: 900vh;
+  left: 42vw;
+  width: 25vw;
+  height: auto;
+}
+.home-text11-place1{
+  position: absolute;
+  top: 920vh;
+  left: 32vw;
+  width: 23vw;
+  height: auto;
+}
+.home-text11-place2{
+  position: absolute;
+  top: 928vh;
+  left: 32vw;
+  width: 11.5vw;
+  height: auto;
+}
+.home-text11-place3{
+  position: absolute;
+  top: 928vh;
+  left: 43.5vw;
+  width: 11.5vw;
+  height: auto;
+}
+/* 交通方式 */
+.home-text12{
+  position: absolute;
+  top: 970vh;
+  left: 42.5vw;
+  width: 15vw;
+  height: auto;
+}
+.home-map1{
+  position: absolute;
+  top: 980vh;
+  left: 35vw;
+  width: 30vw;
+  height: auto;
 }

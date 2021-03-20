@@ -74,9 +74,11 @@
         flex-direction: row;
         justify-content: space-between;
         padding: 0 1rem;
+        pointer-events: none;
       }
       .left {
         width: 2%;
+        pointer-events: auto;
       }
       .right {
         width: 2%;
