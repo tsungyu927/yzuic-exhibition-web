@@ -1,6 +1,7 @@
 .con{
   width: 100vw;
   height: max-content;
+  overflow: hidden;
 }
 /* 最上面液態金屬 */
 .home-top{
@@ -15,12 +16,11 @@
 .home-container{
   position: relative;
   width: 100vw;
-  height: 1300vh;
-  background-color: white;
+  height: 2050vh;
+  background-color: #fff;
   background-image: url('../../assets/home/home_back_texture.png');
   background-size: cover;
   background-repeat: repeat-y;
-  overflow-x: hidden;
 }
 /* static */
 .home-blueback{
@@ -234,7 +234,7 @@
   height: auto;
 }
 /* 海報 */
-.pink-back2{
+.pink-back1{
   position: absolute;
   top: 710vh;
   left: 0;
@@ -267,52 +267,61 @@
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+/* 很彩的背景 */
+.color-back{
+  position: absolute;
+  left: 0;
+  top: 820vh;
+  z-index: 1;
+  width: 100vw;
+  height: 1230vh;
+}
 /* 策展資訊 */
 .home-text11{
   position: absolute;
-  top: 870vh;
+  top: 880vh;
   left: 10vw;
   width: 15vw;
   height: auto;
 }
 .home-text11-date1{
   position: absolute;
-  top: 885vh;
+  top: 895vh;
   left: 32vw;
   width: 25vw;
   height: auto;
 }
 .home-text11-date2{
   position: absolute;
-  top: 896vh;
+  top: 906vh;
   left: 47vw;
   width: 3vw;
   height: auto;
 }
 .home-text11-date3{
   position: absolute;
-  top: 900vh;
+  top: 910vh;
   left: 42vw;
   width: 25vw;
   height: auto;
 }
 .home-text11-place1{
   position: absolute;
-  top: 920vh;
+  top: 930vh;
   left: 32vw;
   width: 23vw;
   height: auto;
 }
 .home-text11-place2{
   position: absolute;
-  top: 928vh;
+  top: 938vh;
   left: 32vw;
   width: 11.5vw;
   height: auto;
 }
 .home-text11-place3{
   position: absolute;
-  top: 928vh;
+  top: 938vh;
   left: 43.5vw;
   width: 11.5vw;
   height: auto;
@@ -328,7 +337,250 @@
 .home-map1{
   position: absolute;
   top: 980vh;
-  left: 35vw;
+  left: 36vw;
+  width: 28vw;
+  height: auto;
+}
+.home-map2{
+  position: absolute;
+  top: 1100vh;
+  left: 5vw;
+  width: 90vw;
+  height: auto;
+}
+/* 粉紅背景2 */
+.pink-back2{
+  position: absolute;
+  top: 1200vh;
+  left: 0;
+  width: 100vw;
+  height: auto;
+}
+.pink-back-back{
+  position: absolute;
+  top: 1200vh;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+}
+.home-light{
+  position: absolute;
+  top: 1205vh;
+  left: 0vw;
+  width: 70vw;
+  height: 34.1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.home-light-img{
+  transform-origin: center;
+  width: 100%;
+  height: 100%;
+}
+.home-text13-1{
+  position: absolute;
+  top: 1210vh;
+  left: 17vw;
+  width: 32vw;
+  height: auto;
+}
+.home-text13-2{
+  position: absolute;
+  top: 1232vh;
+  left: 33vw;
   width: 30vw;
   height: auto;
+}
+.home-text13-3{
+  position: absolute;
+  top: 1244vh;
+  right: 7vw;
+  width: 40vw;
+  height: auto;
+}
+.home-text13-4{
+  position: absolute;
+  top: 1262vh;
+  left: 22vw;
+  width: 27vw;
+  height: auto;
+}
+.home-text13-5{
+  transform: rotate(-10deg);
+  position: absolute;
+  top: 1257vh;
+  left: 50vw;
+  width: 15vw;
+  height: auto;
+}
+.home-text13-6{
+  transform: rotate(-10deg);
+  position: absolute;
+  top: 1257vh;
+  left: 63vw;
+  width: 15vw;
+  height: auto;
+}
+.home-text13-7{
+  position: absolute;
+  top: 1300vh;
+  left: 20vw;
+  width: 60vw;
+  height: auto;
+}
+/* 注意事項 */
+.home-text14-title{
+  position: absolute;
+  top: 1385vh;
+  left: 10vw;
+  width: 20vw;
+  height: auto;
+}
+.home-text14{
+  position: absolute;
+  left: 20vw;
+  width: 56.7vw;
+  height: auto;
+}
+/* 亂亂的 */
+.home-text15-1{
+  transform-origin: bottom right;
+  position: absolute;
+  z-index: 4;
+  top: 1520vh;
+  right: 2vw;
+  width: 50vw;
+  height: auto;
+}
+.home-text15-2{
+  position: absolute;
+  z-index: 2;
+  top: 1535vh;
+  left: -5vw;
+  width: 95vw;
+  height: auto;
+  opacity: 0.4;
+}
+.home-text15-3{
+  position: absolute;
+  z-index: 5;
+  top: 1560vh;
+  right: -3vw;
+  width: 70vw;
+  height: auto;
+}
+.home-text15-4{
+  position: absolute;
+  z-index: 2;
+  top: 1600vh;
+  left: 20vw;
+  width: 40vw;
+  height: auto;
+}
+.home-text15-5{
+  position: absolute;
+  z-index: 2;
+  top: 1605vh;
+  left: 41vw;
+  width: 15vw;
+  height: auto;
+}
+.home-text15-6{
+  position: absolute;
+  z-index: 1;
+  top: 1640vh;
+  left: -10vw;
+  width: 95vw;
+  height: auto;
+  opacity: 0.7;
+}
+.home-text15-7{
+  position: absolute;
+  z-index: 1;
+  top: 1670vh;
+  left: -3vw;
+  width: 80vw;
+  height: auto;
+  opacity: 0.5;
+}
+.home-text15-8{
+  position: absolute;
+  z-index: 1;
+  top: 1710vh;
+  left: 5vw;
+  width: 80vw;
+  height: auto;
+  opacity: 0.1;
+}
+.home-text15-9{
+  position: absolute;
+  right: 1vw;
+  width: 10vw;
+  height: auto;
+}
+/* 結語 */
+.home-text16-1{
+  position: absolute;
+  z-index: 3;
+  left: 10vw;
+  bottom: 50vh;
+  width: 45vw;
+  height: auto;
+  opacity: 0.7;
+}
+.home-text16-2{
+  position: absolute;
+  z-index: 3;
+  right: -5vw;
+  bottom: 44vh;
+  width: 60vw;
+  height: auto;
+  opacity: 0.5;
+}
+.home-text16-3{
+  position: absolute;
+  z-index: 3;
+  right: -3vw;
+  bottom: 49vh;
+  width: 60vw;
+  height: auto;
+  opacity: 0.9;
+}
+.home-text16-4{
+  position: absolute;
+  z-index: 3;
+  left: 10vw;
+  bottom: 25vh;
+  width: 10vw;
+  height: auto;
+  opacity: 0.7;
+}
+.home-text16-5{
+  position: absolute;
+  z-index: 3;
+  left: 10vw;
+  bottom: 20vh;
+  width: 23vw;
+  height: auto;
+  opacity: 0.7;
+}
+.home-text16-6{
+  position: absolute;
+  z-index: 3;
+  left: 33vw;
+  bottom: 20vh;
+  width: 30vw;
+  height: auto;
+}
+.home-text16-7{
+  position: absolute;
+  z-index: 3;
+  left: 64vw;
+  bottom: 20vh;
+  width: 23vw;
+  height: auto;
+  opacity: 0.7;
 }

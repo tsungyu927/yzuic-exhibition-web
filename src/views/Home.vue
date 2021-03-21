@@ -70,9 +70,11 @@
       <img class="home-text10-1" src="../assets/home/堆積了此刻的變態/變border.svg" />
       <img class="home-text10-2" src="../assets/home/堆積了此刻的變態/態border.svg" />
       <!-- 海報的地方 -->
-      <img class="pink-back2" src="../assets/home/海報/pink-back2.png" alt="pink-back2"/>
+      <img class="pink-back1" src="../assets/home/海報/pink-back2.png" alt="pink-back2"/>
       <img class="pink-poster pink-poster-back" src="../assets/home/海報/poster.png" alt="poster" :style="{opacity: 0.5}" :class="shakePos ? 'shake-poster': ''" />
       <img class="pink-poster" src="../assets/home/海報/poster.png" alt="poster" @mouseenter="shakePos = true" @mouseout="shakePos = false" :class="shakePos ? 'shake-poster': ''" />
+      <!-- 很彩的背景 -->
+      <img class="color-back" src="../assets/home/colorback.png" />
       <!-- 策展資訊 -->
       <img class="home-text11" src="../assets/home/策展資訊/策展資訊.svg" alt="策展資訊" />
       <img class="home-text11-date1" src="../assets/home/策展資訊/514五.svg" alt="5/14" />
@@ -84,6 +86,48 @@
       <!-- 交通方式 -->
       <img class="home-text12" src="../assets/home/交通方式/交通方式.svg" alt="交通方式" />
       <img class="home-map1" src="../assets/home/交通方式/地圖一.svg" alt="園區地圖" />
+      <img class="home-map2" src="../assets/home/交通方式/地圖二.svg" alt="展區平面圖" />
+      <!-- 粉紅背景2 -->
+      <img class="pink-back2" src="../assets/home/粉紅背景2/粉紅背景2.png" alt="粉紅背景2" />
+      <img class="pink-back-back" src="../assets/home/粉紅背景2/後方圖層.png" alt="後方圖層" />
+      <div class="home-light">
+        <img class="home-light-img" src="../assets/home/粉紅背景2/亮光.png" alt="light1" />
+      </div>
+      <img class="home-text13-1" src="../assets/home/粉紅背景2/衝擊.svg" alt="衝擊" />
+      <img class="home-text13-2" src="../assets/home/粉紅背景2/夢想框架.svg" alt="夢想框架" />
+      <img class="home-text13-3" src="../assets/home/粉紅背景2/拒絕自我設限.svg" alt="拒絕自我設限" />
+      <img class="home-text13-4" src="../assets/home/粉紅背景2/堅守初心.svg" alt="堅守初心" />
+      <img class="home-text13-5" src="../assets/home/粉紅背景2/盈眶.svg" alt="盈眶" />
+      <img class="home-text13-6" src="../assets/home/粉紅背景2/而出.svg" alt="而出" />
+      <img class="home-text13-7" src="../assets/home/粉紅背景2/成就變態.svg" alt="成就變態" />
+      <!-- 注意事項 -->
+      <img class="home-text14-title" src="../assets/home/注意事項/注意事項.svg" />
+      <img class="home-text14 home-text14-1" src="../assets/home/注意事項/注意事項1.png" :style="{top: '1400vh'}" />
+      <img class="home-text14 home-text14-2" src="../assets/home/注意事項/注意事項2.png" :style="{top: '1415vh'}" />
+      <img class="home-text14 home-text14-3" src="../assets/home/注意事項/注意事項3.png" :style="{top: '1430vh'}" />
+      <img class="home-text14 home-text14-4" src="../assets/home/注意事項/注意事項4.png" :style="{top: '1440vh'}" />
+      <img class="home-text14 home-text14-5" src="../assets/home/注意事項/注意事項5.png" :style="{top: '1462vh'}" />
+      <!-- 亂亂的 -->
+      <img class="home-text15-1" src="../assets/home/亂亂的/執著藍.svg" alt="執著藍" />
+      <img class="home-text15-2" src="../assets/home/亂亂的/無所畏懼紅.svg" alt="無所畏懼紅" />
+      <img class="home-text15-3" src="../assets/home/亂亂的/癡狂紅.svg" alt="癡狂紅" />
+      <img class="home-text15-4" src="../assets/home/亂亂的/執著粉.svg" alt="執著粉" />
+      <img class="home-text15-5" src="../assets/home/亂亂的/癡狂藍.svg" alt="癡狂藍" />
+      <img class="home-text15-6" src="../assets/home/亂亂的/無所畏懼紫.svg" alt="無所畏懼紫" />
+      <img class="home-text15-7" src="../assets/home/亂亂的/癡狂紅.svg" alt="癡狂紅" />
+      <img class="home-text15-8" src="../assets/home/亂亂的/執著紅.svg" alt="執著紅" />
+      <img class="home-text15-9 home-text15-right1" src="../assets/home/亂亂的/懼.svg" alt="懼" :style="{top: '1585vh'}" />
+      <img class="home-text15-9 home-text15-right2" src="../assets/home/亂亂的/畏.svg" alt="畏" :style="{top: '1635vh'}" />
+      <img class="home-text15-9 home-text15-right3" src="../assets/home/亂亂的/所.svg" alt="所" :style="{top: '1685vh'}" />
+      <img class="home-text15-9 home-text15-right4" src="../assets/home/亂亂的/無.svg" alt="無" :style="{top: '1735vh'}" />
+      <!-- 結語 -->
+      <img class="home-text16-1" src="../assets/home/結語/此刻.svg" alt="此刻我們都在變態成為" />
+      <img class="home-text16-2" src="../assets/home/結語/變態_1.svg" alt="變態透" />
+      <img class="home-text16-3" src="../assets/home/結語/變態_1.svg" alt="變態" />
+      <img class="home-text16-4" src="../assets/home/結語/一種.svg" alt="一種" />
+      <img class="home-text16-5" src="../assets/home/結語/執著瘋狂於.svg" alt="執著瘋狂於" />
+      <img class="home-text16-6" src="../assets/home/結語/所愛之物.svg" alt="所愛之物" />
+      <img class="home-text16-7" src="../assets/home/結語/的變態.svg" alt="的變態" />
    </div>
   </div>
 </template>
@@ -98,7 +142,7 @@ export default {
   data() {
     return {
       shakePos: false,
-    };
+    }
   },
   mounted() {
     console.log('%c拜託不要搞我們(●’ω`●）',"color:#FF1A83; font-size: 35px; background-color: #fff;")
@@ -313,8 +357,7 @@ export default {
     })
     gsap.from('.home-map1',{
       scrollTrigger: {
-        trigger: '.home-map1',
-        markers: true,
+        trigger: '.home-map1',     
         start: '20% 50%',
         end: '45% 50%',
         toggleActions: 'play none none reverse',
@@ -323,6 +366,179 @@ export default {
       opacity: 0,
       duration: 0.7
     })
+    gsap.from('.home-map2', {
+      scrollTrigger: {
+        trigger: '.home-map2',
+        start: 'top 60%',
+        end: 'bottom 50%',
+        toggleActions: 'play none none none',
+      },
+      opacity: 0,
+      left: '100vw',
+      ease: 'bounce',
+      duration: 0.8
+    })
+    // ==============================================================
+    // 粉紅背景2
+    const timeLine4 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.pink-back2',
+        start: 'top 70%',
+        end: '50% 50%',
+        toggleActions: 'play none none reset',
+      }
+    })
+    timeLine4.from('.pink-back2', {left: '-100vw', duration: 0.5})
+    timeLine4.from('.pink-back-back', {opacity: 0, duration: 0.3})
+    timeLine4.from('.home-text13-1', {transform: 'scale(0)', opacity: 0, duration: 0.3})
+    timeLine4.from('.home-light-img', {transform: 'scale(5)', opacity: 0, duration: 0.3})
+    timeLine4.from('.home-text13-2', {opacity: 0, duration: 0.3})
+    timeLine4.from('.home-text13-3', {right: '-50vw', duration: 0.3})
+    timeLine4.from('.home-text13-4', {opacity: 0, duration: 0.3})
+    timeLine4.from(['.home-text13-5','.home-text13-6'], {opacity: 0, duration: 0.3})
+    timeLine4.to('.home-text13-6', {top: '1260vh', duration: 0.3})
+    timeLine4.to(['.home-text13-5','.home-text13-6'], {transform: 'rotate(0deg)', duration: 0.3, delay: 0.3})
+    timeLine4.from('.home-text13-7', {scale: 0,opacity: 0, duration: 0.5})
+    // ==============================================================
+    // 注意事項
+    gsap.from('.home-text14-title', {
+      scrollTrigger: {
+        trigger: '.home-text14-title',
+        scrub: true,
+        start: 'top 50%',
+        end: '+=80 50%',
+      },
+      opacity: 0
+    })
+    const timeLine5 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.home-text14-1',
+        start: 'top 40%',
+        end: '+=400 50%',
+        toggleActions: 'play none none reset'
+      }
+    })
+    timeLine5.from('.home-text14-1',{left: '40vw', opacity: 0, duration: 0.3})
+    timeLine5.from('.home-text14-2',{left: '40vw', opacity: 0, duration: 0.3})
+    timeLine5.from('.home-text14-3',{left: '40vw', opacity: 0, duration: 0.3})
+    timeLine5.from('.home-text14-4',{left: '40vw', opacity: 0, duration: 0.3})
+    timeLine5.from('.home-text14-5',{left: '40vw', opacity: 0, duration: 0.3})
+    // ==============================================================
+    // 亂亂的
+    gsap.from('.home-text15-1',{
+      scrollTrigger: {
+        trigger: '.home-text15-1',
+        scrub: true,
+        start: '60% 60%',
+        end: 'bottom 50%',
+      },
+      rotateZ: 90,
+      top: '1500vh',
+      right: '-10vw',
+    })
+    gsap.from('.home-text15-2',{
+      scrollTrigger: {
+        trigger: '.home-text15-2',
+        scrub: true,
+        start: 'top 80%',
+        end: '50% 50%'
+      },
+      left: '-90vw',
+      opacity: 0,
+    })
+    gsap.from('.home-text15-3',{
+      scrollTrigger: {
+        trigger: '.home-text15-3',
+        scrub: true,
+        start: 'top 80%',
+        end: '50% 70%'
+      },
+      right: '-70vw',
+      opacity: 0
+    })
+    gsap.from('.home-text15-4',{
+      scrollTrigger: {
+        trigger: '.home-text15-4',
+        scrub: true,
+        start: 'top 70%',
+        end: 'bottom 70%'
+      },
+      transform: 'rotateY(180deg)',
+      opacity: 0
+    })
+    gsap.from('.home-text15-5',{
+      scrollTrigger: {
+        trigger: '.home-text15-5',
+        scrub: true,
+        start: 'top 50%',
+        end: '+=100 50%'
+      },
+      top: '1610vh',
+      left: '46vw',
+      opacity: 0,
+    })
+    gsap.from('.home-text15-6',{
+      scrollTrigger: {
+        trigger: '.home-text15-6',
+        scrub: true,
+        start: 'top 70%',
+        end: 'bottom 70%'
+      },
+      left: '-90vw',
+      opacity: 0,
+    })
+    gsap.from('.home-text15-7',{
+      scrollTrigger: {
+        trigger: '.home-text15-7',
+        scrub: true,
+        start: 'top 70%',
+        end: '50% 50%',
+      },
+      left: '-13vw',
+      opacity: 0,
+    })
+    gsap.from('.home-text15-8',{
+      scrollTrigger: {
+        trigger: '.home-text15-8',
+        scrub: true,
+        start: 'top 70%',
+        end: 'bottom 40%'
+      },
+      scale: 0,
+      opacity: 0,
+    })
+    function Text15FromRight(trigger){
+      gsap.from(trigger,{
+        scrollTrigger: {
+          trigger: trigger,
+          start: 'top 60%',
+          end: '50% 50%',
+          toggleActions: 'play none none none'
+        },
+        right: '-10vw',
+        duration: 0.3
+      })
+    }
+    Text15FromRight('.home-text15-right1')
+    Text15FromRight('.home-text15-right2')
+    Text15FromRight('.home-text15-right3')
+    Text15FromRight('.home-text15-right4')
+    // ==============================================================
+    // 結語
+    const timeLine6 = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.home-text16-3',
+        start: 'top 50%',
+        end: 'bottom 50%',
+        toggleActions: 'play none none none'
+      }
+    })
+    timeLine6.from(['.home-text16-2','.home-text16-3'], {scale: 0, opacity: 0, duration: 0.5})
+    timeLine6.from('.home-text16-6', {scale: 0, opacity: 0, duration: 0.5})
+    timeLine6.from('.home-text16-1', {left: '0vw', opacity: 0, duration: 0.5, delay: 0.5})
+    timeLine6.from('.home-text16-4', {left: '0vw', opacity: 0, duration: 0.5})
+    timeLine6.from('.home-text16-5', {left: '0vw', opacity: 0, duration: 0.5})
+    timeLine6.from('.home-text16-7', {left: '54vw', opacity: 0, duration: 0.5})
   },
   methods: {
 
@@ -331,6 +547,5 @@ export default {
 </script>
 
 <style>
-@import url('../scss/home/home.css');
-
+@import url('../scss/home/home.css')
 </style>

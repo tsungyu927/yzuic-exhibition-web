@@ -67,7 +67,7 @@
         font-size: 0.7rem;
         display: flex;
         position: fixed;
-        z-index: 1;
+        z-index: 10;
         bottom: 2%;
         height: 40%;
         width: 100%;
