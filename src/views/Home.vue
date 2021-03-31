@@ -168,7 +168,6 @@
         <img class="home-text16-6" v-lazy="require('../assets/home/結語/所愛之物.svg')" alt="所愛之物" />
         <img class="home-text16-7" v-lazy="require('../assets/home/結語/的變態.svg')" alt="的變態" />
       </div>
-   </div>
   </div>
 </template>
 

@@ -19,7 +19,7 @@ export default {
     height: 100%;
     writing-mode: vertical-lr;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     font-weight: bold;
   }
 </style>

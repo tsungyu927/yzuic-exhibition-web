@@ -42,11 +42,7 @@ export default {
             color: $exhibition-mainColor;
             &:hover {
                 color: $exhibition-mainColor;
-                text-decoration: none
             }
-        }
-        a.router-link-exact-active {
-            color: $exhibition-mainColor;
         }
     }
 
@@ -69,5 +65,14 @@ export default {
             line-height: 1.5rem;
             font-size: 0.3rem;
         }
+    }
+
+    .square, .circle {
+      &:hover {
+        background-color: $exhibition-mainColor;
+        a {
+          color: white;
+        }
+      }
     }
 </style>
