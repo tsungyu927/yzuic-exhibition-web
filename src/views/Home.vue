@@ -13,23 +13,23 @@
       </div>
       <div class="home-con">
         <!-- 堆積了此刻的變態border -->
-        <img class="home-text home-text02-border1" src="../assets/home/堆積了此刻的變態/堆border.svg" alt="堆" :style="{top: '20%', right: '8%', width: '13%', height: 'auto'}" />
-        <img class="home-text home-text02-border2" src="../assets/home/堆積了此刻的變態/積border.svg" alt="積" :style="{top: '32%', right: '18%', width: '13%', height: 'auto'}" />
-        <img class="home-text home-text02-border3" src="../assets/home/堆積了此刻的變態/了border.svg" alt="了" :style="{top: '38%', right: '25%', width: '11%', height: 'auto'}" />
-        <img class="home-text home-text02-border4" src="../assets/home/堆積了此刻的變態/此border.svg" alt="此" :style="{top: '47%', right: '34.5%', width: '11%', height: 'auto'}" />
-        <img class="home-text home-text02-border5" src="../assets/home/堆積了此刻的變態/刻border.svg" alt="刻" :style="{top: '56%', right: '43.5%', width: '11%', height: 'auto'}" />
-        <img class="home-text home-text02-border6" src="../assets/home/堆積了此刻的變態/的border.svg" alt="的" :style="{top: '64%', right: '51.5%', width: '11%', height: 'auto'}" />
-        <img class="home-text home-text02-border7" src="../assets/home/堆積了此刻的變態/變border.svg" alt="變" :style="{top: '71%', right: '61%', width: '14%', height: 'auto'}" />
-        <img class="home-text home-text02-border8" src="../assets/home/堆積了此刻的變態/態border.svg" alt="態" :style="{top: '84.5%', right: '70%', width: '14%', height: 'auto'}" />
+        <img class="home-text home-text02-border1" v-lazy="require('../assets/home/堆積了此刻的變態/堆border.svg')" alt="堆" :style="{top: '20%', right: '8%', width: '13%', height: 'auto'}" />
+        <img class="home-text home-text02-border2" v-lazy="require('../assets/home/堆積了此刻的變態/積border.svg')" alt="積" :style="{top: '32%', right: '18%', width: '13%', height: 'auto'}" />
+        <img class="home-text home-text02-border3" v-lazy="require('../assets/home/堆積了此刻的變態/了border.svg')" alt="了" :style="{top: '38%', right: '25%', width: '11%', height: 'auto'}" />
+        <img class="home-text home-text02-border4" v-lazy="require('../assets/home/堆積了此刻的變態/此border.svg')" alt="此" :style="{top: '47%', right: '34.5%', width: '11%', height: 'auto'}" />
+        <img class="home-text home-text02-border5" v-lazy="require('../assets/home/堆積了此刻的變態/刻border.svg')" alt="刻" :style="{top: '56%', right: '43.5%', width: '11%', height: 'auto'}" />
+        <img class="home-text home-text02-border6" v-lazy="require('../assets/home/堆積了此刻的變態/的border.svg')" alt="的" :style="{top: '64%', right: '51.5%', width: '11%', height: 'auto'}" />
+        <img class="home-text home-text02-border7" v-lazy="require('../assets/home/堆積了此刻的變態/變border.svg')" alt="變" :style="{top: '71%', right: '61%', width: '14%', height: 'auto'}" />
+        <img class="home-text home-text02-border8" v-lazy="require('../assets/home/堆積了此刻的變態/態border.svg')" alt="態" :style="{top: '84.5%', right: '70%', width: '14%', height: 'auto'}" />
         <!-- 堆積了此刻的變態 -->
-        <img class="home-text home-text02-1" src="../assets/home/堆積了此刻的變態/堆.svg" alt="堆" :style="{top: '20%', right: '10%', width: '11%', height: 'auto'}" />
-        <img class="home-text home-text02-2" src="../assets/home/堆積了此刻的變態/積.svg" alt="積" :style="{top: '32%', right: '19%', width: '11%', height: 'auto'}" />
-        <img class="home-text home-text02-3" src="../assets/home/堆積了此刻的變態/了.svg" alt="了" :style="{top: '40%', right: '27%', width: '8%', height: 'auto'}" />
-        <img class="home-text home-text02-4" src="../assets/home/堆積了此刻的變態/此.svg" alt="此" :style="{top: '50%', right: '37%', width: '7%', height: 'auto'}" />
-        <img class="home-text home-text02-5" src="../assets/home/堆積了此刻的變態/刻.svg" alt="刻" :style="{top: '59%', right: '46%', width: '7%', height: 'auto'}" />
-        <img class="home-text home-text02-6" src="../assets/home/堆積了此刻的變態/的.svg" alt="的" :style="{top: '67%', right: '54%', width: '7%', height: 'auto'}" />
-        <img class="home-text home-text02-7" src="../assets/home/堆積了此刻的變態/變.svg" alt="變" :style="{top: '73%', right: '63%', width: '11%', height: 'auto'}" />
-        <img class="home-text home-text02-8" src="../assets/home/堆積了此刻的變態/態.svg" alt="態" :style="{top: '86%', right: '72%', width: '11%', height: 'auto'}" />
+        <img class="home-text home-text02-1" v-lazy="require('../assets/home/堆積了此刻的變態/堆.svg')" alt="堆" :style="{top: '20%', right: '10%', width: '11%', height: 'auto'}" />
+        <img class="home-text home-text02-2" v-lazy="require('../assets/home/堆積了此刻的變態/積.svg')" alt="積" :style="{top: '32%', right: '19%', width: '11%', height: 'auto'}" />
+        <img class="home-text home-text02-3" v-lazy="require('../assets/home/堆積了此刻的變態/了.svg')" alt="了" :style="{top: '40%', right: '27%', width: '8%', height: 'auto'}" />
+        <img class="home-text home-text02-4" v-lazy="require('../assets/home/堆積了此刻的變態/此.svg')" alt="此" :style="{top: '50%', right: '37%', width: '7%', height: 'auto'}" />
+        <img class="home-text home-text02-5" v-lazy="require('../assets/home/堆積了此刻的變態/刻.svg')" alt="刻" :style="{top: '59%', right: '46%', width: '7%', height: 'auto'}" />
+        <img class="home-text home-text02-6" v-lazy="require('../assets/home/堆積了此刻的變態/的.svg')" alt="的" :style="{top: '67%', right: '54%', width: '7%', height: 'auto'}" />
+        <img class="home-text home-text02-7" v-lazy="require('../assets/home/堆積了此刻的變態/變.svg')" alt="變" :style="{top: '73%', right: '63%', width: '11%', height: 'auto'}" />
+        <img class="home-text home-text02-8" v-lazy="require('../assets/home/堆積了此刻的變態/態.svg')" alt="態" :style="{top: '86%', right: '72%', width: '11%', height: 'auto'}" />
         <!-- 一圈一圈的圓 -->
         <div class="home-circle home-circle0"></div>
         <div class="home-circle home-circle1"></div>
@@ -39,141 +39,141 @@
       </div>
       <div class="home-con">
         <!-- 用力生活 -->
-        <img class="home-text03-1" src="../assets/home/堆積了此刻的變態/每一次的.svg" alt="每一次的" />
-        <img class="home-text03-2" src="../assets/home/堆積了此刻的變態/用力生活.svg" alt="用力生活" />
-        <img class="home-text03-3" src="../assets/home/堆積了此刻的變態/用力生活框.svg" alt="用力生活框1" :style="{opacity: 1, top: '50%'}" />
-        <img class="home-text03-4" src="../assets/home/堆積了此刻的變態/用力生活框.svg" alt="用力生活框2" :style="{opacity: 0.6, top: '55%'}" />
-        <img class="home-text03-5" src="../assets/home/堆積了此刻的變態/用力生活框.svg" alt="用力生活框3" :style="{opacity: 0.3, top: '60%'}" />
+        <img class="home-text03-1" v-lazy="require('../assets/home/堆積了此刻的變態/每一次的.svg')" alt="每一次的" />
+        <img class="home-text03-2" v-lazy="require('../assets/home/堆積了此刻的變態/用力生活.svg')" alt="用力生活" />
+        <img class="home-text03-3" v-lazy="require('../assets/home/堆積了此刻的變態/用力生活框.svg')" alt="用力生活框1" :style="{opacity: 1, top: '50%'}" />
+        <img class="home-text03-4" v-lazy="require('../assets/home/堆積了此刻的變態/用力生活框.svg')" alt="用力生活框2" :style="{opacity: 0.6, top: '55%'}" />
+        <img class="home-text03-5" v-lazy="require('../assets/home/堆積了此刻的變態/用力生活框.svg')" alt="用力生活框3" :style="{opacity: 0.3, top: '60%'}" />
       </div>
       <div class="home-con">
         <!-- 造就了型態的轉變 -->
-        <img class="home-pink-circle" src="../assets/home/造就了型態的轉變/pink-circle.svg" />
-        <img class="home-text04 home-text04-1" src="../assets/home/造就了型態的轉變/造.svg" alt="造" :style="{top: '-10%', left: '19%'}"/>
-        <img class="home-text04 home-text04-2" src="../assets/home/造就了型態的轉變/就.svg" alt="就" :style="{top: '-7%', left: '27%'}"/>
-        <img class="home-text04 home-text04-3" src="../assets/home/造就了型態的轉變/了.svg" alt="了" :style="{top: '-4%', left: '35%'}"/>
-        <img class="home-text04 home-text04-4" src="../assets/home/造就了型態的轉變/型.svg" alt="型" :style="{top: '-1%', left: '43%'}"/>
-        <img class="home-text04 home-text04-5" src="../assets/home/造就了型態的轉變/態.svg" alt="態" :style="{top: '2%', left: '51%'}"/>
-        <img class="home-text04 home-text04-6" src="../assets/home/造就了型態的轉變/的.svg" alt="的" :style="{top: '5%', left: '59%'}"/>
-        <img class="home-text04 home-text04-7" src="../assets/home/造就了型態的轉變/轉.svg" alt="轉" :style="{top: '8%', left: '67%'}"/>
-        <img class="home-text04 home-text04-8" src="../assets/home/造就了型態的轉變/變.svg" alt="變" :style="{top: '11%', left: '75%'}"/>
+        <img class="home-pink-circle" v-lazy="require('../assets/home/造就了型態的轉變/pink-circle.svg')" />
+        <img class="home-text04 home-text04-1" v-lazy="require('../assets/home/造就了型態的轉變/造.svg')" alt="造" :style="{top: '-10%', left: '19%'}"/>
+        <img class="home-text04 home-text04-2" v-lazy="require('../assets/home/造就了型態的轉變/就.svg')" alt="就" :style="{top: '-7%', left: '27%'}"/>
+        <img class="home-text04 home-text04-3" v-lazy="require('../assets/home/造就了型態的轉變/了.svg')" alt="了" :style="{top: '-4%', left: '35%'}"/>
+        <img class="home-text04 home-text04-4" v-lazy="require('../assets/home/造就了型態的轉變/型.svg')" alt="型" :style="{top: '-1%', left: '43%'}"/>
+        <img class="home-text04 home-text04-5" v-lazy="require('../assets/home/造就了型態的轉變/態.svg')" alt="態" :style="{top: '2%', left: '51%'}"/>
+        <img class="home-text04 home-text04-6" v-lazy="require('../assets/home/造就了型態的轉變/的.svg')" alt="的" :style="{top: '5%', left: '59%'}"/>
+        <img class="home-text04 home-text04-7" v-lazy="require('../assets/home/造就了型態的轉變/轉.svg')" alt="轉" :style="{top: '8%', left: '67%'}"/>
+        <img class="home-text04 home-text04-8" v-lazy="require('../assets/home/造就了型態的轉變/變.svg')" alt="變" :style="{top: '11%', left: '75%'}"/>
         <!-- 意念堅持 -->
-        <img class="qq-line" src="../assets/home/意念堅持/QQ線.svg" alt="QQ線"/>
-        <img class="home-text05" src="../assets/home/意念堅持/意念堅持.svg" alt="意念堅持" />
+        <img class="qq-line" v-lazy="require('../assets/home/意念堅持/QQ線.svg')" alt="QQ線"/>
+        <img class="home-text05" v-lazy="require('../assets/home/意念堅持/意念堅持.svg')" alt="意念堅持" />
       </div>
       <div class="home-con">
         <!-- 粉紅區域 執著執著 痴狂痴狂 -->
-        <img class="pink-back" src="../assets/home/pink-back1/pink-back.png" alt="粉紅背框" />
-        <img class="home-text06" src="../assets/home/pink-back1/執著top.svg" alt="執著back" :style="{opacity: 0.15}" />
-        <img class="home-text06 home-text06-top" src="../assets/home/pink-back1/執著back.svg" alt="執著top" :style="{top: '18%', left: '14%', width: '45%'}" />
-        <img class="home-text07-border" src="../assets/home/pink-back1/痴狂border.png" alt="痴狂border" />
-        <img class="home-text07" src="../assets/home/pink-back1/痴狂.png" alt="痴狂" />
+        <img class="pink-back" v-lazy="require('../assets/home/pink-back1/pink-back.png')" alt="粉紅背框" />
+        <img class="home-text06" v-lazy="require('../assets/home/pink-back1/執著top.svg')" alt="執著back" :style="{opacity: 0.15}" />
+        <img class="home-text06 home-text06-top" v-lazy="require('../assets/home/pink-back1/執著back.svg')" alt="執著top" :style="{top: '18%', left: '14%', width: '45%'}" />
+        <img class="home-text07-border" v-lazy="require('../assets/home/pink-back1/痴狂border.png')" alt="痴狂border" />
+        <img class="home-text07" v-lazy="require('../assets/home/pink-back1/痴狂.png')" alt="痴狂" />
         <div class="home-text07-line1" />
         <div class="home-text07-line2" />
         <div class="home-text07-line3" />
       </div>
       <div class="home-con">
         <!-- 無所畏懼 ＆ QQ線 -->
-        <img class="home-text08 home-text08-border" src="../assets/home/無所畏懼/無所畏懼border.svg" alt="無所畏懼border" />
-        <img class="home-text08" src="../assets/home/無所畏懼/無所畏懼.svg" alt="無所畏懼" />
-        <img class="qq-line-2" src="../assets/home/無所畏懼/QQ線2.png" alt="QQ線2" />
-        <img class="home-text09" src="../assets/home/無所畏懼/此刻就是.svg" alt="此刻就是" />
-        <img class="home-text10" src="../assets/home/無所畏懼/變態線框.svg" alt="變態線框" />
-        <img class="home-text10-1" src="../assets/home/堆積了此刻的變態/變border.svg" />
-        <img class="home-text10-2" src="../assets/home/堆積了此刻的變態/態border.svg" />
+        <img class="home-text08 home-text08-border" v-lazy="require('../assets/home/無所畏懼/無所畏懼border.svg')" alt="無所畏懼border" />
+        <img class="home-text08" v-lazy="require('../assets/home/無所畏懼/無所畏懼.svg')" alt="無所畏懼" />
+        <img class="qq-line-2" v-lazy="require('../assets/home/無所畏懼/QQ線2.png')" alt="QQ線2" />
+        <img class="home-text09" v-lazy="require('../assets/home/無所畏懼/此刻就是.svg')" alt="此刻就是" />
+        <img class="home-text10" v-lazy="require('../assets/home/無所畏懼/變態線框.svg')" alt="變態線框" />
+        <img class="home-text10-1" v-lazy="require('../assets/home/堆積了此刻的變態/變border.svg')" />
+        <img class="home-text10-2" v-lazy="require('../assets/home/堆積了此刻的變態/態border.svg')" />
       </div>
       <div class="home-con"></div>
       <div class="home-con">
         <!-- 海報的地方 -->
-        <img class="pink-back1" src="../assets/home/海報/pink-back2.png" alt="pink-back2"/>
-        <img class="pink-poster pink-poster-back" src="../assets/home/海報/poster.png" alt="poster" :style="{opacity: 0.5}" :class="shakePos ? 'shake-poster': ''" />
-        <img class="pink-poster" src="../assets/home/海報/poster.png" alt="poster" @mouseenter="shakePos = true" @mouseout="shakePos = false" :class="shakePos ? 'shake-poster': ''" />
+        <img class="pink-back1" v-lazy="require('../assets/home/海報/pink-back2.png')" alt="pink-back2"/>
+        <img class="pink-poster pink-poster-back" v-lazy="require('../assets/home/海報/poster.png')" alt="poster" :style="{opacity: 0.5}" :class="shakePos ? 'shake-poster': ''" />
+        <img class="pink-poster" v-lazy="require('../assets/home/海報/poster.png')" alt="poster" @mouseenter="shakePos = true" @mouseout="shakePos = false" :class="shakePos ? 'shake-poster': ''" />
       </div>
       <div class="home-con" :style="{height: '59.4vh'}"></div>
       <!-- 很彩的背景 -->
-      <img class="color-back" src="../assets/home/colorback.png" />
+      <img class="color-back" v-lazy="require('../assets/home/colorback.png')" alt="color back" />
       <div class="home-con">
         <!-- 策展資訊 -->
-        <img class="home-text11" src="../assets/home/策展資訊/策展資訊.svg" alt="策展資訊" />
-        <img class="home-text11-date1" src="../assets/home/策展資訊/514五.svg" alt="5/14" />
-        <img class="home-text11-date2" src="../assets/home/策展資訊/日期中間.svg" alt="~" />
-        <img class="home-text11-date3" src="../assets/home/策展資訊/517一.svg" alt="5/17" />
-        <img class="home-text11-place1" src="../assets/home/策展資訊/松山文創園區.svg" alt="松山文創園區" />
-        <img class="home-text11-place2" src="../assets/home/策展資訊/三號.png" alt="三號" />
-        <img class="home-text11-place3" src="../assets/home/策展資訊/倉庫.png" alt="倉庫" />
+        <img class="home-text11" v-lazy="require('../assets/home/策展資訊/策展資訊.svg')" alt="策展資訊" />
+        <img class="home-text11-date1" v-lazy="require('../assets/home/策展資訊/514五.svg')" alt="5/14" />
+        <img class="home-text11-date2" v-lazy="require('../assets/home/策展資訊/日期中間.svg')" alt="~" />
+        <img class="home-text11-date3" v-lazy="require('../assets/home/策展資訊/517一.svg')" alt="5/17" />
+        <img class="home-text11-place1" v-lazy="require('../assets/home/策展資訊/松山文創園區.svg')" alt="松山文創園區" />
+        <img class="home-text11-place2" v-lazy="require('../assets/home/策展資訊/三號.png')" alt="三號" />
+        <img class="home-text11-place3" v-lazy="require('../assets/home/策展資訊/倉庫.png')" alt="倉庫" />
       </div>
       <div class="home-con">
         <!-- 交通方式 -->
-        <img class="home-text12" src="../assets/home/交通方式/交通方式.svg" alt="交通方式" />
-        <img class="home-map1" src="../assets/home/交通方式/地圖一.svg" alt="園區地圖" />
+        <img class="home-text12" v-lazy="require('../assets/home/交通方式/交通方式.svg')" alt="交通方式" />
+        <img class="home-map1" v-lazy="require('../assets/home/交通方式/地圖一.svg')" alt="園區地圖" />
       </div>
       <div class="home-con">
-        <img class="home-map2" src="../assets/home/交通方式/地圖二.svg" alt="展區平面圖" />
+        <img class="home-map2" v-lazy="require('../assets/home/交通方式/地圖二.svg')" alt="展區平面圖" />
       </div>
       <div class="home-con">
         <!-- 粉紅背景2 -->
-        <img class="pink-back2" src="../assets/home/粉紅背景2/粉紅背景2.png" alt="粉紅背景2" />
-        <img class="pink-back-back" src="../assets/home/粉紅背景2/後方圖層.png" alt="後方圖層" />
+        <img class="pink-back2" v-lazy="require('../assets/home/粉紅背景2/粉紅背景2.png')" alt="粉紅背景2" />
+        <img class="pink-back-back" v-lazy="require('../assets/home/粉紅背景2/後方圖層.png')" alt="後方圖層" />
         <div class="home-light">
-          <img class="home-light-img" src="../assets/home/粉紅背景2/亮光.png" alt="light1" />
+          <img class="home-light-img" v-lazy="require('../assets/home/粉紅背景2/亮光.png')" alt="light1" />
         </div>
-        <img class="home-text13-1" src="../assets/home/粉紅背景2/衝擊.svg" alt="衝擊" />
-        <img class="home-text13-2" src="../assets/home/粉紅背景2/夢想框架.svg" alt="夢想框架" />
-        <img class="home-text13-3" src="../assets/home/粉紅背景2/拒絕自我設限.svg" alt="拒絕自我設限" />
-        <img class="home-text13-4" src="../assets/home/粉紅背景2/堅守初心.svg" alt="堅守初心" />
-        <img class="home-text13-5" src="../assets/home/粉紅背景2/盈眶.svg" alt="盈眶" />
-        <img class="home-text13-6" src="../assets/home/粉紅背景2/而出.svg" alt="而出" />
+        <img class="home-text13-1" v-lazy="require('../assets/home/粉紅背景2/衝擊.svg')" alt="衝擊" />
+        <img class="home-text13-2" v-lazy="require('../assets/home/粉紅背景2/夢想框架.svg')" alt="夢想框架" />
+        <img class="home-text13-3" v-lazy="require('../assets/home/粉紅背景2/拒絕自我設限.svg')" alt="拒絕自我設限" />
+        <img class="home-text13-4" v-lazy="require('../assets/home/粉紅背景2/堅守初心.svg')" alt="堅守初心" />
+        <img class="home-text13-5" v-lazy="require('../assets/home/粉紅背景2/盈眶.svg')" alt="盈眶" />
+        <img class="home-text13-6" v-lazy="require('../assets/home/粉紅背景2/而出.svg')" alt="而出" />
       </div>
       <div class="home-con">
-        <img class="home-text13-7" src="../assets/home/粉紅背景2/成就變態.svg" alt="成就變態" />
+        <img class="home-text13-7" v-lazy="require('../assets/home/粉紅背景2/成就變態.svg')" alt="成就變態" />
       </div>
       <div class="home-con">
         <!-- 注意事項 -->
-        <img class="home-text14-title" src="../assets/home/注意事項/注意事項.svg" />
-        <img class="home-text14 home-text14-1" src="../assets/home/注意事項/注意事項1.png" :style="{top: '40%'}" />
-        <img class="home-text14 home-text14-2" src="../assets/home/注意事項/注意事項2.png" :style="{top: '55%'}" />
-        <img class="home-text14 home-text14-3" src="../assets/home/注意事項/注意事項3.png" :style="{top: '70%'}" />
-        <img class="home-text14 home-text14-4" src="../assets/home/注意事項/注意事項4.png" :style="{top: '80%'}" />
-        <img class="home-text14 home-text14-5" src="../assets/home/注意事項/注意事項5.png" :style="{top: '102%'}" />
+        <img class="home-text14-title" v-lazy="require('../assets/home/注意事項/注意事項.svg')" />
+        <img class="home-text14 home-text14-1" v-lazy="require('../assets/home/注意事項/注意事項1.png')" :style="{top: '40%'}" />
+        <img class="home-text14 home-text14-2" v-lazy="require('../assets/home/注意事項/注意事項2.png')" :style="{top: '55%'}" />
+        <img class="home-text14 home-text14-3" v-lazy="require('../assets/home/注意事項/注意事項3.png')" :style="{top: '70%'}" />
+        <img class="home-text14 home-text14-4" v-lazy="require('../assets/home/注意事項/注意事項4.png')" :style="{top: '80%'}" />
+        <img class="home-text14 home-text14-5" v-lazy="require('../assets/home/注意事項/注意事項5.png')" :style="{top: '102%'}" />
       </div>
       <div class="home-con">
         <!-- 亂亂的 -->
-        <img class="home-text15-1" src="../assets/home/亂亂的/執著藍.svg" alt="執著藍" />
-        <img class="home-text15-2" src="../assets/home/亂亂的/無所畏懼紅.svg" alt="無所畏懼紅" />
+        <img class="home-text15-1" v-lazy="require('../assets/home/亂亂的/執著藍.svg')" alt="執著藍" />
+        <img class="home-text15-2" v-lazy="require('../assets/home/亂亂的/無所畏懼紅.svg')" alt="無所畏懼紅" />
       </div>
       <div class="home-con">
         <!-- 亂亂的 -->
-        <img class="home-text15-3" src="../assets/home/亂亂的/癡狂紅.svg" alt="癡狂紅" />
-        <img class="home-text15-4" src="../assets/home/亂亂的/執著粉.svg" alt="執著粉" />
-        <img class="home-text15-5" src="../assets/home/亂亂的/癡狂藍.svg" alt="癡狂藍" />
-        <img class="home-text15-6" src="../assets/home/亂亂的/無所畏懼紫.svg" alt="無所畏懼紫" />
-        <img class="home-text15-9 home-text15-right1" src="../assets/home/亂亂的/懼.svg" alt="懼" :style="{top: '25%'}" />
-        <img class="home-text15-9 home-text15-right2" src="../assets/home/亂亂的/畏.svg" alt="畏" :style="{top: '75%'}" />
+        <img class="home-text15-3" v-lazy="require('../assets/home/亂亂的/癡狂紅.svg')" alt="癡狂紅" />
+        <img class="home-text15-4" v-lazy="require('../assets/home/亂亂的/執著粉.svg')" alt="執著粉" />
+        <img class="home-text15-5" v-lazy="require('../assets/home/亂亂的/癡狂藍.svg')" alt="癡狂藍" />
+        <img class="home-text15-6" v-lazy="require('../assets/home/亂亂的/無所畏懼紫.svg')" alt="無所畏懼紫" />
+        <img class="home-text15-9 home-text15-right1" v-lazy="require('../assets/home/亂亂的/懼.svg')" alt="懼" :style="{top: '25%'}" />
+        <img class="home-text15-9 home-text15-right2" v-lazy="require('../assets/home/亂亂的/畏.svg')" alt="畏" :style="{top: '75%'}" />
       </div>
       <div class="home-con">
         <!-- 亂亂的 -->
-        <img class="home-text15-7" src="../assets/home/亂亂的/癡狂紅.svg" alt="癡狂紅" />
-        <img class="home-text15-8" src="../assets/home/亂亂的/執著紅.svg" alt="執著紅" />
-        <img class="home-text15-9 home-text15-right3" src="../assets/home/亂亂的/所.svg" alt="所" :style="{top: '25%'}" />
-        <img class="home-text15-9 home-text15-right4" src="../assets/home/亂亂的/無.svg" alt="無" :style="{top: '75%'}" />
+        <img class="home-text15-7" v-lazy="require('../assets/home/亂亂的/癡狂紅.svg')" alt="癡狂紅" />
+        <img class="home-text15-8" v-lazy="require('../assets/home/亂亂的/執著紅.svg')" alt="執著紅" />
+        <img class="home-text15-9 home-text15-right3" v-lazy="require('../assets/home/亂亂的/所.svg')" alt="所" :style="{top: '25%'}" />
+        <img class="home-text15-9 home-text15-right4" v-lazy="require('../assets/home/亂亂的/無.svg')" alt="無" :style="{top: '75%'}" />
       </div>
       <div class="home-con"></div>
       <div class="home-con"></div>
       <div class="home-con">
         <!-- 結語 -->
-        <img class="home-text16-1" src="../assets/home/結語/此刻.svg" alt="此刻我們都在變態成為" />
-        <img class="home-text16-2" src="../assets/home/結語/變態_1.svg" alt="變態透" />
-        <img class="home-text16-3" src="../assets/home/結語/變態_1.svg" alt="變態" />
-        <img class="home-text16-4" src="../assets/home/結語/一種.svg" alt="一種" />
-        <img class="home-text16-5" src="../assets/home/結語/執著瘋狂於.svg" alt="執著瘋狂於" />
-        <img class="home-text16-6" src="../assets/home/結語/所愛之物.svg" alt="所愛之物" />
-        <img class="home-text16-7" src="../assets/home/結語/的變態.svg" alt="的變態" />
+        <img class="home-text16-1" v-lazy="require('../assets/home/結語/此刻.svg')" alt="此刻我們都在變態成為" />
+        <img class="home-text16-2" v-lazy="require('../assets/home/結語/變態_1.svg')" alt="變態透" />
+        <img class="home-text16-3" v-lazy="require('../assets/home/結語/變態_1.svg')" alt="變態" />
+        <img class="home-text16-4" v-lazy="require('../assets/home/結語/一種.svg')" alt="一種" />
+        <img class="home-text16-5" v-lazy="require('../assets/home/結語/執著瘋狂於.svg')" alt="執著瘋狂於" />
+        <img class="home-text16-6" v-lazy="require('../assets/home/結語/所愛之物.svg')" alt="所愛之物" />
+        <img class="home-text16-7" v-lazy="require('../assets/home/結語/的變態.svg')" alt="的變態" />
       </div>
    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+// @ is an alias to /v-lazy
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
