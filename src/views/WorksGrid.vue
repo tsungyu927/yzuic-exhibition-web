@@ -22,7 +22,7 @@
         <img src="../assets/icons/typeBox-bg_pink.svg" />
       </div>
       <div class="cards-group">
-        <div class="card">
+        <div class="card" @click="toIntroduction">
           <div class="card-img"></div>
           <div class="card-text">
             <div class="title">
@@ -113,8 +113,11 @@ export default {
   },
   methods: {
     previous() {
-      console.log('click');
+      // console.log('click');
       return this.$router.push('Exhibition');
+    },
+    toIntroduction() {
+      return this.$router.push('Introduction');
     },
   },
   components: {},
@@ -127,19 +130,6 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
-
-  .pre-arrow {
-    display: none;
-    @include md-width() {
-      cursor: pointer;
-      display: flex;
-      position: fixed;
-      top: 3%;
-      left: 2%;
-      height: 2.5rem;
-    }
-  }
-
   &-header {
     display: grid;
     width: 100%;
@@ -167,23 +157,6 @@ export default {
       padding: 5rem 5rem 0 3rem;
     }
   }
-}
-
-.title {
-  position: relative;
-  color: $exhibition-mainColor;
-  font-size: 2rem;
-  word-break: keep-all;
-  @include md-width() {
-    font-size: 3rem;
-  }
-}
-
-.previous,
-.menu {
-  width: 2.5rem;
-  height: 2.5rem;
-  margin: auto;
 }
 
 .type-box {
@@ -249,6 +222,8 @@ export default {
   height: fit-content;
   background-color: #eaebeb;
   flex-direction: column;
+  cursor: pointer;
+  height: 100%;
   @include md-width() {
     border-bottom: $exhibition-mainColor 1px solid;
     background-color: white;

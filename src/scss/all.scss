@@ -1,5 +1,6 @@
-@import "utilis/_variable.scss";
-@import "utilis/_mixin.scss"; 
-@import "utilis/_reset.scss";
+@import 'utilis/_variable.scss';
+@import 'utilis/_mixin.scss';
+@import 'utilis/_reset.scss';
 
-@import "_base.scss";
+@import '_base.scss';
+@import '_component.scss';

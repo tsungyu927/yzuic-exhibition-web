@@ -1,25 +1,29 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
+import axios from 'axios';
+import VueYoutube from 'vue-youtube';
+
 // tools
-import VueFullPage from 'vue-fullpage.js'
+import VueFullPage from 'vue-fullpage.js';
 import { VueMasonryPlugin } from 'vue-masonry';
-import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue';
 
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-import router from './router'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
+
 // css
+import '@/scss/all.scss';
 
-import "@/scss/all.scss"
-
-Vue.config.productionTip = false
-
-Vue.use(VueFullPage)
-Vue.use(VueMasonryPlugin)
-Vue.use(BootstrapVue)
-Vue.use(BootstrapVueIcons)
+Vue.config.productionTip = false;
+Vue.prototype.$ajax = axios;
+Vue.use(VueFullPage);
+Vue.use(VueMasonryPlugin);
+Vue.use(BootstrapVue);
+Vue.use(BootstrapVueIcons);
+Vue.use(VueYoutube);
 
 new Vue({
   router,
-  render: h => h(App)
-}).$mount('#app')
+  render: (h) => h(App),
+}).$mount('#app');

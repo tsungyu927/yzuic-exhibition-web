@@ -9,15 +9,17 @@
       <router-view />
     </div>
 
-    <div class="app-bar">
-      <!-- 左下角的選單 -->
-      <div class="left">
-        <LeftBar />
-      </div>
-      <!-- 右下角的 footer -->
-      <div class="right">
-        <RightBar />
-      </div>
+    <!-- 左下角的選單 -->
+    <div class="left">
+      <LeftBar />
+    </div>
+    <!-- 右邊的 footer -->
+    <div class="right">
+      <RightBar />
+    </div>
+    <!-- 右下角的 footer -->
+    <div class="bottom">
+      Yan Ze University Information Communication 24th Graduation Exhibition
     </div>
   </div>
 </template>
@@ -65,52 +67,36 @@ export default {
       justify-content: space-between;
       padding: 0 1rem;
     }
-    .left {
-      width: 2%;
-    }
-    .right {
-      width: 2%;
-      position: relative;
-      &::after {
-        position: absolute;
-        content: 'Yan Ze University Information Communication 24th Graduation Exhibition';
-        writing-mode: horizontal-tb;
-        width: fit-content;
-        word-break: keep-all;
-        bottom: 0%;
-        right: 180%;
-        width: max-content;
-      }
+  }
+  .left,
+  .right,
+  .bottom {
+    display: none;
+    @include md-width() {
+      display: block;
+      position: fixed;
+      min-width: 27px;
+      z-index: 1;
+      bottom: 10%;
+      max-height: 280px;
+      color: $exhibition-mainColor;
+      font-size: 0.9rem;
+      font-weight: bold;
     }
   }
-}
-
-.menu-btn {
-  display: none;
-  @include md-width() {
-    display: flex;
-    position: fixed;
-    z-index: 1;
-    font-weight: bold;
-    line-height: 2.8rem;
-    justify-content: center;
-    font-size: 1rem;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    border: $exhibition-mainColor 1px solid;
-    top: 2%;
-    right: 2%;
-    background-color: transparent;
+  .left {
+    left: 3%;
   }
-  a {
-    color: $exhibition-mainColor;
+  .bottom {
+    bottom: 4%;
+    min-height: 30px;
+    max-width: 430px;
+    right: 10%;
+    font-size: 0.7rem;
+    line-height: 30px;
   }
-  &:hover {
-    background-color: $exhibition-mainColor;
-    a {
-      color: white;
-    }
+  .right {
+    right: 3%;
   }
 }
 </style>

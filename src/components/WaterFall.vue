@@ -10,9 +10,6 @@
       <p class="header-title">展覽作品</p>
       <img class="header-menu" src="../assets/icons/phone-menu_pink.svg" />
     </div>
-    <div class="navbar">
-      <NavBar />
-    </div>
 
     <div class="photo-grid">
       <div
@@ -35,7 +32,6 @@
 </template>
 
 <script>
-import NavBar from '../components/NavBar';
 import image from '../data/galleryData';
 
 export default {
@@ -50,9 +46,7 @@ export default {
       return this.$router.push('Home');
     },
   },
-  components: {
-    NavBar,
-  },
+  components: {},
 };
 </script>
 
@@ -122,20 +116,5 @@ export default {
 .photo img {
   width: 100%;
   height: auto;
-}
-
-.navbar {
-  position: fixed;
-  z-index: 1;
-  right: 7%;
-  height: 60%;
-  bottom: -97%;
-  @include md-width() {
-    position: absolute;
-    z-index: 1;
-    top: -20%;
-    width: 100%;
-    right: 0;
-  }
 }
 </style>

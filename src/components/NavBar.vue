@@ -56,39 +56,27 @@ export default {
 <style lang="scss" scoped>
 @import '../scss/all.scss';
 .selector-container {
-  // display: grid;
-  // width: 100%;
-  // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  // grid-gap: 0.2rem;
-  // padding: 0.2rem 0;
-  // @include md-width() {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 3%;
-  left: 0;
-  z-index: 1;
-  width: 95%;
-  height: fit-content;
   justify-content: space-around;
   align-items: center;
-  height: 100%;
-
+  height: 60%;
   @include md-width() {
     flex-direction: row;
     justify-content: flex-end;
+    margin-right: 90px;
+    width: 100%;
+    height: auto;
   }
 }
 
 .selector-btn {
   cursor: pointer;
   font-weight: bold;
-  border: none;
+  border: 0;
   background-color: $exhibition-mainColor;
-  height: fit-content;
   padding: 0.5rem 0;
   border-radius: 50%;
-  margin-right: 20px;
   width: 4rem;
   height: 4rem;
   font-size: 1rem;
