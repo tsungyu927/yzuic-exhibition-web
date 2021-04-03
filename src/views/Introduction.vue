@@ -1,5 +1,5 @@
 <template>
-  <div class="pg-intro">
+  <div class="pg-intro" v-if="work.title">
     <!-- 網頁版 上一頁 -->
     <img
       class="pre-arrow"
@@ -29,7 +29,7 @@
           <div class="title">{{ work.title }}</div>
           <div class="team">{{ work.tag }}</div>
         </div>
-        <img class="poster" :src="work.poster.vertical" />
+        <!-- <img class="poster" :src="work.poster.vertical" /> -->
       </div>
       <!-- 作品-2 -->
       <div class="pg-block b d-md-flex flex-md-row">
@@ -41,7 +41,7 @@
           <div class="intro-web">
             <input type="checkbox" class="read-more-state" id="post-1" />
             <p class="read-more-wrap ">
-              {{ work.gameIntro.substring(0, 60) + '..' }}
+              {{ work.gameIntro | readMoreFun }}
               <span class="read-more-target">{{ work.gameIntro }}</span>
             </p>
             <label for="post-1" class="read-more-trigger"></label>
@@ -68,7 +68,7 @@
           <div class="intro-web">
             <input type="checkbox" class="read-more-state" id="post-2" />
             <p class="read-more-wrap ">
-              {{ work.gameIntro.substring(0, 60) + '..' }}
+              {{ work.gameIntro | readMoreFun }}
               <span class="read-more-target">{{ work.gameIntro }}</span>
             </p>
             <label for="post-2" class="read-more-trigger"></label>
@@ -78,8 +78,8 @@
           <div class="img-grid__group">
             <div
               class="preview-img"
-              v-for="image in work.previewImg"
-              :key="image"
+              v-for="(image, index) in work.previewImg"
+              :key="index"
             >
               <img class="img-fluid" :src="image" />
             </div>
@@ -124,27 +124,55 @@
 </template>
 
 <script>
-import axios from 'axios';
+// import axios from 'axios';
 
 export default {
   name: 'Introduction',
   data() {
     return {
       //json檔
-      work: [],
+      work: {
+        // id: '',
+        // title: '',
+        // team: '',
+        // tag: [],
+        // type: '',
+        // gameIntro: '',
+        // teamIntro: '',
+        // instructor: '',
+        // members: [
+        //   {
+        //     pic: '',
+        //     name: '',
+        //     assignment: '',
+        //     saying: '',
+        //   },
+        // ],
+        // logo: '',
+        // poster: {
+        //   vertical: '',
+        //   horizontal: '',
+        // },
+        // previewImg: [],
+        // teamImg: [],
+        // video: '',
+      },
       //read more
       readMore: false,
       readMore2: false,
       //video
-      videoId: 'IbQlBGniUQQ',
+      videoId: '',
     };
   },
   created() {
+    let $that = this;
     //讀本地端json
-    axios.get('/data.json').then(
+    this.$ajax.get('/data.json').then(
       (res) => {
-        console.log(res.data);
-        this.work = res.data.works[0];
+        const works = res.data.works;
+        $that.work = works.filter(function(item) {
+          return item.id == $that.$route.query.id;
+        })[0];
       },
       (res) => {
         console.log('error');
@@ -154,7 +182,13 @@ export default {
   methods: {
     //前一頁
     previous() {
-      return this.$router.push('WorksGrid');
+      this.$router.go(-1);
+    },
+  },
+  filters: {
+    readMoreFun(str) {
+      // console.log(typeof str);
+      return str.substring(0, 60) + '..';
     },
   },
   computed: {},
@@ -163,7 +197,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../scss/all.scss';
 .pg-intro {
   position: relative;
   width: 100%;

@@ -1,24 +1,18 @@
 <template>
   <div id="app" class="app">
-    <!-- 右上角的btn -->
-    <button class="menu-btn">
-      <router-link to="/">目錄</router-link>
-    </button>
+    <!-- 右上角的menu-btn -->
+    <router-link to="/" tag="button" class="menu-btn">目錄</router-link>
 
     <div class="app-container">
       <router-view />
     </div>
 
     <!-- 左下角的選單 -->
-    <div class="left">
-      <LeftBar />
-    </div>
+    <LeftBar />
     <!-- 右邊的 footer -->
-    <div class="right">
-      <RightBar />
-    </div>
+    <RightBar />
     <!-- 右下角的 footer -->
-    <div class="bottom">
+    <div class="sideBar bottom">
       Yan Ze University Information Communication 24th Graduation Exhibition
     </div>
   </div>
@@ -52,41 +46,6 @@ export default {
     width: 100%;
     height: 100%;
   }
-  &-bar {
-    display: none;
-    @include md-width() {
-      color: #ff1a83;
-      font-size: 0.7rem;
-      display: flex;
-      position: fixed;
-      z-index: 1;
-      bottom: 2%;
-      height: 40%;
-      width: 100%;
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 0 1rem;
-    }
-  }
-  .left,
-  .right,
-  .bottom {
-    display: none;
-    @include md-width() {
-      display: block;
-      position: fixed;
-      min-width: 27px;
-      z-index: 1;
-      bottom: 10%;
-      max-height: 280px;
-      color: $exhibition-mainColor;
-      font-size: 0.9rem;
-      font-weight: bold;
-    }
-  }
-  .left {
-    left: 3%;
-  }
   .bottom {
     bottom: 4%;
     min-height: 30px;
@@ -94,9 +53,6 @@ export default {
     right: 10%;
     font-size: 0.7rem;
     line-height: 30px;
-  }
-  .right {
-    right: 3%;
   }
 }
 </style>

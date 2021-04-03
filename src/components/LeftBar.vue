@@ -1,21 +1,12 @@
 <template>
-  <div class="left-bar">
+  <div class="left sideBar d-flex flex-column justify-content-center">
     <!--<router-link to="/">Home</router-link> | -->
-    <div class="square">
-      <router-link to="/exhibition">展覽作品</router-link>
-    </div>
-    <div class="square">
-      <router-link to="/organizeTeam">策展團隊</router-link>
-    </div>
-    <div class="circle">
-      <router-link to="/organizeTeam">FB</router-link>
-    </div>
-    <div class="circle">
-      <router-link to="/organizeTeam">IG</router-link>
-    </div>
-    <div class="circle">
-      <router-link to="/organizeTeam">YT</router-link>
-    </div>
+
+    <router-link class="square__link" to="/exhibition">展覽作品</router-link>
+    <router-link class="square__link" to="/organizeTeam">策展團隊</router-link>
+    <router-link class="square__link circle" to="/organizeTeam">FB</router-link>
+    <router-link class="square__link circle" to="/organizeTeam">IG</router-link>
+    <router-link class="square__link circle" to="/organizeTeam">YT</router-link>
   </div>
 </template>
 
@@ -26,56 +17,33 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../scss/all.scss';
-
-.left-bar {
-  display: grid;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  grid-gap: 0.4rem;
-  a {
-    font-weight: bold;
-
-    color: $exhibition-mainColor;
-    &:hover {
-      color: $exhibition-mainColor;
-    }
-  }
+.left {
+  left: 3%;
 }
 
-.square {
+.square__link {
+  display: block;
   border: 1px solid $exhibition-mainColor;
-  height: 100%;
-  width: 100%;
-  padding: 1rem 0;
-  //gird的對齊是對內容物，所以如果要讓router-link對齊，就要下在他的父承ˇˇˇ
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  a {
-    writing-mode: vertical-lr;
-  }
-}
-
-.circle {
-  border: 1px solid $exhibition-mainColor;
-  border-radius: 50%;
-  width: 100%;
-  a {
-    line-height: 1.5rem;
-    font-size: 0.3rem;
-  }
-}
-
-.square,
-.circle {
+  padding: 5px;
+  font-weight: bold;
+  color: $exhibition-mainColor;
   &:hover {
+    color: white;
     background-color: $exhibition-mainColor;
-    a {
-      color: white;
-    }
   }
+  &:not(.circle) {
+    writing-mode: vertical-lr;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    line-height: 1.2;
+  }
+  & + & {
+    margin-top: 10px;
+  }
+}
+
+.circle {
+  border-radius: 50%;
+  line-height: 1.35;
 }
 </style>

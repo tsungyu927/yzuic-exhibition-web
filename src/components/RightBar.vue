@@ -1,8 +1,10 @@
 <template>
-  <div class="right-bar">
-    <div>元智大學</div>
-    <div>資訊傳播學系</div>
-    <div>第24屆畢業展覽</div>
+  <div class="sideBar right">
+    <div class="right__bar">
+      <span>元智大學</span>
+      <span>資訊傳播學系</span>
+      <span>第24屆畢業展覽</span>
+    </div>
   </div>
 </template>
 
@@ -12,14 +14,16 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import '../scss/all.scss';
-.right-bar {
-  height: 100%;
+<style lang="scss" scoped>
+.right {
+  right: 3%;
+}
+.right__bar {
   writing-mode: vertical-lr;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
+  span {
+    & + span {
+      margin-top: 10px;
+    }
+  }
 }
 </style>

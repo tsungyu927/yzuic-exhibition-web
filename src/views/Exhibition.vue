@@ -1,8 +1,6 @@
 <template>
   <div class="gallery-container">
-    <div class="navbar">
-      <NavBar />
-    </div>
+    <NavBar />
     <full-page ref="fullpage" :options="options">
       <div class="section">
         <img class="background" src="../assets/back.jpg" />
@@ -44,7 +42,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../scss/all.scss';
 .gallery-container,
 .background {
   width: 100%;
@@ -53,22 +50,5 @@ export default {
 .scetion {
   width: 100%;
   height: 100%;
-}
-
-.navbar {
-  position: fixed;
-  z-index: 1;
-  right: 20px;
-  height: 100%;
-  bottom: 0;
-  @include md-width() {
-    position: absolute;
-    z-index: 1;
-    top: 15px;
-    right: 0;
-    bottom: auto;
-    width: 100%;
-    height: auto;
-  }
 }
 </style>

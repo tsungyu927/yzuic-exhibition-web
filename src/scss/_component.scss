@@ -78,7 +78,6 @@
   line-height: 2;
   // border: 1px solid #ddd;
   border-radius: 0.25em;
-  float: right;
   border: 1px solid #727171;
   color: #727171;
   background-color: #e2e2e2;
@@ -104,13 +103,9 @@
     right: 2%;
     background-color: transparent;
   }
-  a {
-    color: $exhibition-mainColor;
-  }
+  color: $exhibition-mainColor;
   &:hover {
     background-color: $exhibition-mainColor;
-    a {
-      color: white;
-    }
+    color: white;
   }
 }

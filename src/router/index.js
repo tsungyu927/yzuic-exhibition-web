@@ -22,7 +22,7 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/Exhibition.vue'),
+      import(/* webpackChunkName: "Exhibition" */ '../views/Exhibition.vue'),
   },
   //策展團隊
   {
@@ -34,6 +34,7 @@ const routes = [
     path: '/worksGrid',
     name: 'WorksGrid',
     component: WorksGrid,
+    props: (route) => ({ query: route.query.type }),
   },
   {
     path: '/introduction',
