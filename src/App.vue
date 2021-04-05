@@ -1,5 +1,7 @@
 <template>
   <div id="app" class="app">
+    <!-- Loading Anim -->
+    <Loader />
     <!-- 右上角的btn -->
     <button class="menu-btn">
       <router-link to="/">目錄</router-link>
@@ -8,7 +10,6 @@
     <div class="app-container">
       <router-view />
     </div>
-
     <div class="app-bar">
       <!-- 左下角的選單 -->
       <div class="left">
@@ -25,25 +26,31 @@
 <script>
 import LeftBar from '@/components/LeftBar.vue';
 import RightBar from '@/components/RightBar.vue';
-
+import Loader from './views/Loader'
 export default {
   name: 'App',
   components: {
     LeftBar,
     RightBar,
   },
-};
+}
 </script>
 
 <style lang="scss">
 @import './scss/all.scss';
+
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
 
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
-
 .app {
   position: relative;
   &-container {
