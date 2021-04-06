@@ -8,19 +8,19 @@ export default new Vuex.Store({
     typeBox: {},
   },
   mutations: {
-    SET_TYPEBOX(state, type) {
-      state.typeBox = { ...type };
-    },
+    // SET_TYPEBOX(state, type) {
+    //   state.typeBox = { ...type };
+    // },
   },
   actions: {
-    SetTypeBox({ commit }, type) {
-      commit('SET_TYPEBOX', type);
-    },
+    // SetTypeBox({ commit }, type) {
+    //   commit('SET_TYPEBOX', type);
+    // },
   },
   getters: {
-    GetTypeBox(state) {
-      return state.typeBox;
-    },
+    // GetTypeBox(state) {
+    //   return state.typeBox;
+    // },
   },
   modules: {},
 });

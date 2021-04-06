@@ -1,14 +1,18 @@
 <template>
   <div class="photo-grid-container">
-    <!-- 手機板才有 -->
-    <div class="header">
-      <img
-        class="header-previous"
-        src="../assets/icons/phone-arrow_white.svg"
-        @click="previous"
-      />
-      <p class="header-title">展覽作品</p>
-      <img class="header-menu" src="../assets/icons/phone-menu_pink.svg" />
+    <!-- 手機板 header -->
+    <div class="pg-header header-pink d-flex d-md-none">
+      <div class="header__icon previous">
+        <img
+          class="img-fluid"
+          src="../assets/icons/phone-arrow_white.svg"
+          @click="previous"
+        />
+      </div>
+      <div class="title">展覽作品</div>
+      <div class="header__icon menu">
+        <img class="img-fluid" src="../assets/icons/phone-menu_pink.svg" />
+      </div>
     </div>
 
     <div class="photo-grid">
@@ -54,33 +58,13 @@ export default {
 @import '../scss/all.scss';
 
 // waterFall-header
-.header {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr 4fr 1fr;
+.header-pink {
   background-color: $exhibition-mainColor;
-  height: fit-content;
-  padding: 0.8rem 0;
-  align-items: center;
   @include md-width() {
     display: none;
   }
-
-  &-title {
-    position: relative;
-    color: white;
-    font-size: 2.2rem;
-    word-break: keep-all;
-    @include md-width() {
-      font-size: 3.2rem;
-    }
-  }
-
-  &-previous,
-  &-menu {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: auto;
+  .title {
+    color: #ffff;
   }
 }
 

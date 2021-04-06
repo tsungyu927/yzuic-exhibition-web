@@ -34,7 +34,7 @@ const routes = [
     path: '/worksGrid',
     name: 'WorksGrid',
     component: WorksGrid,
-    props: (route) => ({ query: route.query.type }),
+    // props: (route) => ({ query: route.query.type }),
   },
   {
     path: '/introduction',

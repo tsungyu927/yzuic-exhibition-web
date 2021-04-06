@@ -1,5 +1,5 @@
 <template>
-  <div class="left sideBar d-flex flex-column justify-content-center">
+  <div class="left sideBar d-none d-md-flex flex-column justify-content-center">
     <!--<router-link to="/">Home</router-link> | -->
 
     <router-link class="square__link" to="/exhibition">展覽作品</router-link>

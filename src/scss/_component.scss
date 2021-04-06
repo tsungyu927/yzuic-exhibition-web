@@ -1,8 +1,20 @@
+//(手機板)header
+.pg-header {
+  width: 100%;
+  background-color: #fff;
+  padding: 0.8rem;
+  .title {
+    flex: 1;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
 //(手機板)箭頭 漢堡選單
 .previous,
 .menu {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   margin: auto;
 }
 
@@ -28,21 +40,6 @@
     font-size: 3rem;
   }
 }
-
-//read more button
-// .more-btn {
-//   display: none;
-//   @include md-width() {
-//     display: block;
-//     border: 1px solid #727171;
-//     color: #727171;
-//     background-color: #e2e2e2;
-//     border-radius: 7px;
-//     padding: 0.1rem 1rem;
-//     float: right;
-//     margin-top: 2rem;
-//   }
-// }
 
 //read more---------------------
 .read-more-state {

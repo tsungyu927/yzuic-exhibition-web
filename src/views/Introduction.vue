@@ -1,5 +1,5 @@
 <template>
-  <div class="pg-intro" v-if="work.title">
+  <div class="pg-intro col-md-9 px-0" v-if="work.title">
     <!-- 網頁版 上一頁 -->
     <img
       class="pre-arrow"
@@ -8,7 +8,7 @@
     />
 
     <!-- 手機板 header -->
-    <div class="pg-intro-header d-flex d-md-none">
+    <div class="pg-header d-flex d-md-none">
       <div class="header__icon previous">
         <img
           class="img-fluid"
@@ -22,17 +22,17 @@
       </div>
     </div>
 
-    <div class="pg-intro-container container-grid">
-      <!-- 作品-1 -->
-      <div class="pg-block a work-1">
+    <div class="pg-intro-container">
+      <!-- 封面 -->
+      <div class="pg-block p-0 cover d-md-flex flex-md-column">
         <div>
           <div class="title">{{ work.title }}</div>
-          <div class="team">{{ work.tag }}</div>
+          <div class="cover__team">{{ work.team }}</div>
         </div>
-        <!-- <img class="poster" :src="work.poster.vertical" /> -->
+        <img class="cover__poster" :src="work.poster.vertical" />
       </div>
-      <!-- 作品-2 -->
-      <div class="pg-block b d-md-flex flex-md-row">
+      <!-- 介紹 -->
+      <div class="pg-block intro d-md-flex flex-md-row">
         <div class="px-xs-5">
           <div class="sub-title">介紹</div>
           <!-- intro-mobile -->
@@ -58,15 +58,15 @@
           ></iframe>-->
         </div>
       </div>
-      <!-- 作品-3 -->
-      <div class="pg-block c d-md-flex flex-md-row">
-        <div class="col-md-3 col-xs-12">
+      <!-- 作品 -->
+      <div class="pg-block work d-md-flex flex-md-row">
+        <div class="px-xs-5">
           <div class="sub-title">作品</div>
           <!-- intro-mobile -->
           <div class="intro-mobile">{{ work.gameIntro }}</div>
           <!-- intro-web -->
           <div class="intro-web">
-            <input type="checkbox" class="read-more-state" id="post-2" />
+            <input type="checkbox" class="read-more-state" id="post-1" />
             <p class="read-more-wrap ">
               {{ work.gameIntro | readMoreFun }}
               <span class="read-more-target">{{ work.gameIntro }}</span>
@@ -87,43 +87,61 @@
         </div>
       </div>
       <!-- 團隊 -->
-      <div class="pg-block d d-md-flex flex-md-row px-xs-5">
-        <!-- sub-title + logo -->
-        <div class="col-md-3">
-          <div class="sub-title col-md-12 col-xs-8">團隊</div>
-          <img class="logo col-md-12 col-xs-4" :src="work.logo" />
+      <div class="team pg-block d d-md-flex flex-md-row px-xs-5">
+        <div class="px-xs-5 ">
+          <div class="sub-title">團隊</div>
+          <!-- mobile -->
+          <div class="intro-mobile d-md-none">{{ work.team }}</div>
+          <!-- web -->
+          <div class="d-none d-md-block team__logo">
+            <img class="img-fluid" :src="work.logo" />
+          </div>
         </div>
         <div class="slide-show col-md-9">
           <!-- 這裡要放 SlideShow 組件 -->
         </div>
-      </div>
-      <!-- logo + intro -->
-      <div class="pg-block e">
-        <img class="logo d-md-none col-xs-4" :src="work.logo" />
-        <div class="team-intro col-xs-8">{{ work.teamIntro }}</div>
-      </div>
 
+        <!-- mobile版 logo + team intro -->
+        <div class="my-3 d-flex">
+          <div class="team__intro d-md-none">{{ work.teamIntro }}</div>
+          <div class="team__logo col-4 d-md-none">
+            <img class="img-fluid" :src="work.logo" />
+          </div>
+        </div>
+      </div>
+      <div class="team__intro pg-block d-none d-md-block">
+        {{ work.teamIntro }}
+      </div>
       <!-- 組員介紹區 -->
-      <div class="member-group d-none">
-        <!-- 這裡要放 MemberCard 組件 -->
+      <div class="memberGroup col-md-10 col-xs-12">
         <div
-          class="member d-none"
+          class="member"
           :key="index"
           v-for="(member, index) in work.members"
         >
-          <!--<img class="member-pic" :src="member.pic" />-->
-          <div class="member-assignment">{{ member.assignment }}</div>
-          <div class="member-name">{{ member.name }}</div>
-          <div class="member-saying">{{ member.saying }}</div>
+          <div class="d-md-flex">
+            <div class="member__pic">
+              <!-- <img class="img-fluid" :src="member.pic" /> -->
+            </div>
+            <div>
+              <div class="d-md-flex">
+                <div class="member__name">{{ member.name }}</div>
+                <div class="member__assignment">{{ member.assignment }}</div>
+              </div>
+              <div class="member__saying">{{ member.saying }}</div>
+            </div>
+          </div>
         </div>
       </div>
+
       <!-- 聯絡我們 -->
-      <div class="contact"></div>
+      <Footer />
     </div>
   </div>
 </template>
 
 <script>
+import Footer from '../components/Footer.vue';
 // import axios from 'axios';
 
 export default {
@@ -131,32 +149,7 @@ export default {
   data() {
     return {
       //json檔
-      work: {
-        // id: '',
-        // title: '',
-        // team: '',
-        // tag: [],
-        // type: '',
-        // gameIntro: '',
-        // teamIntro: '',
-        // instructor: '',
-        // members: [
-        //   {
-        //     pic: '',
-        //     name: '',
-        //     assignment: '',
-        //     saying: '',
-        //   },
-        // ],
-        // logo: '',
-        // poster: {
-        //   vertical: '',
-        //   horizontal: '',
-        // },
-        // previewImg: [],
-        // teamImg: [],
-        // video: '',
-      },
+      work: {},
       //read more
       readMore: false,
       readMore2: false,
@@ -192,7 +185,7 @@ export default {
     },
   },
   computed: {},
-  components: {},
+  components: { Footer },
 };
 </script>
 
@@ -201,21 +194,12 @@ export default {
   position: relative;
   width: 100%;
   min-height: 100%;
-
-  .pg-intro-header {
-    width: 100%;
-    background-color: #fff;
-    padding: 0.8rem;
-    .header__icon {
-      width: 25px;
-    }
-    .title {
-      flex: 1;
-      font-size: 24px;
-    }
-  }
+  margin: auto;
 
   .pg-intro-container {
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.5rem;
     min-height: 100%;
     //手機板 title
     .title {
@@ -225,37 +209,38 @@ export default {
       }
     }
   }
-}
-.container-grid {
-  .b,
-  .c,
-  .d,
-  .e {
-    border: 1px solid black;
+  p {
+    line-height: 1.5rem;
   }
 }
 
 .pg-block {
+  margin: auto;
+  padding: 0 40px;
   &:nth-child(even) {
     div:first-child {
       order: 1;
+      // float: right;
+      // width: 100%;
     }
   }
 }
 
-.a {
+.cover {
+  align-items: center;
   & > div:first-child {
     display: none;
     @include md-width() {
       display: block;
-      //網頁版 title
-      .title {
-        margin-bottom: 0.5rem;
-      }
-      padding: 3rem 0 2rem 0;
+      text-align: center;
+      padding: 3rem 0 1rem 0;
     }
   }
-  .poster {
+  &__team {
+    margin-top: 25px;
+    font-weight: bold;
+  }
+  &__poster {
     width: 100%;
     @include md-width() {
       width: 70%;
@@ -263,11 +248,7 @@ export default {
   }
 }
 
-.b {
-  padding-top: 2rem;
-  & > div:first-child {
-    border: 1px solid pink;
-  }
+.intro {
   @include md-width() {
     padding-top: 5rem;
     & > div:first-child {
@@ -285,8 +266,7 @@ export default {
   }
 }
 
-.c {
-  padding-top: 2rem;
+.work {
   @include md-width() {
     padding-top: 5rem;
     & > div:first-child {
@@ -295,10 +275,10 @@ export default {
     }
   }
   .img-grid {
-    border: 1px solid blue;
     margin: 0 auto;
     position: relative;
     font-size: 0px;
+    line-height: 0;
   }
   .img-grid__group {
     margin-left: -3px;
@@ -322,56 +302,72 @@ export default {
 
     img {
       display: block;
-      //   position: absolute;
-      //   left: 0;
-      //   top: 50%;
-      //   transform: translateY(-50%);
     }
   }
 }
 
-.d {
-  padding-top: 2rem;
-  & > div:first-child {
-    border: 1px solid pink;
-    .logo {
-      display: none;
-    }
-  }
+.team {
   @include md-width() {
     padding-top: 5rem;
-    & > div:first-child {
-      padding-left: 1.5rem;
-      .logo {
-        display: block;
+  }
+  &__logo {
+    margin: auto;
+  }
+  &__intro {
+    flex: 1;
+    margin-left: 15px;
+    @include md-width() {
+      margin: 25px 0;
+    }
+  }
+}
+
+.memberGroup {
+  margin: auto;
+  .member {
+    display: inline-block;
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+    padding: 1rem;
+    text-align: center;
+    &__pic {
+      height: 3rem;
+      background-color: gray;
+      max-width: 220px;
+      margin: auto;
+      @include md-width() {
+        height: 60px;
+        background-color: gray;
+        width: 180px;
+        margin: 0 25px 0 0;
       }
     }
-  }
-}
-
-.e {
-  display: flex;
-  flex-direction: row;
-  padding-top: 2rem;
-  .team-intro {
-    font-size: 12px;
-    line-height: 16px;
-  }
-  div {
-    border: 1px solid pink;
-    padding-left: 1.5rem;
-  }
-  @include md-width() {
-    padding-top: 5rem;
-    div {
-      padding-left: 0;
+    &__name {
+      font-size: 20px;
+      font-weight: bold;
+      @include md-width() {
+        color: $exhibition-mainColor;
+      }
+    }
+    &__assignment {
+      margin-bottom: 5px;
+      @include md-width() {
+        color: $exhibition-mainColor;
+        font-size: 20px;
+        font-weight: bold;
+        order: -1;
+        margin: 0;
+        &::after {
+          content: '\00A0:\00A0';
+        }
+      }
+    }
+    @include md-width() {
+      width: 100%;
+      text-align: left;
     }
   }
-}
-
-.logo {
-  width: 100px;
-  height: 100px;
 }
 
 .sub-title {
@@ -379,8 +375,6 @@ export default {
   color: $exhibition-mainColor;
   font-weight: bold;
   writing-mode: vertical-lr;
-
-  margin-bottom: 1.5rem;
   @include md-width() {
     margin-bottom: 3rem;
   }
@@ -396,11 +390,8 @@ export default {
   }
 }
 .intro-mobile {
-  text-align: left;
-  font-size: 12px;
-  line-height: 16px;
   width: 80%;
-  margin: auto;
+  margin: 1.5rem auto;
   @include md-width() {
     display: none;
   }
@@ -408,6 +399,9 @@ export default {
 
 .slide-show {
   background-color: pink;
-  min-height: 300px;
+  min-height: 200px;
+  width: 100%;
+  max-width: 650px; /* Also helpful. Optional. */
+  margin-right: 25px;
 }
 </style>

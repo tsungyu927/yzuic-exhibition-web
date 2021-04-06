@@ -24,32 +24,26 @@ export default {
         {
           chName: '全部',
           enName: 'All',
-          routerLink: '/worksGrid',
         },
         {
           chName: '互動',
           enName: 'Interactive',
-          routerLink: '/worksGrid',
         },
         {
           chName: '影視',
           enName: 'Film',
-          routerLink: '/worksGrid',
         },
         {
           chName: '遊戲',
           enName: 'Game',
-          routerLink: '/worksGrid',
         },
         {
           chName: '行銷',
           enName: 'Marketing',
-          routerLink: '/worksGrid',
         },
         {
           chName: '專題',
           enName: 'Project',
-          routerLink: '/worksGrid',
         },
       ],
     };
@@ -60,7 +54,7 @@ export default {
       // this.SetTypeBox(type);
       // this.$router.push(`${type.routerLink}/${type.enName.toLowerCase()}`);
       this.$router.push({
-        path: type.routerLink,
+        path: '/worksGrid',
         query: { type: type.enName.toLowerCase() },
       });
     },
