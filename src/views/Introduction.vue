@@ -1,5 +1,5 @@
 <template>
-  <div class="pg-intro col-md-9 px-0" v-if="work.title">
+  <div class="pg-intro col-md-9 px-0" v-if="work.id">
     <!-- 網頁版 上一頁 -->
     <img
       class="pre-arrow"
@@ -157,7 +157,8 @@ export default {
       videoId: '',
     };
   },
-  created() {
+  mounted() {
+    // console.log(this.$route.query.id);
     let $that = this;
     //讀本地端json
     this.$ajax.get('/data.json').then(
@@ -165,7 +166,8 @@ export default {
         const works = res.data.works;
         $that.work = works.filter(function(item) {
           return item.id == $that.$route.query.id;
-        })[0];
+        });
+        // console.log($that.work);
       },
       (res) => {
         console.log('error');
@@ -181,7 +183,7 @@ export default {
   filters: {
     readMoreFun(str) {
       // console.log(typeof str);
-      return str.substring(0, 60) + '..';
+      return str.substring(0, 45) + '...';
     },
   },
   computed: {},

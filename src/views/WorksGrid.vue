@@ -51,7 +51,7 @@
             </div>
             <div class="work__tag">{{ work.tag }}</div>
             <div class="work__intro">
-              {{ work.gameIntro | readMoreFun }}
+              {{ work.projectShortIntro }}
             </div>
           </div>
         </div>
@@ -80,6 +80,7 @@ export default {
         $that.worksGroup = works.filter(function(item) {
           return item.type == $that.$route.query.type;
         });
+        // console.log($that.worksGroup);
       },
       (res) => {
         console.log('error');
@@ -92,8 +93,8 @@ export default {
     },
     toIntroduction(id) {
       this.$router.push({
-        path: 'Introduction/',
-        query: { id: id.toLowerCase() },
+        path: 'introduction/',
+        query: { id: id },
       });
     },
   },
