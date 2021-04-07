@@ -12,7 +12,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home,
+    component: () => import('../views/Home.vue'),
   },
   //展覽作品
   {
@@ -28,7 +28,7 @@ const routes = [
   {
     path: '/organizeTeam',
     name: 'OrganizeTeam',
-    component: OrganizeTeam,
+    component: () => import('../views/OrganizeTeam.vue'),
   },
   {
     path: '/worksGrid',

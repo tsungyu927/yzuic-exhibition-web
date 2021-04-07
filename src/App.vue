@@ -21,7 +21,7 @@
 <script>
 import LeftBar from '@/components/LeftBar.vue';
 import RightBar from '@/components/RightBar.vue';
-
+import Loader from './views/Loader';
 export default {
   name: 'App',
   components: {
@@ -34,12 +34,18 @@ export default {
 <style lang="scss">
 @import './scss/all.scss';
 
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
-
 .app {
   position: relative;
   &-container {
