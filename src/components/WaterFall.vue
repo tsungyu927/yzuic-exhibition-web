@@ -1,16 +1,18 @@
 <template>
   <div class="photo-grid-container">
-    <!-- 手機板才有 -->
-    <div class="header">
-      <img
-        class="header-previous"
-        src="../assets/icons/phone-arrow_white.svg"
-      />
-      <p class="header-title">展覽作品</p>
-      <img class="header-menu" src="../assets/icons/phone-menu_pink.svg" />
-    </div>
-    <div class="navbar">
-      <NavBar />
+    <!-- 手機板 header -->
+    <div class="pg-header header-pink d-flex d-md-none">
+      <div class="header__icon previous">
+        <img
+          class="img-fluid"
+          src="../assets/icons/phone-arrow_white.svg"
+          @click="previous"
+        />
+      </div>
+      <div class="title">展覽作品</div>
+      <div class="header__icon menu">
+        <img class="img-fluid" src="../assets/icons/phone-menu_pink.svg" />
+      </div>
     </div>
 
     <div class="photo-grid">
@@ -34,7 +36,6 @@
 </template>
 
 <script>
-import NavBar from '../components/NavBar';
 import image from '../data/galleryData';
 
 export default {
@@ -44,10 +45,12 @@ export default {
       images: image,
     };
   },
-  methods: {},
-  components: {
-    NavBar,
+  methods: {
+    previous() {
+      return this.$router.push('Home');
+    },
   },
+  components: {},
 };
 </script>
 
@@ -55,33 +58,13 @@ export default {
 @import '../scss/all.scss';
 
 // waterFall-header
-.header {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr 4fr 1fr;
+.header-pink {
   background-color: $exhibition-mainColor;
-  height: fit-content;
-  padding: 1.5rem 0;
   @include md-width() {
     display: none;
   }
-
-  &-title {
-    position: relative;
-    color: white;
-    font-size: 2.5rem;
-    font-weight: bold;
-    word-break: keep-all;
-    @include md-width() {
-      font-size: 3.2rem;
-    }
-  }
-
-  &-previous,
-  &-menu {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: auto;
+  .title {
+    color: #ffff;
   }
 }
 
@@ -106,7 +89,10 @@ export default {
   max-width: 100%;
 }
 .photo {
-  width: 25%;
+  width: 50%;
+  @include md-width() {
+    width: 20%;
+  }
   height: max-content;
   display: flex;
   flex-direction: column;

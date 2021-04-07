@@ -1,18 +1,18 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import OrganizeTeam from '../views/OrganizeTeam.vue'
-import WorksGrid from '../views/WorksGrid.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Home from '../views/Home.vue';
+import OrganizeTeam from '../views/OrganizeTeam.vue';
+import WorksGrid from '../views/WorksGrid.vue';
+import Introduction from '../views/Introduction.vue';
 
-
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   //index
   {
     path: '/',
     name: 'Home',
-    component: () => import('../views/Home.vue')
+    component: () => import('../views/Home.vue'),
   },
   //展覽作品
   {
@@ -21,25 +21,32 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Exhibition.vue')
+    component: () =>
+      import(/* webpackChunkName: "Exhibition" */ '../views/Exhibition.vue'),
   },
   //策展團隊
   {
     path: '/organizeTeam',
     name: 'OrganizeTeam',
-    component: () => import('../views/OrganizeTeam.vue')
+    component: () => import('../views/OrganizeTeam.vue'),
   },
   {
     path: '/worksGrid',
     name: 'WorksGrid',
-    component: WorksGrid
+    component: WorksGrid,
+    // props: (route) => ({ query: route.query.type }),
   },
-]
+  {
+    path: '/introduction',
+    name: 'Introduction',
+    component: Introduction,
+  },
+];
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
