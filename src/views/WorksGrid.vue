@@ -153,6 +153,7 @@ export default {
     margin-bottom: 25px;
     @include md-width() {
       width: calc((100% / 2) - 25px);
+      height: 350px;
       background-color: #ffff;
       border-bottom: $exhibition-mainColor 1px solid;
       background-color: white;
@@ -162,6 +163,7 @@ export default {
     }
     @include lg-width() {
       width: calc((100% / 3) - 25px);
+      height: 360px;
     }
     &__text {
       background-color: #eaebeb;

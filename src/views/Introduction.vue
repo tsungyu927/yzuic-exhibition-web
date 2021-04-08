@@ -1,5 +1,5 @@
 <template>
-  <div class="pg-intro col-md-9 px-0" v-if="work.id">
+  <div class="pg-intro col-md-9 px-0">
     <!-- 網頁版 上一頁 -->
     <img
       class="pre-arrow"
@@ -29,33 +29,44 @@
           <div class="title">{{ work.title }}</div>
           <div class="cover__team">{{ work.team }}</div>
         </div>
-        <img class="cover__poster" :src="work.poster.vertical" />
+        <!-- <img class="cover__poster" :src="work.poster.vertical" /> -->
       </div>
       <!-- 介紹 -->
       <div class="pg-block intro d-md-flex flex-md-row">
-        <div class="px-xs-5">
+        <div class="px-xs-5 flex-1">
           <div class="sub-title">介紹</div>
           <!-- intro-mobile -->
-          <div class="intro-mobile">{{ work.gameIntro }}</div>
+          <div class="intro-mobile">{{ work.projectIntro }}</div>
           <!-- intro-web -->
-          <div class="intro-web">
+          <div class="intro-web ">
             <input type="checkbox" class="read-more-state" id="post-1" />
             <p class="read-more-wrap ">
-              {{ work.gameIntro | readMoreFun }}
-              <span class="read-more-target">{{ work.gameIntro }}</span>
+              {{ work.projectIntro }}
+              <span class="read-more-target">{{ work.projectIntro }}</span>
             </p>
             <label for="post-1" class="read-more-trigger"></label>
           </div>
         </div>
-        <div class="video-container">
+        <!-- <div class="video-container">
           <youtube video-id="IbQlBGniUQQ" :resize="true" :fitParent="true" />
-          <!--<iframe
+            <iframe
             width="500"
             height="315"
             :src="work.video"
             frameborder="0"
             allowfullscreen
-          ></iframe>-->
+          ></iframe>
+        </div> -->
+
+        <div class="video">
+          <div class="video__box">
+            <iframe
+              frameborder="0"
+              src="https://www.youtube.com/embed/SORD03t7nlo"
+              allowFullScreen="true"
+            >
+            </iframe>
+          </div>
         </div>
       </div>
       <!-- 作品 -->
@@ -63,13 +74,13 @@
         <div class="px-xs-5">
           <div class="sub-title">作品</div>
           <!-- intro-mobile -->
-          <div class="intro-mobile">{{ work.gameIntro }}</div>
+          <div class="intro-mobile">{{ work.projectShortIntro }}</div>
           <!-- intro-web -->
           <div class="intro-web">
             <input type="checkbox" class="read-more-state" id="post-1" />
             <p class="read-more-wrap ">
-              {{ work.gameIntro | readMoreFun }}
-              <span class="read-more-target">{{ work.gameIntro }}</span>
+              {{ work.projectShortIntro | readMoreFun }}
+              <span class="read-more-target">{{ work.projectShortIntro }}</span>
             </p>
             <label for="post-2" class="read-more-trigger"></label>
           </div>
@@ -166,8 +177,8 @@ export default {
         const works = res.data.works;
         $that.work = works.filter(function(item) {
           return item.id == $that.$route.query.id;
-        });
-        // console.log($that.work);
+        })[0];
+        console.log($that.work);
       },
       (res) => {
         console.log('error');
@@ -261,10 +272,21 @@ export default {
   }
 }
 
-.video-container {
-  iframe {
+.video {
+  width: 70%;
+  &__box {
+    position: relative;
+    //16:9
+    padding-bottom: 56.25%;
     width: 100%;
-    max-width: 650px; /* Also helpful. Optional. */
+    height: 0;
+    iframe {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 
@@ -333,6 +355,12 @@ export default {
     position: relative;
     padding: 1rem;
     text-align: center;
+    min-height: 250px;
+    @include md-width() {
+      width: 100%;
+      text-align: left;
+      min-height: 150px;
+    }
     &__pic {
       height: 3rem;
       background-color: gray;
@@ -364,10 +392,6 @@ export default {
           content: '\00A0:\00A0';
         }
       }
-    }
-    @include md-width() {
-      width: 100%;
-      text-align: left;
     }
   }
 }
