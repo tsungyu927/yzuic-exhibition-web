@@ -180,11 +180,12 @@ export default {
       font-weight: bold;
       position: relative;
       padding-left: 20px;
+      height: 40px;
       &::before {
         content: '';
         position: absolute;
         left: 0;
-        bottom: 0;
+        top: 0;
         width: 13px;
         height: 24px;
         background-color: $exhibition-mainColor;

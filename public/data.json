@@ -680,13 +680,13 @@
           "saying": "結束後要整骨按摩、補眠補肝、檢查視力、不醉不歸！誰...都...不..要..逼..我...打..開..電腦優(＊◕ᴗ◕＊)"
         }
       ],
-      "logo": "",
+      "logo": "13_logo",
       "poster": {
-        "vertical": "",
-        "horizontal": ""
+        "vertical": "13_poster",
+        "horizontal": "13_poster"
       },
       "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["", "", ""],
+      "teamImg": ["13_teamImg-1", "13_teamImg-2", ""],
       "viedo": ""
     },
     {

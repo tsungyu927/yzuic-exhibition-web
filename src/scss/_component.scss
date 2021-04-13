@@ -41,45 +41,33 @@
   }
 }
 
-//read more---------------------
-.read-more-state {
-  display: none;
+//----------------modal
+.modal-content {
+  border-radius: 3rem !important;
 }
-.read-more-target {
-  opacity: 0;
-  max-height: 0;
-  font-size: 0;
-  transition: 0.25s ease;
+/* title */
+.conceptModal__title {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    margin-right: 2%;
+  }
 }
-
-.read-more-state:checked ~ .read-more-wrap .read-more-target {
-  opacity: 1;
-  font-size: inherit;
-  max-height: 999em;
+/* content */
+.conceptModal__content {
+  width: 80%;
+  height: 80%;
+  font-size: 20px;
+  line-height: 48px;
+  color: #595757;
 }
-
-.read-more-state ~ .read-more-trigger:before {
-  content: 'more';
-}
-
-.read-more-state:checked ~ .read-more-trigger:before {
-  content: 'less';
-}
-
-.read-more-trigger {
-  cursor: pointer;
-  display: inline-block;
-  padding: 0 2em;
-  // color: #666;
-  font-size: 0.9em;
-  line-height: 2;
-  // border: 1px solid #ddd;
-  border-radius: 0.25em;
-  border: 1px solid #727171;
-  color: #727171;
-  background-color: #e2e2e2;
-}
-//read more---------------------
+//----------------modal
 
 //手機板漢堡選單
 .menu-btn {

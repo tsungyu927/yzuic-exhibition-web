@@ -33,30 +33,20 @@
       </div>
       <!-- 介紹 -->
       <div class="pg-block intro d-md-flex flex-md-row">
-        <div class="px-xs-5 flex-1">
+        <div class="px-xs-5 pg-block__text">
           <div class="sub-title">介紹</div>
           <!-- intro-mobile -->
           <div class="intro-mobile">{{ work.projectIntro }}</div>
           <!-- intro-web -->
           <div class="intro-web ">
-            <input type="checkbox" class="read-more-state" id="post-1" />
-            <p class="read-more-wrap ">
-              {{ work.projectIntro }}
-              <span class="read-more-target">{{ work.projectIntro }}</span>
-            </p>
-            <label for="post-1" class="read-more-trigger"></label>
+            <p>{{ work.projectIntro | readMoreFun }}</p>
+            <b-button v-b-modal="'concept-modal'">more</b-button>
           </div>
+          <ConceptModal
+            :content="work.projectIntro"
+            :modalId="'concept-modal'"
+          />
         </div>
-        <!-- <div class="video-container">
-          <youtube video-id="IbQlBGniUQQ" :resize="true" :fitParent="true" />
-            <iframe
-            width="500"
-            height="315"
-            :src="work.video"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-        </div> -->
 
         <div class="video">
           <div class="video__box">
@@ -76,14 +66,14 @@
           <!-- intro-mobile -->
           <div class="intro-mobile">{{ work.projectShortIntro }}</div>
           <!-- intro-web -->
-          <div class="intro-web">
-            <input type="checkbox" class="read-more-state" id="post-1" />
-            <p class="read-more-wrap ">
-              {{ work.projectShortIntro | readMoreFun }}
-              <span class="read-more-target">{{ work.projectShortIntro }}</span>
-            </p>
-            <label for="post-2" class="read-more-trigger"></label>
+          <div class="intro-web ">
+            <p>{{ work.projectIntro | readMoreFun }}</p>
+            <b-button v-b-modal="'work-modal'">more</b-button>
           </div>
+          <ConceptModal
+            :content="work.projectShortIntro"
+            :modalId="'work-modal'"
+          />
         </div>
         <div class="img-grid col-md-9 col-xs-12">
           <div class="img-grid__group">
@@ -98,44 +88,61 @@
         </div>
       </div>
       <!-- 團隊 -->
-      <div class="team pg-block d d-md-flex flex-md-row px-xs-5">
-        <div class="px-xs-5 ">
+      <div class="team pg-block d-md-flex flex-md-row px-xs-5">
+        <div class="px-xs-5 pg-block__text">
           <div class="sub-title">團隊</div>
           <!-- mobile -->
           <div class="intro-mobile d-md-none">{{ work.team }}</div>
           <!-- web -->
           <div class="d-none d-md-block team__logo">
-            <img class="img-fluid" :src="work.logo" />
+            <img class="img-fluid" :src="getLogoUrl(work.logo)" />
           </div>
         </div>
-        <div class="slide-show col-md-9">
+        <div class="slideShow">
           <!-- 這裡要放 SlideShow 組件 -->
+          <!-- <div class="slideShow__box">
+            <iframe
+              frameborder="0"
+              src="https://www.youtube.com/embed/SORD03t7nlo"
+              allowFullScreen="true"
+            >
+            </iframe>
+          </div> -->
+          <SlideModal
+            :index="1"
+            :image="[
+              'https://lh4.googleusercontent.com/proxy/la_whlWnRyQlgYtu_F8S-Cs25yzCZedtOFViVfGNWO_x_TFyf9CUFoxpQA6Q79Tp40ozqPQ6ydJbH-PzbePTAyMlikL3WZDZHABmpQdH4tB9ab9Ea2vVWWkwPJ2xqy1pDYz_Rj7y=s0-d',
+              'https://images.pexels.com/photos/90270/pexels-photo-90270.jpeg?cs=srgb&dl=pexels-vibez-dzn-90270.jpg&fm=jpg',
+              'https://yoyotours.com.tw/wp-content/uploads/2011/06/Paris-Wallpaper-Free-Download.jpg',
+              'http://i.imgur.com/lX2so.jpg',
+            ]"
+          />
         </div>
 
         <!-- mobile版 logo + team intro -->
         <div class="my-3 d-flex">
-          <div class="team__intro d-md-none">{{ work.teamIntro }}</div>
+          <div class="d-md-none">{{ work.teamIntro }}</div>
           <div class="team__logo col-4 d-md-none">
             <img class="img-fluid" :src="work.logo" />
           </div>
         </div>
       </div>
-      <div class="team__intro pg-block d-none d-md-block">
+      <div class="pg-block my-3 d-none d-md-block">
         {{ work.teamIntro }}
       </div>
       <!-- 組員介紹區 -->
-      <div class="memberGroup col-md-10 col-xs-12">
-        <div
-          class="member"
-          :key="index"
-          v-for="(member, index) in work.members"
-        >
-          <div class="d-md-flex">
+      <div class="d-flex px-5">
+        <div class="memberGroup d-flex flex-wrap">
+          <div
+            class="member d-inline-flex flex-column flex-md-row"
+            :key="index"
+            v-for="(member, index) in work.members"
+          >
             <div class="member__pic">
               <!-- <img class="img-fluid" :src="member.pic" /> -->
             </div>
-            <div>
-              <div class="d-md-flex">
+            <div class="member__text">
+              <div class="d-md-flex ">
                 <div class="member__name">{{ member.name }}</div>
                 <div class="member__assignment">{{ member.assignment }}</div>
               </div>
@@ -153,7 +160,8 @@
 
 <script>
 import Footer from '../components/Footer.vue';
-// import axios from 'axios';
+import SlideModal from '../modal/SlideModal.vue';
+import ConceptModal from '../modal/ConceptModal.vue';
 
 export default {
   name: 'Introduction',
@@ -178,7 +186,6 @@ export default {
         $that.work = works.filter(function(item) {
           return item.id == $that.$route.query.id;
         })[0];
-        console.log($that.work);
       },
       (res) => {
         console.log('error');
@@ -190,15 +197,18 @@ export default {
     previous() {
       this.$router.go(-1);
     },
+    getLogoUrl(fileName) {
+      return `${process.env.VUE_APP_CONTEXT_PATH}${process.env.VUE_APP_IMG}/logo/${fileName}.jpg`;
+    },
   },
   filters: {
     readMoreFun(str) {
       // console.log(typeof str);
-      return str.substring(0, 45) + '...';
+      return str.substring(0, 50) + '...';
     },
   },
   computed: {},
-  components: { Footer },
+  components: { Footer, SlideModal, ConceptModal },
 };
 </script>
 
@@ -230,11 +240,23 @@ export default {
 .pg-block {
   margin: auto;
   padding: 0 40px;
+  &__text {
+    position: relative;
+    @include md-width() {
+      @include flex(1);
+    }
+  }
   &:nth-child(even) {
     div:first-child {
       order: 1;
       // float: right;
       // width: 100%;
+    }
+  }
+  //從第二個開始，每隔兩個的子層
+  &:nth-child(2n + 2) {
+    .sub-title {
+      writing-mode: vertical-rl;
     }
   }
 }
@@ -272,8 +294,12 @@ export default {
   }
 }
 
-.video {
-  width: 70%;
+.video,
+.slideShow {
+  width: 100%;
+  @include md-width() {
+    width: 70%;
+  }
   &__box {
     position: relative;
     //16:9
@@ -336,42 +362,48 @@ export default {
   }
   &__logo {
     margin: auto;
-  }
-  &__intro {
-    flex: 1;
-    margin-left: 15px;
     @include md-width() {
-      margin: 25px 0;
+      background: #333;
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      bottom: 0;
+      right: calc((100% - 80px) / 2);
     }
   }
 }
 
 .memberGroup {
-  margin: auto;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding: 0 40px;
   .member {
-    display: inline-block;
     width: 50%;
     overflow: hidden;
     position: relative;
     padding: 1rem;
     text-align: center;
     min-height: 250px;
+
     @include md-width() {
       width: 100%;
       text-align: left;
       min-height: 150px;
     }
     &__pic {
+      width: 100%;
       height: 3rem;
       background-color: gray;
-      max-width: 220px;
-      margin: auto;
       @include md-width() {
         height: 60px;
         background-color: gray;
         width: 180px;
         margin: 0 25px 0 0;
       }
+    }
+    &__text {
+      @include flex(1);
+      padding: 10px;
     }
     &__name {
       font-size: 20px;
@@ -401,8 +433,10 @@ export default {
   color: $exhibition-mainColor;
   font-weight: bold;
   writing-mode: vertical-lr;
+
   @include md-width() {
     margin-bottom: 3rem;
+    width: 100%;
   }
 }
 .intro-web {

@@ -33,3 +33,10 @@ $xl-media: 1200px;
     @content;
   }
 }
+
+//(for ie) flex:1
+@mixin flex($grow, $shrink: 1, $basis: 0) {
+  flex-grow: $grow;
+  flex-shrink: $shrink;
+  flex-basis: $basis;
+}

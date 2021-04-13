@@ -12,6 +12,7 @@ module.exports = {
     config.resolve.alias
       .set('@', resolve('src'))
       .set('@assets', resolve('src/assets'))
+      .set('@img', resolve('src/assets/img'))
       .set('@scss', resolve('src/scss'))
       .set('@utilis', resolve('src/scss/utilis'))
       .set('@data', resolve('src/data'));
@@ -37,7 +38,6 @@ module.exports = {
     };
   },
 
-  // 在打包之前，把 Variable 跟 mixin 加到其他 SCSS 檔之前
   css: {
     // extract: {
     //   // filename: 'css/[name].css',
@@ -45,6 +45,7 @@ module.exports = {
     // },
     sourceMap: IS_PROD,
     loaderOptions: {
+      // 在打包之前，把 Variable 跟 mixin 加到其他 SCSS 檔之前
       scss: {
         additionalData: `
           @import "~@utilis/_variable.scss";
