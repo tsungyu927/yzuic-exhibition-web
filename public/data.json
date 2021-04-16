@@ -63,39 +63,41 @@
       "instructor": "",
       "members": [
         {
-          "pic": "",
+          "id":"1-1",
+          "pic": "1-1_member",
           "name": "朱妤婷",
           "saying": "我"
         },
         {
-          "pic": "",
+          "id":"1-2",
+          "pic": "1-2_member",
           "name": "吳紫綾",
           "saying": "想"
         },
         {
-          "pic": "",
+          "id":"1-3",
+          "pic": "1-3_member",
           "name": "黃星淳",
           "saying": "要"
         },
         {
-          "pic": "",
+          "id":"1-4",
+          "pic": "1-4_member",
           "name": "蘇鈺棋",
           "saying": "畢"
         },
         {
-          "pic": "",
+          "id":"1-5",
+          "pic": "1-5_member",
           "name": "彭若綺",
           "saying": "業"
         }
       ],
-      "logo": "",
-      "poster": {
-        "vertical": "",
-        "horizontal": ""
-      },
-      "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["", "", ""],
-      "viedo": ""
+      "logo": "1_logo",
+      "poster": "1_poster",
+      "previewImg": ["1_previewImg-1", "1_previewImg-2", "1_previewImg-3", "1_previewImg-4", "1_previewImg-5", "1_previewImg-6"],
+      "teamImg": ["1_teamImg-1", "1_teamImg-2", "1_teamImg-3"],
+      "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
     },
     {
       "id": 2,
@@ -109,44 +111,47 @@
       "instructor": "",
       "members": [
         {
-          "pic": "",
+          "id":"2-1",
+          "pic": "2-1_member",
           "name": "徐秋沛",
           "saying": "沒努力過怎麼會知道那些努力的人的感受，沒有傷害沒有成長，就像你不知道你的組員開始做事的時候到底會拉你後腿還是推你一把，豬隊友和神隊友只有一道門之隔而已，他走過來要推要拉你不會知道。"
         },
         {
-          "pic": "",
+          "id":"2-2",
+          "pic": "2-2_member",
           "name": "張洛瑄",
           "saying": "桃花齊放，\n樹葉盛開，\n英姿煥發，\n雄心大志，\n工作之餘，\n作品成果，\n室內展覽。"
         },
         {
-          "pic": "",
+          "id":"2-3",
+          "pic": "2-3_member",
           "name": "林欣彤",
           "saying": "為期一學年的畢業製作，我們結合了從來沒使用過的VR跑步機，因此在過程中碰到了許多困難，當然也少不了組員間的摩擦，不過還是謝謝大家將近一年來的付出，大家都辛苦了。"
         },
         {
-          "pic": "",
+          "id":"2-4",
+          "pic": "2-4_member",
           "name": "邱雋",
           "saying": "大學的最後一年，我們設計了一款VR冒險遊戲，過程中我也獲益良多，了解到完成一件大型作品除了應具備的專業能力外，分工合作與時間分配也是不可或缺的一部分。"
         },
         {
-          "pic": "",
+          "id":"2-5",
+          "pic": "2-5_member",
           "name": "王嘉柔",
           "saying": "夏天來了，\n落葉歸根，\n特別淒涼，\n海波浪啊，\n底層恐懼，\n大山大海，\n冒起浪花，\n險象環生。"
         },
         {
-          "pic": "",
+          "id":"2-6",
+          "pic": "2-6_member",
           "name": "吳宜峻",
           "saying": "一般來講，我們都務必慎重的考慮再考慮。若能夠欣賞到畢製的美，相信我們一定會對畢製改觀。謹慎地來說，我們必須考慮到所有可能。"
         }
       ],
-      "logo": "",
-      "poster": {
-        "vertical": "",
-        "horizontal": ""
-      },
-      "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["", "", ""],
-      "viedo": ""
+      "logo": "2_logo",
+      "poster": "2_poster",
+      "previewImg": ["2_previewImg-1", "2_previewImg-2", "2_previewImg-3", "2_previewImg-4", "2_previewImg-5", "2_previewImg-6"],
+      "teamImg": ["2_teamImg-1", "2_teamImg-2", "2_teamImg-3"],
+      "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
     },
     {
       "id": 3,
@@ -160,39 +165,41 @@
       "instructor": "",
       "members": [
         {
-          "pic": "",
+          "id":"3-1",
+          "pic": "3-1_member",
           "name": "婷婷",
           "saying": "天堂有路你不走，地獄無門你自來？"
         },
         {
-          "pic": "",
+          "id":"3-2",
+          "pic": "3-2_member",
           "name": "蕙瑜",
           "saying": "佛系人生，緣分到了，就自然而然的生出來了"
         },
         {
-          "pic": "",
+          "id":"3-3",
+          "pic": "3-3_member",
           "name": "芳婷",
           "saying": "興趣全部被扼殺，阿彌陀佛"
         },
         {
-          "pic": "",
+          "id":"3-4",
+          "pic": "3-4_member",
           "name": "乃慈",
           "saying": "舉頭望明月，酒矸仔倘賣嘸"
         },
         {
-          "pic": "",
+          "id":"3-5",
+          "pic": "3-5_member",
           "name": "羽羚",
           "saying": "人生無常，記得備份存檔"
         }
       ],
-      "logo": "",
-      "poster": {
-        "vertical": "",
-        "horizontal": ""
-      },
-      "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["", "", ""],
-      "viedo": ""
+      "logo": "3_logo",
+      "poster": "3_poster",
+      "previewImg": ["3_previewImg-1", "3_previewImg-2", "3_previewImg-3", "3_previewImg-4", "3_previewImg-5", "3_previewImg-6"],
+      "teamImg": ["3_teamImg-1", "3_teamImg-2", "3_teamImg-3"],
+      "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
     },
     {
       "id": 4,
@@ -206,44 +213,47 @@
       "instructor": "",
       "members": [
         {
-          "pic": "",
+          "id":"4-1",
+          "pic": "4-1_member",
           "name": "吳承翰",
           "saying": "在這一年中，經歷風風雨雨，不管怎麼樣，我們好不容易撐過了這最辛苦的一年；我相信大家的努力會結出果實，這是踏向職場前的最後一課，期望大家可以在未來的工作生活中找到哪怕只是一點點的熱情，付出就足夠了。\n感謝各位的陪伴，辛苦了。"
         },
         {
-          "pic": "",
+          "id":"4-2",
+          "pic": "4-2_member",
           "name": "陳昱傑",
           "saying": "老子沒有哭 只是眼睛起了霧"
         },
         {
-          "pic": "",
+          "id":"4-3",
+          "pic": "4-3_member",
           "name": "邱云",
           "saying": "本人我，是連小恐龍都玩不到一分鐘就會死掉的遊戲白痴。（超有說服力der）大學四年，看著歷屆學長姐的作品，每年都在思考自己以後要做什麼。想過動畫、想過互動、想過行銷，但就從來沒想過要做遊戲。我只能說...再讓我選一次，我一定乖乖去畫動畫就好：）"
         },
         {
-          "pic": "",
+          "id":"4-4",
+          "pic": "4-4_member",
           "name": "李知樺",
           "saying": "各位大四資傳的學生們辛苦了，感謝所有同學的互相幫助讓這次畢展順利執行，也謝謝組內同學互相扶持與包容。"
         },
         {
-          "pic": "",
+          "id":"4-5",
+          "pic": "4-5_member",
           "name": "陳為朋",
           "saying": "在這個團隊裡，組員們總是互相包容及體諒，大家各司其職的做好自己份內的工作後也能互相幫忙並努力讓我們的作品更好，真的太感謝也辛苦大家了！也謝謝畢籌的同學對畢展的盡心盡力，努力為我們辦好這個大學四年所學的成果展覽。"
         },
         {
-          "pic": "",
+          "id":"4-6",
+          "pic": "4-6_member",
           "name": "陳廷昱",
           "saying": "每個人都好認真，你們最棒惹"
         }
       ],
-      "logo": "",
-      "poster": {
-        "vertical": "",
-        "horizontal": ""
-      },
-      "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["", "", ""],
-      "viedo": ""
+      "logo": "4_logo",
+      "poster": "4_poster",
+      "previewImg": ["4_previewImg-1", "4_previewImg-2", "4_previewImg-3", "4_previewImg-4", "4_previewImg-5", "4_previewImg-6"],
+      "teamImg": ["4_teamImg-1", "4_teamImg-2", "4_teamImg-3"],
+      "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
     },
     {
       "id": 5,
@@ -257,43 +267,46 @@
       "instructor": "黃怡錚,陳崇文",
       "members": [
         {
-          "pic": "",
+          "id":"5-1",
+          "pic": "5-1_member",
           "name": "高筱婷",
           "saying": "尼瑪我眼睛快沒辦法對焦了"
         },
         {
-          "pic": "",
+          "id":"5-2",
+          "pic": "5-2_member",
           "name": "吳憶嫺",
           "saying": "好想吃冰旋風"
         },
         {
-          "pic": "",
+          "id":"5-3",
+          "pic": "5-3_member",
           "name": "許國彬",
           "saying": "戰場好玩!"
         },
         {
-          "pic": "",
+          "id":"5-4",
+          "pic": "5-4_member",
           "name": "簡琮育",
           "saying": "天亮著進去，天黑才出來，在一館地下室做畢製做到快發霉，但時間真的過得好快，每天都有新的挑戰，新的bug要修，希望我們可以活著畢業，做出理想中的作品。"
         },
         {
-          "pic": "",
+          "id":"5-5",
+          "pic": "5-5_member",
           "name": "謝尚逸",
           "saying": "每天睡到中午過後再進去工作室待到半夜，就是這麼樸實無華且枯燥"
         },
         {
-          "pic": "",
+          "id":"5-6",
+          "pic": "5-6_member",
           "name": "陳宜姍",
           "saying": "我的組員都好強 我就是個廢物( ´▽｀) 畢制不好玩"
         }
       ],
-      "logo": "",
-      "poster": {
-        "vertical": "",
-        "horizontal": ""
-      },
-      "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["", "", ""],
+      "logo": "5_logo",
+      "poster": "5_poster",
+      "previewImg": ["5_previewImg-1", "5_previewImg-2", "5_previewImg-3", "5_previewImg-4", "5_previewImg-5", "5_previewImg-6"],
+      "teamImg": ["5_teamImg-1", "5_teamImg-2", "5_teamImg-3"],
       "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
     },
     {
@@ -308,34 +321,35 @@
       "instructor": "",
       "members": [
         {
-          "pic": "",
+          "id":"6-1",
+          "pic": "6-1_member",
           "name": "郭展成",
           "saying": "這是一個不錯的經驗，在這種東拼西湊的團隊中作為領導做事，得到了帶團隊的經驗，面對不配合的成員時該如何對待他們，做出最有效率的對自己最好的選擇"
         },
         {
-          "pic": "",
+          "id":"6-2",
+          "pic": "6-2_member",
           "name": "林琮智",
           "saying": "我覺得畢業製作最終成功與否並不是重點，光是和他人針對畢業製作一同討論、一起交流意見，這些對我來說才是最重要的學習要素，即便成果或許不甚理想，但只要經歷過這次的體驗，相信下次我參與任何一項團隊合作活動能夠處理地更加完善。"
         },
         {
-          "pic": "",
+          "id":"6-3",
+          "pic": "6-3_member",
           "name": "許文騰",
           "saying": "畢業製作是很多大學生畢業之前所需要面臨的課題，在面對畢製時，表面上是想辦法交出一個還不錯的作品，實際上更為重要的是我們能在過程中學到什麼，是否能將學到的東西用在未來的工作，甚至是學習到對你人生有幫助的處事態度與方法，是更為重要的"
         },
         {
-          "pic": "",
+          "id":"6-4",
+          "pic": "6-4_member",
           "name": "曹文育",
           "saying": ""
         }
       ],
-      "logo": "",
-      "poster": {
-        "vertical": "",
-        "horizontal": ""
-      },
-      "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["", "", ""],
-      "viedo": ""
+      "logo": "6_logo",
+      "poster": "6_poster",
+      "previewImg": ["6_previewImg-1", "6_previewImg-2", "6_previewImg-3", "6_previewImg-4", "6_previewImg-5", "6_previewImg-6"],
+      "teamImg": ["6_teamImg-1", "6_teamImg-2", "6_teamImg-3"],
+      "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
     },
     {
       "id": 7,
@@ -349,44 +363,47 @@
       "instructor": "",
       "members": [
         {
-          "pic": "",
+          "id":"7-1",
+          "pic": "7-1_member",
           "name": "顏崇育",
           "saying": "這三年一路走來，懵懵懂懂、跌跌撞撞，現在終於進入大學的尾聲，而畢製是我們的最後一道關卡，我們的畢生所學都在「此刻」一同綻放，成為一朵朵「變態」之花，並迎來嶄新的人生！"
         },
         {
-          "pic": "",
+          "id":"7-2",
+          "pic": "7-2_member",
           "name": "高維隆",
           "saying": "有點小累，特別是在構想模型時，要一直盯著電腦看。"
         },
         {
-          "pic": "",
+          "id":"7-3",
+          "pic": "7-3_member",
           "name": "曾譯賢",
           "saying": "畢業快樂~"
         },
         {
-          "pic": "",
+          "id":"7-4",
+          "pic": "7-4_member",
           "name": "杜妍",
           "saying": "成為遊戲組的一員是我以前從未想過的事情。作為程式白痴和遊戲白痴，看著一個遊戲逐漸成形的感覺很奇妙。接近一年的時間去原創一樣東西，是作為學生甚至是個人都非常珍貴的機會。在這期間觸碰到的擅長或不擅長的，都會讓我思索尋找自己的定位。"
         },
         {
-          "pic": "",
+          "id":"7-5",
+          "pic": "7-5_member",
           "name": "蔡紘煜",
           "saying": "做模型的過程遇到了蠻多細節上的困難，想做出有特色不單調的模型實在不容易，時常遇到創意乾枯的情況。"
         },
         {
-          "pic": "",
+          "id":"7-6",
+          "pic": "7-6_member",
           "name": "管峻賢",
           "saying": "()相關的知識都沒有，()真的很累。"
         }
       ],
-      "logo": "",
-      "poster": {
-        "vertical": "",
-        "horizontal": ""
-      },
-      "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["", "", ""],
-      "viedo": ""
+      "logo": "7_logo",
+      "poster": "7_poster",
+      "previewImg": ["7_previewImg-1", "7_previewImg-2", "7_previewImg-3", "7_previewImg-4", "7_previewImg-5", "7_previewImg-6"],
+      "teamImg": ["7_teamImg-1", "7_teamImg-2", "7_teamImg-3"],
+      "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
     },
     {
       "id": 8,
@@ -400,44 +417,47 @@
       "instructor": "",
       "members": [
         {
-          "pic": "",
+          "id":"8-1",
+          "pic": "8-1_member",
           "name": "徐寶萱",
           "saying": "創作過程最初追求寫實，最終動物變Q版、植物用光影及配色達成寫實特色兼具、介面兼顧Icon辨識合理及美觀，配合場景不能被場景吃掉、程式結合美術、讓人臉辨識成功運行每天都在奮戰。希望此刻的努力回饋給我們想要的變態，大家辛苦了。"
         },
         {
-          "pic": "",
+          "id":"8-2",
+          "pic": "8-2_member",
           "name": "林凡雅",
           "saying": "透過這次畢業製作我瞭解到，美術設計和程式端的整合十分不容易，且由於技術、時間、人力等問題，許多功能、設計需要在理想與現實之間做取捨。\n這次的作品是第一次接觸2D捲軸遊戲，雖然過程很艱辛，但也讓我更認識遊戲的製作流程。"
         },
         {
-          "pic": "",
+          "id":"8-3",
+          "pic": "8-3_member",
           "name": "林欣儒",
           "saying": "辛苦了！肚子有點餓。"
         },
         {
-          "pic": "",
+          "id":"8-4",
+          "pic": "8-4_member",
           "name": "王宥琦",
           "saying": "以前都是完成小的作品，現在和大家一起完成一個畢製，過程中遇到很多問題，技術問題人力問題溝通的問題，讓我了解團隊合作有多麼不容易，還好大家都還是堅持到最後一起完成，希望畢製可以圓滿落幕"
         },
         {
-          "pic": "",
+          "id":"8-5",
+          "pic": "8-5_member",
           "name": "梁文偉",
           "saying": "獲益良多"
         },
         {
-          "pic": "",
+          "id":"8-6",
+          "pic": "8-6_member",
           "name": "丁怡瑄",
           "saying": "跟以前單純自己做不同，必須配合組員的要求完成專題，常常會有自己的電腦執行沒問題但是別人的電腦執行卻出現bug，花了很多時間學習怎麼解決。"
         }
       ],
-      "logo": "",
-      "poster": {
-        "vertical": "",
-        "horizontal": ""
-      },
-      "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["", "", ""],
-      "viedo": ""
+      "logo": "8_logo",
+      "poster": "8_poster",
+      "previewImg": ["8_previewImg-1", "8_previewImg-2", "8_previewImg-3", "8_previewImg-4", "8_previewImg-5", "8_previewImg-6"],
+      "teamImg": ["8_teamImg-1", "8_teamImg-2", "8_teamImg-3"],
+      "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
     },
     {
       "id": 9,
@@ -451,39 +471,41 @@
       "instructor": "",
       "members": [
         {
-          "pic": "",
+          "id":"9-1",
+          "pic": "9-1_member",
           "name": "珮瑄",
           "saying": "我現在不是人，是一隻只會寫程式的狗，汪汪。"
         },
         {
-          "pic": "",
+          "id":"9-2",
+          "pic": "9-2_member",
           "name": "宣妤",
           "saying": "汪汪汪汪汪汪，汪汪汪汪汪汪汪汪汪汪，汪汪。"
         },
         {
-          "pic": "",
+          "id":"9-3",
+          "pic": "9-3_member",
           "name": "晉瑜",
           "saying": "啵啵啵啵啵啵！"
         },
         {
-          "pic": "",
+          "id":"9-4",
+          "pic": "9-4_member",
           "name": "亞褕",
           "saying": "喵喵喵喵喵喵！"
         },
         {
-          "pic": "",
+          "id":"9-5",
+          "pic": "9-5_member",
           "name": "郁萱",
           "saying": "謝謝大家，我愛大家，大家最棒（ㄍㄨㄞˋ）了。"
         }
       ],
-      "logo": "",
-      "poster": {
-        "vertical": "",
-        "horizontal": ""
-      },
-      "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["", "", ""],
-      "viedo": ""
+      "logo": "9_logo",
+      "poster": "9_poster",
+      "previewImg": ["9_previewImg-1", "9_previewImg-2", "9_previewImg-3", "9_previewImg-4", "9_previewImg-5", "9_previewImg-6"],
+      "teamImg": ["9_teamImg-1", "9_teamImg-2", "9_teamImg-3"],
+      "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
     },
     {
       "id": 10,
@@ -497,44 +519,47 @@
       "instructor": "",
       "members": [
         {
-          "pic": "",
+          "id":"10-1",
+          "pic": "10-1_member",
           "name": "林楚倩",
           "saying": ""
         },
         {
-          "pic": "",
+          "id":"10-2",
+          "pic": "10-2_member",
           "name": "嚴浩恩",
           "saying": "能睡就好"
         },
         {
-          "pic": "",
+          "id":"10-3",
+          "pic": "10-3_member",
           "name": "賴瑞玟",
           "saying": "Live2D skill level up_(´ཀ`」∠)_(在此播放Ϝ!nα|Ϝαnταsγ系列的升等BGM)"
         },
         {
-          "pic": "",
+          "id":"10-4",
+          "pic": "10-4_member",
           "name": "陳治嘉",
           "saying": "組員消失一隻～辛苦我們的美術惹！"
         },
         {
-          "pic": "",
+          "id":"10-5",
+          "pic": "10-5_member",
           "name": "盧柏魁",
           "saying": "關卡設計好難，組員不見也好難"
         },
         {
-          "pic": "",
+          "id":"10-6",
+          "pic": "10-6_member",
           "name": "蔡連誠",
           "saying": "懸賞1F一億貝里"
         }
       ],
-      "logo": "",
-      "poster": {
-        "vertical": "",
-        "horizontal": ""
-      },
-      "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["", "", ""],
-      "viedo": ""
+      "logo": "10_logo",
+      "poster": "10_poster",
+      "previewImg": ["10_previewImg-1", "10_previewImg-2", "10_previewImg-3", "10_previewImg-4", "10_previewImg-5", "10_previewImg-6"],
+      "teamImg": ["10_teamImg-1", "10_teamImg-2", "10_teamImg-3"],
+      "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
     },
     {
       "id": 11,
@@ -548,44 +573,47 @@
       "instructor": "",
       "members": [
         {
-          "pic": "",
+          "id":"11-1",
+          "pic": "11-1_member",
           "name": "李鴻德",
           "saying": "在這次的畢業製作中，說老實話我本身就是個短板，很感謝團隊裡每個人的用心，即便我能力不強，透過他們的合作和幫助，讓我也能一起把遊戲做出來，中間有發生很多令大家頭痛的事，不過多虧他們在才能一一解決，能和他們一起做畢製是我大四最幸福的事"
         },
         {
-          "pic": "",
+          "id":"11-2",
+          "pic": "11-2_member",
           "name": "謝淳安",
           "saying": "興趣變成工作般的例行公事後就不那麼美好了"
         },
         {
-          "pic": "",
+          "id":"11-3",
+          "pic": "11-3_member",
           "name": "羅家穎",
           "saying": "展覽結束我沒禿都是奇蹟。"
         },
         {
-          "pic": "",
+          "id":"11-4",
+          "pic": "11-4_member",
           "name": "張印和",
           "saying": "https://youtu.be/dQw4w9WgXcQ"
         },
         {
-          "pic": "",
+          "id":"11-5",
+          "pic": "11-5_member",
           "name": "張翔雲",
           "saying": "我的肝總在深夜裡流淚"
         },
         {
-          "pic": "",
+          "id":"11-6",
+          "pic": "11-6_member",
           "name": "郭青雲",
           "saying": "鴻德可以順便幫我打心得嗎？"
         }
       ],
-      "logo": "",
-      "poster": {
-        "vertical": "",
-        "horizontal": ""
-      },
-      "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["", "", ""],
-      "viedo": ""
+      "logo": "11_logo",
+      "poster": "11_poster",
+      "previewImg": ["11_previewImg-1", "11_previewImg-2", "11_previewImg-3", "11_previewImg-4", "11_previewImg-5", "11_previewImg-6"],
+      "teamImg": ["11_teamImg-1", "11_teamImg-2", "11_teamImg-3"],
+      "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
     },
     {
       "id": 12,
@@ -599,44 +627,47 @@
       "instructor": "",
       "members": [
         {
-          "pic": "",
+          "id":"12-1",
+          "pic": "12-1_member",
           "name": "葉芃妘",
           "saying": "「宮夜隔命」提案的發想來自於組員們共同玩的手遊，其實提案的發想很新穎，以精子的旅程作為作品核心，其實整個發想的過程我都非常的喜歡，覺得是非常有趣的，但對於畢製的憧憬總是美好的，現實卻也是殘酷的，過程中遇到了各式各樣的問題，我們也不得不妥協，雖然最後呈現的作品未必如起初的想像那樣，卻也是值得驕傲的成果。"
         },
         {
-          "pic": "",
+          "id":"12-2",
+          "pic": "12-2_member",
           "name": "雷易瑾",
           "saying": "以前作為一個參觀者或體驗者來說，並不會想到一件完整的作品的背後，創作者或團隊是需要考慮、付出多少心思，才能將作品最好的一面呈現出來。經由畢製過程，我們一步步學習、解決困難，直到看見我們的理想實現，每個人都是不可缺少的部份。"
         },
         {
-          "pic": "",
+          "id":"12-3",
+          "pic": "12-3_member",
           "name": "查品亘",
           "saying": "在這一整年中不斷反覆的製作、修改、調整，雖然有時候會感到疲倦、煩躁、焦慮，但與之並隨的那份完成後的滿足，帶來了在這當中很大的喜悅和力量。很喜歡每一個人用著各自所會的，相互配合與呼應，一起合作、完成、成長。雖然感覺短暫，卻也是在大學四年中最珍貴的一年。"
         },
         {
-          "pic": "",
+          "id":"12-4",
+          "pic": "12-4_member",
           "name": "劉采綺",
           "saying": "挑選元件時，怎麼做到低成本，不製造多餘的浪費，提前想好流程很重要，怎麼設計、規劃每個細節，怎麼跟組員溝通、傳達意見，心平氣和。老師給了我們方向，並且引導我們去做任何嘗試，第一次自己的作品，沒有任何捷徑，只能靠自己實作。最充實的一年，盡全力的自己！"
         },
         {
-          "pic": "",
+          "id":"12-5",
+          "pic": "12-5_member",
           "name": "黃韋婷",
           "saying": "從跨媒到畢製這個組合沒有誰退出，也沒有新血加入，對於整個過程和我們的組員真的是又愛又恨。溝通、團結、耐心很重要！主題跟裝置不斷的在更新，組員也從相親相愛到相愛相殺，但是很幸運我的組員是你們還有指導老師們，歐耶！"
         },
         {
-          "pic": "",
+          "id":"12-6",
+          "pic": "12-6_member",
           "name": "黃柏瀚",
           "saying": "維持一年的畢製感覺在不知不覺間就要結束了，想當初我們幾乎天天都要去借教室不斷重複提案，好不容易決定好要做互動裝置後，要再克服許多裝置上的問題，熬過了許多阻礙後，現在終於要進入最後階段了，希望可以順利完成不要明年再見。"
         }
       ],
-      "logo": "",
-      "poster": {
-        "vertical": "",
-        "horizontal": ""
-      },
-      "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["", "", ""],
-      "viedo": ""
+      "logo": "12_logo",
+      "poster": "12_poster",
+      "previewImg": ["12_previewImg-1", "12_previewImg-2", "12_previewImg-3", "12_previewImg-4", "12_previewImg-5", "12_previewImg-6"],
+      "teamImg": ["12_teamImg-1", "12_teamImg-2", "12_teamImg-3"],
+      "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
     },
     {
       "id": 13,
@@ -650,44 +681,47 @@
       "instructor": "",
       "members": [
         {
-          "pic": "",
+          "id":"13-1",
+          "pic": "13-1_member",
           "name": "泰安",
           "saying": "大家都好棒啦也辛苦了，好想趕快完成歐但又有點不想畢業ㄝ然後好想打球!"
         },
         {
-          "pic": "",
+          "id":"13-2",
+          "pic": "13-2_member",
           "name": "詩庭",
           "saying": "畢製真的好累。即使在未知的領域不斷踩坑，還是會努力爬起來QQ。"
         },
         {
-          "pic": "",
+          "id":"13-3",
+          "pic": "13-3_member",
           "name": "冬雪",
           "saying": "從小畢製到大畢製同一個陣容，幸好這些人都好好笑，不然畢製做到後面真的要吐血了，我必須告訴自己：結束後我一定要喝爆（飲料之類的）！才讓我有動力前進…講認真的，我真的很感激跟大家一起奮鬥的這段日子，這一年我吸收到很多很有價值的事，畢業後一定會懷念這些時光的～"
         },
         {
-          "pic": "",
+          "id":"13-4",
+          "pic": "13-4_member",
           "name": "宥蓁",
           "saying": "已經忘記上次12點前睡覺是什麼時候了，每天都在熬夜，膠原蛋白每天都在流失！！"
         },
         {
-          "pic": "",
+          "id":"13-5",
+          "pic": "13-5_member",
           "name": "文蔚",
           "saying": "每天睜眼到闔眼都在用電腦 需要滿滿的葉黃素 為了順（不）利（被）畢（罵）業（爆） 拿命在拼，好想放假睡整整三天啊啊啊啊啊啊"
         },
         {
-          "pic": "",
+          "id":"13-6",
+          "pic": "13-6_member",
           "name": "芷誼",
           "saying": "結束後要整骨按摩、補眠補肝、檢查視力、不醉不歸！誰...都...不..要..逼..我...打..開..電腦優(＊◕ᴗ◕＊)"
         }
       ],
       "logo": "13_logo",
-      "poster": {
-        "vertical": "13_poster",
-        "horizontal": "13_poster"
-      },
-      "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["13_teamImg-1", "13_teamImg-2", ""],
-      "viedo": ""
+      "poster": "13_poster",
+      "previewImg": ["13_previewImg-1", "13_previewImg-2", "13_previewImg-3", "13_previewImg-4", "13_previewImg-5", "13_previewImg-6"],
+      "teamImg": ["13_teamImg-1", "13_teamImg-2", "13_teamImg-3"],
+      "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
     },
     {
       "id": 14,
@@ -701,44 +735,47 @@
       "instructor": "",
       "members": [
         {
-          "pic": "",
+          "id":"14-1",
+          "pic": "14-1_member",
           "name": "李若彤",
           "saying": "起司起司起司！747474！即使每天都在跟起司奮鬥，我還是喜歡吃起司！"
         },
         {
-          "pic": "",
+          "id":"14-2",
+          "pic": "14-2_member",
           "name": "黃心怡",
           "saying": "鑽起司得好運！希望這個裝置能讓大家獲得喜悅"
         },
         {
-          "pic": "",
+          "id":"14-3",
+          "pic": "14-3_member",
           "name": "張宇茜",
           "saying": "每件事情實際做起來發現並沒有想像的輕鬆，過程中學習很多以前沒接觸的領域，非常的有成就感"
         },
         {
-          "pic": "",
+          "id":"14-4",
+          "pic": "14-4_member",
           "name": "鍾佳蓉",
           "saying": "畢製雖然真的很累很辛苦！差點要好運氣死！不過能夠和大家一起完成最後的畢制真的很幸運也很開心～辛苦了我的組員們！"
         },
         {
-          "pic": "",
+          "id":"14-5",
+          "pic": "14-5_member",
           "name": "孫崇勛",
           "saying": "哈囉大家好，我是資傳4B孫崇勛，也可以叫我Leo。我的星座是摩羯座，血型B型，有雙眼皮"
         },
         {
-          "pic": "",
+          "id":"14-6",
+          "pic": "14-6_member",
           "name": "應淯文",
           "saying": "也許我們不是最有天份，但是我們總是可以當最努力的那一個"
         }
       ],
-      "logo": "",
-      "poster": {
-        "vertical": "",
-        "horizontal": ""
-      },
-      "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["", "", ""],
-      "viedo": ""
+      "logo": "14_logo",
+      "poster": "14_poster",
+      "previewImg": ["14_previewImg-1", "14_previewImg-2", "14_previewImg-3", "14_previewImg-4", "14_previewImg-5", "14_previewImg-6"],
+      "teamImg": ["14_teamImg-1", "14_teamImg-2", "14_teamImg-3"],
+      "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
     },
     {
       "id": 16,
@@ -752,44 +789,47 @@
       "instructor": "",
       "members": [
         {
-          "pic": "",
+          "id":"16-1",
+          "pic": "16-1_member",
           "name": "鍾育翎",
           "saying": "哞～～"
         },
         {
-          "pic": "",
+          "id":"16-2",
+          "pic": "16-2_member",
           "name": "蘇鴻",
           "saying": "今天是3月10號，離展覽只剩一個月"
         },
         {
-          "pic": "",
+          "id":"16-3",
+          "pic": "16-3_member",
           "name": "卓榮祥",
           "saying": "不是吧，一個月都不到，今天3/20表單也還沒填完，我們似乎"
         },
         {
-          "pic": "",
+          "id":"16-4",
+          "pic": "16-4_member",
           "name": "李佳穎",
           "saying": "尚未解脫，看來"
         },
         {
-          "pic": "",
+          "id":"16-5",
+          "pic": "16-5_member",
           "name": "陳竹妗",
           "saying": "革命尚未成功、同志仍須努力"
         },
         {
-          "pic": "",
+          "id":"16-6",
+          "pic": "16-6_member",
           "name": "林洧盈",
           "saying": "各位！！     BE    POSITIVE ！！"
         }
       ],
-      "logo": "",
-      "poster": {
-        "vertical": "",
-        "horizontal": ""
-      },
-      "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["", "", ""],
-      "viedo": ""
+      "logo": "16_logo",
+      "poster": "16_poster",
+      "previewImg": ["16_previewImg-1", "16_previewImg-2", "16_previewImg-3", "16_previewImg-4", "16_previewImg-5", "16_previewImg-6"],
+      "teamImg": ["16_teamImg-1", "16_teamImg-2", "16_teamImg-3"],
+      "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
     },
     {
       "id": 17,
@@ -803,44 +843,47 @@
       "instructor": "",
       "members": [
         {
-          "pic": "",
+          "id":"17-1",
+          "pic": "17-1_member",
           "name": "楊舒涵",
           "saying": "能融入自己一直以來都很喜歡的「聲音」作為主要元素，真的相當開心。雖然，當中遇到了不少困難，謝謝組員一年來的包容，及每次充滿火花的討論，衝撞出大學時代最後的作品，讓大學生活圓滿落幕（雖然英檢的部分可能比較不美滿啦）。"
         },
         {
-          "pic": "",
+          "id":"17-2",
+          "pic": "17-2_member",
           "name": "劉羽芳",
           "saying": "其實……互動組並不是我的第一志願，只是抱持著好奇、新鮮的心態挑戰，發覺需要大量手作的東西更有趣。將近一年的時間，有說有笑有哭有鬧，一步步完成我們的作品，在這過程中最擔心的並非作品做不完，而是終於通過多益，可以放心畢業了！YA"
         },
         {
-          "pic": "",
+          "id":"17-3",
+          "pic": "17-3_member",
           "name": "蔡維仁",
           "saying": "集結了大學四年的精隨，一次釋放在這次的畢業製作中。除了將四年來的所學的東西都應用在製作上，當然也有許多是從未碰過的技術，像是要學習木工技術、搭建展場等等，都是前所未有的體驗。"
         },
         {
-          "pic": "",
+          "id":"17-4",
+          "pic": "17-4_member",
           "name": "楊歆儀",
           "saying": "從大一開始就常有老師說我們缺乏實做能力，太習慣坐在電腦前想像。做了畢製後我終於懂了，我不會架投影機，我只會架變形金剛。"
         },
         {
-          "pic": "",
+          "id":"17-5",
+          "pic": "17-5_member",
           "name": "李明軒",
           "saying": "畢製前沒有什麼方向，跟著也要做互動的同學一組，有些空洞，直到「工作室」的出現一切具象化了起來，加上我找到專長「搭展場」，全新的事物，跟其他組別的人交流討論下，畢製變得十分有趣，希望一切順利。"
         },
         {
-          "pic": "",
+          "id":"17-6",
+          "pic": "17-6_member",
           "name": "陳晁傑",
           "saying": "專題製作總算接近尾聲了，在過程中我主要負責程式編寫，常常半夜坐在電腦前，不是寫JavaScript就是在寫arduino，偶爾還會忘記怎麼跟人類溝通。希望經過這段時間的努力，我們的作品可以順利呈現，大家加油！"
         }
       ],
-      "logo": "",
-      "poster": {
-        "vertical": "",
-        "horizontal": ""
-      },
-      "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["", "", ""],
-      "viedo": ""
+      "logo": "17_logo",
+      "poster": "17_poster",
+      "previewImg": ["17_previewImg-1", "17_previewImg-2", "17_previewImg-3", "17_previewImg-4", "17_previewImg-5", "17_previewImg-6"],
+      "teamImg": ["17_teamImg-1", "17_teamImg-2", "17_teamImg-3"],
+      "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
     },
     {
       "id": 18,
@@ -854,39 +897,41 @@
       "instructor": "",
       "members": [
         {
-          "pic": "",
+          "id":"18-1",
+          "pic": "18-1_member",
           "name": "劉楷珉",
           "saying": "讚啦!!"
         },
         {
-          "pic": "",
+          "id":"18-2",
+          "pic": "18-2_member",
           "name": "葉珈彤",
           "saying": "你所煩惱的事，有九成都會發生。"
         },
         {
-          "pic": "",
+          "id":"18-3",
+          "pic": "18-3_member",
           "name": "林言秉",
           "saying": "我此生沒想過做出一個畢製竟然要會縫紉，又要會木工，或是更多，用尬咪咪帽帽，嚇爆！"
         },
         {
-          "pic": "",
+          "id":"18-4",
+          "pic": "18-4_member",
           "name": "張羽",
           "saying": "同志們撐下去剩不到一個月!!辛苦了!!!! 辛苦了!!!! 辛苦了!!!!"
         },
         {
-          "pic": "",
+          "id":"18-5",
+          "pic": "18-5_member",
           "name": "謝敏",
           "saying": "一生只要體驗一次呦🥺謝謝各位～"
         }
       ],
-      "logo": "",
-      "poster": {
-        "vertical": "",
-        "horizontal": ""
-      },
-      "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["", "", ""],
-      "viedo": ""
+      "logo": "18_logo",
+      "poster": "18_poster",
+      "previewImg": ["18_previewImg-1", "18_previewImg-2", "18_previewImg-3", "18_previewImg-4", "18_previewImg-5", "18_previewImg-6"],
+      "teamImg": ["18_teamImg-1", "18_teamImg-2", "18_teamImg-3"],
+      "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
     },
     {
       "id": 19,
@@ -900,44 +945,47 @@
       "instructor": "",
       "members": [
         {
-          "pic": "",
+          "id":"19-1",
+          "pic": "19-1_member",
           "name": "簡伯諺",
           "saying": "這次是我第一次擔任劇情片的導演，對於拍攝上面及編劇上面的事情，都是第一次接觸，過程中經歷了許多困難，但在老師及組員們的幫助之下，都一一克服了，這次的作品對我來說是一個開始，希望有了這次的經驗後，在未來的路上可以越來越好。"
         },
         {
-          "pic": "",
+          "id":"19-2",
+          "pic": "19-2_member",
           "name": "謝明軒",
           "saying": "第一次擔任製片的角色，工作內容好像也比想像中的更多樣，不論是前期、拍攝期、後期，每一時間都有著處理不完的事情。而讓我最印象深刻的是和演員的溝通，從原本陌生又尷尬的氛圍，到最後變成能夠互相的體諒，這也是我最珍惜和喜歡的。"
         },
         {
-          "pic": "",
+          "id":"19-3",
+          "pic": "19-3_member",
           "name": "林語萱",
           "saying": "這次主要負責的部分是美術，因為是畢業製作，所以規模較於以往的作品又更大了些，從前製到後製，需要美術的部分非常多，像是畫視覺概念圖、服裝設定到調色、展場設計等等。對我來說都蠻新鮮的，也藉此讓我更了解電影美術這個領域。"
         },
         {
-          "pic": "",
+          "id":"19-4",
+          "pic": "19-4_member",
           "name": "蔡奕箴",
           "saying": "本身對於拍片就有一些興趣，透過大四的畢業製作與幾個同學組成一組來完成一部劇情片；在片場中我是負責攝影的職位，平時拍靜態，這次是挑戰拍攝動態，是另外一種全新的感受，透過這次拍片學到了很多的技巧，與各職位的互相合作。"
         },
         {
-          "pic": "",
+          "id":"19-5",
+          "pic": "19-5_member",
           "name": "張嘉玲",
           "saying": "畢製拍片第一次負責燈光部份，從零開始學習，現在學到一些拍攝專用燈光是如何操作，跟想像中差蠻遠的，初期也遇到很多困難。以拍片來說人員偏少，還好組員們會互相幫忙，還有學長姐學弟妹的幫忙，畢製真的學習到蠻多的。"
         },
         {
-          "pic": "",
+          "id":"19-6",
+          "pic": "19-6_member",
           "name": "林庚翰",
           "saying": "第一次參與拍攝微電影的作業團隊，很多東西是第一次接觸，一開始有著很多畏懼和無知，隨著時間往前推進，自己也跟著往前進步的感受很明顯，從一開始什麼都沒看過到可以幫別人解決的成就感也誕生了，算是竭盡所能的為團隊提供體力及腦力。"
         }
       ],
-      "logo": "",
-      "poster": {
-        "vertical": "",
-        "horizontal": ""
-      },
-      "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["", "", ""],
-      "viedo": ""
+      "logo": "19_logo",
+      "poster": "19_poster",
+      "previewImg": ["19_previewImg-1", "19_previewImg-2", "19_previewImg-3", "19_previewImg-4", "19_previewImg-5", "19_previewImg-6"],
+      "teamImg": ["19_teamImg-1", "19_teamImg-2", "19_teamImg-3"],
+      "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
     },
     {
       "id": 20,
@@ -951,44 +999,47 @@
       "instructor": "",
       "members": [
         {
-          "pic": "",
+          "id":"20-1",
+          "pic": "20-1_member",
           "name": "黃紀嘉",
           "saying": "我有錢人啦！"
         },
         {
-          "pic": "",
+          "id":"20-2",
+          "pic": "20-2_member",
           "name": "王柔樺",
           "saying": "計畫趕不上變化。"
         },
         {
-          "pic": "",
+          "id":"20-3",
+          "pic": "20-3_member",
           "name": "蕭郁蓓",
           "saying": "錢能解決的問題都不是問題！"
         },
         {
-          "pic": "",
+          "id":"20-4",
+          "pic": "20-4_member",
           "name": "曾櫳慧",
           "saying": "學習永無止盡，熬夜是常態，人情世故皆學問，心態和平成就事。"
         },
         {
-          "pic": "",
+          "id":"20-5",
+          "pic": "20-5_member",
           "name": "陳嘉儀",
           "saying": "我們隨便一個人都贏過你們一隻水母。"
         },
         {
-          "pic": "",
+          "id":"20-6",
+          "pic": "20-6_member",
           "name": "鍾靜妮",
           "saying": "免費的最貴。"
         }
       ],
-      "logo": "",
-      "poster": {
-        "vertical": "",
-        "horizontal": ""
-      },
-      "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["", "", ""],
-      "viedo": ""
+      "logo": "20_logo",
+      "poster": "20_poster",
+      "previewImg": ["20_previewImg-1", "20_previewImg-2", "20_previewImg-3", "20_previewImg-4", "20_previewImg-5", "20_previewImg-6"],
+      "teamImg": ["20_teamImg-1", "20_teamImg-2", "20_teamImg-3"],
+      "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
     },
     {
       "id": 21,
@@ -1002,39 +1053,41 @@
       "instructor": "",
       "members": [
         {
-          "pic": "",
+          "id":"21-1",
+          "pic": "21-1_member",
           "name": "李孟珊",
           "saying": "創造了抱豹是我最開心的事情~希望大家也能喜歡!"
         },
         {
-          "pic": "",
+          "id":"21-2",
+          "pic": "21-2_member",
           "name": "吳憶涵",
           "saying": "要延畢惹"
         },
         {
-          "pic": "",
+          "id":"21-3",
+          "pic": "21-3_member",
           "name": "王愉涵",
           "saying": "希望能順利畢業"
         },
         {
-          "pic": "",
+          "id":"21-4",
+          "pic": "21-4_member",
           "name": "張爾仕",
           "saying": "祝大家畢製順利，順利畢業，肚子餓了想叫Uber"
         },
         {
-          "pic": "",
+          "id":"21-5",
+          "pic": "21-5_member",
           "name": "江騏戎",
           "saying": "希望可以趕快脫離這地獄"
         }
       ],
-      "logo": "",
-      "poster": {
-        "vertical": "",
-        "horizontal": ""
-      },
-      "previewImg": ["", "", "", "", "", ""],
-      "teamImg": ["", "", ""],
-      "viedo": ""
+      "logo": "21_logo",
+      "poster": "21_poster",
+      "previewImg": ["21_previewImg-1", "21_previewImg-2", "21_previewImg-3", "21_previewImg-4", "21_previewImg-5", "21_previewImg-6"],
+      "teamImg": ["21_teamImg-1", "21_teamImg-2", "21_teamImg-3"],
+      "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
     }
   ]
 }
