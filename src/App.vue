@@ -24,9 +24,10 @@
 </template>
 
 <script>
-import LeftBar from '@/components/LeftBar.vue';
-import RightBar from '@/components/RightBar.vue';
-import Loader from './views/Loader'
+import LeftBar from '@/components/LeftBar.vue'
+import RightBar from '@/components/RightBar.vue'
+// import Loader from './views/Loader'
+
 export default {
   name: 'App',
   components: {
