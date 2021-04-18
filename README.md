@@ -1,24 +1,49 @@
-# yzuic-exhibition-web
+# 元智大學資訊傳播學系24th畢業展覽網站
 
-## Project setup
+![](https://github.com/tsungyu927/yzuic-exhibition-web/blob/master/src/assets/home/海報/poster.png)
+
+>## **Warning**
+目前畢業專刊上的QR Code為轉跳[**連結**](https://exhibitionweb-45da9.web.app/)，之後將會轉跳到這個網站部屬的地方（目前將轉跳到粉專）
+
+>## **預計完成的功能**
+
+- [ ] 動態更改左右fixed bar的顏色（透過Vuex)
+- [ ] 左右fixed bar蓋到中間內容
+- [ ] 目錄
+- [ ] 照片瀑布底部平整
+- [ ] 圖片壓小（不考慮webp）
+- [ ] 分類按鈕點擊放大動畫＆上一頁的縮小動畫
+- [ ] 策展團隊
+- [ ] 所有圖片更換
+- [ ] 展覽作品往上的按鈕（因為fullpage下滑鎖住了）
+
+>## **使用的dependencies**
+```
+"bootstrap-vue": "^2.21.2",
+"gsap": "^3.6.0",
+"lodash": "^4.17.21",
+"vue-fullpage.js": "^0.1.7",
+"vue-lazyload": "^1.3.3",
+"vue-masonry": "^0.12.0",
+```
+
+>## **How To Use**
+#### Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+#### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+#### Compiles and minifies for production
 ```
 npm run build
 ```
 
-### Lints and fixes files
+#### Lints and fixes files
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
