@@ -16,7 +16,7 @@
           @click="previous"
         />
       </div>
-      <div class="title">Mirror xd</div>
+      <div class="title">{{ work.title }}</div>
       <div class="header__icon menu">
         <img class="img-fluid" src="../assets/icons/phone-menu_white.svg" />
       </div>
@@ -32,7 +32,7 @@
         <!-- <img class="cover__poster" :src="work.poster.vertical" /> -->
       </div>
       <!-- 介紹 -->
-      <div class="pg-block intro d-md-flex flex-md-row">
+      <div class="pg-block intro d-md-flex flex-md-row mb-3">
         <div class="px-xs-5 pg-block__text">
           <div class="sub-title">介紹</div>
           <!-- intro-mobile -->
@@ -60,7 +60,7 @@
         </div>
       </div>
       <!-- 作品 -->
-      <div class="pg-block work d-md-flex flex-md-row">
+      <div class="pg-block work d-md-flex flex-md-row mb-3">
         <div class="px-xs-5">
           <div class="sub-title">作品</div>
           <!-- intro-mobile -->
@@ -88,11 +88,9 @@
         </div>
       </div>
       <!-- 團隊 -->
-      <div class="team pg-block d-md-flex flex-md-row px-xs-5">
+      <div class="team pg-block d-md-flex flex-md-row px-xs-5 mb-3">
         <div class="px-xs-5 pg-block__text">
           <div class="sub-title">團隊</div>
-          <!-- mobile -->
-          <div class="intro-mobile d-md-none">{{ work.team }}</div>
           <!-- web -->
           <div class="d-none d-md-block team__logo">
             <img class="img-fluid" :src="getLogoUrl(work.logo)" />
@@ -121,17 +119,17 @@
 
         <!-- mobile版 logo + team intro -->
         <div class="my-3 d-flex">
-          <div class="d-md-none">{{ work.teamIntro }}</div>
-          <div class="team__logo col-4 d-md-none">
-            <img class="img-fluid" :src="work.logo" />
+          <div class="d-md-none flex-grow-1">{{ work.teamIntro }}</div>
+          <div class="team__logo d-md-none logo__mobile">
+            <img class="img-fluid" :src="getLogoUrl(work.logo)" />
           </div>
         </div>
       </div>
-      <div class="pg-block my-3 d-none d-md-block">
+      <div class="pg-block my-3 d-none d-md-block mb-3">
         {{ work.teamIntro }}
       </div>
       <!-- 組員介紹區 -->
-      <div class="d-flex px-5">
+      <div class="d-flex px-md-5">
         <div class="memberGroup d-flex flex-wrap">
           <div
             class="member d-inline-flex flex-column flex-md-row"
@@ -139,9 +137,9 @@
             v-for="(member, index) in work.members"
           >
             <div class="member__pic">
-              <!-- <img class="img-fluid" :src="member.pic" /> -->
+              <img class="img-fluid" :src="getMemberUrl(member.pic)" />
             </div>
-            <div class="member__text">
+            <div class="member__text p-3 p-md-0">
               <div class="d-md-flex ">
                 <div class="member__name">{{ member.name }}</div>
                 <div class="member__assignment">{{ member.assignment }}</div>
@@ -197,8 +195,12 @@ export default {
     previous() {
       this.$router.go(-1);
     },
+    //用環境變數讀取圖片URL
     getLogoUrl(fileName) {
       return `${process.env.VUE_APP_CONTEXT_PATH}${process.env.VUE_APP_IMG}/logo/${fileName}.jpg`;
+    },
+    getMemberUrl(fileName) {
+      return `${process.env.VUE_APP_CONTEXT_PATH}${process.env.VUE_APP_IMG}/memberPic/${fileName}.jpg`;
     },
   },
   filters: {
@@ -392,12 +394,8 @@ export default {
     }
     &__pic {
       width: 100%;
-      height: 3rem;
-      background-color: gray;
       @include md-width() {
-        height: 60px;
-        background-color: gray;
-        width: 180px;
+        width: 150px;
         margin: 0 25px 0 0;
       }
     }
@@ -463,5 +461,10 @@ export default {
   width: 100%;
   max-width: 650px; /* Also helpful. Optional. */
   margin-right: 25px;
+}
+
+.logo__mobile {
+  width: 20%;
+  margin-right: 20px;
 }
 </style>
