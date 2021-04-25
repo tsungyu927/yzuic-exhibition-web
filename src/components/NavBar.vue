@@ -1,8 +1,10 @@
 <template>
   <div class="navbar">
-    <div class="selector-container">
+    <!-- 將 JavaScript Variable 與 CSS Variable 綁定，則可使用 JavaScript 動態改變 CSS -->
+    <!-- 2. cssVars computed 綁定到 style 屬性  -->
+    <div :style="cssVars" class="selector-container">
       <button
-        v-for="item in exhibitionNavbar"
+        v-for="item in navbarData"
         :key="item.enName"
         class="selector-btn"
         @click="toExbitionPage(item)"
@@ -15,38 +17,30 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
 export default {
   name: 'NavBar',
-  data() {
-    return {
-      exhibitionNavbar: [
-        {
-          chName: '全部',
-          enName: 'All',
-        },
-        {
-          chName: '互動',
-          enName: 'Interactive',
-        },
-        {
-          chName: '影視',
-          enName: 'Film',
-        },
-        {
-          chName: '遊戲',
-          enName: 'Game',
-        },
-        {
-          chName: '行銷',
-          enName: 'Marketing',
-        },
-        {
-          chName: '專題',
-          enName: 'Project',
-        },
-      ],
-    };
+  props: {
+    //主色
+    mainColor: {
+      type: String,
+      required: true,
+    },
+    //[navbar] 選項data
+    navbarData: {
+      type: Array,
+      required: true,
+    },
+    //[navbar] 跳轉頁
+    navbarPage: {
+      type: String,
+      required: true,
+    },
+  },
+  computed: {
+    // 1.在 cssVars computed 內，以data值(this.mainColor) 定義 css原生變數(--mianColor)
+    cssVars() {
+      return { '--mianColor': this.mainColor };
+    },
   },
   methods: {
     // ...mapActions(['SetTypeBox']),
@@ -54,7 +48,7 @@ export default {
       // this.SetTypeBox(type);
       // this.$router.push(`${type.routerLink}/${type.enName.toLowerCase()}`);
       this.$router.push({
-        path: '/worksGrid',
+        path: this.navbarPage,
         query: { type: type.enName.toLowerCase() },
       });
     },
@@ -68,7 +62,7 @@ export default {
   z-index: 1;
   right: 20px;
   height: 100%;
-  bottom: 0;
+  bottom: auto;
   @include md-width() {
     position: absolute;
     z-index: 1;
@@ -95,7 +89,8 @@ export default {
   cursor: pointer;
   font-weight: bold;
   border: 0;
-  background-color: $exhibition-mainColor;
+  // 3. 以var() 使用 --mianColor
+  background-color: var(--mianColor);
   padding: 0.5rem 0;
   border-radius: 50%;
   width: 4rem;
@@ -125,7 +120,7 @@ export default {
 
   &:hover {
     background-color: white;
-    color: $exhibition-mainColor;
+    color: var(--mianColor);
     text-decoration: none;
     @include md-width() {
       display: flex;

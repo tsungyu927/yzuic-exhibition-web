@@ -6,22 +6,12 @@
       src="../assets/icons/web-arrow_pink.svg"
       @click="previous"
     />
-
-    <!-- 手機板 header -->
-    <div class="pg-header d-flex d-md-none">
-      <div class="header__icon previous">
-        <img
-          class="img-fluid"
-          src="../assets/icons/phone-arrow_pink.svg"
-          @click="previous"
-        />
-      </div>
-      <div class="title">Mirror xd</div>
-      <div class="header__icon menu">
-        <img class="img-fluid" src="../assets/icons/phone-menu_white.svg" />
-      </div>
-    </div>
-
+    <MobileHeader
+      :main-color="'#ffffff'"
+      :sec-color="'#ff1a83'"
+      :bg-color="'#ffffff'"
+      :title="'展覽作品'"
+    />
     <div class="pg-intro-container">
       <!-- 封面 -->
       <div class="pg-block p-0 cover d-md-flex flex-md-column">
@@ -155,6 +145,9 @@
       <!-- 聯絡我們 -->
       <Footer />
     </div>
+    <LeftBar :main-color="'#ff1a83'" :hover-color="'#00cbf4'" />
+    <RightBar :main-color="'#ff1a83'" :hover-color="'#00cbf4'" />
+    <RightFooter :main-color="'#ff1a83'" />
   </div>
 </template>
 
@@ -162,6 +155,10 @@
 import Footer from '../components/Footer.vue';
 import SlideModal from '../modal/SlideModal.vue';
 import ConceptModal from '../modal/ConceptModal.vue';
+import LeftBar from '../components/LeftBar';
+import RightBar from '../components/RightBar';
+import RightFooter from '../components/RightFooter';
+import MobileHeader from '../components/MobileHeader';
 
 export default {
   name: 'Introduction',
@@ -208,7 +205,15 @@ export default {
     },
   },
   computed: {},
-  components: { Footer, SlideModal, ConceptModal },
+  components: {
+    Footer,
+    SlideModal,
+    ConceptModal,
+    LeftBar,
+    RightBar,
+    RightFooter,
+    MobileHeader,
+  },
 };
 </script>
 

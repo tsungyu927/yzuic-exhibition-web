@@ -1,6 +1,6 @@
 <template>
   <div class="sideBar right">
-    <div class="right__bar">
+    <div :style="cssVars" class="right__bar">
       <span>元智大學</span>
       <span>資訊傳播學系</span>
       <span>第24屆畢業展覽</span>
@@ -11,6 +11,22 @@
 <script>
 export default {
   name: 'RightBar',
+  props: {
+    //主色
+    mainColor: {
+      type: String,
+      required: true,
+    },
+    hoverColor: {
+      type: String,
+      required: true,
+    },
+  },
+  computed: {
+    cssVars() {
+      return { '--mainColor': this.mainColor, '--hoverColor': this.hoverColor };
+    },
+  },
 };
 </script>
 
@@ -20,6 +36,7 @@ export default {
 }
 .right__bar {
   writing-mode: vertical-lr;
+  color: var(--mainColor);
   span {
     & + span {
       margin-top: 10px;

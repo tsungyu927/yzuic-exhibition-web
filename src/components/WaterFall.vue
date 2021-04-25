@@ -1,20 +1,5 @@
 <template>
   <div class="photo-grid-container">
-    <!-- 手機板 header -->
-    <div class="pg-header header-pink d-flex d-md-none">
-      <div class="header__icon previous">
-        <img
-          class="img-fluid"
-          src="../assets/icons/phone-arrow_white.svg"
-          @click="previous"
-        />
-      </div>
-      <div class="title">展覽作品</div>
-      <div class="header__icon menu">
-        <img class="img-fluid" src="../assets/icons/phone-menu_pink.svg" />
-      </div>
-    </div>
-
     <div class="photo-grid">
       <div
         v-masonry
@@ -45,29 +30,13 @@ export default {
       images: image,
     };
   },
-  methods: {
-    previous() {
-      return this.$router.push('Home');
-    },
-  },
+  methods: {},
   components: {},
 };
 </script>
 
 <style lang="scss" scoped>
 @import '../scss/all.scss';
-
-// waterFall-header
-.header-pink {
-  background-color: $exhibition-mainColor;
-  @include md-width() {
-    display: none;
-  }
-  .title {
-    color: #ffff;
-  }
-}
-
 .photo-grid-container {
   position: relative;
   width: 100%;

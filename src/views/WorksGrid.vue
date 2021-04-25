@@ -7,20 +7,15 @@
       @click="previous"
     />
 
+    <MenuBtn :main-color="'#ff1a83'" />
     <!-- 手機板 header -->
-    <div class="pg-header d-flex d-md-none">
-      <div class="header__icon previous">
-        <img
-          class="img-fluid"
-          src="../assets/icons/phone-arrow_pink.svg"
-          @click="previous"
-        />
-      </div>
-      <div class="title">{{ getTypeState.chName }}</div>
-      <div class="header__icon menu">
-        <img class="img-fluid" src="../assets/icons/phone-menu_white.svg" />
-      </div>
-    </div>
+    <MobileHeader
+      :main-color="'#ffffff'"
+      :sec-color="'#ff1a83'"
+      :bg-color="'#ffffff'"
+      :arrow-color="'#ff1a83'"
+      :title="getTypeState.chName"
+    />
 
     <div class="workGrid-container d-md-flex">
       <div class="workGrid__left d-none d-md-block">
@@ -57,12 +52,22 @@
         </div>
       </div>
     </div>
+
+    <LeftBar :main-color="'#ff1a83'" :hover-color="'#ffffff'" />
+    <RightBar :main-color="'#ff1a83'" :hover-color="'#ffffff'" />
+    <RightFooter :main-color="'#ff1a83'" />
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
 import { typeBox } from '@data/utilis.js';
+import MenuBtn from '../components/MenuBtn';
+import MobileHeader from '../components/MobileHeader';
+import LeftBar from '../components/LeftBar';
+import RightBar from '../components/RightBar';
+import RightFooter from '../components/RightFooter';
+
 export default {
   name: 'WorksGrid',
   data() {
@@ -108,7 +113,7 @@ export default {
       return typeBox[this.$route.query.type];
     },
   },
-  components: {},
+  components: { MenuBtn, MobileHeader, LeftBar, RightBar, RightFooter },
 };
 </script>
 
