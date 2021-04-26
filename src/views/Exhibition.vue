@@ -4,30 +4,13 @@
       <!-- [Section1] 液態金屬 -->
       <div class="section">
         <MenuBtn :main-color="'#ff1a83'" />
-        <MobileHeader
-          :main-color="'#ff1a83'"
-          :sec-color="'transparent'"
-          :bg-color="'transparent'"
-          :arrow-color="'#ffffff'"
-          :title="''"
-          class="p-absolute"
-        />
+        <MobileHeader :title="''" class="p-absolute " />
         <img class="background" src="../assets/fluid.png" />
-        <LeftBar :main-color="'#ffffff'" :hover-color="'#ff1a83'" />
-        <PageTitle :ch-name="'展覽作品'" :en-name="'Exhibition Works'" />
-        <RightBar :main-color="'#ffffff'" :hover-color="'#ff1a83'" />
-        <RightFooter :main-color="'#ffffff'" />
       </div>
       <!-- [Section2] 瀑布流 -->
       <div class="section section__waterFall">
         <MenuBtn :main-color="'#ff1a83'" />
-        <MobileHeader
-          :main-color="'#ff1a83'"
-          :sec-color="'#ffffff'"
-          :bg-color="'#ff1a83'"
-          :arrow-color="'#ffffff'"
-          :title="'展覽作品'"
-        />
+        <MobileHeader :title="'展覽作品'" class="pink__scrolled" />
         <!-- <NavBar
           :main-color="'#ff1a83'"
           :navbar-data="exhibitionNavbar"
@@ -46,6 +29,11 @@
         </div>
         <WaterFall />
       </div>
+
+      <PageTitle :ch-name="'展覽作品'" :en-name="'Exhibition Works'" />
+      <LeftBar />
+      <RightBar />
+      <RightFooter />
     </full-page>
   </div>
 </template>

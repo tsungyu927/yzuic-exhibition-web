@@ -1,4 +1,15 @@
+//color
+$white: #ffffff;
+$gray: #595757;
+
+//mixin
+$xs-media: 375px;
+$sm-media: 576px;
+$md-media: 768px;
+$lg-media: 992px;
+$xl-media: 1200px;
+
 $exhibition-mainColor: #ff1a83;
 $organizeTeam-mainColor: #00cbf4;
 
-$font-color: #595757;
+$font-color: $gray;

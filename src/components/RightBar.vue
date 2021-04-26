@@ -1,6 +1,6 @@
 <template>
-  <div class="sideBar right">
-    <div :style="cssVars" class="right__bar">
+  <div class="sideBar right" :class="[changeColor]">
+    <div class="right__bar">
       <span>元智大學</span>
       <span>資訊傳播學系</span>
       <span>第24屆畢業展覽</span>
@@ -11,20 +11,30 @@
 <script>
 export default {
   name: 'RightBar',
-  props: {
-    //主色
-    mainColor: {
-      type: String,
-      required: true,
-    },
-    hoverColor: {
-      type: String,
-      required: true,
-    },
+  data() {
+    return {
+      changeColor: '',
+    };
   },
-  computed: {
-    cssVars() {
-      return { '--mainColor': this.mainColor, '--hoverColor': this.hoverColor };
+  watch: {
+    $route: {
+      handler: function(to, from) {
+        switch (to.path) {
+          case '/exhibition':
+            this.changeColor = 'fluid__footer';
+            break;
+          case '/organizeTeam':
+            this.changeColor = 'fluid__footer';
+            break;
+          case '/organizeTeamIntro':
+            this.changeColor = 'organizeTeam__footer';
+            break;
+          default:
+            this.changeColor = 'exhibition__footer';
+        }
+      },
+      deep: true,
+      immediate: true,
     },
   },
 };
@@ -36,7 +46,6 @@ export default {
 }
 .right__bar {
   writing-mode: vertical-lr;
-  color: var(--mainColor);
   span {
     & + span {
       margin-top: 10px;

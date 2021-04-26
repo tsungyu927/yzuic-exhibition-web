@@ -4,30 +4,13 @@
       <!-- [Section1] 液態金屬 -->
       <div class="section">
         <MenuBtn :main-color="'#00cbf4'" />
-        <MobileHeader
-          :main-color="'#00cbf4'"
-          :sec-color="'transparent'"
-          :bg-color="'transparent'"
-          :arrow-color="'#ffffff'"
-          :title="''"
-          class="p-absolute"
-        />
+        <MobileHeader :title="''" class="p-absolute" />
         <img class="background" src="../assets/fluid.png" />
-        <LeftBar :main-color="'#ffffff'" :hover-color="'#00cbf4'" />
-        <PageTitle :ch-name="'策展團隊'" :en-name="'Organize Team'" />
-        <RightBar :main-color="'#ffffff'" :hover-color="'#00cbf4'" />
-        <RightFooter :main-color="'#ffffff'" />
       </div>
       <!-- [Section2] -->
       <div class="section section__waterFall">
         <MenuBtn :main-color="'#00cbf4'" />
-        <MobileHeader
-          :main-color="'#00cbf4'"
-          :sec-color="'#ffffff'"
-          :bg-color="'#00cbf4'"
-          :arrow-color="'#ffffff'"
-          :title="'策展團隊'"
-        />
+        <MobileHeader :title="'策展團隊'" class="blue__scrolled" />
         <div class="navbar">
           <div class="selector-container">
             <NavBtn
@@ -40,6 +23,11 @@
           </div>
         </div>
       </div>
+
+      <PageTitle :ch-name="'策展團隊'" :en-name="'Organize Team'" />
+      <LeftBar />
+      <RightBar />
+      <RightFooter />
     </full-page>
   </div>
 </template>

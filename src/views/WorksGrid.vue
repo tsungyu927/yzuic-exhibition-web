@@ -9,13 +9,7 @@
 
     <MenuBtn :main-color="'#ff1a83'" />
     <!-- 手機板 header -->
-    <MobileHeader
-      :main-color="'#ffffff'"
-      :sec-color="'#ff1a83'"
-      :bg-color="'#ffffff'"
-      :arrow-color="'#ff1a83'"
-      :title="getTypeState.chName"
-    />
+    <MobileHeader :title="getTypeState.chName" />
 
     <div class="workGrid-container d-md-flex">
       <div class="workGrid__left d-none d-md-block">
@@ -53,9 +47,9 @@
       </div>
     </div>
 
-    <LeftBar :main-color="'#ff1a83'" :hover-color="'#ffffff'" />
-    <RightBar :main-color="'#ff1a83'" :hover-color="'#ffffff'" />
-    <RightFooter :main-color="'#ff1a83'" />
+    <LeftBar />
+    <RightBar />
+    <RightFooter />
   </div>
 </template>
 
@@ -98,7 +92,7 @@ export default {
     },
     toIntroduction(id) {
       this.$router.push({
-        path: 'introduction/',
+        path: 'exhibitionIntro/',
         query: { id: id },
       });
     },

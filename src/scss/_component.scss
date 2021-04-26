@@ -56,3 +56,24 @@
   color: #595757;
 }
 //----------------modal
+
+//-----------router 動態改變 fixedbar 顏色
+.fluid__footer {
+  color: $white;
+}
+
+.exhibition__footer {
+  display: none;
+  color: $exhibition-mainColor;
+  @include md-width() {
+    display: block;
+  }
+}
+
+.organizeTeam__footer {
+  display: none;
+  color: $organizeTeam-mainColor;
+  @include md-width() {
+    display: block;
+  }
+}

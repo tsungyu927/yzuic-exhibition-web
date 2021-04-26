@@ -6,12 +6,7 @@
       src="../assets/icons/web-arrow_pink.svg"
       @click="previous"
     />
-    <MobileHeader
-      :main-color="'#ffffff'"
-      :sec-color="'#ff1a83'"
-      :bg-color="'#ffffff'"
-      :title="'展覽作品'"
-    />
+    <MobileHeader :title="'展覽作品'" />
     <div class="pg-intro-container">
       <!-- 封面 -->
       <div class="pg-block p-0 cover d-md-flex flex-md-column">
@@ -145,9 +140,9 @@
       <!-- 聯絡我們 -->
       <Footer />
     </div>
-    <LeftBar :main-color="'#ff1a83'" :hover-color="'#00cbf4'" />
-    <RightBar :main-color="'#ff1a83'" :hover-color="'#00cbf4'" />
-    <RightFooter :main-color="'#ff1a83'" />
+    <LeftBar />
+    <RightBar />
+    <RightFooter />
   </div>
 </template>
 

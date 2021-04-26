@@ -1,6 +1,6 @@
 <template>
   <!-- 右下角的 footer -->
-  <div :style="cssVars" class="sideBar bottom">
+  <div class="sideBar bottom" :class="[changeColor]">
     Yan Ze University Information Communication 24th Graduation Exhibition
   </div>
 </template>
@@ -8,16 +8,30 @@
 <script>
 export default {
   name: 'RightFooter',
-  props: {
-    //主色
-    mainColor: {
-      type: String,
-      required: true,
-    },
+  data() {
+    return {
+      changeColor: '',
+    };
   },
-  computed: {
-    cssVars() {
-      return { '--mainColor': this.mainColor };
+  watch: {
+    $route: {
+      handler: function(to, from) {
+        switch (to.path) {
+          case '/exhibition':
+            this.changeColor = 'fluid__footer';
+            break;
+          case '/organizeTeam':
+            this.changeColor = 'fluid__footer';
+            break;
+          case '/organizeTeamIntro':
+            this.changeColor = 'organizeTeam__footer';
+            break;
+          default:
+            this.changeColor = 'exhibition__footer';
+        }
+      },
+      deep: true,
+      immediate: true,
     },
   },
 };
@@ -25,7 +39,6 @@ export default {
 
 <style lang="scss">
 .bottom {
-  color: var(--mainColor);
   bottom: 2%;
   min-height: 30px;
   max-width: 250px;

@@ -1,13 +1,8 @@
 <template>
   <!-- 手機板 header -->
-  <div :style="cssVars" class="pg-header d-flex d-md-none">
+  <div class="pg-header d-flex d-md-none" :class="[changeColor]">
     <!-- previous arrow btn -->
     <div class="header__icon previous">
-      <!-- <img
-        class="img-fluid"
-        src="../assets/icons/phone-arrow_white.svg"
-        @click="previous"
-      /> -->
       <font-awesome-icon
         :icon="['fas', 'arrow-left']"
         class="m-auto"
@@ -27,20 +22,47 @@
 <script>
 export default {
   name: 'MobileHeader',
-  props: ['title', 'mainColor', 'secColor', 'bgColor', 'arrowColor'],
+  data() {
+    return {
+      changeColor: '',
+    };
+  },
+  props: ['title'],
+  // props: ['title', 'mainColor', 'secColor', 'bgColor', 'arrowColor'],
   computed: {
-    cssVars() {
-      return {
-        '--mainColor': this.mainColor,
-        '--secColor': this.secColor,
-        '--bgColor': this.bgColor,
-        '--arrowColor': this.arrowColor,
-      };
-    },
+    // cssVars() {
+    //   return {
+    //     '--mainColor': this.mainColor,
+    //     '--secColor': this.secColor,
+    //     '--bgColor': this.bgColor,
+    //     '--arrowColor': this.arrowColor,
+    //   };
+    // },
   },
   methods: {
     previous() {
       this.$router.go(-1);
+    },
+  },
+  watch: {
+    $route: {
+      handler: function(to, from) {
+        switch (to.path) {
+          case '/exhibition':
+            this.changeColor = 'fluid-pink';
+            break;
+          case '/organizeTeam':
+            this.changeColor = 'fluid-blue';
+            break;
+          case '/organizeTeamIntro':
+            this.changeColor = 'fluid-blue';
+            break;
+          default:
+            this.changeColor = 'white-bg__pink';
+        }
+      },
+      deep: true,
+      immediate: true,
     },
   },
 };
@@ -50,13 +72,11 @@ export default {
 //(手機板)header
 .pg-header {
   width: 100%;
-  background-color: var(--bgColor);
   padding: 0.8rem;
   .title {
     flex: 1;
     font-size: 2rem;
     font-weight: bold;
-    color: var(--secColor);
   }
 }
 
@@ -72,15 +92,63 @@ export default {
   border-radius: 50%;
 }
 
-.previous {
-  color: var(--arrowColor);
-  border: var(--arrowColor) 1px solid;
-  background-color: var(--bgColor);
+//---------------路由改變顏色
+//[液態金屬] 透明底 粉icon
+.fluid-pink {
+  background-color: transparent;
+  .previous {
+    color: $white;
+    border: $white 1px solid;
+  }
+  .title {
+    color: $white;
+  }
+  .menu {
+    color: $exhibition-mainColor;
+    background-color: $white;
+    border: $white 1px solid;
+  }
+  //滾動 粉
+  &.pink__scrolled {
+    background-color: $exhibition-mainColor;
+  }
 }
 
-.menu {
-  color: var(--mainColor);
-  border: var(--mainColor) 1px solid;
-  background-color: var(--secColor);
+//[液態金屬] 透明底 藍icon
+.fluid-blue {
+  background-color: transparent;
+  .previous {
+    color: $white;
+    border: $white 1px solid;
+  }
+  .title {
+    color: $white;
+  }
+  .menu {
+    color: $organizeTeam-mainColor;
+    background-color: $white;
+    border: $white 1px solid;
+  }
+  //滾動 藍
+  &.blue__scrolled {
+    background-color: $organizeTeam-mainColor;
+  }
+}
+
+//白底 粉字
+.white-bg__pink {
+  background-color: $white;
+  .previous {
+    color: $exhibition-mainColor;
+    border: $exhibition-mainColor 1px solid;
+  }
+  .title {
+    color: $exhibition-mainColor;
+  }
+  .menu {
+    background-color: $exhibition-mainColor;
+    color: $white;
+    border: $exhibition-mainColor 1px solid;
+  }
 }
 </style>
