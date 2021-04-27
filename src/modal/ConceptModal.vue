@@ -1,15 +1,23 @@
 <template>
-  <div class="concept-modal">
-    <div class="container">
-      <div class="title">
-        <button type="button" @click="handleClose()">
+  <!-- concept-modal 介紹 -->
+  <div class="conceptModal">
+    <b-modal
+      :ref="modalId"
+      :id="modalId"
+      centered
+      hide-header
+      hide-footer
+      size="lg"
+    >
+      <div class="conceptModal__title">
+        <button type="button" @click="hideModal()">
           <img src="../assets/logo/closeBtn_pink.svg" />
         </button>
       </div>
-      <div class="content">
-        {{content}}
-      </div>
-    </div>
+      <p class="my-4 mx-auto conceptModal__content">
+        {{ content }}
+      </p>
+    </b-modal>
   </div>
 </template>
 
@@ -23,18 +31,22 @@ export default {
     content: {
       type: String,
       required: true,
-    }
+    },
+    modalId: {
+      type: String,
+    },
   },
   methods: {
-    handleClose: () => {
-      console.log('close modal')
-    }
-  }
-}
+    // using ref attribute and then call the show(), hide()
+    hideModal() {
+      this.$refs[this.modalId].hide();
+    },
+  },
+};
 </script>
 
 <style scoped>
-.concept-modal{
+.concept-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -44,9 +56,9 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.concept-modal .container{
+.concept-modal .container {
   padding: 0;
   margin: 0;
   width: 80vw;
@@ -59,21 +71,21 @@ export default {
   align-items: center;
 }
 /* title */
-.concept-modal .title{
+.concept-modal .title {
   width: 100%;
   height: 20%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.concept-modal .title button{
+.concept-modal .title button {
   padding: 0;
   border: none;
   background-color: transparent;
   margin-right: 2%;
 }
 /* content */
-.concept-modal .content{
+.concept-modal .content {
   width: 80%;
   height: 80%;
   font-size: 20px;

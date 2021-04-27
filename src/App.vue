@@ -8,19 +8,17 @@
     <button class="menu-btn" @click="handleOpenCatalog">
       <div>目錄</div>
     </button>
-
     <div class="app-container">
       <router-view />
     </div>
-    <div class="app-bar">
-      <!-- 左下角的選單 -->
-      <div class="left">
-        <LeftBar />
-      </div>
-      <!-- 右下角的 footer -->
-      <div class="right">
-        <RightBar />
-      </div>
+
+    <!-- 左下角的選單 -->
+    <LeftBar />
+    <!-- 右邊的 footer -->
+    <RightBar />
+    <!-- 右下角的 footer -->
+    <div class="sideBar bottom">
+      Yan Ze University Information Communication 24th Graduation Exhibition
     </div>
   </div>
 </template>
@@ -59,17 +57,17 @@ export default {
       }
     },
   }
-}
+};
 </script>
 
 <style lang="scss">
 @import './scss/all.scss';
 
-body{
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 #app {
@@ -143,6 +141,14 @@ body{
     background-color: $exhibition-mainColor;
     div {
       color: white;
+    }
+    .bottom {
+      bottom: 4%;
+      min-height: 30px;
+      max-width: 430px;
+      right: 10%;
+      font-size: 0.7rem;
+      line-height: 30px;
     }
   }
 }

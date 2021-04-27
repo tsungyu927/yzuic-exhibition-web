@@ -51,7 +51,7 @@
   height: auto;
 }
 /* 內容 */
-.home-container{
+.home-container {
   position: relative;
   width: 100vw;
   height: 2050vh;
@@ -63,14 +63,14 @@
 /* ############################## */
 /* ############ con1 ############ */
 /* ############################## */
-.home-con{
+.home-con {
   position: relative;
   width: 100vw;
   height: 100vh;
-  z-index: 5;
+  /* z-index: 5; */
 }
 /* static */
-.home-blueback{
+.home-blueback {
   position: absolute;
   top: 50vh;
   right: -7vw;
@@ -78,14 +78,14 @@
   height: auto;
 }
 /* 每一刻的 */
-.home-text00-1{
+.home-text00-1 {
   position: absolute;
   top: 40%;
   left: 21%;
   width: 8%;
   height: auto;
 }
-.home-text00-2{
+.home-text00-2 {
   position: absolute;
   z-index: 10;
   top: 45%;
@@ -94,7 +94,7 @@
   height: auto;
 }
 /* 大膽狂放文字 */
-.home-text01{
+.home-text01 {
   position: absolute;
   top: 63vh;
   right: 10vw;
@@ -103,7 +103,7 @@
   transform: scale(0);
   filter: brightness(1.1);
 }
-.home-text01-outline{
+.home-text01-outline {
   position: absolute;
   top: 69vh;
   right: 10vw;
@@ -114,19 +114,19 @@
 /* ############################## */
 /* ############ con2 ############ */
 /* ############################## */
-.home-text{
+.home-text {
   position: absolute;
   opacity: 0;
   z-index: 10;
 }
 /* 一圈圈的圓 */
-.home-circle{
+.home-circle {
   position: absolute;
   left: 31%;
   top: 100%;
   width: 30%;
   height: 15%;
-  border: 3px solid #FF1A83;
+  border: 3px solid #ff1a83;
   border-radius: 50%;
   transform: rotateZ(-9.93deg);
   opacity: 0;
@@ -135,14 +135,17 @@
 /* ############ con3 ############ */
 /* ############################## */
 /* 用力生活 */
-.home-text03-1{
+.home-text03-1 {
   position: absolute;
   top: 40%;
   left: 19%;
   width: 8%;
   height: auto;
 }
-.home-text03-2, .home-text03-3, .home-text03-4, .home-text03-5{
+.home-text03-2,
+.home-text03-3,
+.home-text03-4,
+.home-text03-5 {
   position: absolute;
   top: 45%;
   left: 22%;
@@ -153,7 +156,7 @@
 /* ############ con4 ############ */
 /* ############################## */
 /* 造就了形態的轉變 */
-.home-pink-circle{
+.home-pink-circle {
   position: absolute;
   top: -30%;
   left: 20%;
@@ -161,7 +164,7 @@
   height: 80%;
   opacity: 0.9;
 }
-.home-text04{
+.home-text04 {
   position: absolute;
   opacity: 1;
   z-index: 10;
@@ -169,14 +172,14 @@
   height: auto;
 }
 /* 意念堅持 */
-.qq-line{
+.qq-line {
   position: absolute;
   top: 0%;
   left: -5%;
   width: 95%;
   height: auto;
 }
-.home-text05{
+.home-text05 {
   position: absolute;
   top: 50%;
   right: 20%;
@@ -187,7 +190,7 @@
 /* ############ con4 ############ */
 /* ############################## */
 /* 粉紅區域 執著執著 痴狂痴狂 */
-.pink-back{
+.pink-back {
   position: absolute;
   top: -25%;
   left: 0;
@@ -195,14 +198,14 @@
   height: auto;
   opacity: 0.8;
 }
-.home-text06{
+.home-text06 {
   position: absolute;
   top: 20%;
   left: 15%;
   width: 42%;
   height: auto;
 }
-.home-text07{
+.home-text07 {
   transform-origin: bottom right;
   position: absolute;
   top: 85%;
@@ -210,7 +213,7 @@
   width: 30%;
   height: auto;
 }
-.home-text07-border{
+.home-text07-border {
   transform-origin: bottom right;
   position: absolute;
   top: 63%;
@@ -218,7 +221,7 @@
   width: 60%;
   height: auto;
 }
-.home-text07-line1{
+.home-text07-line1 {
   transform-origin: bottom center;
   position: absolute;
   top: 23.5%;
@@ -228,7 +231,7 @@
   width: 1%;
   height: 52%;
 }
-.home-text07-line2{
+.home-text07-line2 {
   transform-origin: center right;
   position: absolute;
   top: 99.5%;
@@ -238,7 +241,7 @@
   width: 30%;
   height: 1%;
 }
-.home-text07-line3{
+.home-text07-line3 {
   transform-origin: bottom left;
   position: absolute;
   top: 107%;
@@ -252,42 +255,42 @@
 /* ############ con5 ############ */
 /* ############################## */
 /* 無所畏懼 ＆ QQ線 */
-.home-text08{
+.home-text08 {
   position: absolute;
   top: 70%;
   left: 20%;
   width: 60%;
   height: auto;
 }
-.qq-line-2{
+.qq-line-2 {
   position: absolute;
   top: 50%;
   left: 0;
   width: 95%;
   height: auto;
 }
-.home-text09{
+.home-text09 {
   position: absolute;
   top: 180%;
   left: 30%;
   width: 8%;
   height: auto;
 }
-.home-text10{
+.home-text10 {
   position: absolute;
   top: 165%;
   left: 40%;
   width: 25%;
   height: auto;
 }
-.home-text10-1{
+.home-text10-1 {
   position: absolute;
   top: 163%;
   left: 38%;
   width: 17%;
   height: auto;
 }
-.home-text10-2{
+.home-text10-2 {
   position: absolute;
   top: 162%;
   left: 50%;
@@ -298,14 +301,14 @@
 /* ############ con6 ############ */
 /* ############################## */
 /* 海報 */
-.pink-back1{
+.pink-back1 {
   position: absolute;
   top: 10%;
   left: 0;
   width: 100%;
   height: auto;
 }
-.pink-poster{
+.pink-poster {
   cursor: pointer;
   position: absolute;
   top: 45%;
@@ -313,26 +316,48 @@
   width: 30%;
   height: auto;
 }
-.shake-poster{
-  animation: shake 0.5s; 
-  animation-iteration-count: infinite; 
+.shake-poster {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
 }
 /* shake image */
 @keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
 /* 很彩的背景 */
-.color-back{
+.color-back {
   position: absolute;
   left: 0;
   top: 820vh;
@@ -344,49 +369,49 @@
 /* ############ con6 ############ */
 /* ############################## */
 /* 策展資訊 */
-.home-text11{
+.home-text11 {
   position: absolute;
   top: 20%;
   left: 10%;
   width: 15%;
   height: auto;
 }
-.home-text11-date1{
+.home-text11-date1 {
   position: absolute;
   top: 35%;
   left: 32%;
   width: 25%;
   height: auto;
 }
-.home-text11-date2{
+.home-text11-date2 {
   position: absolute;
   top: 46%;
   left: 47%;
   width: 3%;
   height: auto;
 }
-.home-text11-date3{
+.home-text11-date3 {
   position: absolute;
   top: 50%;
   left: 42%;
   width: 25%;
   height: auto;
 }
-.home-text11-place1{
+.home-text11-place1 {
   position: absolute;
   top: 70%;
   left: 32%;
   width: 23%;
   height: auto;
 }
-.home-text11-place2{
+.home-text11-place2 {
   position: absolute;
   top: 78%;
   left: 32%;
   width: 11.5%;
   height: auto;
 }
-.home-text11-place3{
+.home-text11-place3 {
   position: absolute;
   top: 78%;
   left: 43.5%;
@@ -397,21 +422,21 @@
 /* ############ con7 ############ */
 /* ############################## */
 /* 交通方式 */
-.home-text12{
+.home-text12 {
   position: absolute;
   top: 10%;
   left: 42.5%;
   width: 15%;
   height: auto;
 }
-.home-map1{
+.home-map1 {
   position: absolute;
   top: 20%;
   left: 36%;
   width: 28%;
   height: auto;
 }
-.home-map2{
+.home-map2 {
   position: absolute;
   top: 40%;
   left: 5%;
@@ -422,14 +447,14 @@
 /* ############ con8 ############ */
 /* ############################## */
 /* 粉紅背景2 */
-.pink-back2{
+.pink-back2 {
   position: absolute;
   top: 40%;
   left: 0;
   width: 100%;
   height: auto;
 }
-.pink-back-back{
+.pink-back-back {
   position: absolute;
   top: 40%;
   left: 0;
@@ -437,7 +462,7 @@
   height: auto;
   overflow: hidden;
 }
-.home-light{
+.home-light {
   position: absolute;
   top: 45%;
   left: 0vw;
@@ -448,40 +473,40 @@
   align-items: center;
   overflow: hidden;
 }
-.home-light-img{
+.home-light-img {
   transform-origin: center;
   width: 100%;
   height: 100%;
 }
-.home-text13-1{
+.home-text13-1 {
   position: absolute;
   top: 50%;
   left: 17%;
   width: 32%;
   height: auto;
 }
-.home-text13-2{
+.home-text13-2 {
   position: absolute;
   top: 72%;
   left: 33%;
   width: 30%;
   height: auto;
 }
-.home-text13-3{
+.home-text13-3 {
   position: absolute;
   top: 84%;
   right: 7%;
   width: 40%;
   height: auto;
 }
-.home-text13-4{
+.home-text13-4 {
   position: absolute;
   top: 102%;
   left: 22%;
   width: 27%;
   height: auto;
 }
-.home-text13-5{
+.home-text13-5 {
   transform: rotate(-10deg);
   position: absolute;
   top: 97%;
@@ -489,7 +514,7 @@
   width: 15%;
   height: auto;
 }
-.home-text13-6{
+.home-text13-6 {
   transform: rotate(-10deg);
   position: absolute;
   top: 97%;
@@ -497,7 +522,7 @@
   width: 15%;
   height: auto;
 }
-.home-text13-7{
+.home-text13-7 {
   position: absolute;
   top: 40%;
   left: 20%;
@@ -508,14 +533,14 @@
 /* ############ con9 ############ */
 /* ############################## */
 /* 注意事項 */
-.home-text14-title{
+.home-text14-title {
   position: absolute;
   top: 25%;
   left: 10%;
   width: 20%;
   height: auto;
 }
-.home-text14{
+.home-text14 {
   position: absolute;
   left: 20%;
   width: 56.7%;
@@ -525,7 +550,7 @@
 /* ############ con10 ############ */
 /* ############################## */
 /* 亂亂的 */
-.home-text15-1{
+.home-text15-1 {
   transform-origin: bottom right;
   position: absolute;
   z-index: 4;
@@ -534,7 +559,7 @@
   width: 50%;
   height: auto;
 }
-.home-text15-2{
+.home-text15-2 {
   position: absolute;
   z-index: 2;
   top: 75%;
@@ -546,7 +571,7 @@
 /* ############################## */
 /* ############ con10 ############ */
 /* ############################## */
-.home-text15-3{
+.home-text15-3 {
   position: absolute;
   z-index: 5;
   top: 0%;
@@ -554,7 +579,7 @@
   width: 70%;
   height: auto;
 }
-.home-text15-4{
+.home-text15-4 {
   position: absolute;
   z-index: 2;
   top: 40%;
@@ -562,7 +587,7 @@
   width: 40%;
   height: auto;
 }
-.home-text15-5{
+.home-text15-5 {
   position: absolute;
   z-index: 2;
   top: 45%;
@@ -573,7 +598,7 @@
 /* ############################## */
 /* ############ con10 ############ */
 /* ############################## */
-.home-text15-6{
+.home-text15-6 {
   position: absolute;
   z-index: 1;
   top: 80%;
@@ -582,7 +607,7 @@
   height: auto;
   opacity: 0.7;
 }
-.home-text15-7{
+.home-text15-7 {
   position: absolute;
   z-index: 1;
   top: 10%;
@@ -591,7 +616,7 @@
   height: auto;
   opacity: 0.5;
 }
-.home-text15-8{
+.home-text15-8 {
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -600,7 +625,7 @@
   height: auto;
   opacity: 0.1;
 }
-.home-text15-9{
+.home-text15-9 {
   position: absolute;
   right: 1vw;
   width: 10vw;
@@ -610,7 +635,7 @@
 /* ############ con10 ############ */
 /* ############################## */
 /* 結語 */
-.home-text16-1{
+.home-text16-1 {
   position: absolute;
   z-index: 3;
   left: 10%;
@@ -619,7 +644,7 @@
   height: auto;
   opacity: 0.7;
 }
-.home-text16-2{
+.home-text16-2 {
   position: absolute;
   z-index: 3;
   right: -5%;
@@ -628,7 +653,7 @@
   height: auto;
   opacity: 0.5;
 }
-.home-text16-3{
+.home-text16-3 {
   position: absolute;
   z-index: 3;
   right: -3%;
@@ -637,7 +662,7 @@
   height: auto;
   opacity: 0.9;
 }
-.home-text16-4{
+.home-text16-4 {
   position: absolute;
   z-index: 3;
   left: 10%;
@@ -646,7 +671,7 @@
   height: auto;
   opacity: 0.7;
 }
-.home-text16-5{
+.home-text16-5 {
   position: absolute;
   z-index: 3;
   left: 10%;
@@ -655,7 +680,7 @@
   height: auto;
   opacity: 0.7;
 }
-.home-text16-6{
+.home-text16-6 {
   position: absolute;
   z-index: 3;
   left: 33%;
@@ -663,7 +688,7 @@
   width: 30%;
   height: auto;
 }
-.home-text16-7{
+.home-text16-7 {
   position: absolute;
   z-index: 3;
   left: 64%;
@@ -672,4 +697,3 @@
   height: auto;
   opacity: 0.7;
 }
-

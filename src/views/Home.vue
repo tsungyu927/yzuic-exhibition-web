@@ -192,6 +192,7 @@ export default {
       shakePos: false,
       openIntro: false,
     }
+    };
   },
   components: {
     HomeIntro,
@@ -218,7 +219,7 @@ export default {
     titleSeq.from('.title-img3',{opacity: 0, duration: 0.5, delay: 0.5})
     titleSeq.from('.title-img4',{opacity: 0, duration: 0.3})
     // 每一刻的 & 努力追求
-    gsap.from('.home-text00',{
+    gsap.from('.home-text00', {
       scrollTrigger: {
         trigger: '.home-text00-1',
         scrub: true,
@@ -226,10 +227,10 @@ export default {
         end: 'top 35%',
       },
       opacity: 0,
-    })
+    });
     // ==============================================================
     // 大膽狂放文字
-    gsap.to('.home-text01',{
+    gsap.to('.home-text01', {
       scrollTrigger: {
         trigger: '.home-blueback',
         scrub: true,
@@ -238,9 +239,9 @@ export default {
       },
       scale: 1,
       duration: 1,
-    })
+    });
     // 大膽狂放文字邊框
-    gsap.to('.home-text01-outline',{
+    gsap.to('.home-text01-outline', {
       scrollTrigger: {
         trigger: '.home-blueback',
         scrub: true,
@@ -249,15 +250,19 @@ export default {
       },
       opacity: 1,
       duration: 1,
-    })
+    });
     // ==============================================================
     // 堆積了此刻的變態
-    var shakeTween = function(item, repeatCount, top, right){
+    var shakeTween = function(item, repeatCount, top, right) {
       // var max = 1
       // var min = -1
-      gsap.to(item,{repeat:repeatCount-1, right: `${Math.floor(right + Math.random() + 1)}%`, duration: 0.1})
-      gsap.to(item,{top: `${top}%`, right: `${right}%`})
-    }
+      gsap.to(item, {
+        repeat: repeatCount - 1,
+        right: `${Math.floor(right + Math.random() + 1)}%`,
+        duration: 0.1,
+      });
+      gsap.to(item, { top: `${top}%`, right: `${right}%` });
+    };
 
     const timeLine0 = gsap.timeline({
       scrollTrigger: {
@@ -265,17 +270,57 @@ export default {
         start: 'top 50%',
         end: '+=300',
         toggleActions: 'play none complete reverse',
-      }
-    })
+      },
+    });
 
-    timeLine0.to(['.home-text02-1', '.home-text02-border1'], {opacity: 1, duration: 0.3, onComplete: shakeTween, onCompleteParams: ['.home-text02-border1', 10, 20, 8]})
-    timeLine0.to(['.home-text02-2', '.home-text02-border2'], {opacity: 1, duration: 0.3, onComplete: shakeTween, onCompleteParams: ['.home-text02-border2', 10, 32, 18]})
-    timeLine0.to(['.home-text02-3', '.home-text02-border3'], {opacity: 1, duration: 0.3, onComplete: shakeTween, onCompleteParams: ['.home-text02-border3', 10, 38, 25]})
-    timeLine0.to(['.home-text02-4', '.home-text02-border4'], {opacity: 1, duration: 0.3, onComplete: shakeTween, onCompleteParams: ['.home-text02-border4', 10, 47, 34.5]})
-    timeLine0.to(['.home-text02-5', '.home-text02-border5'], {opacity: 1, duration: 0.3, onComplete: shakeTween, onCompleteParams: ['.home-text02-border5', 10, 56, 43.5]})
-    timeLine0.to(['.home-text02-6', '.home-text02-border6'], {opacity: 1, duration: 0.3, onComplete: shakeTween, onCompleteParams: ['.home-text02-border6', 10, 64, 51.5]})
-    timeLine0.to(['.home-text02-7', '.home-text02-border7'], {opacity: 1, duration: 0.3, onComplete: shakeTween, onCompleteParams: ['.home-text02-border7', 10, 71, 61]})
-    timeLine0.to(['.home-text02-8', '.home-text02-border8'], {opacity: 1, duration: 0.3, onComplete: shakeTween, onCompleteParams: ['.home-text02-border8', 10, 84.5, 70]})
+    timeLine0.to(['.home-text02-1', '.home-text02-border1'], {
+      opacity: 1,
+      duration: 0.3,
+      onComplete: shakeTween,
+      onCompleteParams: ['.home-text02-border1', 10, 20, 8],
+    });
+    timeLine0.to(['.home-text02-2', '.home-text02-border2'], {
+      opacity: 1,
+      duration: 0.3,
+      onComplete: shakeTween,
+      onCompleteParams: ['.home-text02-border2', 10, 32, 18],
+    });
+    timeLine0.to(['.home-text02-3', '.home-text02-border3'], {
+      opacity: 1,
+      duration: 0.3,
+      onComplete: shakeTween,
+      onCompleteParams: ['.home-text02-border3', 10, 38, 25],
+    });
+    timeLine0.to(['.home-text02-4', '.home-text02-border4'], {
+      opacity: 1,
+      duration: 0.3,
+      onComplete: shakeTween,
+      onCompleteParams: ['.home-text02-border4', 10, 47, 34.5],
+    });
+    timeLine0.to(['.home-text02-5', '.home-text02-border5'], {
+      opacity: 1,
+      duration: 0.3,
+      onComplete: shakeTween,
+      onCompleteParams: ['.home-text02-border5', 10, 56, 43.5],
+    });
+    timeLine0.to(['.home-text02-6', '.home-text02-border6'], {
+      opacity: 1,
+      duration: 0.3,
+      onComplete: shakeTween,
+      onCompleteParams: ['.home-text02-border6', 10, 64, 51.5],
+    });
+    timeLine0.to(['.home-text02-7', '.home-text02-border7'], {
+      opacity: 1,
+      duration: 0.3,
+      onComplete: shakeTween,
+      onCompleteParams: ['.home-text02-border7', 10, 71, 61],
+    });
+    timeLine0.to(['.home-text02-8', '.home-text02-border8'], {
+      opacity: 1,
+      duration: 0.3,
+      onComplete: shakeTween,
+      onCompleteParams: ['.home-text02-border8', 10, 84.5, 70],
+    });
     // ==============================================================
     // 一圈圈的圓
     const timeLine1 = gsap.timeline({
@@ -284,16 +329,44 @@ export default {
         start: 'top 20%',
         end: '+=300',
         toggleActions: 'play none complete reverse',
-      }
-    })
-    timeLine1.to('.home-circle0', {opacity: 1, duration: 0.5})
-    timeLine1.to('.home-circle1', {top: '85%', left: '23%', width: '40%', height: '20%', opacity: 1, duration: 0.5})
-    timeLine1.to('.home-circle2', {top: '70%', left: '16%', width: '50%', height: '25%', opacity: 1, duration: 0.5})
-    timeLine1.to('.home-circle3', {top: '53%', left: '8%', width: '60%', height: '30%', opacity: 1, duration: 0.5})
-    timeLine1.to('.home-circle4', {top: '35%', left: '0%', width: '70%', height: '35%', opacity: 1, duration: 0.5})
+      },
+    });
+    timeLine1.to('.home-circle0', { opacity: 1, duration: 0.5 });
+    timeLine1.to('.home-circle1', {
+      top: '85%',
+      left: '23%',
+      width: '40%',
+      height: '20%',
+      opacity: 1,
+      duration: 0.5,
+    });
+    timeLine1.to('.home-circle2', {
+      top: '70%',
+      left: '16%',
+      width: '50%',
+      height: '25%',
+      opacity: 1,
+      duration: 0.5,
+    });
+    timeLine1.to('.home-circle3', {
+      top: '53%',
+      left: '8%',
+      width: '60%',
+      height: '30%',
+      opacity: 1,
+      duration: 0.5,
+    });
+    timeLine1.to('.home-circle4', {
+      top: '35%',
+      left: '0%',
+      width: '70%',
+      height: '35%',
+      opacity: 1,
+      duration: 0.5,
+    });
     // ==============================================================
     // 用力生活
-    gsap.from('.home-text03-3',{
+    gsap.from('.home-text03-3', {
       scrollTrigger: {
         trigger: '.home-text03-2',
         scrub: true,
@@ -303,8 +376,8 @@ export default {
       top: '45%',
       opacity: 0,
       duration: 1,
-    })
-    gsap.from('.home-text03-4',{
+    });
+    gsap.from('.home-text03-4', {
       scrollTrigger: {
         trigger: '.home-text03-2',
         scrub: true,
@@ -314,8 +387,8 @@ export default {
       top: '45%',
       opacity: 0,
       duration: 1,
-    })
-    gsap.from('.home-text03-5',{
+    });
+    gsap.from('.home-text03-5', {
       scrollTrigger: {
         trigger: '.home-text03-2',
         scrub: true,
@@ -325,7 +398,7 @@ export default {
       top: '40%',
       opacity: 0,
       duration: 1,
-    })
+    });
     // ==============================================================
     // 造就了形態的轉變
     const timeLine2 = gsap.timeline({
@@ -334,30 +407,52 @@ export default {
         start: 'top 60%',
         end: '+=200',
         toggleActions: 'play none complete reverse',
-      }
-    })
-    timeLine2.from('.home-text04-1',{top: '-12%', opacity: 0, duration: 0.15})
-    timeLine2.from('.home-text04-2',{top: '-9%', opacity: 0, duration: 0.15})
-    timeLine2.from('.home-text04-3',{top: '-6%', opacity: 0, duration: 0.15})
-    timeLine2.from('.home-text04-4',{top: '-3%', opacity: 0, duration: 0.15, delay: 0.3})
-    timeLine2.from('.home-text04-5',{top: '0%', opacity: 0, duration: 0.15})
-    timeLine2.from('.home-text04-6',{top: '3%', opacity: 0, duration: 0.15})
-    timeLine2.from('.home-text04-7',{top: '6%', opacity: 0, duration: 0.15, delay: 0.3})
-    timeLine2.from('.home-text04-8',{top: '9%', opacity: 0, duration: 0.15})
+      },
+    });
+    timeLine2.from('.home-text04-1', {
+      top: '-12%',
+      opacity: 0,
+      duration: 0.15,
+    });
+    timeLine2.from('.home-text04-2', {
+      top: '-9%',
+      opacity: 0,
+      duration: 0.15,
+    });
+    timeLine2.from('.home-text04-3', {
+      top: '-6%',
+      opacity: 0,
+      duration: 0.15,
+    });
+    timeLine2.from('.home-text04-4', {
+      top: '-3%',
+      opacity: 0,
+      duration: 0.15,
+      delay: 0.3,
+    });
+    timeLine2.from('.home-text04-5', { top: '0%', opacity: 0, duration: 0.15 });
+    timeLine2.from('.home-text04-6', { top: '3%', opacity: 0, duration: 0.15 });
+    timeLine2.from('.home-text04-7', {
+      top: '6%',
+      opacity: 0,
+      duration: 0.15,
+      delay: 0.3,
+    });
+    timeLine2.from('.home-text04-8', { top: '9%', opacity: 0, duration: 0.15 });
     // ==============================================================
     // 意念堅持
-    gsap.from('.home-text05',{
+    gsap.from('.home-text05', {
       scrollTrigger: {
         trigger: '.home-text05',
         scrub: true,
         start: 'top 90%',
         end: 'bottom 70%',
       },
-      opacity: 0
-    })
+      opacity: 0,
+    });
     // ==============================================================
     // 執著執著
-    gsap.to('.home-text06-top',{
+    gsap.to('.home-text06-top', {
       scrollTrigger: {
         trigger: '.home-text06-top',
         start: 'top 50%',
@@ -366,8 +461,8 @@ export default {
       },
       left: '7%',
       opacity: 0.9,
-      duration: 0.5
-    })
+      duration: 0.5,
+    });
     // ==============================================================
     // 痴狂
     const timeLineN1 = gsap.timeline({
@@ -376,13 +471,19 @@ export default {
         start: 'top 85%',
         end: '+=150',
         toggleActions: 'play none complete reverse',
-      }
-    })
-    timeLineN1.from('.home-text07-border', {transform: 'scale(0.5)', duration: 0.5})
-    timeLineN1.from(['.home-text07-line1','.home-text07-line2','.home-text07-line3'], {transform: 'scale(0)', duration: 1,})
+      },
+    });
+    timeLineN1.from('.home-text07-border', {
+      transform: 'scale(0.5)',
+      duration: 0.5,
+    });
+    timeLineN1.from(
+      ['.home-text07-line1', '.home-text07-line2', '.home-text07-line3'],
+      { transform: 'scale(0)', duration: 1 }
+    );
     // ==============================================================
     // 無所畏懼 變態
-    gsap.to(['.home-text10-1','.home-text10-2'],{
+    gsap.to(['.home-text10-1', '.home-text10-2'], {
       scrollTrigger: {
         trigger: '.home-text10-1',
         start: 'top 50%',
@@ -390,14 +491,16 @@ export default {
         toggleActions: 'play none complete reverse',
       },
       yoyo: true,
-      repeat: 15, 
-      rotateZ: `${Math.floor(10 + Math.random() + 1)}`, 
+      repeat: 15,
+      rotateZ: `${Math.floor(10 + Math.random() + 1)}`,
       duration: 0.1,
-      onComplete: () => { gsap.to(['.home-text10-1','.home-text10-2'], {rotateZ: 0}) }
-    })
+      onComplete: () => {
+        gsap.to(['.home-text10-1', '.home-text10-2'], { rotateZ: 0 });
+      },
+    });
     // ==============================================================
     // 策展資訊
-    gsap.from('.home-text11',{
+    gsap.from('.home-text11', {
       scrollTrigger: {
         trigger: '.home-text11',
         scrub: true,
@@ -405,7 +508,7 @@ export default {
         end: '+=80 50%',
       },
       opacity: 0,
-    })
+    });
     const timeLine3 = gsap.timeline({
       scrollTrigger: {
         trigger: '.home-text11-date1',
@@ -413,16 +516,28 @@ export default {
         end: '+=300 50%',
         toggleActions: 'play none none reverse',
       },
-    })
-    timeLine3.from('.home-text11-date1',{left: '30%', opacity: 0, duration: 0.3})
-    timeLine3.from('.home-text11-date2',{opacity: 0, duration: 0.3})
-    timeLine3.from('.home-text11-date3',{left: '44%', opacity: 0, duration: 0.3})
-    timeLine3.from('.home-text11-place1',{opacity: 0, duration: 0.3})
-    timeLine3.from('.home-text11-place2',{opacity: 0, duration: 0.3})
-    timeLine3.from('.home-text11-place3',{opacity: 0, rotateY: 180, duration: 0.5})
+    });
+    timeLine3.from('.home-text11-date1', {
+      left: '30%',
+      opacity: 0,
+      duration: 0.3,
+    });
+    timeLine3.from('.home-text11-date2', { opacity: 0, duration: 0.3 });
+    timeLine3.from('.home-text11-date3', {
+      left: '44%',
+      opacity: 0,
+      duration: 0.3,
+    });
+    timeLine3.from('.home-text11-place1', { opacity: 0, duration: 0.3 });
+    timeLine3.from('.home-text11-place2', { opacity: 0, duration: 0.3 });
+    timeLine3.from('.home-text11-place3', {
+      opacity: 0,
+      rotateY: 180,
+      duration: 0.5,
+    });
     // ==============================================================
     // 交通方式
-    gsap.from('.home-text12',{
+    gsap.from('.home-text12', {
       scrollTrigger: {
         trigger: '.home-text12',
         scrub: true,
@@ -430,18 +545,18 @@ export default {
         end: '+=80 50%',
       },
       opacity: 0,
-    })
-    gsap.from('.home-map1',{
+    });
+    gsap.from('.home-map1', {
       scrollTrigger: {
-        trigger: '.home-map1',     
+        trigger: '.home-map1',
         start: '20% 50%',
         end: '45% 50%',
         toggleActions: 'play none none reverse',
       },
       transform: 'scale(1.2)',
       opacity: 0,
-      duration: 0.7
-    })
+      duration: 0.7,
+    });
     gsap.from('.home-map2', {
       scrollTrigger: {
         trigger: '.home-map2',
@@ -452,8 +567,8 @@ export default {
       opacity: 0,
       left: '100%',
       ease: 'bounce',
-      duration: 0.8
-    })
+      duration: 0.8,
+    });
     // ==============================================================
     // 粉紅背景2
     const timeLine4 = gsap.timeline({
@@ -462,19 +577,34 @@ export default {
         start: 'top 70%',
         end: '50% 50%',
         toggleActions: 'play none none reset',
-      }
-    })
-    timeLine4.from('.pink-back2', {left: '-100%', duration: 0.5})
-    timeLine4.from('.pink-back-back', {opacity: 0, duration: 0.3})
-    timeLine4.from('.home-text13-1', {transform: 'scale(0)', opacity: 0, duration: 0.3})
-    timeLine4.from('.home-light-img', {transform: 'scale(5)', opacity: 0, duration: 0.3})
-    timeLine4.from('.home-text13-2', {opacity: 0, duration: 0.3})
-    timeLine4.from('.home-text13-3', {right: '-50%', duration: 0.3})
-    timeLine4.from('.home-text13-4', {opacity: 0, duration: 0.3})
-    timeLine4.from(['.home-text13-5','.home-text13-6'], {opacity: 0, duration: 0.3})
-    timeLine4.to('.home-text13-6', {top: '100%', duration: 0.3})
-    timeLine4.to(['.home-text13-5','.home-text13-6'], {transform: 'rotate(0deg)', duration: 0.3, delay: 0.3})
-    timeLine4.from('.home-text13-7', {scale: 0,opacity: 0, duration: 0.5})
+      },
+    });
+    timeLine4.from('.pink-back2', { left: '-100%', duration: 0.5 });
+    timeLine4.from('.pink-back-back', { opacity: 0, duration: 0.3 });
+    timeLine4.from('.home-text13-1', {
+      transform: 'scale(0)',
+      opacity: 0,
+      duration: 0.3,
+    });
+    timeLine4.from('.home-light-img', {
+      transform: 'scale(5)',
+      opacity: 0,
+      duration: 0.3,
+    });
+    timeLine4.from('.home-text13-2', { opacity: 0, duration: 0.3 });
+    timeLine4.from('.home-text13-3', { right: '-50%', duration: 0.3 });
+    timeLine4.from('.home-text13-4', { opacity: 0, duration: 0.3 });
+    timeLine4.from(['.home-text13-5', '.home-text13-6'], {
+      opacity: 0,
+      duration: 0.3,
+    });
+    timeLine4.to('.home-text13-6', { top: '100%', duration: 0.3 });
+    timeLine4.to(['.home-text13-5', '.home-text13-6'], {
+      transform: 'rotate(0deg)',
+      duration: 0.3,
+      delay: 0.3,
+    });
+    timeLine4.from('.home-text13-7', { scale: 0, opacity: 0, duration: 0.5 });
     // ==============================================================
     // 注意事項
     gsap.from('.home-text14-title', {
@@ -484,24 +614,44 @@ export default {
         start: 'top 50%',
         end: '+=80 50%',
       },
-      opacity: 0
-    })
+      opacity: 0,
+    });
     const timeLine5 = gsap.timeline({
       scrollTrigger: {
         trigger: '.home-text14-1',
         start: 'top 40%',
         end: '+=400 50%',
-        toggleActions: 'play none none reset'
-      }
-    })
-    timeLine5.from('.home-text14-1',{left: '40%', opacity: 0, duration: 0.3})
-    timeLine5.from('.home-text14-2',{left: '40%', opacity: 0, duration: 0.3})
-    timeLine5.from('.home-text14-3',{left: '40%', opacity: 0, duration: 0.3})
-    timeLine5.from('.home-text14-4',{left: '40%', opacity: 0, duration: 0.3})
-    timeLine5.from('.home-text14-5',{left: '40%', opacity: 0, duration: 0.3})
+        toggleActions: 'play none none reset',
+      },
+    });
+    timeLine5.from('.home-text14-1', {
+      left: '40%',
+      opacity: 0,
+      duration: 0.3,
+    });
+    timeLine5.from('.home-text14-2', {
+      left: '40%',
+      opacity: 0,
+      duration: 0.3,
+    });
+    timeLine5.from('.home-text14-3', {
+      left: '40%',
+      opacity: 0,
+      duration: 0.3,
+    });
+    timeLine5.from('.home-text14-4', {
+      left: '40%',
+      opacity: 0,
+      duration: 0.3,
+    });
+    timeLine5.from('.home-text14-5', {
+      left: '40%',
+      opacity: 0,
+      duration: 0.3,
+    });
     // ==============================================================
     // 亂亂的
-    gsap.from('.home-text15-1',{
+    gsap.from('.home-text15-1', {
       scrollTrigger: {
         trigger: '.home-text15-1',
         start: '60% 60%',
@@ -597,16 +747,16 @@ export default {
           trigger: trigger,
           start: 'top 60%',
           end: '50% 50%',
-          toggleActions: 'play none none none'
+          toggleActions: 'play none none none',
         },
         right: '-10vw',
-        duration: 0.3
-      })
+        duration: 0.3,
+      });
     }
-    Text15FromRight('.home-text15-right1')
-    Text15FromRight('.home-text15-right2')
-    Text15FromRight('.home-text15-right3')
-    Text15FromRight('.home-text15-right4')
+    Text15FromRight('.home-text15-right1');
+    Text15FromRight('.home-text15-right2');
+    Text15FromRight('.home-text15-right3');
+    Text15FromRight('.home-text15-right4');
     // ==============================================================
     // 結語
     const timeLine6 = gsap.timeline({
@@ -614,15 +764,28 @@ export default {
         trigger: '.home-text16-3',
         start: 'top 50%',
         end: 'bottom 50%',
-        toggleActions: 'play none none none'
-      }
-    })
-    timeLine6.from(['.home-text16-2','.home-text16-3'], {scale: 0, opacity: 0, duration: 0.5})
-    timeLine6.from('.home-text16-6', {scale: 0, opacity: 0, duration: 0.5})
-    timeLine6.from('.home-text16-1', {left: '0%', opacity: 0, duration: 0.5, delay: 0.5})
-    timeLine6.from('.home-text16-4', {left: '0%', opacity: 0, duration: 0.5})
-    timeLine6.from('.home-text16-5', {left: '0%', opacity: 0, duration: 0.5})
-    timeLine6.from('.home-text16-7', {left: '54%', opacity: 0, duration: 0.5})
+        toggleActions: 'play none none none',
+      },
+    });
+    timeLine6.from(['.home-text16-2', '.home-text16-3'], {
+      scale: 0,
+      opacity: 0,
+      duration: 0.5,
+    });
+    timeLine6.from('.home-text16-6', { scale: 0, opacity: 0, duration: 0.5 });
+    timeLine6.from('.home-text16-1', {
+      left: '0%',
+      opacity: 0,
+      duration: 0.5,
+      delay: 0.5,
+    });
+    timeLine6.from('.home-text16-4', { left: '0%', opacity: 0, duration: 0.5 });
+    timeLine6.from('.home-text16-5', { left: '0%', opacity: 0, duration: 0.5 });
+    timeLine6.from('.home-text16-7', {
+      left: '54%',
+      opacity: 0,
+      duration: 0.5,
+    });
   },
   methods: {
     handleOrientationChange: function() {
