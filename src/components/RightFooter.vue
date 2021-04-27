@@ -1,16 +1,13 @@
 <template>
-  <div class="sideBar right" :class="[changeColor]">
-    <div class="right__bar">
-      <span>元智大學</span>
-      <span>資訊傳播學系</span>
-      <span>第24屆畢業展覽</span>
-    </div>
+  <!-- 右下角的 footer -->
+  <div class="sideBar bottom" :class="[changeColor]">
+    Yan Ze University Information Communication 24th Graduation Exhibition
   </div>
 </template>
 
 <script>
 export default {
-  name: 'RightBar',
+  name: 'RightFooter',
   data() {
     return {
       changeColor: '',
@@ -40,16 +37,20 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.right {
-  right: 3%;
-}
-.right__bar {
-  writing-mode: vertical-lr;
-  span {
-    & + span {
-      margin-top: 10px;
-    }
+<style lang="scss">
+.bottom {
+  bottom: 2%;
+  min-height: 30px;
+  max-width: 250px;
+  right: 4%;
+  font-size: 0.7rem;
+  line-height: 20px;
+  text-align: right;
+  @include md-width() {
+    bottom: 4%;
+    max-width: 430px;
+    right: 10%;
+    line-height: 30px;
   }
 }
 </style>

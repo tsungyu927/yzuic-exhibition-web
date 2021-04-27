@@ -7,20 +7,9 @@
       @click="previous"
     />
 
+    <MenuBtn :main-color="'#ff1a83'" />
     <!-- 手機板 header -->
-    <div class="pg-header d-flex d-md-none">
-      <div class="header__icon previous">
-        <img
-          class="img-fluid"
-          src="../assets/icons/phone-arrow_pink.svg"
-          @click="previous"
-        />
-      </div>
-      <div class="title">{{ getTypeState.chName }}</div>
-      <div class="header__icon menu">
-        <img class="img-fluid" src="../assets/icons/phone-menu_white.svg" />
-      </div>
-    </div>
+    <MobileHeader :title="getTypeState.chName" />
 
     <div class="workGrid-container d-md-flex">
       <div class="workGrid__left d-none d-md-block">
@@ -57,17 +46,28 @@
         </div>
       </div>
     </div>
+
+    <LeftBar />
+    <RightBar />
+    <RightFooter />
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
 import { typeBox } from '@data/utilis.js';
+import MenuBtn from '../components/MenuBtn';
+import MobileHeader from '../components/MobileHeader';
+import LeftBar from '../components/LeftBar';
+import RightBar from '../components/RightBar';
+import RightFooter from '../components/RightFooter';
+
 export default {
   name: 'WorksGrid',
   data() {
     return {
       worksGroup: {},
+      work: {},
     };
   },
   mounted() {
@@ -80,7 +80,6 @@ export default {
         $that.worksGroup = works.filter(function(item) {
           return item.type == $that.$route.query.type;
         });
-        // console.log($that.worksGroup);
       },
       (res) => {
         console.log('error');
@@ -92,9 +91,16 @@ export default {
       this.$router.go(-1);
     },
     toIntroduction(id) {
+      //傳作品資料(object)給下一頁
+      let $that = this;
+      $that.work = $that.worksGroup.filter(function(item) {
+        return item.id == id;
+      })[0];
+
+      //路由到下一頁
       this.$router.push({
-        path: 'introduction/',
-        query: { id: id },
+        path: 'exhibitionIntro/',
+        query: { id: id, name: 'works' },
       });
     },
   },
@@ -108,7 +114,7 @@ export default {
       return typeBox[this.$route.query.type];
     },
   },
-  components: {},
+  components: { MenuBtn, MobileHeader, LeftBar, RightBar, RightFooter },
 };
 </script>
 
