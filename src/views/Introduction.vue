@@ -19,13 +19,13 @@
       <!-- 介紹 -->
       <div class="pg-block intro d-md-flex flex-md-row">
         <div class="px-xs-5 pg-block__text">
-          <div class="sub-title">介紹</div>
+          <div class="sub-title">{{introText}}</div>
           <!-- intro-mobile -->
           <div class="intro-mobile">{{ introData.projectIntro }}</div>
           <!-- intro-web -->
           <div class="intro-web ">
             <p>{{ introData.projectIntro | readMoreFun }}</p>
-            <b-button v-b-modal="'concept-modal'">more</b-button>
+            <b-button v-b-modal="'concept-modal'">{{moreText}}</b-button>
           </div>
           <ConceptModal
             :content="introData.projectIntro"
@@ -47,13 +47,13 @@
       <!-- 作品 -->
       <div class="pg-block work d-md-flex flex-md-row">
         <div class="px-xs-5">
-          <div class="sub-title">作品</div>
+          <div class="sub-title">{{workText}}</div>
           <!-- intro-mobile -->
           <div class="intro-mobile">{{ introData.projectShortIntro }}</div>
           <!-- intro-web -->
           <div class="intro-web ">
             <p>{{ introData.projectIntro | readMoreFun }}</p>
-            <b-button v-b-modal="'work-modal'">more</b-button>
+            <b-button v-b-modal="'work-modal'">{{moreText}}</b-button>
           </div>
           <ConceptModal
             :content="introData.projectShortIntro"
@@ -75,7 +75,7 @@
       <!-- 團隊 -->
       <div class="team pg-block d-md-flex flex-md-row px-xs-5">
         <div class="px-xs-5 pg-block__text">
-          <div class="sub-title">團隊</div>
+          <div class="sub-title">{{teamText}}</div>
           <!-- mobile -->
           <div class="intro-mobile d-md-none">{{ introData.team }}</div>
           <!-- web -->
@@ -157,6 +157,7 @@ import MobileHeader from '../components/MobileHeader';
 
 export default {
   name: 'Introduction',
+
   data() {
     return {
       introData: {},
@@ -166,6 +167,10 @@ export default {
       readMore2: false,
       //video
       videoId: '',
+      moreText:"more",
+      introText:"介紹",
+      teamText:"團隊",
+      workText:"作品"
     };
   },
   mounted() {

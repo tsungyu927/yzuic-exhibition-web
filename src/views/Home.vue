@@ -181,19 +181,18 @@
 
 <script>
 // @ is an alias to /v-lazy
-import HomeIntro from '../modal/HomeIntro'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
+import HomeIntro from '../modal/HomeIntro';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 export default {
   name: 'Home',
   data() {
-    return {
-      shakePos: false,
-      openIntro: false,
-    }
-    };
-  },
+      return {
+        shakePos: false,
+        openIntro: false
+      }
+    },
   components: {
     HomeIntro,
   },
