@@ -67,6 +67,7 @@ export default {
   data() {
     return {
       worksGroup: {},
+      work: {},
     };
   },
   mounted() {
@@ -79,7 +80,6 @@ export default {
         $that.worksGroup = works.filter(function(item) {
           return item.type == $that.$route.query.type;
         });
-        // console.log($that.worksGroup);
       },
       (res) => {
         console.log('error');
@@ -91,9 +91,16 @@ export default {
       this.$router.go(-1);
     },
     toIntroduction(id) {
+      //傳作品資料(object)給下一頁
+      let $that = this;
+      $that.work = $that.worksGroup.filter(function(item) {
+        return item.id == id;
+      })[0];
+
+      //路由到下一頁
       this.$router.push({
         path: 'exhibitionIntro/',
-        query: { id: id },
+        query: { id: id, name: 'works' },
       });
     },
   },

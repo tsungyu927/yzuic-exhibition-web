@@ -23,7 +23,7 @@ export default {
   watch: {
     $route: {
       handler: function(to, from) {
-        console.log(to, from);
+        // console.log(to, from);
         switch (to.path) {
           case '/exhibition':
             this.changeColor = 'white-outline__pink';

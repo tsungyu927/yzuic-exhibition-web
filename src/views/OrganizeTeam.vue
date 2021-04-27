@@ -18,7 +18,7 @@
               :key="item.enName"
               :nav-item="item"
               :main-color="'#00cbf4'"
-              @click.native="toIntroPage(item)"
+              @click.native="toIntroduction(item.id)"
             />
           </div>
         </div>
@@ -51,26 +51,32 @@ export default {
       //OrgnaizeTeamNavbar
       OTNavbar: [
         {
-          chName: '行政',
-          enName: 'Administration',
-        },
-        {
+          id: 1,
           chName: '公關',
           enName: 'PR',
         },
         {
+          id: 2,
+          chName: '行政',
+          enName: 'Administration',
+        },
+        {
+          id: 3,
           chName: '活動',
           enName: 'Activity',
         },
         {
+          id: 4,
           chName: '美術',
           enName: 'Art',
         },
         {
+          id: 5,
           chName: '場務',
           enName: 'Equipment',
         },
         {
+          id: 6,
           chName: '總務',
           enName: 'Affair',
         },
@@ -85,10 +91,10 @@ export default {
         console.log('After load end');
       }
     },
-    toIntroPage(type) {
+    toIntroduction(id) {
       this.$router.push({
-        path: '/Introduction',
-        query: { type: type.enName.toLowerCase() },
+        path: 'organizeTeamIntro/',
+        query: { id: id, name: 'staff' },
       });
     },
   },

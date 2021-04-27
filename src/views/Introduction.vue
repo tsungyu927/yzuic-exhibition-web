@@ -11,24 +11,24 @@
       <!-- 封面 -->
       <div class="pg-block p-0 cover d-md-flex flex-md-column">
         <div>
-          <div class="title">{{ work.title }}</div>
-          <div class="cover__team">{{ work.team }}</div>
+          <div class="title">{{ introData.title }}</div>
+          <div class="cover__team">{{ introData.team }}</div>
         </div>
-        <!-- <img class="cover__poster" :src="work.poster.vertical" /> -->
+        <!-- <img class="cover__poster" :src="introData.poster.vertical" /> -->
       </div>
       <!-- 介紹 -->
       <div class="pg-block intro d-md-flex flex-md-row">
         <div class="px-xs-5 pg-block__text">
           <div class="sub-title">介紹</div>
           <!-- intro-mobile -->
-          <div class="intro-mobile">{{ work.projectIntro }}</div>
+          <div class="intro-mobile">{{ introData.projectIntro }}</div>
           <!-- intro-web -->
           <div class="intro-web ">
-            <p>{{ work.projectIntro | readMoreFun }}</p>
+            <p>{{ introData.projectIntro | readMoreFun }}</p>
             <b-button v-b-modal="'concept-modal'">more</b-button>
           </div>
           <ConceptModal
-            :content="work.projectIntro"
+            :content="introData.projectIntro"
             :modalId="'concept-modal'"
           />
         </div>
@@ -49,14 +49,14 @@
         <div class="px-xs-5">
           <div class="sub-title">作品</div>
           <!-- intro-mobile -->
-          <div class="intro-mobile">{{ work.projectShortIntro }}</div>
+          <div class="intro-mobile">{{ introData.projectShortIntro }}</div>
           <!-- intro-web -->
           <div class="intro-web ">
-            <p>{{ work.projectIntro | readMoreFun }}</p>
+            <p>{{ introData.projectIntro | readMoreFun }}</p>
             <b-button v-b-modal="'work-modal'">more</b-button>
           </div>
           <ConceptModal
-            :content="work.projectShortIntro"
+            :content="introData.projectShortIntro"
             :modalId="'work-modal'"
           />
         </div>
@@ -64,7 +64,7 @@
           <div class="img-grid__group">
             <div
               class="preview-img"
-              v-for="(image, index) in work.previewImg"
+              v-for="(image, index) in introData.previewImg"
               :key="index"
             >
               <img class="img-fluid" :src="image" />
@@ -77,10 +77,10 @@
         <div class="px-xs-5 pg-block__text">
           <div class="sub-title">團隊</div>
           <!-- mobile -->
-          <div class="intro-mobile d-md-none">{{ work.team }}</div>
+          <div class="intro-mobile d-md-none">{{ introData.team }}</div>
           <!-- web -->
           <div class="d-none d-md-block team__logo">
-            <img class="img-fluid" :src="getLogoUrl(work.logo)" />
+            <img class="img-fluid" :src="getLogoUrl(introData.logo)" />
           </div>
         </div>
         <div class="slideShow">
@@ -106,14 +106,14 @@
 
         <!-- mobile版 logo + team intro -->
         <div class="my-3 d-flex">
-          <div class="d-md-none">{{ work.teamIntro }}</div>
+          <div class="d-md-none">{{ introData.teamIntro }}</div>
           <div class="team__logo col-4 d-md-none">
-            <img class="img-fluid" :src="work.logo" />
+            <img class="img-fluid" :src="introData.logo" />
           </div>
         </div>
       </div>
       <div class="pg-block my-3 d-none d-md-block">
-        {{ work.teamIntro }}
+        {{ introData.teamIntro }}
       </div>
       <!-- 組員介紹區 -->
       <div class="d-flex px-5">
@@ -121,7 +121,7 @@
           <div
             class="member d-inline-flex flex-column flex-md-row"
             :key="index"
-            v-for="(member, index) in work.members"
+            v-for="(member, index) in introData.members"
           >
             <div class="member__pic">
               <!-- <img class="img-fluid" :src="member.pic" /> -->
@@ -159,8 +159,8 @@ export default {
   name: 'Introduction',
   data() {
     return {
-      //json檔
-      work: {},
+      introData: {},
+      introData: {},
       //read more
       readMore: false,
       readMore2: false,
@@ -171,13 +171,26 @@ export default {
   mounted() {
     // console.log(this.$route.query.id);
     let $that = this;
+    let type = '';
     //讀本地端json
     this.$ajax.get('/data.json').then(
       (res) => {
-        const works = res.data.works;
-        $that.work = works.filter(function(item) {
+        switch ($that.$route.query.name) {
+          //展覽作品
+          case 'works':
+            type = res.data.works;
+            break;
+          //策展團隊
+          case 'staff':
+            type = res.data.staff;
+            break;
+        }
+        // console.log('introData:', introData);
+        $that.introData = type.filter(function(item) {
           return item.id == $that.$route.query.id;
         })[0];
+        // console.log('$that.introData:', $that.introData);
+        // console.log('title:', $that.introData.title);
       },
       (res) => {
         console.log('error');
