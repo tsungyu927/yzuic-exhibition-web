@@ -1,10 +1,12 @@
 <template>
   <div id="app" class="app">
     <!-- Loading Anim -->
-    <Loader />
+    <!-- <Loader /> -->
+    <!-- 目錄modal -->
+    <Catalog v-if="openCatalog" class="catalogModal" />
     <!-- 右上角的btn -->
-    <button class="menu-btn">
-      <router-link to="/">目錄</router-link>
+    <button class="menu-btn" @click="handleOpenCatalog">
+      <div>目錄</div>
     </button>
 
     <div class="app-container">
@@ -27,13 +29,36 @@
 import LeftBar from '@/components/LeftBar.vue'
 import RightBar from '@/components/RightBar.vue'
 // import Loader from './views/Loader'
+import Catalog from './modal/Catalog'
+import gsap from 'gsap'
 
 export default {
   name: 'App',
+  data(){
+    return {
+      openCatalog: false
+    }
+  },
   components: {
+    // Loader,
     LeftBar,
     RightBar,
+    Catalog,
   },
+  methods: {
+    handleOpenCatalog: function(){
+      if(this.openCatalog){
+        gsap.to('.catalogModal',{
+          opacity: 0,
+          duration: 0.3
+        }).then(()=>{
+          this.openCatalog = false
+        })
+      } else{
+        this.openCatalog = true
+      }
+    },
+  }
 }
 </script>
 
@@ -65,7 +90,7 @@ body{
       font-size: 0.7rem;
       display: flex;
       position: fixed;
-      z-index: 1;
+      z-index: 2;
       bottom: 2%;
       height: 40%;
       width: 100%;
@@ -98,7 +123,7 @@ body{
   @include md-width() {
     display: flex;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     font-weight: bold;
     line-height: 2.8rem;
     justify-content: center;
@@ -111,12 +136,12 @@ body{
     right: 2%;
     background-color: transparent;
   }
-  a {
+  div {
     color: $exhibition-mainColor;
   }
   &:hover {
     background-color: $exhibition-mainColor;
-    a {
+    div {
       color: white;
     }
   }

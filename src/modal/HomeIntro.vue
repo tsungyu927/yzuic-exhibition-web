@@ -1,8 +1,8 @@
 <template>
   <div class="homeIntro">
     <img class="QQLine" :src="require('../assets/home/modal/QQ.svg')" />
+    <img @click="handleClose" class="backIcon" :src="require('../assets/home/modal/返回icon.svg')" />
     <div class="homeIntro-left">
-      <img @click="handleClose" class="backIcon" :src="require('../assets/home/modal/返回icon.svg')" />
       <div class="homeIntro-text">
         <div class="homeIntro-title">為甚麼要叫「此刻變態」？</div>
         <div class="homeIntro-con">

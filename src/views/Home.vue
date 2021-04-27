@@ -197,6 +197,11 @@ export default {
     HomeIntro,
   },
   mounted() {
+    // 判斷是否為橫式
+    this.handleOrientationChange()
+    window.addEventListener('resize', this.handleOrientationChange, false);
+    
+    // ===============================
     console.log('%c拜託不要搞我們(●’ω`●）',"color:#FF1A83; font-size: 35px; background-color: #fff;")
     gsap.registerPlugin(ScrollTrigger)
     const titleSeq = gsap.timeline({
@@ -620,12 +625,25 @@ export default {
     timeLine6.from('.home-text16-7', {left: '54%', opacity: 0, duration: 0.5})
   },
   methods: {
-    handleOpenModal: function(){
+    handleOrientationChange: function() {
+      if (window.innerWidth > window.innerHeight) {
+        // landscape
+        // 可以下滑
+        console.log('landscape')
+        document.querySelector('body').style.overflowY = 'scroll'
+      } else {
+        // portrait
+        // 鎖住不能下滑
+        console.log('portrait')
+        document.querySelector('body').style.overflowY = 'hidden'
+      }
+    },
+    handleOpenModal: function() {
       // 停止滑動body
       document.querySelector('body').style.overflowY = 'hidden'
       this.openIntro = true
     },
-    handleCloseModal: function(){
+    handleCloseModal: function() {
       // 可以滑動body
       document.querySelector('body').style.overflowY = 'scroll'
       this.openIntro = false
@@ -635,5 +653,5 @@ export default {
 </script>
 
 <style>
-@import url('../scss/home/home.css')
+@import url('../scss/home/home.css');
 </style>
