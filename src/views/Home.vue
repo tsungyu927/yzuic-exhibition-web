@@ -181,9 +181,9 @@
 
 <script>
 // @ is an alias to /v-lazy
-import HomeIntro from '../modal/HomeIntro'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
+import HomeIntro from '../modal/HomeIntro';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 export default {
   name: 'Home',
@@ -191,7 +191,6 @@ export default {
     return {
       shakePos: false,
       openIntro: false,
-    }
     };
   },
   components: {
@@ -199,12 +198,12 @@ export default {
   },
   mounted() {
     // 判斷是否為橫式
-    this.handleOrientationChange()
+    this.handleOrientationChange();
     window.addEventListener('resize', this.handleOrientationChange, false);
     
     // ===============================
-    console.log('%c拜託不要搞我們(●’ω`●）',"color:#FF1A83; font-size: 35px; background-color: #fff;")
-    gsap.registerPlugin(ScrollTrigger)
+    console.log('%c拜託不要搞我們(●’ω`●）',"color:#FF1A83; font-size: 35px; background-color: #fff;");
+    gsap.registerPlugin(ScrollTrigger);
     const titleSeq = gsap.timeline({
       scrollTrigger: {
         trigger: '.title-back',
@@ -213,11 +212,11 @@ export default {
         markers: true,
         toggleActions: 'play reverse play none'
       }
-    })
-    titleSeq.from('.title-img1',{opacity: 0, duration: 0.5})
-    titleSeq.from('.title-img2',{opacity: 0, duration: 0.3})
-    titleSeq.from('.title-img3',{opacity: 0, duration: 0.5, delay: 0.5})
-    titleSeq.from('.title-img4',{opacity: 0, duration: 0.3})
+    });
+    titleSeq.from('.title-img1',{opacity: 0, duration: 0.5});
+    titleSeq.from('.title-img2',{opacity: 0, duration: 0.3});
+    titleSeq.from('.title-img3',{opacity: 0, duration: 0.5, delay: 0.5});
+    titleSeq.from('.title-img4',{opacity: 0, duration: 0.3});
     // 每一刻的 & 努力追求
     gsap.from('.home-text00', {
       scrollTrigger: {
@@ -662,7 +661,7 @@ export default {
       top: '40%',
       right: '-10%',
       duration: 1,
-    })
+    });
     gsap.from('.home-text15-2',{
       scrollTrigger: {
         trigger: '.home-text15-2',
@@ -673,7 +672,7 @@ export default {
       left: '-90%',
       opacity: 0,
       duration: 1
-    })
+    });
     gsap.from('.home-text15-3',{
       scrollTrigger: {
         trigger: '.home-text15-3',
@@ -684,7 +683,7 @@ export default {
       right: '-70%',
       opacity: 0,
       duration: 1,
-    })
+    });
     gsap.from('.home-text15-4',{
       scrollTrigger: {
         trigger: '.home-text15-4',
@@ -695,7 +694,7 @@ export default {
       transform: 'rotateY(180deg)',
       opacity: 0,
       duration: 1,
-    })
+    });
     gsap.from('.home-text15-5',{
       scrollTrigger: {
         trigger: '.home-text15-5',
@@ -707,7 +706,7 @@ export default {
       left: '46%',
       opacity: 0,
       duration: 1
-    })
+    });
     gsap.from('.home-text15-6',{
       scrollTrigger: {
         trigger: '.home-text15-6',
@@ -718,7 +717,7 @@ export default {
       left: '-90%',
       opacity: 0,
       duration: 1
-    })
+    });
     gsap.from('.home-text15-7',{
       scrollTrigger: {
         trigger: '.home-text15-7',
@@ -729,7 +728,7 @@ export default {
       left: '-13%',
       opacity: 0,
       duration: 1
-    })
+    });
     gsap.from('.home-text15-8',{
       scrollTrigger: {
         trigger: '.home-text15-8',
@@ -740,7 +739,7 @@ export default {
       scale: 0,
       opacity: 0,
       duration: 1
-    })
+    });
     function Text15FromRight(trigger){
       gsap.from(trigger,{
         scrollTrigger: {
@@ -792,27 +791,27 @@ export default {
       if (window.innerWidth > window.innerHeight) {
         // landscape
         // 可以下滑
-        console.log('landscape')
-        document.querySelector('body').style.overflowY = 'scroll'
+        console.log('landscape');
+        document.querySelector('body').style.overflowY = 'scroll';
       } else {
         // portrait
         // 鎖住不能下滑
-        console.log('portrait')
-        document.querySelector('body').style.overflowY = 'hidden'
+        console.log('portrait');
+        document.querySelector('body').style.overflowY = 'hidden';
       }
     },
     handleOpenModal: function() {
       // 停止滑動body
-      document.querySelector('body').style.overflowY = 'hidden'
-      this.openIntro = true
+      document.querySelector('body').style.overflowY = 'hidden';
+      this.openIntro = true;
     },
     handleCloseModal: function() {
       // 可以滑動body
-      document.querySelector('body').style.overflowY = 'scroll'
-      this.openIntro = false
+      document.querySelector('body').style.overflowY = 'scroll';
+      this.openIntro = false;
     }
   }
-}
+};
 </script>
 
 <style>

@@ -11,36 +11,25 @@
     <div class="app-container">
       <router-view />
     </div>
-
-    <!-- 左下角的選單 -->
-    <LeftBar />
-    <!-- 右邊的 footer -->
-    <RightBar />
-    <!-- 右下角的 footer -->
-    <div class="sideBar bottom">
-      Yan Ze University Information Communication 24th Graduation Exhibition
-    </div>
   </div>
 </template>
 
 <script>
-import LeftBar from '@/components/LeftBar.vue'
-import RightBar from '@/components/RightBar.vue'
+import LeftBar from '@/components/LeftBar.vue';
+import RightBar from '@/components/RightBar.vue';
 // import Loader from './views/Loader'
-import Catalog from './modal/Catalog'
-import gsap from 'gsap'
+import Catalog from './modal/Catalog';
+import gsap from 'gsap';
 
 export default {
   name: 'App',
   data(){
     return {
       openCatalog: false
-    }
+    };
   },
   components: {
     // Loader,
-    LeftBar,
-    RightBar,
     Catalog,
   },
   methods: {
@@ -50,10 +39,10 @@ export default {
           opacity: 0,
           duration: 0.3
         }).then(()=>{
-          this.openCatalog = false
-        })
+          this.openCatalog = false;
+        });
       } else{
-        this.openCatalog = true
+        this.openCatalog = true;
       }
     },
   }

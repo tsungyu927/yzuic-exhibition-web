@@ -10,13 +10,14 @@ import VueLazyload from 'vue-lazyload';
 import VueFullPage from 'vue-fullpage.js';
 import { VueMasonryPlugin } from 'vue-masonry';
 import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue';
-
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-vue/dist/bootstrap-vue.css';
 // css
-
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
+
+//font awesome
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faBars, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 // css
 // import '@/scss/all.scss';
@@ -35,6 +36,9 @@ Vue.use(VueFullPage);
 Vue.use(VueMasonryPlugin);
 Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);
+
+library.add(faBars, faArrowLeft);
+Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 new Vue({
   router,
