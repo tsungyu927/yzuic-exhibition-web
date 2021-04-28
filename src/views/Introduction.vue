@@ -167,10 +167,10 @@ export default {
       readMore2: false,
       //video
       videoId: '',
-      moreText:"more",
-      introText:"介紹",
-      teamText:"團隊",
-      workText:"作品"
+      moreText:"",
+      introText:"",
+      teamText:"",
+      workText:""
     };
   },
   mounted() {
@@ -184,10 +184,18 @@ export default {
           //展覽作品
           case 'works':
             type = res.data.works;
+            this.moreText="more";
+            this.introText="介紹";
+            this.teamText="團隊";
+            this.workText="作品";
             break;
           //策展團隊
           case 'staff':
             type = res.data.staff;
+            this.moreText="more";
+            this.workText="籌畫";
+            this.introText="";
+            this.teamText="團隊";
             break;
         }
         // console.log('introData:', introData);
