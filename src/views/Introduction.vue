@@ -29,7 +29,9 @@
           <div class="title">{{ work.title }}</div>
           <div class="cover__team">{{ work.team }}</div>
         </div>
-        <!-- <img class="cover__poster" :src="work.poster.vertical" /> -->
+        <div class="d-none d-md-block">
+          <img class="img-fluid" :src="getPosterUrl(work.poster)" />
+        </div>
       </div>
       <!-- 介紹 -->
       <div class="pg-block intro d-md-flex flex-md-row mb-3">
@@ -82,7 +84,7 @@
               v-for="(image, index) in work.previewImg"
               :key="index"
             >
-              <img class="img-fluid" :src="image" />
+              <img class="img-fluid" :src="getPreviewUrl(image)" />
             </div>
           </div>
         </div>
@@ -97,24 +99,24 @@
           </div>
         </div>
         <div class="slideShow">
-          <!-- 這裡要放 SlideShow 組件 -->
-          <!-- <div class="slideShow__box">
-            <iframe
-              frameborder="0"
-              src="https://www.youtube.com/embed/SORD03t7nlo"
-              allowFullScreen="true"
+          <!-- vue-agile套件(Carousel 輪播)  -->
+          <!-- 要傳到套件裡，所以參數都要加冒號 -->
+          <agile :autoplay="true" :dots="false">
+            <div
+              class="slide"
+              v-for="(image, index) in work.teamImg"
+              :key="index"
             >
-            </iframe>
-          </div> -->
-          <SlideModal
-            :index="1"
-            :image="[
-              'https://lh4.googleusercontent.com/proxy/la_whlWnRyQlgYtu_F8S-Cs25yzCZedtOFViVfGNWO_x_TFyf9CUFoxpQA6Q79Tp40ozqPQ6ydJbH-PzbePTAyMlikL3WZDZHABmpQdH4tB9ab9Ea2vVWWkwPJ2xqy1pDYz_Rj7y=s0-d',
-              'https://images.pexels.com/photos/90270/pexels-photo-90270.jpeg?cs=srgb&dl=pexels-vibez-dzn-90270.jpg&fm=jpg',
-              'https://yoyotours.com.tw/wp-content/uploads/2011/06/Paris-Wallpaper-Free-Download.jpg',
-              'http://i.imgur.com/lX2so.jpg',
-            ]"
-          />
+              <img class="img-fluid" :src="getTeamUrl(image)" />
+            </div>
+            <!-- 客製化 按鈕 -->
+            <template slot="prevButton"
+              ><img class="img-fluid" src="../assets/logo/carousel-prev.svg"
+            /></template>
+            <template slot="nextButton"
+              ><img class="img-fluid" src="../assets/logo/carousel-next.svg"
+            /></template>
+          </agile>
         </div>
 
         <!-- mobile版 logo + team intro -->
@@ -158,8 +160,8 @@
 
 <script>
 import Footer from '../components/Footer.vue';
-import SlideModal from '../modal/SlideModal.vue';
 import ConceptModal from '../modal/ConceptModal.vue';
+import { VueAgile } from 'vue-agile';
 
 export default {
   name: 'Introduction',
@@ -184,6 +186,7 @@ export default {
         $that.work = works.filter(function(item) {
           return item.id == $that.$route.query.id;
         })[0];
+        console.log('img', $that.work.teamImg);
       },
       (res) => {
         console.log('error');
@@ -202,6 +205,15 @@ export default {
     getMemberUrl(fileName) {
       return `${process.env.VUE_APP_CONTEXT_PATH}${process.env.VUE_APP_IMG}/memberPic/${fileName}.jpg`;
     },
+    getPosterUrl(fileName) {
+      return `${process.env.VUE_APP_CONTEXT_PATH}${process.env.VUE_APP_IMG}/poster/${fileName}.jpg`;
+    },
+    getPreviewUrl(fileName) {
+      return `${process.env.VUE_APP_CONTEXT_PATH}${process.env.VUE_APP_IMG}/previewImg/${fileName}.jpg`;
+    },
+    getTeamUrl(fileName) {
+      return `${process.env.VUE_APP_CONTEXT_PATH}${process.env.VUE_APP_IMG}/teamImg/${fileName}.jpg`;
+    },
   },
   filters: {
     readMoreFun(str) {
@@ -210,7 +222,7 @@ export default {
     },
   },
   computed: {},
-  components: { Footer, SlideModal, ConceptModal },
+  components: { Footer, ConceptModal, agile: VueAgile },
 };
 </script>
 
@@ -466,5 +478,20 @@ export default {
 .logo__mobile {
   width: 20%;
   margin-right: 20px;
+}
+
+.agile {
+  // v-deep 往組件裡找 class
+  ::v-deep .agile__actions {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .agile__nav-button {
+      border: none;
+      background-color: transparent;
+    }
+  }
 }
 </style>
