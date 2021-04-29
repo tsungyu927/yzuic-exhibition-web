@@ -12,7 +12,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('../views/Home.vue'),
+    component: Home,
   },
   //展覽作品
   {
@@ -37,8 +37,13 @@ const routes = [
     // props: (route) => ({ query: route.query.type }),
   },
   {
-    path: '/introduction',
-    name: 'Introduction',
+    path: '/exhibitionIntro',
+    name: 'ExhibitionIntro',
+    component: Introduction,
+  },
+  {
+    path: '/organizeTeamIntro',
+    name: 'OrganizeTeamIntro',
     component: Introduction,
   },
 ];

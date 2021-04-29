@@ -7,27 +7,13 @@
       @click="previous"
     />
 
-    <!-- 手機板 header -->
-    <div class="pg-header d-flex d-md-none">
-      <div class="header__icon previous">
-        <img
-          class="img-fluid"
-          src="../assets/icons/phone-arrow_pink.svg"
-          @click="previous"
-        />
-      </div>
-      <div class="title">{{ work.title }}</div>
-      <div class="header__icon menu">
-        <img class="img-fluid" src="../assets/icons/phone-menu_white.svg" />
-      </div>
-    </div>
-
+    <MobileHeader :title="'展覽作品'" />
     <div class="pg-intro-container">
       <!-- 封面 -->
       <div class="pg-block p-0 cover d-md-flex flex-md-column">
         <div>
-          <div class="title">{{ work.title }}</div>
-          <div class="cover__team">{{ work.team }}</div>
+          <div class="title">{{ introData.title }}</div>
+          <div class="cover__team">{{ introData.team }}</div>
         </div>
         <div class="d-none d-md-block">
           <img class="img-fluid" :src="getPosterUrl(work.poster)" />
@@ -38,14 +24,14 @@
         <div class="px-xs-5 pg-block__text">
           <div class="sub-title">介紹</div>
           <!-- intro-mobile -->
-          <div class="intro-mobile">{{ work.projectIntro }}</div>
+          <div class="intro-mobile">{{ introData.projectIntro }}</div>
           <!-- intro-web -->
           <div class="intro-web ">
-            <p>{{ work.projectIntro | readMoreFun }}</p>
+            <p>{{ introData.projectIntro | readMoreFun }}</p>
             <b-button v-b-modal="'concept-modal'">more</b-button>
           </div>
           <ConceptModal
-            :content="work.projectIntro"
+            :content="introData.projectIntro"
             :modalId="'concept-modal'"
           />
         </div>
@@ -66,14 +52,14 @@
         <div class="px-xs-5">
           <div class="sub-title">作品</div>
           <!-- intro-mobile -->
-          <div class="intro-mobile">{{ work.projectShortIntro }}</div>
+          <div class="intro-mobile">{{ introData.projectShortIntro }}</div>
           <!-- intro-web -->
           <div class="intro-web ">
-            <p>{{ work.projectIntro | readMoreFun }}</p>
+            <p>{{ introData.projectIntro | readMoreFun }}</p>
             <b-button v-b-modal="'work-modal'">more</b-button>
           </div>
           <ConceptModal
-            :content="work.projectShortIntro"
+            :content="introData.projectShortIntro"
             :modalId="'work-modal'"
           />
         </div>
@@ -81,7 +67,7 @@
           <div class="img-grid__group">
             <div
               class="preview-img"
-              v-for="(image, index) in work.previewImg"
+              v-for="(image, index) in introData.previewImg"
               :key="index"
             >
               <img class="img-fluid" :src="getPreviewUrl(image)" />
@@ -93,9 +79,11 @@
       <div class="team pg-block d-md-flex flex-md-row px-xs-5 mb-3">
         <div class="px-xs-5 pg-block__text">
           <div class="sub-title">團隊</div>
+          <!-- mobile -->
+          <div class="intro-mobile d-md-none">{{ introData.team }}</div>
           <!-- web -->
           <div class="d-none d-md-block team__logo">
-            <img class="img-fluid" :src="getLogoUrl(work.logo)" />
+            <img class="img-fluid" :src="getLogoUrl(introData.logo)" />
           </div>
         </div>
         <div class="slideShow">
@@ -136,7 +124,7 @@
           <div
             class="member d-inline-flex flex-column flex-md-row"
             :key="index"
-            v-for="(member, index) in work.members"
+            v-for="(member, index) in introData.members"
           >
             <div class="member__pic">
               <img class="img-fluid" :src="getMemberUrl(member.pic)" />
@@ -155,6 +143,9 @@
       <!-- 聯絡我們 -->
       <Footer />
     </div>
+    <LeftBar />
+    <RightBar />
+    <RightFooter />
   </div>
 </template>
 
@@ -162,13 +153,17 @@
 import Footer from '../components/Footer.vue';
 import ConceptModal from '../modal/ConceptModal.vue';
 import { VueAgile } from 'vue-agile';
+import LeftBar from '../components/LeftBar';
+import RightBar from '../components/RightBar';
+import RightFooter from '../components/RightFooter';
+import MobileHeader from '../components/MobileHeader';
 
 export default {
   name: 'Introduction',
   data() {
     return {
-      //json檔
-      work: {},
+      introData: {},
+      introData: {},
       //read more
       readMore: false,
       readMore2: false,
@@ -179,14 +174,24 @@ export default {
   mounted() {
     // console.log(this.$route.query.id);
     let $that = this;
+    let type = '';
     //讀本地端json
     this.$ajax.get('/data.json').then(
       (res) => {
-        const works = res.data.works;
-        $that.work = works.filter(function(item) {
+        switch ($that.$route.query.name) {
+          //展覽作品
+          case 'works':
+            type = res.data.works;
+            break;
+          //策展團隊
+          case 'staff':
+            type = res.data.staff;
+            break;
+        }
+        // console.log('introData:', introData);
+        $that.introData = type.filter(function(item) {
           return item.id == $that.$route.query.id;
         })[0];
-        console.log('img', $that.work.teamImg);
       },
       (res) => {
         console.log('error');
@@ -223,6 +228,15 @@ export default {
   },
   computed: {},
   components: { Footer, ConceptModal, agile: VueAgile },
+  components: {
+    Footer,
+    SlideModal,
+    ConceptModal,
+    LeftBar,
+    RightBar,
+    RightFooter,
+    MobileHeader,
+  },
 };
 </script>
 
