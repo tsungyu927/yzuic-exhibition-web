@@ -16,7 +16,7 @@
           <div class="cover__team">{{ introData.team }}</div>
         </div>
         <div class="d-none d-md-block">
-          <img class="img-fluid" :src="getPosterUrl(work.poster)" />
+          <img class="img-fluid" :src="getPosterUrl(introData.poster)" />
         </div>
       </div>
       <!-- 介紹 -->
@@ -92,7 +92,7 @@
           <agile :autoplay="true" :dots="false">
             <div
               class="slide"
-              v-for="(image, index) in work.teamImg"
+              v-for="(image, index) in introData.teamImg"
               :key="index"
             >
               <img class="img-fluid" :src="getTeamUrl(image)" />
@@ -109,14 +109,14 @@
 
         <!-- mobile版 logo + team intro -->
         <div class="my-3 d-flex">
-          <div class="d-md-none flex-grow-1">{{ work.teamIntro }}</div>
+          <div class="d-md-none flex-grow-1">{{ introData.teamIntro }}</div>
           <div class="team__logo d-md-none logo__mobile">
-            <img class="img-fluid" :src="getLogoUrl(work.logo)" />
+            <img class="img-fluid" :src="getLogoUrl(introData.logo)" />
           </div>
         </div>
       </div>
       <div class="pg-block my-3 d-none d-md-block mb-3">
-        {{ work.teamIntro }}
+        {{ introData.teamIntro }}
       </div>
       <!-- 組員介紹區 -->
       <div class="d-flex px-md-5">
@@ -162,7 +162,6 @@ export default {
   name: 'Introduction',
   data() {
     return {
-      introData: {},
       introData: {},
       //read more
       readMore: false,
@@ -227,15 +226,14 @@ export default {
     },
   },
   computed: {},
-  components: { Footer, ConceptModal, agile: VueAgile },
   components: {
     Footer,
-    SlideModal,
     ConceptModal,
     LeftBar,
     RightBar,
     RightFooter,
     MobileHeader,
+    agile: VueAgile
   },
 };
 </script>
