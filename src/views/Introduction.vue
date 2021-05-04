@@ -22,13 +22,13 @@
       <!-- 介紹 -->
       <div class="pg-block intro d-md-flex flex-md-row mb-3">
         <div class="px-xs-5 pg-block__text">
-          <div class="sub-title">介紹</div>
+          <div class="sub-title">{{introText}}</div>
           <!-- intro-mobile -->
           <div class="intro-mobile">{{ introData.projectIntro }}</div>
           <!-- intro-web -->
           <div class="intro-web ">
             <p>{{ introData.projectIntro | readMoreFun }}</p>
-            <b-button v-b-modal="'concept-modal'">more</b-button>
+            <b-button v-b-modal="'concept-modal'">{{moreText}}</b-button>
           </div>
           <ConceptModal
             :content="introData.projectIntro"
@@ -50,13 +50,13 @@
       <!-- 作品 -->
       <div class="pg-block work d-md-flex flex-md-row mb-3">
         <div class="px-xs-5">
-          <div class="sub-title">作品</div>
+          <div class="sub-title">{{workText}}</div>
           <!-- intro-mobile -->
           <div class="intro-mobile">{{ introData.projectShortIntro }}</div>
           <!-- intro-web -->
           <div class="intro-web ">
             <p>{{ introData.projectIntro | readMoreFun }}</p>
-            <b-button v-b-modal="'work-modal'">more</b-button>
+            <b-button v-b-modal="'work-modal'">{{moreText}}</b-button>
           </div>
           <ConceptModal
             :content="introData.projectShortIntro"
@@ -70,15 +70,36 @@
               v-for="(image, index) in introData.previewImg"
               :key="index"
             >
-              <img class="img-fluid" :src="getPreviewUrl(image)" />
+              <img class="img-fluid" :src="getPreviewUrl(image)" v-b-modal="'modal-xl'"/>
             </div>
           </div>
         </div>
+        <b-modal id="modal-xl" size="xl" hide-footer="true">
+          <div class="slideShow">
+            <!-- vue-agile套件(Carousel 輪播)  -->
+            <!-- 要傳到套件裡，所以參數都要加冒號 -->
+            <agile :autoplay="true" :dots="false">
+              <div
+                v-for="(image, index) in introData.previewImg"
+                :key="index"
+              >
+                <img style="width:1120px; height:500px;" class="img-fluid" :src="getPreviewUrl(image)" />
+              </div>
+              <!-- 客製化 按鈕 -->
+              <template slot="prevButton"
+                ><img  class="img-fluid" src="../assets/logo/carousel-prev.svg"/>
+              </template>
+              <template slot="nextButton"
+                ><img  class="img-fluid" src="../assets/logo/carousel-next.svg"/>
+              </template>
+            </agile>
+          </div>
+        </b-modal>
       </div>
       <!-- 團隊 -->
       <div class="team pg-block d-md-flex flex-md-row px-xs-5 mb-3">
         <div class="px-xs-5 pg-block__text">
-          <div class="sub-title">團隊</div>
+          <div class="sub-title">{{teamText}}</div>
           <!-- mobile -->
           <div class="intro-mobile d-md-none">{{ introData.team }}</div>
           <!-- web -->
@@ -157,7 +178,6 @@ import LeftBar from '../components/LeftBar';
 import RightBar from '../components/RightBar';
 import RightFooter from '../components/RightFooter';
 import MobileHeader from '../components/MobileHeader';
-
 export default {
   name: 'Introduction',
   data() {
@@ -168,6 +188,10 @@ export default {
       readMore2: false,
       //video
       videoId: '',
+      moreText:"",
+      introText:"",
+      teamText:"",
+      workText:""
     };
   },
   mounted() {
@@ -181,10 +205,16 @@ export default {
           //展覽作品
           case 'works':
             type = res.data.works;
+            $that.moreText="more";
+            $that.introText="介紹",
+            $that.teamText="團隊",
+            $that.workText="作品"
             break;
           //策展團隊
           case 'staff':
             type = res.data.staff;
+            $that.workText="策畫";
+            $that.introText="";
             break;
         }
         // console.log('introData:', introData);
@@ -233,7 +263,7 @@ export default {
     RightBar,
     RightFooter,
     MobileHeader,
-    agile: VueAgile
+    agile: VueAgile,
   },
 };
 </script>
