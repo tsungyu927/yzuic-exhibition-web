@@ -29,7 +29,7 @@
           @click="toIntroduction(work.id)"
         >
           <div class="work__img">
-            <img class="img-fluid" :src="work.poster.vertical" />
+            <img class="img-fluid" :src="getPosterUrl(work.poster)" />
           </div>
           <div class="work__text">
             <div
@@ -103,6 +103,9 @@ export default {
         query: { id: id, name: 'works' },
       });
     },
+    getPosterUrl(fileName) {
+      return `${process.env.VUE_APP_CONTEXT_PATH}${process.env.VUE_APP_IMG}/poster/${fileName}.jpg`;
+    },
   },
   filters: {
     readMoreFun(str) {
@@ -157,6 +160,7 @@ export default {
     width: 100%;
     text-align: left;
     margin-bottom: 25px;
+    overflow: hidden;
     @include md-width() {
       width: calc((100% / 2) - 25px);
       height: 350px;

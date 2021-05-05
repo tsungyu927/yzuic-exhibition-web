@@ -42,7 +42,7 @@ export default {
 
 <style lang="scss" scoped>
 .right {
-  right: 3%;
+  right: 2%;
 }
 .right__bar {
   writing-mode: vertical-lr;
