@@ -25,8 +25,8 @@
 </template>
 
 <script>
-import gsap from 'gsap'
-import '../scss/home/IntroModal.css'
+import gsap from 'gsap';
+import '../scss/home/IntroModal.css';
 
 export default {
   name: 'HomeIntro',
@@ -36,9 +36,9 @@ export default {
         opacity: 0,
         duration: 0.2
       }).then(()=>{
-        this.$emit('handleCloseModal')
-      })
+        this.$emit('handleCloseModal');
+      });
     }
   }
-}
+};
 </script>

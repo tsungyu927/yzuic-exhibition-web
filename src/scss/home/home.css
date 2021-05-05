@@ -309,6 +309,7 @@
   height: auto;
 }
 .pink-poster {
+  z-index: 5;
   cursor: pointer;
   position: absolute;
   top: 45%;

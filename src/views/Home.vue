@@ -678,7 +678,6 @@ export default {
         trigger: '.title-back',
         start: 'top 50%',
         end: 'bottom 50%',
-        markers: true,
         toggleActions: 'play reverse play none'
       }
     });
@@ -849,7 +848,8 @@ export default {
       scrollTrigger: {
         trigger: '.home-text03-2',
         scrub: true,
-        start: '30% 60%',
+        markers: true,
+        start: 'top 60%',
         end: '+=100',
       },
       top: '45%',
@@ -860,7 +860,7 @@ export default {
       scrollTrigger: {
         trigger: '.home-text03-2',
         scrub: true,
-        start: '60% 60%',
+        start: 'top 60%',
         end: '+=100',
       },
       top: '40%',
