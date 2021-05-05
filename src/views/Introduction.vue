@@ -74,7 +74,7 @@
             </div>
           </div>
         </div>
-        <b-modal id="modal-xl" size="xl" hide-footer="true">
+        <b-modal id="modal-xl" size="xl" hide-footer>
           <div class="slideShow">
             <!-- vue-agile套件(Carousel 輪播)  -->
             <!-- 要傳到套件裡，所以參數都要加冒號 -->
@@ -83,7 +83,7 @@
                 v-for="(image, index) in introData.previewImg"
                 :key="index"
               >
-                <img style="width:1120px; height:500px;" class="img-fluid" :src="getPreviewUrl(image)" />
+                <img class="img-fluid" :src="getPreviewUrl(image)" />
               </div>
               <!-- 客製化 按鈕 -->
               <template slot="prevButton"
@@ -248,6 +248,9 @@ export default {
     getTeamUrl(fileName) {
       return `${process.env.VUE_APP_CONTEXT_PATH}${process.env.VUE_APP_IMG}/teamImg/${fileName}.jpg`;
     },
+    refreshSlide(){
+      this.agile.refreshSlide();
+    }
   },
   filters: {
     readMoreFun(str) {
