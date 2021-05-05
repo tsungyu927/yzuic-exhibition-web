@@ -48,7 +48,7 @@ export default {
 
 <style lang="scss">
 .left {
-  left: 3%;
+  left: 2%;
   display: none;
   @include md-width() {
     display: block;

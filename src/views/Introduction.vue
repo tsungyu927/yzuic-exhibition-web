@@ -1,17 +1,17 @@
 <template>
-  <div class="pg-intro col-md-9 px-0">
+  <div class="pg-intro col-md-10 px-0">
     <!-- 網頁版 上一頁 -->
     <img
       class="pre-arrow"
       src="../assets/icons/web-arrow_pink.svg"
       @click="previous"
     />
-    <MobileHeader :title="'展覽作品'" />
-    <SlideModal 
+    <MobileHeader :title="introData.title" />
+    <SlideModal
       v-if="openSlideModal"
       v-on:handleSlideModal="handleSlideModal"
       :index="sliderNum"
-      :image="introData.previewImg"  
+      :image="introData.previewImg"
     />
     <div class="pg-intro-container">
       <!-- 封面 -->
@@ -20,20 +20,22 @@
           <div class="title">{{ introData.title }}</div>
           <div class="cover__team">{{ introData.team }}</div>
         </div>
-        <div class="d-none d-md-block">
+        <div class="d-none d-md-block cover__poster">
           <img class="img-fluid" :src="getPosterUrl(introData.poster)" />
         </div>
       </div>
       <!-- 介紹 -->
       <div class="pg-block intro d-md-flex flex-md-row mb-3">
         <div class="px-xs-5 pg-block__text">
-          <div class="sub-title">{{introText}}</div>
+          <div class="sub-title">{{ introText }}</div>
           <!-- intro-mobile -->
           <div class="intro-mobile">{{ introData.projectIntro }}</div>
           <!-- intro-web -->
           <div class="intro-web ">
-            <p>{{ introData.projectIntro | readMoreFun }}</p>
-            <b-button v-b-modal="'concept-modal'">{{moreText}}</b-button>
+            <p v-if="introData.projectIntro">
+              {{ introData.projectIntro | readMoreFun }}
+            </p>
+            <b-button v-b-modal="'concept-modal'">{{ moreText }}</b-button>
           </div>
           <ConceptModal
             :content="introData.projectIntro"
@@ -55,18 +57,7 @@
       <!-- 作品 -->
       <div class="pg-block work d-md-flex flex-md-row mb-3">
         <div class="px-xs-5">
-          <div class="sub-title">{{workText}}</div>
-          <!-- intro-mobile -->
-          <div class="intro-mobile">{{ introData.projectShortIntro }}</div>
-          <!-- intro-web -->
-          <div class="intro-web ">
-            <p>{{ introData.projectIntro | readMoreFun }}</p>
-            <b-button v-b-modal="'work-modal'">{{moreText}}</b-button>
-          </div>
-          <ConceptModal
-            :content="introData.projectShortIntro"
-            :modalId="'work-modal'"
-          />
+          <div class="sub-title">{{ workText }}</div>
         </div>
         <div class="img-grid col-md-9 col-xs-12">
           <div class="img-grid__group">
@@ -75,7 +66,11 @@
               v-for="(image, index) in introData.previewImg"
               :key="index"
             >
-              <img class="img-fluid" :src="getPreviewUrl(image)" @click="handleSlideModal(index)"/>
+              <img
+                class="img-fluid"
+                :src="getPreviewUrl(image)"
+                @click="handleSlideModal(index)"
+              />
             </div>
           </div>
         </div>
@@ -83,7 +78,7 @@
       <!-- 團隊 -->
       <div class="team pg-block d-md-flex flex-md-row px-xs-5 mb-3">
         <div class="px-xs-5 pg-block__text">
-          <div class="sub-title">{{teamText}}</div>
+          <div class="sub-title">{{ teamText }}</div>
           <!-- mobile -->
           <div class="intro-mobile d-md-none">{{ introData.team }}</div>
           <!-- web -->
@@ -94,7 +89,7 @@
         <div class="slideShow">
           <!-- vue-agile套件(Carousel 輪播)  -->
           <!-- 要傳到套件裡，所以參數都要加冒號 -->
-          <agile :autoplay="true" :dots="false">
+          <agile v-if="introData.teamImg" :autoplay="true" :dots="false">
             <div
               class="slide"
               v-for="(image, index) in introData.teamImg"
@@ -120,7 +115,7 @@
           </div>
         </div>
       </div>
-      <div class="pg-block my-3 d-none d-md-block mb-3">
+      <div class="pg-block my-3 my-md-5 d-none d-md-block">
         {{ introData.teamIntro }}
       </div>
       <!-- 組員介紹區 -->
@@ -174,10 +169,10 @@ export default {
       readMore2: false,
       //video
       videoId: '',
-      moreText:"",
-      introText:"",
-      teamText:"",
-      workText:"",
+      moreText: '',
+      introText: '',
+      teamText: '',
+      workText: '',
       sliderNum: 0,
       openSlideModal: false,
     };
@@ -193,16 +188,16 @@ export default {
           //展覽作品
           case 'works':
             type = res.data.works;
-            $that.moreText="more";
-            $that.introText="介紹",
-            $that.teamText="團隊",
-            $that.workText="作品"
+            $that.moreText = 'more';
+            ($that.introText = '介紹'),
+              ($that.teamText = '團隊'),
+              ($that.workText = '作品');
             break;
           //策展團隊
           case 'staff':
             type = res.data.staff;
-            $that.workText="策畫";
-            $that.introText="";
+            $that.workText = '策畫';
+            $that.introText = '';
             break;
         }
         // console.log('introData:', introData);
@@ -236,12 +231,12 @@ export default {
     getTeamUrl(fileName) {
       return `${process.env.VUE_APP_CONTEXT_PATH}${process.env.VUE_APP_IMG}/teamImg/${fileName}.jpg`;
     },
-    handleSlideModal(i){
-      if(i !== undefined){
-        this.sliderNum = i
+    handleSlideModal(i) {
+      if (i !== undefined) {
+        this.sliderNum = i;
       }
-      this.openSlideModal = !this.openSlideModal
-    }
+      this.openSlideModal = !this.openSlideModal;
+    },
   },
   filters: {
     readMoreFun(str) {
@@ -277,6 +272,8 @@ export default {
     min-height: 100%;
     //手機板 title
     .title {
+      font-size: 60px;
+      line-height: 60px;
       display: none;
       @include md-width() {
         display: block;
@@ -289,6 +286,8 @@ export default {
 }
 
 .pg-block {
+  line-height: 28px;
+  font-size: 16px;
   margin: auto;
   padding: 0 40px;
   &__text {
@@ -297,6 +296,10 @@ export default {
       @include flex(1);
     }
   }
+  .sub-title {
+    font-size: 48px;
+  }
+
   &:nth-child(even) {
     div:first-child {
       order: 1;
@@ -323,7 +326,9 @@ export default {
     }
   }
   &__team {
-    margin-top: 25px;
+    font-size: 24px;
+    line-height: 24px;
+    margin: 10px 0;
     font-weight: bold;
   }
   &__poster {
@@ -416,11 +421,12 @@ export default {
     margin: auto;
     @include md-width() {
       background: #333;
-      width: 80px;
-      height: 80px;
+      width: 150px;
+      height: 150px;
       position: absolute;
       bottom: 0;
-      right: calc((100% - 80px) / 2);
+      right: 0;
+      // right: calc((100% - 80px) / 2);
     }
   }
 }
@@ -468,10 +474,11 @@ export default {
         font-weight: bold;
         order: -1;
         margin: 0;
-        &::after {
-          content: '\00A0:\00A0';
-        }
       }
+    }
+    &__saying {
+      font-size: 16px;
+      margin-top: 15px;
     }
   }
 }
@@ -492,7 +499,9 @@ export default {
   @include md-width() {
     display: block;
     text-align: left;
+    letter-spacing: 1.5px;
     line-height: 16px;
+    font-size: 16px;
     margin: auto;
     width: 100%;
   }
@@ -524,9 +533,10 @@ export default {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: -40px;
+    right: -40px;
     .agile__nav-button {
+      width: 25px;
       border: none;
       background-color: transparent;
     }
