@@ -1,6 +1,6 @@
 <template>
-  <!-- <div class="slide-modal">
-    <button class="slide-close-btn" type="button" @click="handleClose()">
+  <div class="slide-modal">
+    <button class="slide-close-btn" type="button" @click="handleClose">
       <img src="../assets/logo/closeBtn_pink.svg" />
     </button>
     <b-carousel
@@ -10,11 +10,27 @@
       controls
       background="transparent"
     >
-        <b-carousel-slide v-for="img in image" :key="img" :img-src="img" >
+        <b-carousel-slide v-for="img in image" :key="img" :img-src="'/img/previewImg/'+img+'.jpg'" >
         </b-carousel-slide>
     </b-carousel>
-  </div> -->
-  <div>
+  </div>
+  <!-- <agile :autoplay="true" :dots="false">
+      <div
+        v-for="(image, index) in introData.previewImg"
+        :key="index"
+      >
+        <img style="width:1120px; height:500px;" class="img-fluid" :src="getPreviewUrl(image)" />
+      </div> -->
+      <!-- 客 製化 按鈕 -->
+      <!-- <template slot="prevButton">
+        <img  class="img-fluid" src="../assets/logo/carousel-prev.svg"/>
+      </template>
+      <template slot="nextButton">
+        <img  class="img-fluid" src="../assets/logo/carousel-next.svg"/>
+      </template>
+    </agile> -->
+
+  <!-- <div>
     <b-carousel
       id="carousel-1"
       v-model="slide"
@@ -27,16 +43,16 @@
       style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
-    >
+    > -->
       <!-- Slides with image only -->
       <!-- <b-carousel-slide
         img-src="https://picsum.photos/1024/480/?image=58"
       ></b-carousel-slide> -->
 
-      <b-carousel-slide v-for="img in image" :key="img" :img-src="img">
+      <!-- <b-carousel-slide v-for="img in image" :key="img" :img-src="img">
       </b-carousel-slide>
     </b-carousel>
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -73,8 +89,8 @@ export default {
     };
   },
   methods: {
-    handleClose: () => {
-      console.log('close modal');
+    handleClose() {
+      this.$emit('handleSlideModal')
     },
   },
 };
@@ -98,6 +114,7 @@ export default {
   position: absolute;
   top: 5%;
   right: 5%;
+  z-index: 12;
   border: none;
   background-color: transparent;
 }

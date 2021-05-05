@@ -6,8 +6,13 @@
       src="../assets/icons/web-arrow_pink.svg"
       @click="previous"
     />
-
     <MobileHeader :title="'展覽作品'" />
+    <SlideModal
+      v-if="openSlideModal"
+      v-on:handleSlideModal="handleSlideModal"
+      :index="sliderNum"
+      :image="introData.previewImg"
+    />
     <div class="pg-intro-container">
       <!-- 封面 -->
       <div class="pg-block p-0 cover d-md-flex flex-md-column">
@@ -70,31 +75,10 @@
               v-for="(image, index) in introData.previewImg"
               :key="index"
             >
-              <img class="img-fluid" :src="getPreviewUrl(image)" v-b-modal="'modal-xl'"/>
+              <img class="img-fluid" :src="getPreviewUrl(image)" @click="handleSlideModal(index)"/>
             </div>
           </div>
         </div>
-        <b-modal id="modal-xl" size="xl" hide-footer>
-          <div class="slideShow">
-            <!-- vue-agile套件(Carousel 輪播)  -->
-            <!-- 要傳到套件裡，所以參數都要加冒號 -->
-            <agile :autoplay="true" :dots="false">
-              <div
-                v-for="(image, index) in introData.previewImg"
-                :key="index"
-              >
-                <img class="img-fluid" :src="getPreviewUrl(image)" />
-              </div>
-              <!-- 客製化 按鈕 -->
-              <template slot="prevButton"
-                ><img  class="img-fluid" src="../assets/logo/carousel-prev.svg"/>
-              </template>
-              <template slot="nextButton"
-                ><img  class="img-fluid" src="../assets/logo/carousel-next.svg"/>
-              </template>
-            </agile>
-          </div>
-        </b-modal>
       </div>
       <!-- 團隊 -->
       <div class="team pg-block d-md-flex flex-md-row px-xs-5 mb-3">
@@ -178,6 +162,8 @@ import LeftBar from '../components/LeftBar';
 import RightBar from '../components/RightBar';
 import RightFooter from '../components/RightFooter';
 import MobileHeader from '../components/MobileHeader';
+import SlideModal from '../modal/SlideModal';
+
 export default {
   name: 'Introduction',
   data() {
@@ -191,7 +177,9 @@ export default {
       moreText:"",
       introText:"",
       teamText:"",
-      workText:""
+      workText:"",
+      sliderNum: 0,
+      openSlideModal: false,
     };
   },
   mounted() {
@@ -206,15 +194,17 @@ export default {
           case 'works':
             type = res.data.works;
             $that.moreText="more";
-            $that.introText="介紹",
-            $that.teamText="團隊",
-            $that.workText="作品"
+            $that.introText="介紹";
+            $that.teamText="團隊";
+            $that.workText="作品";
             break;
           //策展團隊
           case 'staff':
             type = res.data.staff;
             $that.workText="策畫";
+            $that.teamText="團隊";
             $that.introText="";
+            $that.moreText="more";
             break;
         }
         // console.log('introData:', introData);
@@ -248,8 +238,11 @@ export default {
     getTeamUrl(fileName) {
       return `${process.env.VUE_APP_CONTEXT_PATH}${process.env.VUE_APP_IMG}/teamImg/${fileName}.jpg`;
     },
-    refreshSlide(){
-      this.agile.refreshSlide();
+    handleSlideModal(i){
+      if(i !== undefined){
+        this.sliderNum = i
+      }
+      this.openSlideModal = !this.openSlideModal
     }
   },
   filters: {
@@ -267,6 +260,7 @@ export default {
     RightFooter,
     MobileHeader,
     agile: VueAgile,
+    SlideModal,
   },
 };
 </script>
@@ -411,6 +405,7 @@ export default {
 
     img {
       display: block;
+      cursor: pointer;
     }
   }
 }
