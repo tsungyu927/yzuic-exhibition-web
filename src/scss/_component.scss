@@ -19,16 +19,6 @@
   }
 }
 
-.title {
-  position: relative;
-  color: $exhibition-mainColor;
-  font-size: 2rem;
-  word-break: keep-all;
-  @include md-width() {
-    font-size: 3rem;
-  }
-}
-
 //----------------modal
 .modal-content {
   border-radius: 3rem !important;

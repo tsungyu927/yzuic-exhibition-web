@@ -54,8 +54,8 @@ export default {
           case '/organizeTeam':
             this.changeColor = 'fluid-blue';
             break;
-          case '/organizeTeamIntro':
-            this.changeColor = 'fluid-blue';
+          case '/organizeTeamIntro/':
+            this.changeColor = 'white-bg__blue';
             break;
           default:
             this.changeColor = 'white-bg__pink';
@@ -132,6 +132,23 @@ export default {
   //滾動 藍
   &.blue__scrolled {
     background-color: $organizeTeam-mainColor;
+  }
+}
+
+//白底 藍字
+.white-bg__blue {
+  background-color: $white;
+  .previous {
+    color: $organizeTeam-mainColor;
+    border: $organizeTeam-mainColor 1px solid;
+  }
+  .title {
+    color: $organizeTeam-mainColor;
+  }
+  .menu {
+    background-color: $organizeTeam-mainColor;
+    color: $white;
+    border: $organizeTeam-mainColor 1px solid;
   }
 }
 
