@@ -1,9 +1,8 @@
 <template>
   <div class="pg-intro col-md-10 px-0" :class="[changeColor]">
-
     <!-- 展覽作品 Header -->
-    <template v-if="isWork"> 
-      <img 
+    <template v-if="isWork">
+      <img
         class="pre-arrow"
         src="../assets/icons/web-arrow_pink.svg"
         @click="previous"
@@ -11,15 +10,15 @@
       <MobileHeader :title="introData.title" />
     </template>
     <!-- 策展團隊 Header -->
-    <template v-if="!isWork"> 
-      <img 
+    <template v-if="!isWork">
+      <img
         class="pre-arrow"
-        src="../assets/icons/web-arrow_pink.svg"
+        src="../assets/icons/web-arrow_blue.svg"
         @click="previous"
       />
       <MobileHeader :title="introData.team" />
     </template>
-    
+
     <!-- preview img 放大的彈窗 -->
     <SlideModal
       v-if="openSlideModal"
@@ -34,7 +33,7 @@
       <div class="pg-block p-0 cover d-md-flex flex-md-column" v-if="isWork">
         <div>
           <div class="title">{{ introData.title }}</div>
-          <div class="cover__team d-none d-md-block" >{{ introData.team }}</div>
+          <div class="cover__team d-none d-md-block">{{ introData.team }}</div>
         </div>
         <div class="d-none d-md-block cover__poster">
           <img class="img-fluid" :src="getPosterUrl(introData.poster)" />
@@ -60,7 +59,7 @@
             :modalId="'concept-modal'"
           />
         </div>
-       
+
         <div class="d-none d-md-block cover__poster">
           <img class="img-fluid" :src="getPosterUrl(introData.poster)" />
         </div>
@@ -122,7 +121,9 @@
         <div class="px-xs-5 pg-block__text">
           <div class="sub-title">{{ teamText }}</div>
           <!-- mobile -->
-          <div class="intro-mobile d-md-none" v-if="isWork">{{ introData.team }}</div>
+          <div class="intro-mobile d-md-none" v-if="isWork">
+            {{ introData.team }}
+          </div>
           <!-- web -->
           <div class="d-none d-md-block team__logo" v-if="isWork">
             <img class="img-fluid" :src="getLogoUrl(introData.logo)" />
@@ -218,7 +219,7 @@ export default {
       // 判斷是否為 展覽團隊（work）
       isWork: true,
       // 改變sub title 顏色用
-      changeColor:'',
+      changeColor: '',
     };
   },
   mounted() {
@@ -333,7 +334,7 @@ export default {
   @include md-width() {
     font-size: 3rem;
   }
-} 
+}
 .pg-intro {
   position: relative;
   width: 100%;
@@ -605,7 +606,7 @@ export default {
 
 //粉字
 .subTitle__pink {
-  .title{
+  .title {
     color: $exhibition-mainColor;
   }
   .sub-title {
@@ -620,7 +621,7 @@ export default {
 
 //藍字
 .subTitle__blue {
-  .title{
+  .title {
     color: $organizeTeam-mainColor;
     writing-mode: vertical-rl;
   }
