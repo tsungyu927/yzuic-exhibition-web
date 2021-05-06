@@ -1,6 +1,6 @@
 <template>
   <!-- 右下角的 footer -->
-  <div class="sideBar bottom" :class="[changeColor]">
+  <div class="sideBar bottom" :class="[changeColor]" v-if="isShow">
     Yan Ze University Information Communication 24th Graduation Exhibition
   </div>
 </template>
@@ -13,6 +13,7 @@ export default {
       changeColor: '',
     };
   },
+  props: ['isShow'],
   watch: {
     $route: {
       handler: function(to, from) {
@@ -41,15 +42,13 @@ export default {
 .bottom {
   bottom: 2%;
   min-height: 30px;
-  max-width: 250px;
   right: 4%;
   font-size: 0.7rem;
   line-height: 20px;
   text-align: right;
   @include md-width() {
     bottom: 4%;
-    max-width: 430px;
-    right: 10%;
+    right: 4%;
     line-height: 30px;
   }
 }
