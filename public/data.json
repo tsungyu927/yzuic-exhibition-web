@@ -93,7 +93,7 @@
             "logo": "1_logo",
             "poster": "1_poster",
             "previewImg": ["1_previewImg-1", "1_previewImg-2", "1_previewImg-3", "1_previewImg-4", "1_previewImg-5", "1_previewImg-6"],
-            "teamImg": ["1_teamImg-1", "1_teamImg-2", "1_teamImg-3"],
+            "teamImg": ["1_teamImg-1", "1_teamImg-2", "1_teamImg-3", "1_teamImg-4", "1_teamImg-5"],
             "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
         },
         {
@@ -146,7 +146,7 @@
             "logo": "2_logo",
             "poster": "2_poster",
             "previewImg": ["2_previewImg-1", "2_previewImg-2", "2_previewImg-3", "2_previewImg-4", "2_previewImg-5", "2_previewImg-6"],
-            "teamImg": ["2_teamImg-1", "2_teamImg-2", "2_teamImg-3"],
+            "teamImg": ["2_teamImg-1", "2_teamImg-2", "2_teamImg-3", "2_teamImg-4"],
             "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
         },
         {
@@ -193,7 +193,7 @@
             "logo": "3_logo",
             "poster": "3_poster",
             "previewImg": ["3_previewImg-1", "3_previewImg-2", "3_previewImg-3", "3_previewImg-4", "3_previewImg-5", "3_previewImg-6"],
-            "teamImg": ["3_teamImg-1", "3_teamImg-2", "3_teamImg-3"],
+            "teamImg": ["3_teamImg-1", "3_teamImg-2", "3_teamImg-3","3_teamImg-4", "3_teamImg-5", "3_teamImg-6"],
             "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
         },
         {
@@ -246,7 +246,7 @@
             "logo": "4_logo",
             "poster": "4_poster",
             "previewImg": ["4_previewImg-1", "4_previewImg-2", "4_previewImg-3", "4_previewImg-4", "4_previewImg-5", "4_previewImg-6"],
-            "teamImg": ["4_teamImg-1", "4_teamImg-2", "4_teamImg-3"],
+            "teamImg": ["4_teamImg-1", "4_teamImg-2", "4_teamImg-3", "4_teamImg-4", "4_teamImg-5"],
             "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
         },
         {
@@ -299,7 +299,7 @@
             "logo": "5_logo",
             "poster": "5_poster",
             "previewImg": ["5_previewImg-1", "5_previewImg-2", "5_previewImg-3", "5_previewImg-4", "5_previewImg-5", "5_previewImg-6"],
-            "teamImg": ["5_teamImg-1", "5_teamImg-2", "5_teamImg-3"],
+            "teamImg": ["5_teamImg-1", "5_teamImg-2", "5_teamImg-3", "5_teamImg-4", "5_teamImg-5"],
             "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
         },
         {
@@ -340,7 +340,7 @@
             "logo": "6_logo",
             "poster": "6_poster",
             "previewImg": ["6_previewImg-1", "6_previewImg-2", "6_previewImg-3", "6_previewImg-4", "6_previewImg-5", "6_previewImg-6"],
-            "teamImg": ["6_teamImg-1", "6_teamImg-2", "6_teamImg-3"],
+            "teamImg": ["6_teamImg-1", "6_teamImg-2", "6_teamImg-3", "6_teamImg-4", "6_teamImg-5"],
             "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
         },
         {
@@ -393,7 +393,7 @@
             "logo": "7_logo",
             "poster": "7_poster",
             "previewImg": ["7_previewImg-1", "7_previewImg-2", "7_previewImg-3", "7_previewImg-4", "7_previewImg-5", "7_previewImg-6"],
-            "teamImg": ["7_teamImg-1", "7_teamImg-2", "7_teamImg-3"],
+            "teamImg": ["7_teamImg-1", "7_teamImg-2"],
             "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
         },
         {
@@ -446,7 +446,7 @@
             "logo": "8_logo",
             "poster": "8_poster",
             "previewImg": ["8_previewImg-1", "8_previewImg-2", "8_previewImg-3", "8_previewImg-4", "8_previewImg-5", "8_previewImg-6"],
-            "teamImg": ["8_teamImg-1", "8_teamImg-2", "8_teamImg-3"],
+            "teamImg": ["8_teamImg-1", "8_teamImg-2", "8_teamImg-3", "8_teamImg-4", "8_teamImg-5"],
             "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
         },
         {
@@ -493,7 +493,7 @@
             "logo": "9_logo",
             "poster": "9_poster",
             "previewImg": ["9_previewImg-1", "9_previewImg-2", "9_previewImg-3", "9_previewImg-4", "9_previewImg-5", "9_previewImg-6"],
-            "teamImg": ["9_teamImg-1", "9_teamImg-2", "9_teamImg-3"],
+            "teamImg": ["9_teamImg-1", "9_teamImg-2"],
             "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
         },
         {
@@ -599,7 +599,7 @@
             "logo": "11_logo",
             "poster": "11_poster",
             "previewImg": ["11_previewImg-1", "11_previewImg-2", "11_previewImg-3", "11_previewImg-4", "11_previewImg-5", "11_previewImg-6"],
-            "teamImg": ["11_teamImg-1", "11_teamImg-2", "11_teamImg-3"],
+            "teamImg": ["11_teamImg-1", "11_teamImg-2"],
             "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
         },
         {
@@ -652,7 +652,7 @@
             "logo": "12_logo",
             "poster": "12_poster",
             "previewImg": ["12_previewImg-1", "12_previewImg-2", "12_previewImg-3", "12_previewImg-4", "12_previewImg-5", "12_previewImg-6"],
-            "teamImg": ["12_teamImg-1", "12_teamImg-2", "12_teamImg-3"],
+            "teamImg": ["12_teamImg-1", "12_teamImg-2", "12_teamImg-3", "12_teamImg-4", "12_teamImg-5"],
             "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
         },
         {
@@ -705,7 +705,7 @@
             "logo": "13_logo",
             "poster": "13_poster",
             "previewImg": ["13_previewImg-1", "13_previewImg-2", "13_previewImg-3", "13_previewImg-4", "13_previewImg-5", "13_previewImg-6"],
-            "teamImg": ["13_teamImg-1", "13_teamImg-2", "13_teamImg-3"],
+            "teamImg": ["13_teamImg-1", "13_teamImg-2", "13_teamImg-3","13_teamImg-4", "13_teamImg-5", "13_teamImg-6"],
             "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
         },
         {
@@ -758,7 +758,7 @@
             "logo": "14_logo",
             "poster": "14_poster",
             "previewImg": ["14_previewImg-1", "14_previewImg-2", "14_previewImg-3", "14_previewImg-4", "14_previewImg-5", "14_previewImg-6"],
-            "teamImg": ["14_teamImg-1", "14_teamImg-2", "14_teamImg-3"],
+            "teamImg": ["14_teamImg-1", "14_teamImg-2", "14_teamImg-3", "14_teamImg-4", "14_teamImg-5"],
             "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
         },
         {
@@ -811,7 +811,7 @@
             "logo": "16_logo",
             "poster": "16_poster",
             "previewImg": ["16_previewImg-1", "16_previewImg-2", "16_previewImg-3", "16_previewImg-4", "16_previewImg-5", "16_previewImg-6"],
-            "teamImg": ["16_teamImg-1", "16_teamImg-2", "16_teamImg-3"],
+            "teamImg": ["16_teamImg-1", "16_teamImg-2", "16_teamImg-3", "16_teamImg-4", "16_teamImg-5"],
             "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
         },
         {
@@ -864,7 +864,7 @@
             "logo": "17_logo",
             "poster": "17_poster",
             "previewImg": ["17_previewImg-1", "17_previewImg-2", "17_previewImg-3", "17_previewImg-4", "17_previewImg-5", "17_previewImg-6"],
-            "teamImg": ["17_teamImg-1", "17_teamImg-2", "17_teamImg-3"],
+            "teamImg": ["17_teamImg-1", "17_teamImg-2", "17_teamImg-3", "17_teamImg-4", "17_teamImg-5"],
             "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
         },
         {
@@ -911,7 +911,7 @@
             "logo": "18_logo",
             "poster": "18_poster",
             "previewImg": ["18_previewImg-1", "18_previewImg-2", "18_previewImg-3", "18_previewImg-4", "18_previewImg-5", "18_previewImg-6"],
-            "teamImg": ["18_teamImg-1", "18_teamImg-2", "18_teamImg-3"],
+            "teamImg": ["18_teamImg-1", "18_teamImg-2", "18_teamImg-3", "18_teamImg-4", "18_teamImg-5"],
             "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
         },
         {
@@ -964,7 +964,7 @@
             "logo": "19_logo",
             "poster": "19_poster",
             "previewImg": ["19_previewImg-1", "19_previewImg-2", "19_previewImg-3", "19_previewImg-4", "19_previewImg-5", "19_previewImg-6"],
-            "teamImg": ["19_teamImg-1", "19_teamImg-2", "19_teamImg-3"],
+            "teamImg": ["19_teamImg-1", "19_teamImg-2", "19_teamImg-3", "19_teamImg-4", "19_teamImg-5"],
             "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
         },
         {
@@ -1017,7 +1017,7 @@
             "logo": "20_logo",
             "poster": "20_poster",
             "previewImg": ["20_previewImg-1", "20_previewImg-2", "20_previewImg-3", "20_previewImg-4", "20_previewImg-5", "20_previewImg-6"],
-            "teamImg": ["20_teamImg-1", "20_teamImg-2", "20_teamImg-3"],
+            "teamImg": ["20_teamImg-1", "20_teamImg-2", "20_teamImg-3", "20_teamImg-4", "20_teamImg-5"],
             "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
         },
         {
@@ -1064,7 +1064,7 @@
             "logo": "21_logo",
             "poster": "21_poster",
             "previewImg": ["21_previewImg-1", "21_previewImg-2", "21_previewImg-3", "21_previewImg-4", "21_previewImg-5", "21_previewImg-6"],
-            "teamImg": ["21_teamImg-1", "21_teamImg-2", "21_teamImg-3"],
+            "teamImg": ["21_teamImg-1"],
             "viedo": "https://www.youtube.com/watch?v=IbQlBGniUQQ"
         }
     ],
@@ -1081,31 +1081,31 @@
             "members": [{
                     "id": "1-1",
                     "name": "羅家穎",
-                    "pic": "1-1_member",
+                    "pic": "s1-1_member",
                     "saying": "慶功我想吃燒烤。樓下的願望真奢侈 (╬☉д☉)"
                 },
                 {
                     "id": "1-2",
                     "name": "林言秉",
-                    "pic": "1-2_member",
+                    "pic": "s1-2_member",
                     "saying": "我想要增加體重，樓下也許個願望吧，電梯下樓 ,,Ծ‸Ծ,,"
                 },
                 {
                     "id": "1-3",
                     "name": "劉郁萱",
-                    "pic": "1-3_member",
+                    "pic": "s1-3_member",
                     "saying": "我想要...吃飽...睡好...吃燒烤...樓下...請接棒..._(´ཀ`」 ∠)_"
                 },
                 {
                     "id": "1-4",
                     "name": "謝淳安",
-                    "pic": "1-4_member",
+                    "pic": "s1-4_member",
                     "saying": "小孩子才做選擇，朕要吃生魚片拉麵壽司燒烤火鍋冰淇淋。。。其實就是什麼都想吃，然後我要出去玩٩(๑`^´๑)۶出去玩！！！！心塞(´-ωก`)"
                 },
                 {
                     "id": "1-5",
                     "name": "王愉涵",
-                    "pic": "1-5_member",
+                    "pic": "s1-5_member",
                     "saying": "我想要買服飾。一樓到了，電梯開門(｡◕‿◕｡)➜"
                 }
             ]
@@ -1123,19 +1123,19 @@
             "members": [{
                     "id": "2-1",
                     "name": "黃紀嘉",
-                    "pic": "2-1_member",
+                    "pic": "s2-1_member",
                     "saying": "每次開會的時候都會講話講到腦袋放空，還以爲自己是自動公播機，腦袋沒在動，嘴裡卻滔滔不絕，謝謝一直支持我的行政夥伴，這份江湖之情，小弟必定加倍奉還。"
                 },
                 {
                     "id": "2-2",
                     "name": "陳竹妗",
-                    "pic": "2-3_member",
+                    "pic": "s2-2_member",
                     "saying": "開會開到一半有時候會迷惘是誰我怎麼在當副召，哈哈好讚喔"
                 },
                 {
                     "id": "2-3",
                     "name": "朱妤婷",
-                    "pic": "2-3_member",
+                    "pic": "s2-3_member",
                     "saying": "原本以為只要做做紀錄的事，沒想到一腳踏進來已經收不回去，這裡是什麼世界，今天要開會是不是!!!"
                 }
             ]
@@ -1153,31 +1153,31 @@
             "members": [{
                     "id": "3-1",
                     "name": "林洧盈",
-                    "pic": "3-1_member",
+                    "pic": "s3-1_member",
                     "saying": "很開心能在活動組一起和大家執行很多活動，我們勇於做了很多創新的事，或許還有很多地方需要改進，過程雖辛苦也享受，活動組開會宗旨就是絕對不能超過一個半小時，要求大家都要效率做事！實際是我不喜歡開會開太久啦哈哈哈。"
                 },
                 {
                     "id": "3-2",
                     "name": "鍾佳蓉",
-                    "pic": "3-2_member",
+                    "pic": "s3-2_member",
                     "saying": "雖然我們人少但我們很堅強！很高興跟大家共事也很感謝，尤其是我可能很常搞麻煩哈哈哈，一起嘗試了很多新事物真的是希望活動能夠辦更好也更能夠推廣給大家多多關注我們用肝換來的畢製！辛苦活動組也辛苦畢籌的各位了！"
                 },
                 {
                     "id": "3-3",
                     "name": "林語萱",
-                    "pic": "3-3_member",
+                    "pic": "s3-3_member",
                     "saying": "很開心可以跟大家一起在活動組共事，雖然因為人力不足常常需要一人身兼多職，剪片也剪到要發芬，但組內的氣氛總是蠻歡樂，各位讚讚啦。"
                 },
                 {
                     "id": "3-4",
                     "name": "蔡維仁",
-                    "pic": "3-4_member",
+                    "pic": "s3-4_member",
                     "saying": "對我來說最辛苦的莫過於YouTube頻道了！尤其是總共也才7支影片，我自己就剪了3支！真的是耗盡精神與體力，不過也當作是訓練自己剪片的技術！還有跟活動組組員拍片的過程也很開心。"
                 },
                 {
                     "id": "3-5",
                     "name": "許國彬",
-                    "pic": "3-5_member",
+                    "pic": "s3-5_member",
                     "saying": "氣氛好、做得好，個個學習情緒高，組長對我們如父母、如兄弟、如師長。"
                 }
             ]
@@ -1195,43 +1195,43 @@
             "members": [{
                     "id": "4-1",
                     "name": "林欣儒",
-                    "pic": "4-1_member",
+                    "pic": "s4-1_member",
                     "saying": "謝謝大家！大家好棒！辛苦了！我喜歡吃拉麵。"
                 },
                 {
                     "id": "4-2",
                     "name": "林凡雅",
-                    "pic": "4-2_member",
+                    "pic": "s4-2_member",
                     "saying": "很開心透過畢籌認識了大家～想吃拉麵！"
                 },
                 {
                     "id": "4-3",
                     "name": "高筱婷",
-                    "pic": "4-3_member",
+                    "pic": "s4-3_member",
                     "saying": "希望大家以後偶爾可以一起出去吃拉麵。"
                 },
                 {
                     "id": "4-4",
                     "name": "宋芷誼",
-                    "pic": "4-4_member",
+                    "pic": "s4-4_member",
                     "saying": "大家真的棒到！可以！吃兩碗拉麵！"
                 },
                 {
                     "id": "4-5",
                     "name": "簡伯諺",
-                    "pic": "4-5_member",
+                    "pic": "s4-5_member",
                     "saying": "讚啦！此刻拉麵！"
                 },
                 {
                     "id": "4-6",
                     "name": "楊冬雪",
-                    "pic": "4-6_member",
+                    "pic": "s4-6_member",
                     "saying": "我不愛拉麵但還是可以吃，就愛這樣不受控的你們！"
                 },
                 {
                     "id": "4-7",
                     "name": "邱云",
-                    "pic": "4-7_member",
+                    "pic": "s4-7_member",
                     "saying": "大家辛苦了～"
                 }
             ]
@@ -1249,61 +1249,61 @@
             "members": [{
                     "id": "5-1",
                     "name": "李若彤",
-                    "pic": "5-1_member",
+                    "pic": "s5-1_member",
                     "saying": "很累但學到很多，現在的夢想是把Line刪掉大睡特睡！"
                 },
                 {
                     "id": "5-2",
                     "name": "楊蕙瑜",
-                    "pic": "5-2_member",
+                    "pic": "s5-2_member",
                     "saying": "開會！開會！！Always開會ε===(っ≧ω≦)っㄎㄎ"
                 },
                 {
                     "id": "5-3",
                     "name": "梁晉瑜",
-                    "pic": "5-3_member",
+                    "pic": "s5-3_member",
                     "saying": "大家都辛苦了，希望一切順利。"
                 },
                 {
                     "id": "5-4",
                     "name": "黃韋婷",
-                    "pic": "5-4_member",
+                    "pic": "s5-4_member",
                     "saying": "吃飽睡飽就是幸福的所在。"
                 },
                 {
                     "id": "5-5",
                     "name": "劉采綺",
-                    "pic": "5-5_member",
+                    "pic": "s5-5_member",
                     "saying": "好累。"
                 },
                 {
                     "id": "5-6",
                     "name": "林庚翰",
-                    "pic": "5-6_member",
+                    "pic": "s5-6_member",
                     "saying": "抽一個美眉吃遍全台拉麵"
                 },
                 {
                     "id": "5-7",
                     "name": "李明軒",
-                    "pic": "5-7_member",
+                    "pic": "s5-7_member",
                     "saying": "難忘的經驗，一切順利"
                 },
                 {
                     "id": "5-8",
                     "name": "吳宜峻",
-                    "pic": "5-8_member",
+                    "pic": "s5-8_member",
                     "saying": "你看到我 媽的 巨...你看到我大槌達瑞斯 都不會怕的欸、還在他mom還在前面那邊洗兵耶、嗚哇～墮 欸幹?怎麼墮到李星嗚挖阿 Double Kill !!巨槌瑞斯!!!!誇抓 !! 哈哈哈哈哈哈哈哈!!"
                 },
                 {
                     "id": "5-9",
                     "name": "郭展成",
-                    "pic": "5-9_member",
+                    "pic": "s5-9_member",
                     "saying": "很棒的收穫"
                 },
                 {
                     "id": "5-10",
                     "name": "顏崇育",
-                    "pic": "5-10_member",
+                    "pic": "s5-10_member",
                     "saying": "畢籌的各位辛苦了！在場務組體驗到許多東西，光雕非常有趣酷炫、展場規發想令人頭痛欲絕等等，真是令人難忘，希望畢展一切順利～"
                 }
             ]
@@ -1321,14 +1321,14 @@
             "members": [{
                     "id": "6-1",
                     "name": "陳宜姍",
-                    "pic": "6-1_member",
-                    "saying": "每次開會的時候都會講話講到腦袋放空，還以爲自己是自動公播機，腦袋沒在動，嘴裡卻滔滔不絕，謝謝一直支持我的行政夥伴，這份江湖之情，小弟必定加倍奉還。"
+                    "pic": "s6-1_member",
+                    "saying": "我的帳戶好多錢呦，噢！不對那都是畢籌的，好想一夜致富"
                 },
                 {
                     "id": "6-2",
                     "name": "盧柏魁",
-                    "pic": "6-2_member",
-                    "saying": "開會開到一半有時候會迷惘是誰我怎麼在當副召，哈哈好讚喔"
+                    "pic": "s6-2_member",
+                    "saying": "感謝組長收留怕麻煩的我，除了裝黑道瘋狂討債基本0作用很對不起大家，但是討債怎麼那麼難，怎麼到處都有歸回虛無找不到人的狀況？"
                 }
             ]
         }
