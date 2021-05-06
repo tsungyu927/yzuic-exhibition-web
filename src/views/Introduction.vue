@@ -1,39 +1,82 @@
 <template>
-  <div class="pg-intro col-md-9 px-0">
-    <!-- 網頁版 上一頁 -->
-    <img
-      class="pre-arrow"
-      src="../assets/icons/web-arrow_pink.svg"
-      @click="previous"
-    />
-    <MobileHeader :title="'展覽作品'" />
-    <SlideModal 
+  <div class="pg-intro col-md-10 px-0" :class="[changeColor]">
+    <!-- 展覽作品 Header -->
+    <template v-if="isWork">
+      <img
+        class="pre-arrow"
+        src="../assets/icons/web-arrow_pink.svg"
+        @click="previous"
+      />
+      <MobileHeader :title="introData.title" />
+    </template>
+    <!-- 策展團隊 Header -->
+    <template v-if="!isWork">
+      <img
+        class="pre-arrow"
+        src="../assets/icons/web-arrow_blue.svg"
+        @click="previous"
+      />
+      <MobileHeader :title="introData.team" />
+    </template>
+
+    <!-- preview img 放大的彈窗 -->
+    <SlideModal
       v-if="openSlideModal"
       v-on:handleSlideModal="handleSlideModal"
       :index="sliderNum"
-      :image="introData.previewImg"  
+      :image="introData.previewImg"
     />
+
     <div class="pg-intro-container">
       <!-- 封面 -->
-      <div class="pg-block p-0 cover d-md-flex flex-md-column">
+      <!-- 展覽作品 封面-->
+      <div class="pg-block p-0 cover d-md-flex flex-md-column" v-if="isWork">
         <div>
           <div class="title">{{ introData.title }}</div>
-          <div class="cover__team">{{ introData.team }}</div>
+          <div class="cover__team d-none d-md-block">{{ introData.team }}</div>
         </div>
-        <div class="d-none d-md-block">
+        <div class="d-none d-md-block cover__poster">
           <img class="img-fluid" :src="getPosterUrl(introData.poster)" />
         </div>
       </div>
-      <!-- 介紹 -->
-      <div class="pg-block intro d-md-flex flex-md-row mb-3">
-        <div class="px-xs-5 pg-block__text">
-          <div class="sub-title">{{introText}}</div>
+      <!-- 策展團隊 封面-->
+      <div class="pg-block p-0 cover d-md-flex flex-md-row" v-if="!isWork">
+        <div>
+          <div>
+            <div class="title">{{ introData.team }}</div>
+          </div>
           <!-- intro-mobile -->
           <div class="intro-mobile">{{ introData.projectIntro }}</div>
           <!-- intro-web -->
           <div class="intro-web ">
-            <p>{{ introData.projectIntro | readMoreFun }}</p>
-            <b-button v-b-modal="'concept-modal'">{{moreText}}</b-button>
+            <p v-if="introData.projectIntro">
+              {{ introData.projectIntro | readMoreFun }}
+            </p>
+            <b-button v-b-modal="'concept-modal'">more</b-button>
+          </div>
+          <ConceptModal
+            :content="introData.projectIntro"
+            :modalId="'concept-modal'"
+          />
+        </div>
+
+        <div class="d-none d-md-block cover__poster">
+          <img class="img-fluid" :src="getPosterUrl(introData.poster)" />
+        </div>
+      </div>
+
+      <!-- 介紹 -->
+      <div class="pg-block intro d-md-flex flex-md-row mb-3" v-if="isWork">
+        <div class="px-xs-5 pg-block__text">
+          <div class="sub-title">{{ introText }}</div>
+          <!-- intro-mobile -->
+          <div class="intro-mobile">{{ introData.projectIntro }}</div>
+          <!-- intro-web -->
+          <div class="intro-web ">
+            <p v-if="introData.projectIntro">
+              {{ introData.projectIntro | readMoreFun }}
+            </p>
+            <b-button v-b-modal="'concept-modal'">more</b-button>
           </div>
           <ConceptModal
             :content="introData.projectIntro"
@@ -53,20 +96,9 @@
         </div>
       </div>
       <!-- 作品 -->
-      <div class="pg-block work d-md-flex flex-md-row mb-3">
+      <div class="pg-block work d-md-flex flex-md-row mb-3" v-if="isWork">
         <div class="px-xs-5">
-          <div class="sub-title">{{workText}}</div>
-          <!-- intro-mobile -->
-          <div class="intro-mobile">{{ introData.projectShortIntro }}</div>
-          <!-- intro-web -->
-          <div class="intro-web ">
-            <p>{{ introData.projectIntro | readMoreFun }}</p>
-            <b-button v-b-modal="'work-modal'">{{moreText}}</b-button>
-          </div>
-          <ConceptModal
-            :content="introData.projectShortIntro"
-            :modalId="'work-modal'"
-          />
+          <div class="sub-title">{{ workText }}</div>
         </div>
         <div class="img-grid col-md-9 col-xs-12">
           <div class="img-grid__group">
@@ -75,7 +107,11 @@
               v-for="(image, index) in introData.previewImg"
               :key="index"
             >
-              <img class="img-fluid" :src="getPreviewUrl(image)" @click="handleSlideModal(index)"/>
+              <img
+                class="img-fluid"
+                :src="getPreviewUrl(image)"
+                @click="handleSlideModal(index)"
+              />
             </div>
           </div>
         </div>
@@ -83,18 +119,20 @@
       <!-- 團隊 -->
       <div class="team pg-block d-md-flex flex-md-row px-xs-5 mb-3">
         <div class="px-xs-5 pg-block__text">
-          <div class="sub-title">{{teamText}}</div>
+          <div class="sub-title">{{ teamText }}</div>
           <!-- mobile -->
-          <div class="intro-mobile d-md-none">{{ introData.team }}</div>
+          <div class="intro-mobile d-md-none" v-if="isWork">
+            {{ introData.team }}
+          </div>
           <!-- web -->
-          <div class="d-none d-md-block team__logo">
+          <div class="d-none d-md-block team__logo" v-if="isWork">
             <img class="img-fluid" :src="getLogoUrl(introData.logo)" />
           </div>
         </div>
         <div class="slideShow">
           <!-- vue-agile套件(Carousel 輪播)  -->
           <!-- 要傳到套件裡，所以參數都要加冒號 -->
-          <agile :autoplay="true" :dots="false">
+          <agile v-if="introData.teamImg" :autoplay="true" :dots="false">
             <div
               class="slide"
               v-for="(image, index) in introData.teamImg"
@@ -115,12 +153,12 @@
         <!-- mobile版 logo + team intro -->
         <div class="my-3 d-flex">
           <div class="d-md-none flex-grow-1">{{ introData.teamIntro }}</div>
-          <div class="team__logo d-md-none logo__mobile">
+          <div class="team__logo d-md-none logo__mobile" v-if="isWork">
             <img class="img-fluid" :src="getLogoUrl(introData.logo)" />
           </div>
         </div>
       </div>
-      <div class="pg-block my-3 d-none d-md-block mb-3">
+      <div class="pg-block my-3 my-md-5 d-none d-md-block">
         {{ introData.teamIntro }}
       </div>
       <!-- 組員介紹區 -->
@@ -137,7 +175,6 @@
             <div class="member__text p-3 p-md-0">
               <div class="d-md-flex ">
                 <div class="member__name">{{ member.name }}</div>
-                <div class="member__assignment">{{ member.assignment }}</div>
               </div>
               <div class="member__saying">{{ member.saying }}</div>
             </div>
@@ -174,12 +211,15 @@ export default {
       readMore2: false,
       //video
       videoId: '',
-      moreText:"",
-      introText:"",
-      teamText:"",
-      workText:"",
+      introText: '',
+      teamText: '',
+      workText: '',
       sliderNum: 0,
       openSlideModal: false,
+      // 判斷是否為 展覽團隊（work）
+      isWork: true,
+      // 改變sub title 顏色用
+      changeColor: '',
     };
   },
   mounted() {
@@ -192,17 +232,17 @@ export default {
         switch ($that.$route.query.name) {
           //展覽作品
           case 'works':
+            $that.isWork = true;
             type = res.data.works;
-            $that.moreText="more";
-            $that.introText="介紹",
-            $that.teamText="團隊",
-            $that.workText="作品"
+            $that.introText = '介紹';
+            $that.workText = '作品';
+            $that.teamText = '團隊';
             break;
           //策展團隊
           case 'staff':
+            $that.isWork = false;
             type = res.data.staff;
-            $that.workText="策畫";
-            $that.introText="";
+            $that.teamText = '團隊';
             break;
         }
         // console.log('introData:', introData);
@@ -236,12 +276,35 @@ export default {
     getTeamUrl(fileName) {
       return `${process.env.VUE_APP_CONTEXT_PATH}${process.env.VUE_APP_IMG}/teamImg/${fileName}.jpg`;
     },
-    handleSlideModal(i){
-      if(i !== undefined){
-        this.sliderNum = i
+    handleSlideModal(i) {
+      if (i !== undefined) {
+        this.sliderNum = i;
       }
-      this.openSlideModal = !this.openSlideModal
-    }
+      this.openSlideModal = !this.openSlideModal;
+    },
+  },
+  watch: {
+    $route: {
+      handler: function(to, from) {
+        // console.log(to, from);
+        switch (to.path) {
+          case '/exhibition':
+            this.changeColor = 'subTitle__pink';
+            break;
+          case '/organizeTeam':
+            this.changeColor = 'subTitle__blue';
+            break;
+          case '/organizeTeamIntro/':
+            this.changeColor = 'subTitle__blue';
+            break;
+          default:
+            this.changeColor = 'subTitle__pink';
+            break;
+        }
+      },
+      deep: true,
+      immediate: true,
+    },
   },
   filters: {
     readMoreFun(str) {
@@ -264,6 +327,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.title {
+  position: relative;
+  font-size: 2rem;
+  word-break: keep-all;
+  @include md-width() {
+    font-size: 3rem;
+  }
+}
 .pg-intro {
   position: relative;
   width: 100%;
@@ -277,6 +348,8 @@ export default {
     min-height: 100%;
     //手機板 title
     .title {
+      font-size: 60px;
+      line-height: 60px;
       display: none;
       @include md-width() {
         display: block;
@@ -289,6 +362,8 @@ export default {
 }
 
 .pg-block {
+  line-height: 28px;
+  font-size: 16px;
   margin: auto;
   padding: 0 40px;
   &__text {
@@ -297,6 +372,10 @@ export default {
       @include flex(1);
     }
   }
+  .sub-title {
+    font-size: 48px;
+  }
+
   &:nth-child(even) {
     div:first-child {
       order: 1;
@@ -315,15 +394,15 @@ export default {
 .cover {
   align-items: center;
   & > div:first-child {
-    display: none;
     @include md-width() {
-      display: block;
       text-align: center;
       padding: 3rem 0 1rem 0;
     }
   }
   &__team {
-    margin-top: 25px;
+    font-size: 24px;
+    line-height: 24px;
+    margin: 10px 0;
     font-weight: bold;
   }
   &__poster {
@@ -416,11 +495,12 @@ export default {
     margin: auto;
     @include md-width() {
       background: #333;
-      width: 80px;
-      height: 80px;
+      width: 150px;
+      height: 150px;
       position: absolute;
       bottom: 0;
-      right: calc((100% - 80px) / 2);
+      right: 0;
+      // right: calc((100% - 80px) / 2);
     }
   }
 }
@@ -454,31 +534,19 @@ export default {
       padding: 10px;
     }
     &__name {
+      margin-bottom: 5px;
       font-size: 20px;
       font-weight: bold;
-      @include md-width() {
-        color: $exhibition-mainColor;
-      }
     }
-    &__assignment {
-      margin-bottom: 5px;
-      @include md-width() {
-        color: $exhibition-mainColor;
-        font-size: 20px;
-        font-weight: bold;
-        order: -1;
-        margin: 0;
-        &::after {
-          content: '\00A0:\00A0';
-        }
-      }
+    &__saying {
+      font-size: 16px;
+      margin-top: 15px;
     }
   }
 }
 
 .sub-title {
   font-size: 24px;
-  color: $exhibition-mainColor;
   font-weight: bold;
   writing-mode: vertical-lr;
 
@@ -492,7 +560,9 @@ export default {
   @include md-width() {
     display: block;
     text-align: left;
+    letter-spacing: 1.5px;
     line-height: 16px;
+    font-size: 16px;
     margin: auto;
     width: 100%;
   }
@@ -524,11 +594,43 @@ export default {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: -40px;
+    right: -40px;
     .agile__nav-button {
+      width: 25px;
       border: none;
       background-color: transparent;
+    }
+  }
+}
+
+//粉字
+.subTitle__pink {
+  .title {
+    color: $exhibition-mainColor;
+  }
+  .sub-title {
+    color: $exhibition-mainColor;
+  }
+  .member__name {
+    @include md-width() {
+      color: $exhibition-mainColor;
+    }
+  }
+}
+
+//藍字
+.subTitle__blue {
+  .title {
+    color: $organizeTeam-mainColor;
+    writing-mode: vertical-rl;
+  }
+  .sub-title {
+    color: $organizeTeam-mainColor;
+  }
+  .member__name {
+    @include md-width() {
+      color: $organizeTeam-mainColor;
     }
   }
 }

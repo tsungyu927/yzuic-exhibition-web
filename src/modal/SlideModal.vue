@@ -10,49 +10,14 @@
       controls
       background="transparent"
     >
-        <b-carousel-slide v-for="img in image" :key="img" :img-src="'/img/previewImg/'+img+'.jpg'" >
-        </b-carousel-slide>
-    </b-carousel>
-  </div>
-  <!-- <agile :autoplay="true" :dots="false">
-      <div
-        v-for="(image, index) in introData.previewImg"
-        :key="index"
+      <b-carousel-slide
+        v-for="img in image"
+        :key="img"
+        :img-src="'/img/previewImg/' + img + '.jpg'"
       >
-        <img style="width:1120px; height:500px;" class="img-fluid" :src="getPreviewUrl(image)" />
-      </div> -->
-      <!-- 客製化 按鈕 -->
-      <!-- <template slot="prevButton">
-        <img  class="img-fluid" src="../assets/logo/carousel-prev.svg"/>
-      </template>
-      <template slot="nextButton">
-        <img  class="img-fluid" src="../assets/logo/carousel-next.svg"/>
-      </template>
-    </agile> -->
-
-  <!-- <div>
-    <b-carousel
-      id="carousel-1"
-      v-model="slide"
-      :interval="4000"
-      controls
-      indicators
-      background="#ababab"
-      img-width="1024"
-      img-height="480"
-      style="text-shadow: 1px 1px 2px #333;"
-      @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd"
-    > -->
-      <!-- Slides with image only -->
-      <!-- <b-carousel-slide
-        img-src="https://picsum.photos/1024/480/?image=58"
-      ></b-carousel-slide> -->
-
-      <!-- <b-carousel-slide v-for="img in image" :key="img" :img-src="img">
       </b-carousel-slide>
     </b-carousel>
-  </div> -->
+  </div>
 </template>
 
 <script>
@@ -90,7 +55,7 @@ export default {
   },
   methods: {
     handleClose() {
-      this.$emit('handleSlideModal')
+      this.$emit('handleSlideModal');
     },
   },
 };

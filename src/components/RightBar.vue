@@ -26,7 +26,7 @@ export default {
           case '/organizeTeam':
             this.changeColor = 'fluid__footer';
             break;
-          case '/organizeTeamIntro':
+          case '/organizeTeamIntro/':
             this.changeColor = 'organizeTeam__footer';
             break;
           default:
@@ -42,7 +42,8 @@ export default {
 
 <style lang="scss" scoped>
 .right {
-  right: 3%;
+  right: 2%;
+  bottom: 10%;
 }
 .right__bar {
   writing-mode: vertical-lr;
