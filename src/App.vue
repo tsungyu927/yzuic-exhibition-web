@@ -11,28 +11,45 @@
     <div class="app-container">
       <router-view />
     </div>
+    <RightFooter :is-show="isShowRF" />
   </div>
 </template>
 
 <script>
-import LeftBar from '@/components/LeftBar.vue';
-import RightBar from '@/components/RightBar.vue';
+import Loader from './views/Loader';
+import RightFooter from './components/RightFooter';
 // import Loader from './views/Loader'
 import Catalog from './modal/Catalog';
 import gsap from 'gsap';
 
 export default {
   name: 'App',
-  data(){
+  data() {
     return {
+      // show right footer
+      isShowRF: false,
       openCatalog: false
     };
   },
-  components: {
-    // Loader,
-    Catalog,
+  created() {
+    window.addEventListener('scroll', this.showFooter);
   },
   methods: {
+    //滑到末端 出現 right bar
+    showFooter() {
+      // console.log('垂直位移量', window.scrollY);
+      // console.log('可見螢幕高度', window.screen.height);
+      // console.log('網頁內文高度', document.body.scrollHeight);
+      if (
+        window.scrollY + window.screen.height >=
+        document.body.scrollHeight - 1
+      ) {
+        console.log('end');
+        this.isShowRF = true;
+      } else {
+        this.isShowRF = false;
+      }
+    },
     handleOpenCatalog: function(){
       if(this.openCatalog){
         gsap.to('.catalogModal',{
@@ -45,7 +62,12 @@ export default {
         this.openCatalog = true;
       }
     },
-  }
+  },
+  components: {
+    RightFooter,
+    // Loader,
+    Catalog,
+  },
 };
 </script>
 

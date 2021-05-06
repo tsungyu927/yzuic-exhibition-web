@@ -31,7 +31,7 @@ export default {
           case '/organizeTeam':
             this.changeColor = 'white-outline__blue';
             break;
-          case '/organizeTeamIntro':
+          case '/organizeTeamIntro/':
             this.changeColor = 'blue-outline';
             break;
           default:
@@ -48,7 +48,8 @@ export default {
 
 <style lang="scss">
 .left {
-  left: 3%;
+  left: 2%;
+  bottom: 10%;
   display: none;
   @include md-width() {
     display: block;
@@ -69,7 +70,7 @@ export default {
     writing-mode: vertical-lr;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    line-height: 1.2;
+    //line-height: 1.2;
   }
   & + & {
     margin-top: 10px;

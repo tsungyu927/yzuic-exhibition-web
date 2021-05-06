@@ -27,15 +27,7 @@
 
 export default {
   name: 'ConceptModal',
-  props: {
-    content: {
-      type: String,
-      required: true,
-    },
-    modalId: {
-      type: String,
-    },
-  },
+  props: ['content', 'modalId'],
   methods: {
     // using ref attribute and then call the show(), hide()
     hideModal() {
