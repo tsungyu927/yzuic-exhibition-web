@@ -428,11 +428,18 @@
             v-lazy="require('../assets/home/交通方式/交通方式.svg')"
             alt="交通方式"
           />
-          <img
-            class="home-map1"
-            v-lazy="require('../assets/home/交通方式/地圖一.svg')"
-            alt="園區地圖"
-          />
+          <div class="home-map1-div">
+            <img
+              class="home-map1"
+              v-lazy="require('../assets/home/交通方式/地圖一.svg')"
+              alt="園區地圖"
+            />
+            <img
+              class="home-map-pointer"
+              v-lazy="require('../assets/home/交通方式/指標.svg')"
+              alt="指標"
+            />
+          </div>
         </div>
         <div class="home-con">
           <img
