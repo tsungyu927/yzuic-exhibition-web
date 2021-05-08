@@ -1,7 +1,7 @@
 <template>
   <div class="catalog">
     <div class="catalog-left">
-      <img class="catalog-logo" src="../assets/logo/vertical-logo.png" />
+      <img class="catalog-logo" :src="imgSrc" />
     </div>
     <div class="catalog-right">
       <div class="catalog-right-bar">
@@ -43,9 +43,32 @@
 </template>
 
 <script>
+import horImg from '../assets/logo/horizontal-logo.png';
+import verImg from '../assets/logo/vertical-logo.png';
+
 export default {
   name: 'Catalog',
-}
+  data() {
+    return{
+      imgSrc: verImg
+    };
+  },
+  mounted() {
+    this.handleOrientationChange();
+    window.addEventListener('resize', this.handleOrientationChange, false);
+  },
+  methods: {
+    handleOrientationChange: function() {
+      if (window.innerWidth > window.innerHeight) {
+        // landscape
+        this.imgSrc = verImg;
+      } else {
+        // portrait
+        this.imgSrc = horImg;
+      }
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -59,39 +82,62 @@ export default {
   background-color: #FF1B82;
   animation:  0.3s linear openAnim;
   display: flex;
+  flex-direction: column;
+  @include md-width() {
+    flex-direction: row;
+  }
 
   $catalog-font-color: #fff;
-  // left
+  // left top
   &-left{
-    width: 30%;
-    height: 100%;
+    width: 100%;
+    height: 30%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    @include md-width() {
+      width: 30%;
+      height: 100%;
+      justify-content: center;
+    }
   }
   &-logo{
-    margin-left: 2em;
-    width: auto;
-    height: 80%;
+    margin-left: 0;
+    margin-top: 2em;
+    width: 80%;
+    height: auto;
+    @include md-width() {
+      margin-left: 2em;
+      margin-top: 0em;
+      width: auto;
+      height: 80%;
+    }
   }
 
-  // right
+  // right bottom
   &-right{
-    width: 70%;
-    height: 100%;
+    width: 100%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    @include md-width() {
+      width: 70%;
+      height: 100%;
+    }
   }
   &-right-bar{
-    width: 80%;
+    width: 100%;
     height: 30%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    @include md-width() {
+      width: 80%;
+    }
   }
   &-btn{
     cursor: pointer;

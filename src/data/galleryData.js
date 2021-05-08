@@ -1,175 +1,167 @@
-import _ from 'lodash'
+import _ from 'lodash';
 
 const logo = [
         {
           title: 'logo0',
-          url: require('../assets/img/TeamLogo0.jpg')
+          url: '/img/logo/1_logo.jpg'
         },
         {
           title: 'logo1',
-          url: require('../assets/img/TeamLogo1.jpg')
+          url: '/img/logo/2_logo.jpg'
         },
         {
           title: 'logo2',
-          url: require('../assets/img/TeamLogo2.jpg')
+          url: '/img/logo/3_logo.jpg'
         },
         {
           title: 'logo3',
-          url: require('../assets/img/TeamLogo3.jpg')
+          url: '/img/logo/4_logo.jpg'
         },
         {
           title: 'logo4',
-          url: require('../assets/img/TeamLogo4.jpg')
+          url: '/img/logo/5_logo.jpg'
         },
         {
           title: 'logo5',
-          url: require('../assets/img/TeamLogo5.jpg')
+          url: '/img/logo/6_logo.jpg'
         },
         {
           title: 'logo6',
-          url: require('../assets/img/TeamLogo6.jpg')
+          url: '/img/logo/7_logo.jpg'
         },
         {
           title: 'logo7',
-          url: require('../assets/img/TeamLogo7.jpg')
+          url: '/img/logo/8_logo.jpg'
         },
         {
           title: 'logo8',
-          url: require('../assets/img/TeamLogo8.jpg')
+          url: '/img/logo/9_logo.jpg'
         },
         {
           title: 'logo9',
-          url: require('../assets/img/TeamLogo9.jpg')
+          url: '/img/logo/10_logo.jpg'
         },
         {
           title: 'logo10',
-          url: require('../assets/img/TeamLogo10.jpg')
+          url: '/img/logo/11_logo.jpg'
         },
         {
           title: 'logo11',
-          url: require('../assets/img/TeamLogo11.jpg')
+          url: '/img/logo/12_logo.jpg'
         },
         {
           title: 'logo12',
-          url: require('../assets/img/TeamLogo12.jpg')
+          url: '/img/logo/13_logo.jpg'
         },
         {
           title: 'logo13',
-          url: require('../assets/img/TeamLogo13.jpg')
+          url: '/img/logo/14_logo.jpg'
         },
         {
           title: 'logo14',
-          url: require('../assets/img/TeamLogo14.jpg')
+          url: '/img/logo/16_logo.jpg'
         },
         {
           title: 'logo15',
-          url: require('../assets/img/TeamLogo15.jpg')
+          url: '/img/logo/17_logo.jpg'
         },
         {
           title: 'logo16',
-          url: require('../assets/img/TeamLogo16.jpg')
+          url: '/img/logo/18_logo.jpg'
         },
         {
           title: 'logo17',
-          url: require('../assets/img/TeamLogo17.jpg')
+          url: '/img/logo/19_logo.jpg'
         },
         {
           title: 'logo18',
-          url: require('../assets/img/TeamLogo18.jpg')
+          url: '/img/logo/20_logo.jpg'
         },
         {
           title: 'logo19',
-          url: require('../assets/img/TeamLogo19.jpg')
-        },
-        {
-          title: 'logo20',
-          url: require('../assets/img/TeamLogo19.jpg')
+          url: '/img/logo/21_logo.jpg'
         },
         {
           title: 'poster0',
-          url: require('../assets/img/TeamPoster0.jpg')
+          url: '/img/poster/1_poster.jpg'
         },
         {
           title: 'poster1',
-          url: require('../assets/img/TeamPoster1.jpg')
+          url: '/img/poster/2_poster.jpg'
         },
         {
           title: 'poster2',
-          url: require('../assets/img/TeamPoster2.jpg')
+          url: '/img/poster/3_poster.jpg'
         },
         {
           title: 'poster3',
-          url: require('../assets/img/TeamPoster3.jpg')
+          url: '/img/poster/4_poster.jpg'
         },
         {
           title: 'poster4',
-          url: require('../assets/img/TeamPoster4.jpg')
+          url: '/img/poster/5_poster.jpg'
         },
         {
           title: 'poster5',
-          url: require('../assets/img/TeamPoster5.jpg')
+          url: '/img/poster/6_poster.jpg'
         },
         {
           title: 'poster6',
-          url: require('../assets/img/TeamPoster6.jpg')
+          url: '/img/poster/7_poster.jpg'
         },
         {
           title: 'poster7',
-          url: require('../assets/img/TeamPoster7.jpg')
+          url: '/img/poster/8_poster.jpg'
         },
         {
           title: 'poster8',
-          url: require('../assets/img/TeamPoster8.jpg')
+          url: '/img/poster/9_poster.jpg'
         },
         {
           title: 'poster9',
-          url: require('../assets/img/TeamPoster9.jpg')
+          url: '/img/poster/10_poster.jpg'
         },
         {
           title: 'poster10',
-          url: require('../assets/img/TeamPoster10.jpg')
+          url: '/img/poster/11_poster.jpg'
         },
         {
           title: 'poster11',
-          url: require('../assets/img/TeamPoster11.jpg')
+          url: '/img/poster/12_poster.jpg'
         },
         {
           title: 'poster12',
-          url: require('../assets/img/TeamPoster12.jpg')
+          url: '/img/poster/13_poster.jpg'
         },
         {
           title: 'poster13',
-          url: require('../assets/img/TeamPoster13.jpg')
+          url: '/img/poster/14_poster.jpg'
         },
         {
           title: 'poster14',
-          url: require('../assets/img/TeamPoster14.jpg')
+          url: '/img/poster/16_poster.jpg'
         },
         {
           title: 'poster15',
-          url: require('../assets/img/TeamPoster15.jpg')
+          url: '/img/poster/17_poster.jpg'
         },
         {
           title: 'poster16',
-          url: require('../assets/img/TeamPoster16.jpg')
+          url: '/img/poster/18_poster.jpg'
         },
         {
           title: 'poster17',
-          url: require('../assets/img/TeamPoster17.jpg')
+          url: '/img/poster/19_poster.jpg'
         },
         {
           title: 'poster18',
-          url: require('../assets/img/TeamPoster18.jpg')
+          url: '/img/poster/20_poster.jpg'
         },
         {
           title: 'poster19',
-          url: require('../assets/img/TeamPoster19.jpg')
+          url: '/img/poster/21_poster.jpg'
         },
-        {
-          title: 'poster20',
-          url: require('../assets/img/TeamPoster19.jpg')
-        }
-      ]
+      ];
 // const poster = [
   
 // ]
@@ -180,6 +172,6 @@ const logo = [
 //   return _.shuffle(tmp)
 // })
 
-const imgData =  _.shuffle(logo)
+const imgData =  _.shuffle(logo);
 
-export default imgData
+export default imgData;
