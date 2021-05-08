@@ -5,38 +5,38 @@
     </div>
     <div class="catalog-right">
       <div class="catalog-right-bar">
-        <div class="catalog-btn">
-          <div class="catalog-content">
+        <router-link class="catalog-btn" to="/">
+          <div class="catalog-content" @click="handleCloseModal">
             主頁
           </div>        
-        </div>
-        <div class="catalog-btn">
-          <div class="catalog-content">
+        </router-link>
+        <router-link class="catalog-btn" to="/">
+          <div class="catalog-content" @click="handleCloseModal">
             展覽<br>資訊
           </div>        
-        </div>
-        <div class="catalog-btn">
-          <div class="catalog-content">
+        </router-link>
+        <router-link class="catalog-btn" to="/exhibition">
+          <div class="catalog-content" @click="handleCloseModal">
             展覽<br>作品
           </div>        
-        </div>
+        </router-link>
       </div>
       <div class="catalog-right-bar">
-        <div class="catalog-btn">
-          <div class="catalog-content">
+        <router-link class="catalog-btn" to="/organizeTeam">
+          <div class="catalog-content" @click="handleCloseModal">
             策展<br>概念
           </div>        
-        </div>
-        <div class="catalog-btn">
-          <div class="catalog-content">
+        </router-link>
+        <router-link class="catalog-btn" to="/organizeTeam">
+          <div class="catalog-content" @click="handleCloseModal">
             策展<br>團隊
           </div>        
-        </div>
-        <div class="catalog-btn">
-          <div class="catalog-content">
+        </router-link>
+        <router-link class="catalog-btn" to="">
+          <div class="catalog-content" @click="handleCloseModal">
             聯絡<br>我們
           </div>        
-        </div>
+        </router-link>
       </div>
     </div>
   </div>
@@ -66,6 +66,9 @@ export default {
         // portrait
         this.imgSrc = horImg;
       }
+    },
+    handleCloseModal(){
+      this.$emit('handleCloseModal');
     }
   }
 };

@@ -3,7 +3,7 @@
     <!-- Loading Anim -->
     <!-- <Loader /> -->
     <!-- 目錄modal -->
-    <Catalog v-if="openCatalog" class="catalogModal" />
+    <Catalog v-if="openCatalog" class="catalogModal" v-on:handleCloseModal="handleOpenCatalog"  />
     <!-- 右上角的btn -->
     <button class="menu-btn" @click="handleOpenCatalog">
       <div>目錄</div>
