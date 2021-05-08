@@ -24,7 +24,7 @@ export default {
 <style lang="scss" scoped>
 .title {
   left: 10%;
-  top: 0%;
+  top: 10%;
   color: #ffffff;
   display: block;
   position: fixed;

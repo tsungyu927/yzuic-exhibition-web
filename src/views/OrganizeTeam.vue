@@ -10,11 +10,33 @@
       <!-- [Section2] -->
       <div class="section section__waterFall ">
         <MenuBtn :main-color="'#00cbf4'" />
-        <div class="">
-          <div class="mb-4">
-            <div class="title">元智資傳 24 th</div>
+        <MobileHeader :title="'策展團隊'" class="blue__scrolled "/>
+        <!-- mobile navbar-->
+        <div class="navbar-fixed d-md-none">
+          <div class="selector-container">
+            <NavBtn
+              v-for="item in OTNavbar"
+              :key="item.enName"
+              :nav-item="item"
+              :main-color="'#00cbf4'"
+              @click.native="toIntroduction(item.id)"
+            />
           </div>
-          <div class="selector-container navbar position-fixed position-md-relative">
+        </div>
+        <div class="content d-md-flex">
+          <div class="content__left"> 
+            <div class="content___poster">
+              <img class="img-fluid" src="../assets/img/allstaffimg.jpg" />
+            </div>
+            <div class="content__text pl-5 pl-md-0">
+              <div class="title">元智資傳 24 th</div>
+              <p>
+                我們是第24屆元智資傳系畢業展策展團隊。歷經大學四年的成長與蛻變，在最後一刻，共同策劃屬於我們的畢業展覽，辦展的這一年中，我們度過無數個難熬的時刻，也面對同時要做自己畢業製作的心力憔悴。最終、我們把最好的展覽呈現給大家，為大家帶來此次展覽「此刻變態」。
+              </p>
+            </div>
+          </div>
+          <!-- web navbar -->
+          <div class="navbar d-none d-md-block">
             <NavBtn
               v-for="item in OTNavbar"
               :key="item.enName"
@@ -130,27 +152,75 @@ export default {
   position: relative;
 }
 
-.navbar {
+.sectionContainer {
+  height: 100%;
+  align-items: center;
+  @include md-width() {
+    padding-left: 30px;
+  }
+}
+
+.content {
+  @include md-width() {
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    &__left {
+      width: 70%;
+      padding: 70px;
+      max-width: 900px;
+    }
+  }
+  &__poster {
+    max-width: 600px;
+    margin: auto;
+  }
+  &__text {
+    text-align: left;
+    width: 70%;
+  }
+  .title {
+    margin: 30px 0;
+    font-size: 30px;
+    color: $organizeTeam-mainColor;
+    @include md-width() {
+      font-size: 48px;
+    }
+  }
+  p {
+    font-size: 16px;
+    line-height: 30px;
+    @include md-width() {
+      width: 100%;
+    }
+  }
+}
+
+.navbar-fixed {
+  position: fixed;
   z-index: 1;
   right: 20px;
   height: 100%;
-  bottom: auto;
-  @include md-width() {
-    width: 40%;
-    right: 5%;
-  }
+  bottom: -130%;
 }
+
+.navbar {
+  width: 30%;
+  display: inline-block;
+}
+
 .selector-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   @include md-width() {
-    display: inline-block;
-  }
-  @include xl-width() {
-    padding: 0 50px;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    height: auto;
   }
 }
+
 
 .selector-btn {
   @include md-width() {
