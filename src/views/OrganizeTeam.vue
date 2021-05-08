@@ -8,11 +8,13 @@
         <img class="background" src="../assets/fluid.png" />
       </div>
       <!-- [Section2] -->
-      <div class="section section__waterFall">
+      <div class="section section__waterFall ">
         <MenuBtn :main-color="'#00cbf4'" />
-        <MobileHeader :title="'策展團隊'" class="blue__scrolled" />
-        <div class="navbar">
-          <div class="selector-container">
+        <div class="">
+          <div class="mb-4">
+            <div class="title">元智資傳 24 th</div>
+          </div>
+          <div class="selector-container navbar position-fixed position-md-relative">
             <NavBtn
               v-for="item in OTNavbar"
               :key="item.enName"
@@ -129,7 +131,6 @@ export default {
 }
 
 .navbar {
-  position: fixed;
   z-index: 1;
   right: 20px;
   height: 100%;
