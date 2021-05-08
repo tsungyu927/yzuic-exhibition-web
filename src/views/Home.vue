@@ -855,7 +855,6 @@ export default {
       scrollTrigger: {
         trigger: '.home-text03-2',
         scrub: true,
-        markers: true,
         start: 'top 60%',
         end: '+=100',
       },
@@ -1031,6 +1030,17 @@ export default {
       transform: 'scale(1.2)',
       opacity: 0,
       duration: 0.7,
+      onComplete: ()=>{
+        gsap.to('.home-map-pointer', {
+          opacity: 1,
+          duration: 0.3,
+        });
+      },
+      onReverseComplete: ()=> {
+        gsap.to('.home-map-pointer', {
+          opacity: 0,
+        });
+      }
     });
     gsap.from('.home-map2', {
       scrollTrigger: {
@@ -1129,8 +1139,9 @@ export default {
     gsap.from('.home-text15-1', {
       scrollTrigger: {
         trigger: '.home-text15-1',
-        start: '60% 60%',
+        start: 'top 60%',
         end: 'bottom 50%',
+        markers: true,
         toggleActions: 'play none none reset',
       },
       rotateZ: 90,
