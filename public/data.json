@@ -94,7 +94,7 @@
             "poster": "1_poster",
             "previewImg": ["1_previewImg-1", "1_previewImg-2", "1_previewImg-3", "1_previewImg-4", "1_previewImg-5", "1_previewImg-6"],
             "teamImg": ["1_teamImg-1", "1_teamImg-2", "1_teamImg-3", "1_teamImg-4", "1_teamImg-5"],
-            "viedo": "https://www.youtube.com/watch?v=uZP7_S_zFNo"
+            "viedo": "https://www.youtube.com/embed/uZP7_S_zFNo"
         },
         {
             "id": 2,
@@ -147,7 +147,7 @@
             "poster": "2_poster",
             "previewImg": ["2_previewImg-1", "2_previewImg-2", "2_previewImg-3", "2_previewImg-4", "2_previewImg-5", "2_previewImg-6"],
             "teamImg": ["2_teamImg-1", "2_teamImg-2", "2_teamImg-3", "2_teamImg-4"],
-            "viedo": "https://www.youtube.com/watch?v=N6TlUirkkF8"
+            "viedo": "https://www.youtube.com/embed/N6TlUirkkF8"
         },
         {
             "id": 3,
@@ -194,7 +194,7 @@
             "poster": "3_poster",
             "previewImg": ["3_previewImg-1", "3_previewImg-2", "3_previewImg-3", "3_previewImg-4", "3_previewImg-5", "3_previewImg-6"],
             "teamImg": ["3_teamImg-1", "3_teamImg-2", "3_teamImg-3","3_teamImg-4", "3_teamImg-5", "3_teamImg-6"],
-            "viedo": "https://www.youtube.com/watch?v=Gndyj4_ekPs"
+            "viedo": "https://www.youtube.com/embed/Gndyj4_ekPs"
         },
         {
             "id": 4,
@@ -247,7 +247,7 @@
             "poster": "4_poster",
             "previewImg": ["4_previewImg-1", "4_previewImg-2", "4_previewImg-3", "4_previewImg-4", "4_previewImg-5", "4_previewImg-6"],
             "teamImg": ["4_teamImg-1", "4_teamImg-2", "4_teamImg-3", "4_teamImg-4", "4_teamImg-5"],
-            "viedo": "https://youtu.be/C26ZTiEJ4Lc "
+            "viedo": "https://www.youtube.com/embed/C26ZTiEJ4Lc "
         },
         {
             "id": 5,
@@ -300,7 +300,7 @@
             "poster": "5_poster",
             "previewImg": ["5_previewImg-1", "5_previewImg-2", "5_previewImg-3", "5_previewImg-4", "5_previewImg-5", "5_previewImg-6"],
             "teamImg": ["5_teamImg-1", "5_teamImg-2", "5_teamImg-3", "5_teamImg-4", "5_teamImg-5"],
-            "viedo": "https://youtu.be/Yb4hxSAMmxg"
+            "viedo": "https://www.youtube.com/embed/Yb4hxSAMmxg"
         },
         {
             "id": 6,
@@ -341,7 +341,7 @@
             "poster": "6_poster",
             "previewImg": ["6_previewImg-1", "6_previewImg-2", "6_previewImg-3", "6_previewImg-4", "6_previewImg-5", "6_previewImg-6"],
             "teamImg": ["6_teamImg-1", "6_teamImg-2", "6_teamImg-3", "6_teamImg-4", "6_teamImg-5"],
-            "viedo": "https://www.youtube.com/watch?v=qschjPFvHdg"
+            "viedo": "https://www.youtube.com/embed/qschjPFvHdg"
         },
         {
             "id": 7,
@@ -394,7 +394,7 @@
             "poster": "7_poster",
             "previewImg": ["7_previewImg-1", "7_previewImg-2", "7_previewImg-3", "7_previewImg-4", "7_previewImg-5", "7_previewImg-6"],
             "teamImg": ["7_teamImg-1", "7_teamImg-2"],
-            "viedo": "https://www.youtube.com/watch?v=VOdzpt0vsNI"
+            "viedo": "https://www.youtube.com/embed/VOdzpt0vsNI"
         },
         {
             "id": 8,
@@ -447,7 +447,7 @@
             "poster": "8_poster",
             "previewImg": ["8_previewImg-1", "8_previewImg-2", "8_previewImg-3", "8_previewImg-4", "8_previewImg-5", "8_previewImg-6"],
             "teamImg": ["8_teamImg-1", "8_teamImg-2", "8_teamImg-3", "8_teamImg-4", "8_teamImg-5"],
-            "viedo": "https://youtu.be/qMBfnuZ3AoQ"
+            "viedo": " https://www.youtube.com/embed/UnmTY5vKHpg"
         },
         {
             "id": 9,
@@ -494,7 +494,7 @@
             "poster": "9_poster",
             "previewImg": ["9_previewImg-1", "9_previewImg-2", "9_previewImg-3", "9_previewImg-4", "9_previewImg-5", "9_previewImg-6"],
             "teamImg": ["9_teamImg-1", "9_teamImg-2"],
-            "viedo": "https://youtu.be/lfcMS5ZnMuo"
+            "viedo": "https://www.youtube.com/embed/lfcMS5ZnMuo"
         },
         {
             "id": 10,
@@ -547,7 +547,7 @@
             "poster": "10_poster",
             "previewImg": ["10_previewImg-1", "10_previewImg-2", "10_previewImg-3", "10_previewImg-4", "10_previewImg-5", "10_previewImg-6"],
             "teamImg": ["10_teamImg-1", "10_teamImg-2", "10_teamImg-3"],
-            "viedo": "https://www.youtube.com/watch?v=ZV6TH2pCzuk&ab_channel=RyanLu"
+            "viedo": "https://www.youtube.com/embed/ZV6TH2pCzuk"
         },
         {
             "id": 11,
@@ -600,7 +600,7 @@
             "poster": "11_poster",
             "previewImg": ["11_previewImg-1", "11_previewImg-2", "11_previewImg-3", "11_previewImg-4", "11_previewImg-5", "11_previewImg-6"],
             "teamImg": ["11_teamImg-1", "11_teamImg-2"],
-            "viedo": "https://youtu.be/xGf2vqB8tx8"
+            "viedo": "https://www.youtube.com/embed/xGf2vqB8tx8"
         },
         {
             "id": 12,
@@ -653,7 +653,7 @@
             "poster": "12_poster",
             "previewImg": ["12_previewImg-1", "12_previewImg-2", "12_previewImg-3", "12_previewImg-4", "12_previewImg-5", "12_previewImg-6"],
             "teamImg": ["12_teamImg-1", "12_teamImg-2", "12_teamImg-3", "12_teamImg-4", "12_teamImg-5"],
-            "viedo": "https://youtu.be/vyp3twMV5vg"
+            "viedo": "https://www.youtube.com/embed/vyp3twMV5vg"
         },
         {
             "id": 13,
@@ -759,7 +759,7 @@
             "poster": "14_poster",
             "previewImg": ["14_previewImg-1", "14_previewImg-2", "14_previewImg-3", "14_previewImg-4", "14_previewImg-5", "14_previewImg-6"],
             "teamImg": ["14_teamImg-1", "14_teamImg-2", "14_teamImg-3", "14_teamImg-4", "14_teamImg-5"],
-            "viedo": "https://youtu.be/s7Vhdt3J9_Y"
+            "viedo": "https://www.youtube.com/embed/s7Vhdt3J9_Y"
         },
         {
             "id": 16,
@@ -812,7 +812,7 @@
             "poster": "16_poster",
             "previewImg": ["16_previewImg-1", "16_previewImg-2", "16_previewImg-3", "16_previewImg-4", "16_previewImg-5", "16_previewImg-6"],
             "teamImg": ["16_teamImg-1", "16_teamImg-2", "16_teamImg-3", "16_teamImg-4", "16_teamImg-5"],
-            "viedo": "https://youtu.be/wnGFzOQMtbI"
+            "viedo": "https://www.youtube.com/embed/wnGFzOQMtbI"
         },
         {
             "id": 17,
@@ -865,7 +865,7 @@
             "poster": "17_poster",
             "previewImg": ["17_previewImg-1", "17_previewImg-2", "17_previewImg-3", "17_previewImg-4", "17_previewImg-5", "17_previewImg-6"],
             "teamImg": ["17_teamImg-1", "17_teamImg-2", "17_teamImg-3", "17_teamImg-4", "17_teamImg-5"],
-            "viedo": "https://youtu.be/GP7SJvOAmd0"
+            "viedo": "https://www.youtube.com/embed/GP7SJvOAmd0"
         },
         {
             "id": 18,
@@ -912,7 +912,7 @@
             "poster": "18_poster",
             "previewImg": ["18_previewImg-1", "18_previewImg-2", "18_previewImg-3", "18_previewImg-4", "18_previewImg-5", "18_previewImg-6"],
             "teamImg": ["18_teamImg-1", "18_teamImg-2", "18_teamImg-3", "18_teamImg-4", "18_teamImg-5"],
-            "viedo": "https://www.youtube.com/watch?v=RhG9snYWgvY"
+            "viedo": "https://www.youtube.com/embed/RhG9snYWgvY"
         },
         {
             "id": 19,
@@ -965,7 +965,7 @@
             "poster": "19_poster",
             "previewImg": ["19_previewImg-1", "19_previewImg-2", "19_previewImg-3", "19_previewImg-4", "19_previewImg-5", "19_previewImg-6"],
             "teamImg": ["19_teamImg-1", "19_teamImg-2", "19_teamImg-3", "19_teamImg-4", "19_teamImg-5"],
-            "viedo": "https://youtu.be/IBqhD45ze9M"
+            "viedo": "https://www.youtube.com/embed/IBqhD45ze9M"
         },
         {
             "id": 20,
@@ -1018,7 +1018,7 @@
             "poster": "20_poster",
             "previewImg": ["20_previewImg-1", "20_previewImg-2", "20_previewImg-3", "20_previewImg-4", "20_previewImg-5", "20_previewImg-6"],
             "teamImg": ["20_teamImg-1", "20_teamImg-2", "20_teamImg-3", "20_teamImg-4", "20_teamImg-5"],
-            "viedo": "https://youtu.be/jWNAN_p5U5E"
+            "viedo": "https://www.youtube.com/embed/jWNAN_p5U5E"
         },
         {
             "id": 21,
@@ -1065,7 +1065,7 @@
             "poster": "21_poster",
             "previewImg": ["21_previewImg-1", "21_previewImg-2", "21_previewImg-3", "21_previewImg-4", "21_previewImg-5", "21_previewImg-6"],
             "teamImg": ["21_teamImg-1"],
-            "viedo": "https://youtu.be/N1jcEadcohE"
+            "viedo": "https://www.youtube.com/embed/N1jcEadcohE"
         }
     ],
     "staff": [{
