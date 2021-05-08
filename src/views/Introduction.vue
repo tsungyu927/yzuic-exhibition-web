@@ -88,7 +88,7 @@
           <div class="video__box">
             <iframe
               frameborder="0"
-              src="https://www.youtube.com/embed/SORD03t7nlo"
+              :src="introData.viedo"
               allowFullScreen="true"
             >
             </iframe>
