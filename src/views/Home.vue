@@ -2,6 +2,9 @@
   <div class="con">
     <HomeIntro v-if="openIntro" v-on:handleCloseModal="handleCloseModal" />
     <div class="content">
+      <div class="rotate-tips" v-if="openRotateTips">
+        請將手機轉向
+      </div>
       <div class="home-top">
         <img
           class="title-back"
@@ -665,6 +668,7 @@ export default {
   name: 'Home',
   data() {
     return {
+      openRotateTips: false,
       shakePos: false,
       openIntro: false,
     };
@@ -680,6 +684,7 @@ export default {
     // ===============================
     console.log('%c拜託不要搞我們(●’ω`●）',"color:#FF1A83; font-size: 35px; background-color: #fff;");
     gsap.registerPlugin(ScrollTrigger);
+
     const titleSeq = gsap.timeline({
       scrollTrigger: {
         trigger: '.title-back',
@@ -1278,11 +1283,13 @@ export default {
       if (window.innerWidth > window.innerHeight) {
         // landscape
         // 可以下滑
+        this.openRotateTips = false;
         console.log('landscape');
         document.querySelector('body').style.overflowY = 'scroll';
       } else {
         // portrait
         // 鎖住不能下滑
+        this.openRotateTips = true;
         console.log('portrait');
         document.querySelector('body').style.overflowY = 'hidden';
       }

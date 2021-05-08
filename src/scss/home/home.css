@@ -9,6 +9,28 @@
   height: max-content;
   overflow: hidden;
 }
+.rotate-tips{
+  position: fixed;
+  z-index: 20;
+  top: 80%;
+  left: 20%;
+  width: 60%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  letter-spacing: 0.8em;
+  animation: rotateTipAnim 1.5s linear infinite alternate;
+}
+@keyframes rotateTipAnim {
+  from{
+    opacity: 0.2;
+  }
+  to{
+    opacity: 1;
+  }
+}
 /* 最上面液態金屬 */
 .home-top{
   position: relative;
