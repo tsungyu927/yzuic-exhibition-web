@@ -77,9 +77,17 @@ export default {
     this.$ajax.get('/data.json').then(
       (res) => {
         const works = res.data.works;
-        $that.worksGroup = works.filter(function(item) {
-          return item.type == $that.$route.query.type;
-        });
+        if($that.$route.query.type==='all') {
+          $that.worksGroup = works.filter(function(item){
+            return item.id != 0;
+          });
+        }
+        else {
+          $that.worksGroup = works.filter(function(item) {
+            return item.type == $that.$route.query.type;
+          });
+        }
+        
       },
       (res) => {
         console.log('error');

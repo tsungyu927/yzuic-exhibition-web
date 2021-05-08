@@ -76,10 +76,10 @@ export default {
           chName: '行銷',
           enName: 'Marketing',
         },
-        {
+        /*{
           chName: '專題',
           enName: 'Project',
-        },
+        },*/
       ],
     };
   },
