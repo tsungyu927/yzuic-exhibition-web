@@ -1,5 +1,13 @@
 <template>
   <div id="app" class="app">
+    <!-- Loading Anim -->
+    <!-- <Loader /> -->
+    <!-- 目錄modal -->
+    <Catalog v-if="openCatalog" class="catalogModal" />
+    <!-- 右上角的btn -->
+    <button class="menu-btn" @click="handleOpenCatalog">
+      <div>目錄</div>
+    </button>
     <div class="app-container">
       <router-view />
     </div>
@@ -10,6 +18,9 @@
 <script>
 import Loader from './views/Loader';
 import RightFooter from './components/RightFooter';
+// import Loader from './views/Loader'
+import Catalog from './modal/Catalog';
+import gsap from 'gsap';
 
 export default {
   name: 'App',
@@ -17,6 +28,7 @@ export default {
     return {
       // show right footer
       isShowRF: false,
+      openCatalog: false
     };
   },
   created() {
@@ -38,9 +50,23 @@ export default {
         this.isShowRF = false;
       }
     },
+    handleOpenCatalog: function(){
+      if(this.openCatalog){
+        gsap.to('.catalogModal',{
+          opacity: 0,
+          duration: 0.3
+        }).then(()=>{
+          this.openCatalog = false;
+        });
+      } else{
+        this.openCatalog = true;
+      }
+    },
   },
   components: {
     RightFooter,
+    // Loader,
+    Catalog,
   },
 };
 </script>
@@ -65,6 +91,76 @@ body {
   &-container {
     width: 100%;
     height: 100%;
+  }
+  &-bar {
+    display: none;
+    @include md-width() {
+      color: #ff1a83;
+      font-size: 0.7rem;
+      display: flex;
+      position: fixed;
+      z-index: 2;
+      bottom: 2%;
+      height: 40%;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 1rem;
+    }
+    .left {
+      width: 2%;
+    }
+    .right {
+      width: 2%;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: 'Yan Ze University Information Communication 24th Graduation Exhibition';
+        writing-mode: horizontal-tb;
+        width: fit-content;
+        word-break: keep-all;
+        bottom: 0%;
+        right: 180%;
+        width: max-content;
+      }
+    }
+  }
+}
+
+.menu-btn {
+  display: none;
+  @include md-width() {
+    display: flex;
+    position: fixed;
+    z-index: 2;
+    font-weight: bold;
+    line-height: 2.8rem;
+    justify-content: center;
+    font-size: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: $exhibition-mainColor 1px solid;
+    top: 2%;
+    right: 2%;
+    background-color: transparent;
+  }
+  div {
+    color: $exhibition-mainColor;
+  }
+  &:hover {
+    background-color: $exhibition-mainColor;
+    div {
+      color: white;
+    }
+    .bottom {
+      bottom: 4%;
+      min-height: 30px;
+      max-width: 430px;
+      right: 10%;
+      font-size: 0.7rem;
+      line-height: 30px;
+    }
   }
 }
 </style>

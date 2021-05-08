@@ -1,8 +1,8 @@
 <template>
   <div class="homeIntro">
     <img class="QQLine" :src="require('../assets/home/modal/QQ.svg')" />
+    <img @click="handleClose" class="backIcon" :src="require('../assets/home/modal/返回icon.svg')" />
     <div class="homeIntro-left">
-      <img @click="handleClose" class="backIcon" :src="require('../assets/home/modal/返回icon.svg')" />
       <div class="homeIntro-text">
         <div class="homeIntro-title">為甚麼要叫「此刻變態」？</div>
         <div class="homeIntro-con">
@@ -25,8 +25,8 @@
 </template>
 
 <script>
-import gsap from 'gsap'
-import '../scss/home/IntroModal.css'
+import gsap from 'gsap';
+import '../scss/home/IntroModal.css';
 
 export default {
   name: 'HomeIntro',
@@ -36,9 +36,9 @@ export default {
         opacity: 0,
         duration: 0.2
       }).then(()=>{
-        this.$emit('handleCloseModal')
-      })
+        this.$emit('handleCloseModal');
+      });
     }
   }
-}
+};
 </script>

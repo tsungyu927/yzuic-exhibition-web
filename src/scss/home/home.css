@@ -9,6 +9,31 @@
   height: max-content;
   overflow: hidden;
 }
+.rotate-tips{
+  position: fixed;
+  z-index: 20;
+  top: 80%;
+  left: 20%;
+  width: 60%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: #00eaff;
+  text-shadow: 0.1em 0.1em 0.05em #006ba1;
+  letter-spacing: 0.8em;
+  animation: rotateTipAnim 1.5s ease-out infinite alternate;
+}
+@keyframes rotateTipAnim {
+  from{
+    opacity: 0.2;
+  }
+  to{
+    opacity: 1;
+  }
+}
 /* 最上面液態金屬 */
 .home-top{
   position: relative;
@@ -309,6 +334,7 @@
   height: auto;
 }
 .pink-poster {
+  z-index: 5;
   cursor: pointer;
   position: absolute;
   top: 45%;
@@ -429,12 +455,16 @@
   width: 15%;
   height: auto;
 }
-.home-map1 {
-  position: absolute;
+.home-map1-div{
+  position: relative;
   top: 20%;
   left: 36%;
   width: 28%;
-  height: auto;
+}
+.home-map1 {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
 }
 .home-map2 {
   position: absolute;
@@ -442,6 +472,23 @@
   left: 5%;
   width: 90%;
   height: auto;
+}
+.home-map-pointer{
+  opacity: 0;
+  position: absolute;
+  top: 55%;
+  left: 15%;
+  width: 15%;
+  height: auto;
+  animation: pointerLoop 1s linear infinite alternate;
+}
+@keyframes pointerLoop {
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(1.2);
+  }
 }
 /* ############################## */
 /* ############ con8 ############ */

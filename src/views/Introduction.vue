@@ -141,12 +141,12 @@
               <img class="img-fluid" :src="getTeamUrl(image)" />
             </div>
             <!-- 客製化 按鈕 -->
-            <template slot="prevButton"
-              ><img class="img-fluid" src="../assets/logo/carousel-prev.svg"
-            /></template>
-            <template slot="nextButton"
-              ><img class="img-fluid" src="../assets/logo/carousel-next.svg"
-            /></template>
+            <template slot="prevButton">
+              <img class="img-fluid" src="../assets/logo/carousel-prev.svg" />
+            </template>
+            <template slot="nextButton">
+              <img class="img-fluid" src="../assets/logo/carousel-next.svg"/>
+            </template>
           </agile>
         </div>
 
