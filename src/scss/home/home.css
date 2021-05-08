@@ -19,9 +19,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 2em;
+  font-weight: bold;
+  color: #00eaff;
+  text-shadow: 0.1em 0.1em 0.05em #006ba1;
   letter-spacing: 0.8em;
-  animation: rotateTipAnim 1.5s linear infinite alternate;
+  animation: rotateTipAnim 1.5s ease-out infinite alternate;
 }
 @keyframes rotateTipAnim {
   from{

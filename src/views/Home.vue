@@ -1146,7 +1146,6 @@ export default {
         trigger: '.home-text15-1',
         start: 'top 60%',
         end: 'bottom 50%',
-        markers: true,
         toggleActions: 'play none none reset',
       },
       rotateZ: 90,
