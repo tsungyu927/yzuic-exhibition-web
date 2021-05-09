@@ -1,15 +1,17 @@
 <template>
   <!-- 將 JavaScript Variable 與 CSS Variable 綁定，則可使用 JavaScript 動態改變 CSS -->
   <!-- 2. cssVars computed 綁定到 style 屬性  -->
-  <button :style="cssVars" class="selector-btn">
+  <button :style="cssVars" class="selector-btn" @click="handleClick" ref="target">
     <div class="ch">{{ navItem.chName }}</div>
     <div class="en">{{ navItem.enName }}</div>
   </button>
 </template>
 
 <script>
+import gsap from 'gsap';
+
 export default {
-  name: 'NavBar',
+  name: 'NavBtn',
   props: {
     //主色
     mainColor: {
@@ -28,7 +30,21 @@ export default {
       return { '--mianColor': this.mainColor };
     },
   },
-  methods: {},
+  methods: {
+    handleClick(){
+      const tl = gsap.timeline();
+      tl.to([this.$el.querySelector('.ch'),this.$el.querySelector('.en')], {
+        opacity: 0,
+      });
+      tl.to(this.$el, {
+        scale: 30,
+        duration: 0.8,
+        ease: "Ease.Linear",
+      }).then(()=>{
+        this.$emit('handleClick');
+      });
+    }
+  },
 };
 </script>
 

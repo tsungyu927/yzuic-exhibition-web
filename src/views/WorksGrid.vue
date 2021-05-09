@@ -96,7 +96,7 @@ export default {
   },
   methods: {
     previous() {
-      this.$router.go(-1);
+      this.$router.back();
     },
     toIntroduction(id) {
       //傳作品資料(object)給下一頁

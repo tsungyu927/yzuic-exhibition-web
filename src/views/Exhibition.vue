@@ -8,7 +8,7 @@
         <img class="background" src="../assets/fluid.png" />
       </div>
       <!-- [Section2] 瀑布流 -->
-      <div class="section section__waterFall">
+      <div class="section section__waterFall" id="gallery">
         <button class="arrowup-btn" @click="moveSectionUp">
           <img src="../assets/icons/arrow_up_pink.svg" />
         </button>
@@ -26,7 +26,7 @@
               :key="item.enName"
               :nav-item="item"
               :main-color="'#ff1a83'"
-              @click.native="toExbitionPage(item)"
+              v-on:handleClick="toExbitionPage(item)"
             />
           </div>
         </div>
@@ -86,7 +86,15 @@ export default {
       ],
     };
   },
+  mounted(){
+    // this.goSection(true);
+  },
   methods: {
+    goSection(toDown){
+      if(toDown){
+        // this.$el.querySelector('#gallery').classList.add("active");
+      }
+    },
     afterLoad(origin, destination) {
       if (destination.isLast) {
         this.$refs.fullpage.api.setAllowScrolling(false, 'up');
@@ -167,7 +175,7 @@ export default {
   bottom: auto;
   @include md-width() {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     top: 15px;
     right: 70px;
     bottom: auto;
