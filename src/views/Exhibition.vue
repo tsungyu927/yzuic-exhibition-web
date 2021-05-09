@@ -152,11 +152,11 @@ export default {
 .arrowup-btn{
   position: absolute;
   z-index: 2;
-  top: 5%;
-  left: 5%;
-  width: 5%;
-  background-color: transparent;
+  width: 10%;
+  top: 12%;
+  left: 4%;
   border-radius: 50%;
+  background-color: transparent;
   border: none;
   padding: 0;
   img{
@@ -164,6 +164,11 @@ export default {
     max-height: 100%;
     display: block;
     border-radius: 50%;
+  }
+  @include md-width() {
+    top: 5%;
+    left: 5%;
+    width: 5%;
   }
 }
 
@@ -179,7 +184,7 @@ export default {
     top: 15px;
     right: 70px;
     bottom: auto;
-    width: 100%;
+    width: 70%;
     height: auto;
   }
 }
