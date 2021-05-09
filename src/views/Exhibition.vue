@@ -9,6 +9,9 @@
       </div>
       <!-- [Section2] 瀑布流 -->
       <div class="section section__waterFall">
+        <button class="arrowup-btn" @click="moveSectionUp">
+          <img src="../assets/icons/arrow_up_pink.svg" />
+        </button>
         <MenuBtn :main-color="'#ff1a83'" />
         <MobileHeader :title="'展覽作品'" class="pink__scrolled" />
         <!-- <NavBar
@@ -91,7 +94,10 @@ export default {
         console.log('After load end');
       }
     },
-
+    moveSectionUp(){
+      this.$refs.fullpage.api.setAllowScrolling(true);
+      this.$refs.fullpage.api.moveSectionUp();
+    },
     //跳轉頁
     // [Vuex]...mapActions(['SetTypeBox']),
     toExbitionPage(type) {
@@ -126,13 +132,31 @@ export default {
 .section {
   width: 100%;
   height: 100%;
-  img {
+  .background {
     background-color: #ff1a83;
   }
 }
 
 .section__waterFall {
   position: relative;
+}
+
+.arrowup-btn{
+  position: absolute;
+  z-index: 2;
+  top: 5%;
+  left: 5%;
+  width: 5%;
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    border-radius: 50%;
+  }
 }
 
 .navbar {

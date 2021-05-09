@@ -10,6 +10,10 @@
       <!-- [Section2] -->
       <div class="section section__waterFall ">
         <MobileHeader :title="'策展團隊'" class="blue__scrolled "/>
+        <!-- 上滑按鈕 -->
+        <button class="arrowup-btn" @click="moveSectionUp">
+          <img src="../assets/icons/arrow_up_blue.svg" />
+        </button>
         <!-- mobile navbar-->
         <div class="navbar-fixed d-md-none">
           <div class="selector-container">
@@ -114,6 +118,10 @@ export default {
         console.log('After load end');
       }
     },
+    moveSectionUp(){
+      this.$refs.fullpage.api.setAllowScrolling(true);
+      this.$refs.fullpage.api.moveSectionUp();
+    },
     toIntroduction(id) {
       this.$router.push({
         path: 'organizeTeamIntro/',
@@ -142,8 +150,26 @@ export default {
 .section {
   width: 100%;
   height: 100%;
-  img {
+  .background {
     background-color: #00cbf4;
+  }
+}
+
+.arrowup-btn{
+  position: absolute;
+  z-index: 2;
+  top: 5%;
+  left: 5%;
+  width: 5%;
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    border-radius: 50%;
   }
 }
 
