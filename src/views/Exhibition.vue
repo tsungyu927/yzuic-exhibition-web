@@ -2,10 +2,10 @@
   <div class="gallery-container">
     <full-page ref="fullpage" :options="options">
       <!-- [Section1] 液態金屬 -->
-      <div class="section">
+      <div class="section section1">
         <MenuBtn :main-color="'#ff1a83'" />
         <MobileHeader :title="''" class="p-absolute " />
-        <img class="background" src="../assets/fluid.png" />
+        <!-- <img class="background" src="../assets/fluid.png" /> -->
       </div>
       <!-- [Section2] 瀑布流 -->
       <div class="section section__waterFall" id="gallery">
@@ -143,6 +143,9 @@ export default {
   .background {
     background-color: #ff1a83;
   }
+}
+.section1{
+  background-color: #ff1a83;
 }
 
 .section__waterFall {

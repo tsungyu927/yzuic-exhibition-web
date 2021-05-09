@@ -2,10 +2,10 @@
   <div class="gallery-container">
     <full-page ref="fullpage" :options="options">
       <!-- [Section1] 液態金屬 -->
-      <div class="section">
+      <div class="section section1">
         <MenuBtn />
         <MobileHeader :title="''" class="p-absolute" />
-        <img class="background" src="../assets/fluid.png" />
+        <!-- <img class="background" src="../assets/fluid.png" /> -->
       </div>
       <!-- [Section2] -->
       <div class="section section__waterFall ">
@@ -153,6 +153,9 @@ export default {
   .background {
     background-color: #00cbf4;
   }
+}
+.section1{
+  background-color: #00cbf4;
 }
 
 .arrowup-btn{
