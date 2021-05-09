@@ -5,9 +5,7 @@
     <!-- 目錄modal -->
     <Catalog v-if="openCatalog" class="catalogModal" v-on:handleCloseModal="handleOpenCatalog"  />
     <!-- 右上角的btn -->
-    <button class="menu-btn" @click="handleOpenCatalog">
-      <div>目錄</div>
-    </button>
+    <MenuBtn @click.native="handleOpenCatalog"/>
     <div class="app-container">
       <router-view />
     </div>
@@ -18,6 +16,7 @@
 <script>
 import Loader from './views/Loader';
 import RightFooter from './components/RightFooter';
+import MenuBtn from './components/MenuBtn';
 // import Loader from './views/Loader'
 import Catalog from './modal/Catalog';
 import gsap from 'gsap';
@@ -64,6 +63,7 @@ export default {
     },
   },
   components: {
+    MenuBtn,
     RightFooter,
     // Loader,
     Catalog,
@@ -127,6 +127,7 @@ body {
   }
 }
 
+/*
 .menu-btn {
   display: none;
   @include md-width() {
@@ -162,5 +163,5 @@ body {
       line-height: 30px;
     }
   }
-}
+}*/
 </style>

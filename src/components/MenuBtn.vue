@@ -2,8 +2,8 @@
   <router-link
     to="/"
     tag="button"
-    :style="cssVars"
     class="menu-btn d-none d-md-block"
+    :class="[changeColor]"
   >
     <div class="d-none d-md-block">目錄</div>
     <font-awesome-icon icon="bars" size="lg" class="d-md-none m-auto" />
@@ -13,16 +13,32 @@
 <script>
 export default {
   name: 'MenuBtn',
-  props: {
-    //主色
-    mainColor: {
-      type: String,
-      required: true,
-    },
+  data() {
+    return {
+      changeColor: '',
+    };
   },
-  computed: {
-    cssVars() {
-      return { '--mainColor': this.mainColor };
+  watch: {
+    $route: {
+      handler: function(to, from) {
+        // console.log(to, from);
+        switch (to.path) {
+          case '/exhibition':
+            this.changeColor = 'pink-outline';
+            break;
+          case '/organizeTeam':
+            this.changeColor = 'blue-outline';
+            break;
+          case '/organizeTeamIntro/':
+            this.changeColor = 'blue-outline';
+            break;
+          default:
+            this.changeColor = 'pink-outline';
+            break;
+        }
+      },
+      deep: true,
+      immediate: true,
     },
   },
 };
@@ -31,9 +47,8 @@ export default {
 <style lang="scss" scoped>
 //手機板漢堡選單
 .menu-btn {
-  color: var(--mainColor);
   display: flex;
-  position: absolute;
+  position: fixed;
   z-index: 1;
   font-weight: bold;
   line-height: 2.8rem;
@@ -42,7 +57,6 @@ export default {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  border: var(--mainColor) 1px solid;
   top: 3%;
   right: 3%;
   background-color: transparent;
@@ -52,9 +66,24 @@ export default {
     top: 2%;
     right: 2%;
   }
+}
+
+//粉邊粉字
+.pink-outline {
+  border: 1px solid $exhibition-mainColor;
+  color: $exhibition-mainColor;
   &:hover {
-    background-color: var(--mainColor);
-    color: white;
+    color: $white;
+    background-color: $exhibition-mainColor;
+  }
+}
+//藍邊藍字
+.blue-outline {
+  border: 1px solid $organizeTeam-mainColor;
+  color: $organizeTeam-mainColor;
+  &:hover {
+    color: $white;
+    background-color: $organizeTeam-mainColor;
   }
 }
 </style>
