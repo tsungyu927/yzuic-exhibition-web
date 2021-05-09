@@ -152,7 +152,7 @@
 
         <!-- mobile版 logo + team intro -->
         <div class="my-3 d-flex">
-          <div class="d-md-none flex-grow-1">{{ introData.teamIntro }}</div>
+          <div class="d-md-none team__intro">{{ introData.teamIntro }}</div>
           <div class="team__logo d-md-none logo__mobile" v-if="isWork">
             <img class="img-fluid" :src="getLogoUrl(introData.logo)" />
           </div>
@@ -498,9 +498,13 @@ export default {
   @include md-width() {
     padding-top: 5rem;
   }
+  &__intro {
+    width: 70%;
+  }
   &__logo {
-    margin: auto;
+    flex: 1;
     @include md-width() {
+      margin: auto;
       background: #333;
       width: 150px;
       height: 150px;
@@ -611,6 +615,7 @@ export default {
   }
 }
 
+//----------------------- 動態改變 Fixed bar 顏色
 //粉字
 .subTitle__pink {
   .title {

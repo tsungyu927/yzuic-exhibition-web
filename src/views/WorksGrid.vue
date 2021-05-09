@@ -168,10 +168,12 @@ export default {
     width: 100%;
     text-align: left;
     margin-bottom: 25px;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    height: 380px;
     @include md-width() {
       width: calc((100% / 2) - 25px);
-      max-height: 350px;
       background-color: #ffff;
       border-bottom: $exhibition-mainColor 1px solid;
       background-color: white;
@@ -185,10 +187,10 @@ export default {
     }
     &__text {
       background-color: #eaebeb;
-      padding: 30px;
+      padding: 30px 30px 0 30px;
       @include md-width() {
         background-color: #ffff;
-        padding: 20px;
+        padding: 20px 20px 0 20px;
       }
     }
     &__title {
