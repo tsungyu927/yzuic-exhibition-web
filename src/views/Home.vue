@@ -655,6 +655,10 @@
         </div>
       </div>
     </div>
+
+    <LeftBar />
+    <RightBar />
+    <RightFooter />
   </div>
 </template>
 
@@ -663,6 +667,9 @@
 import HomeIntro from '../modal/HomeIntro';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import LeftBar from '../components/LeftBar';
+import RightBar from '../components/RightBar';
+import RightFooter from '../components/RightFooter';
 
 export default {
   name: 'Home',
@@ -675,6 +682,9 @@ export default {
   },
   components: {
     HomeIntro,
+    LeftBar, 
+    RightBar, 
+    RightFooter
   },
   mounted() {
     // 判斷是否為橫式
