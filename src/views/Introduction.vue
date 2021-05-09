@@ -40,15 +40,15 @@
         </div>
       </div>
       <!-- 策展團隊 封面-->
-      <div class="pg-block p-0 cover d-md-flex flex-md-row" v-if="!isWork">
-        <div>
-          <div>
+      <div class="pg-block p-0 cover d-flex flex-column flex-md-row" v-if="!isWork">
+        <div class="order-2 order-md-1 cover__text mr-4">
+          <div class="mb-4">
             <div class="title">{{ introData.team }}</div>
           </div>
           <!-- intro-mobile -->
           <div class="intro-mobile">{{ introData.projectIntro }}</div>
           <!-- intro-web -->
-          <div class="intro-web ">
+          <div class="intro-web">
             <p v-if="introData.projectIntro">
               {{ introData.projectIntro | readMoreFun }}
             </p>
@@ -60,8 +60,8 @@
           />
         </div>
 
-        <div class="d-none d-md-block cover__poster">
-          <img class="img-fluid" :src="getPosterUrl(introData.poster)" />
+        <div class="cover__poster order-1 order-md-2">
+          <img class="img-fluid" :src="getCoverUrl(introData.coverPic)" />
         </div>
       </div>
 
@@ -270,6 +270,9 @@ export default {
     getPosterUrl(fileName) {
       return `${process.env.VUE_APP_CONTEXT_PATH}${process.env.VUE_APP_IMG}/poster/${fileName}.jpg`;
     },
+    getCoverUrl(fileName) {
+      return `${process.env.VUE_APP_CONTEXT_PATH}${process.env.VUE_APP_IMG}/cover/${fileName}.jpg`;
+    },
     getPreviewUrl(fileName) {
       return `${process.env.VUE_APP_CONTEXT_PATH}${process.env.VUE_APP_IMG}/previewImg/${fileName}.jpg`;
     },
@@ -411,6 +414,10 @@ export default {
       width: 70%;
     }
   }
+}
+
+.cover__text {
+  flex: 1;
 }
 
 .intro {
