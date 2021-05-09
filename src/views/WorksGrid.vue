@@ -39,8 +39,8 @@
               <div class="work__team">{{ work.team }}</div>
             </div>
             <div class="work__tag">{{ work.tag }}</div>
-            <div class="work__intro">
-              {{ work.projectShortIntro }}
+            <div class="work__intro" v-if="work.projectShortIntro">
+              {{ work.projectShortIntro | readMoreFun }}
             </div>
           </div>
         </div>
@@ -117,7 +117,7 @@ export default {
   },
   filters: {
     readMoreFun(str) {
-      return str.substring(0, 45) + '...';
+      return str.substring(0, 35) + '...';
     },
   },
   computed: {
@@ -171,7 +171,7 @@ export default {
     overflow: hidden;
     @include md-width() {
       width: calc((100% / 2) - 25px);
-      height: 350px;
+      max-height: 350px;
       background-color: #ffff;
       border-bottom: $exhibition-mainColor 1px solid;
       background-color: white;
@@ -181,7 +181,7 @@ export default {
     }
     @include lg-width() {
       width: calc((100% / 3) - 25px);
-      height: 360px;
+      height: 400px;
     }
     &__text {
       background-color: #eaebeb;
