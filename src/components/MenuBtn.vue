@@ -49,7 +49,7 @@ export default {
 .menu-btn {
   display: flex;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   font-weight: bold;
   line-height: 2.8rem;
   justify-content: center;

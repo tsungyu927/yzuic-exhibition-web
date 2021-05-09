@@ -434,7 +434,7 @@
           <div class="home-map1-div">
             <img
               class="home-map1"
-              v-lazy="require('../assets/home/交通方式/地圖一.svg')"
+              v-lazy="require('../assets/home/交通方式/松菸地圖.png')"
               alt="園區地圖"
             />
             <img
@@ -447,7 +447,7 @@
         <div class="home-con">
           <img
             class="home-map2"
-            v-lazy="require('../assets/home/交通方式/地圖二.svg')"
+            v-lazy="require('../assets/home/交通方式/展內地圖.png')"
             alt="展區平面圖"
           />
         </div>
@@ -655,6 +655,10 @@
         </div>
       </div>
     </div>
+
+    <LeftBar />
+    <RightBar />
+    <RightFooter />
   </div>
 </template>
 
@@ -663,6 +667,9 @@
 import HomeIntro from '../modal/HomeIntro';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import LeftBar from '../components/LeftBar';
+import RightBar from '../components/RightBar';
+import RightFooter from '../components/RightFooter';
 
 export default {
   name: 'Home',
@@ -675,6 +682,9 @@ export default {
   },
   components: {
     HomeIntro,
+    LeftBar, 
+    RightBar, 
+    RightFooter
   },
   mounted() {
     // 判斷是否為橫式
@@ -1047,6 +1057,16 @@ export default {
         });
       }
     });
+    const t1 = gsap.timeline({repeat: -1, yoyo: true});
+    t1.add('start')
+      .to('.home-map-pointer', .50, {y: 20, ease: "Circ.easeIn"})
+      .to('.home-map-pointer', .10, {
+          scaleY: 0.7,
+          transformOrigin: 'center bottom',
+          borderBottomLeftRadius: '40%',
+          borderBottomRightRadius: '40%',
+          ease: "Circ.easeIn"
+        }, '-=.05');
     gsap.from('.home-map2', {
       scrollTrigger: {
         trigger: '.home-map2',
