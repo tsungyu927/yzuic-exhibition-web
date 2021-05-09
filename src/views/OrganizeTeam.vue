@@ -3,13 +3,12 @@
     <full-page ref="fullpage" :options="options">
       <!-- [Section1] 液態金屬 -->
       <div class="section">
-        <MenuBtn :main-color="'#00cbf4'" />
+        <MenuBtn />
         <MobileHeader :title="''" class="p-absolute" />
         <img class="background" src="../assets/fluid.png" />
       </div>
       <!-- [Section2] -->
       <div class="section section__waterFall ">
-        <MenuBtn :main-color="'#00cbf4'" />
         <MobileHeader :title="'策展團隊'" class="blue__scrolled "/>
         <!-- mobile navbar-->
         <div class="navbar-fixed d-md-none">
