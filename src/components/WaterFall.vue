@@ -12,6 +12,7 @@
           class="photo"
           :key="imahe.title"
           v-for="imahe in images"
+          @click="handleClickWork(imahe.id)"
         >
           <img :src="imahe.url" :alt="imahe.title" />
         </div>
@@ -30,7 +31,15 @@ export default {
       images: image,
     };
   },
-  methods: {},
+  methods: {
+    handleClickWork(id){
+      //路由到下一頁
+      this.$router.push({
+        path: 'exhibitionIntro/',
+        query: { id: id, name: 'works' },
+      });
+    }
+  },
   components: {},
 };
 </script>
@@ -60,6 +69,7 @@ export default {
 .photo {
   width: 50%;
   @include md-width() {
+    cursor: pointer;
     width: 20%;
   }
   height: max-content;
@@ -67,6 +77,7 @@ export default {
   flex-direction: column;
 }
 .photo img {
+  cursor: pointer;
   width: 100%;
   height: auto;
 }

@@ -45,7 +45,7 @@
               :key="item.enName"
               :nav-item="item"
               :main-color="'#00cbf4'"
-              @click.native="toIntroduction(item.id)"
+              v-on:handleClick="toIntroduction(item.id)"
             />
           </div>
         </div>

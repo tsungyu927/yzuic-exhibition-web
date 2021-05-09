@@ -1,5 +1,6 @@
 <template>
   <div class="catalog">
+    <MenuBtn @click.native="handleCloseModal"/>
     <div class="catalog-left">
       <img class="catalog-logo" :src="imgSrc" />
     </div>
@@ -43,6 +44,7 @@
 </template>
 
 <script>
+import MenuBtn from '../components/MenuBtn';
 import horImg from '../assets/logo/horizontal-logo.png';
 import verImg from '../assets/logo/vertical-logo.png';
 
@@ -54,6 +56,7 @@ export default {
     };
   },
   mounted() {
+    document.querySelector('body').style.overflowY = 'hidden';
     // 確認方向
     this.handleOrientationChange();
     window.addEventListener('resize', this.handleOrientationChange, false);
@@ -69,9 +72,13 @@ export default {
       }
     },
     handleCloseModal(){
+      document.querySelector('body').style.overflowY = 'scroll';
       // call close
       this.$emit('handleCloseModal');
     }
+  },
+  components: {
+    MenuBtn
   }
 };
 </script>
