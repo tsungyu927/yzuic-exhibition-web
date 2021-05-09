@@ -411,7 +411,7 @@ export default {
   &__poster {
     width: 100%;
     @include md-width() {
-      width: 70%;
+      width: 85%;
     }
   }
 }
@@ -462,7 +462,7 @@ export default {
     }
   }
   .img-grid {
-    margin: 0 auto;
+    margin: 0 0 0 auto;
     position: relative;
     font-size: 0px;
     line-height: 0;
