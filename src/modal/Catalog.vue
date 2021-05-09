@@ -54,6 +54,7 @@ export default {
     };
   },
   mounted() {
+    // 確認方向
     this.handleOrientationChange();
     window.addEventListener('resize', this.handleOrientationChange, false);
   },
@@ -68,6 +69,7 @@ export default {
       }
     },
     handleCloseModal(){
+      // call close
       this.$emit('handleCloseModal');
     }
   }
@@ -79,7 +81,7 @@ export default {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 1;
+  z-index: 20;
   width: 100vw;
   height: 100vh;
   background-color: #FF1B82;
