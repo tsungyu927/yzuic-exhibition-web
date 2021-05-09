@@ -1,6 +1,6 @@
 # 元智大學資訊傳播學系24th畢業展覽網站
 
-![](https://github.com/tsungyu927/yzuic-exhibition-web/blob/master/src/assets/home/海報/poster.png)
+![](https://github.com/tsungyu927/yzuic-exhibition-web/blob/master/src/assets/logo/horizontal-logo.png)
 
 >## **Warning**
 目前畢業專刊上的QR Code為轉跳[**連結**](https://exhibitionweb-45da9.web.app/)，之後將會轉跳到這個網站部屬的地方（目前將轉跳到粉專）
