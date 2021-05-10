@@ -8,6 +8,7 @@ import VueYoutube from 'vue-youtube';
 // tools
 import VueLazyload from 'vue-lazyload';
 import VueFullPage from 'vue-fullpage.js';
+import 'fullpage.js/vendors/scrolloverflow';
 import { VueMasonryPlugin } from 'vue-masonry';
 import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue';
 // css

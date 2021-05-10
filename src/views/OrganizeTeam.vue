@@ -2,13 +2,13 @@
   <div class="gallery-container">
     <full-page ref="fullpage" :options="options">
       <!-- [Section1] 液態金屬 -->
-      <div class="section section1">
+      <div data-anchor="cover" class="section section1">
         <MenuBtn />
         <MobileHeader :title="''" class="p-absolute" />
         <!-- <img class="background" src="../assets/fluid.png" /> -->
       </div>
       <!-- [Section2] -->
-      <div class="section section__waterFall ">
+      <div data-anchor="content" class="section section__waterFall ">
         <MobileHeader :title="'策展團隊'" class="blue__scrolled "/>
         <!-- 上滑按鈕 -->
         <button class="arrowup-btn" @click="moveSectionUp">
@@ -74,6 +74,8 @@ export default {
     return {
       options: {
         afterLoad: this.afterLoad,
+        animateAnchor: false,
+        anchors: ['cover', 'content'],
       },
       //OrgnaizeTeamNavbar
       OTNavbar: [
@@ -113,13 +115,13 @@ export default {
   methods: {
     afterLoad(origin, destination) {
       if (destination.isLast) {
-        this.$refs.fullpage.api.setAllowScrolling(false, 'up');
         // 滑到最後一頁了
+        // this.$refs.fullpage.api.setAllowScrolling(false, 'up');
         console.log('After load end');
       }
     },
     moveSectionUp(){
-      this.$refs.fullpage.api.setAllowScrolling(true);
+      // this.$refs.fullpage.api.setAllowScrolling(true);
       this.$refs.fullpage.api.moveSectionUp();
     },
     toIntroduction(id) {
@@ -233,6 +235,8 @@ export default {
 }
 
 .navbar {
+  position: relative;
+  z-index: 2;
   width: 30%;
   display: inline-block;
 }
