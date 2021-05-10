@@ -34,11 +34,14 @@ export default {
     writing-mode: vertical-lr;
     font-size: 90px;
     @include md-width() {
-      font-size: 110px;
+      font-size: 130px;
     }
   }
   &__en {
     font-size: 10px;
+    @include md-width() {
+      font-size: 14px;
+    }
   }
 }
 </style>

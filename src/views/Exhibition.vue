@@ -2,13 +2,13 @@
   <div class="gallery-container">
     <full-page ref="fullpage" :options="options">
       <!-- [Section1] 液態金屬 -->
-      <div class="section">
+      <div data-anchor="cover" class="section section1">
         <MenuBtn :main-color="'#ff1a83'" />
         <MobileHeader :title="''" class="p-absolute " />
-        <img class="background" src="../assets/fluid.png" />
+        <!-- <img class="background" src="../assets/fluid.png" /> -->
       </div>
       <!-- [Section2] 瀑布流 -->
-      <div class="section section__waterFall" id="gallery">
+      <div data-anchor="gallery" class="section section__waterFall">
         <button class="arrowup-btn" @click="moveSectionUp">
           <img src="../assets/icons/arrow_up_pink.svg" />
         </button>
@@ -30,7 +30,7 @@
             />
           </div>
         </div>
-        <WaterFall />
+        <WaterFall id="waterfall" />
       </div>
 
       <PageTitle :ch-name="'展覽作品'" :en-name="'Exhibition Works'" />
@@ -51,12 +51,16 @@ import RightFooter from '../components/RightFooter';
 import PageTitle from '../components/PageTitle';
 import MobileHeader from '../components/MobileHeader';
 
+
 export default {
   name: 'Exhibition',
   data() {
     return {
       options: {
         afterLoad: this.afterLoad,
+        animateAnchor: false,
+        anchors: ['cover', 'gallery'],
+        normalScrollElements: "#waterfall"  // 讓waterfall滑動的部分不會影響到fullpage而導致上滑到上面一頁
       },
       exhibitionNavbar: [
         {
@@ -87,23 +91,19 @@ export default {
     };
   },
   mounted(){
-    // this.goSection(true);
+
   },
   methods: {
-    goSection(toDown){
-      if(toDown){
-        // this.$el.querySelector('#gallery').classList.add("active");
-      }
-    },
     afterLoad(origin, destination) {
       if (destination.isLast) {
-        this.$refs.fullpage.api.setAllowScrolling(false, 'up');
         // 滑到最後一頁了
-        console.log('After load end');
+        // this.$refs.fullpage.api.setAllowScrolling(false, 'up');
+        // this.$refs.fullpage.api.setAllowScrolling(false, 'up');
+        // console.log('After load end');
       }
     },
     moveSectionUp(){
-      this.$refs.fullpage.api.setAllowScrolling(true);
+      // this.$refs.fullpage.api.setAllowScrolling(true);
       this.$refs.fullpage.api.moveSectionUp();
     },
     //跳轉頁
@@ -143,6 +143,9 @@ export default {
   .background {
     background-color: #ff1a83;
   }
+}
+.section1{
+  background-color: #ff1a83;
 }
 
 .section__waterFall {
