@@ -63,7 +63,7 @@ export default {
   @include md-width() {
     display: block;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     bottom: 10%;
     font-size: 0.9rem;
     font-weight: bold;

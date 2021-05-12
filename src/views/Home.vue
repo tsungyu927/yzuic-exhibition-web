@@ -695,7 +695,7 @@ export default {
     gsap.config({
       nullTargetWarn: false
     });
-    
+
     // 判斷是否為橫式
     this.handleOrientationChange();
     window.addEventListener('resize', this.handleOrientationChange, false);
