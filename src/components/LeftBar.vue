@@ -18,13 +18,13 @@ export default {
   data() {
     return {
       changeColor: '',
-      dynamicallyChangeColor: this.toWhite ? 'whole-white-outline': '',
+      dynamicallyChangeColor: this.toWhite ? 'whole-white-outline' : '',
     };
   },
   props: {
     toWhite: {
-      type: Boolean
-    }
+      type: Boolean,
+    },
   },
   watch: {
     $route: {
@@ -48,9 +48,10 @@ export default {
       deep: true,
       immediate: true,
     },
-    toWhite: function(newVal, oldVal) { // watch it
-      this.dynamicallyChangeColor = this.toWhite ? 'whole-white-outline': '';
-    }
+    toWhite: function(newVal, oldVal) {
+      // watch it
+      this.dynamicallyChangeColor = this.toWhite ? 'whole-white-outline' : '';
+    },
   },
 };
 </script>
@@ -91,14 +92,14 @@ export default {
   line-height: 1.35;
 }
 %defaultColor {
-  border: 1px solid $white;
+  border: 1.5px solid $white;
   color: $white;
 }
 
 //粉邊粉字
 .pink-outline {
   > a {
-    border: 1px solid $exhibition-mainColor;
+    border: 1.5px solid $exhibition-mainColor;
     color: $exhibition-mainColor;
     &:hover {
       color: $white;
@@ -109,7 +110,7 @@ export default {
 //藍邊藍字
 .blue-outline {
   > a {
-    border: 1px solid $organizeTeam-mainColor;
+    border: 1.5px solid $organizeTeam-mainColor;
     color: $organizeTeam-mainColor;
     &:hover {
       color: $white;
@@ -144,7 +145,7 @@ export default {
 // 全白
 .whole-white-outline {
   > a {
-    border: 1px solid #fff;
+    border: 1.5px solid #fff;
     color: #fff;
     &:hover {
       color: $exhibition-mainColor;
