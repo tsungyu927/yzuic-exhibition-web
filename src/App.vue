@@ -2,10 +2,6 @@
   <div id="app" class="app">
     <!-- Loading Anim -->
     <!-- <Loader /> -->
-    <!-- 目錄modal -->
-    <Catalog v-if="openCatalog" class="catalogModal" v-on:handleCloseModal="handleOpenCatalog"  />
-    <!-- 右上角的btn -->
-    <MenuBtn @click.native="handleOpenCatalog"/>
     <div class="app-container">
       <router-view />
     </div>
@@ -16,10 +12,7 @@
 <script>
 import Loader from './views/Loader';
 import RightFooter from './components/RightFooter';
-import MenuBtn from './components/MenuBtn';
 // import Loader from './views/Loader'
-import Catalog from './modal/Catalog';
-import gsap from 'gsap';
 
 export default {
   name: 'App',
@@ -27,7 +20,6 @@ export default {
     return {
       // show right footer
       isShowRF: false,
-      openCatalog: false
     };
   },
   created() {
@@ -49,24 +41,10 @@ export default {
         this.isShowRF = false;
       }
     },
-    handleOpenCatalog: function(){
-      if(this.openCatalog){
-        gsap.to('.catalogModal',{
-          opacity: 0,
-          duration: 0.3
-        }).then(()=>{
-          this.openCatalog = false;
-        });
-      } else{
-        this.openCatalog = true;
-      }
-    },
   },
   components: {
-    MenuBtn,
     RightFooter,
     // Loader,
-    Catalog,
   },
 };
 </script>

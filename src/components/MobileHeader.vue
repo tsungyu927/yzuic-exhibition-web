@@ -13,9 +13,9 @@
     <!-- title -->
     <div class="title">{{ title }}</div>
     <!-- menu btn -->
-    <router-link to="/" tag="button" class="header__icon menu">
+    <div class="header__icon menu">
       <font-awesome-icon icon="bars" size="lg" class="m-auto" />
-    </router-link>
+    </div>
   </div>
 </template>
 

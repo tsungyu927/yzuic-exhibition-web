@@ -1,9 +1,9 @@
 <template>
   <div class="gallery-container">
+    <MenuBtn :main-color="'#ff1a83'" :toWhite="borderToWhite" />
     <full-page ref="fullpage" :options="options">
       <!-- [Section1] 液態金屬 -->
       <div data-anchor="cover" class="section section1">
-        <MenuBtn :main-color="'#ff1a83'" />
         <MobileHeader :title="''" class="p-absolute " />
         <!-- <img class="background" src="../assets/fluid.png" /> -->
       </div>
@@ -12,7 +12,6 @@
         <button class="arrowup-btn" @click="moveSectionUp">
           <img src="../assets/icons/arrow_up_pink.svg" />
         </button>
-        <MenuBtn :main-color="'#ff1a83'" />
         <MobileHeader :title="'展覽作品'" class="pink__scrolled" />
         <!-- <NavBar
           :main-color="'#ff1a83'"
@@ -56,11 +55,12 @@ export default {
   name: 'Exhibition',
   data() {
     return {
+      borderToWhite: true,
       options: {
         afterLoad: this.afterLoad,
         animateAnchor: false,
         anchors: ['cover', 'gallery'],
-        normalScrollElements: "#waterfall"  // 讓waterfall滑動的部分不會影響到fullpage而導致上滑到上面一頁
+        normalScrollElements: "#waterfall",  // 讓waterfall滑動的部分不會影響到fullpage而導致上滑到上面一頁
       },
       exhibitionNavbar: [
         {
@@ -96,6 +96,7 @@ export default {
   methods: {
     afterLoad(origin, destination) {
       if (destination.isLast) {
+        this.borderToWhite = false;
         // 滑到最後一頁了
         // this.$refs.fullpage.api.setAllowScrolling(false, 'up');
         // this.$refs.fullpage.api.setAllowScrolling(false, 'up');
@@ -104,6 +105,7 @@ export default {
     },
     moveSectionUp(){
       // this.$refs.fullpage.api.setAllowScrolling(true);
+      this.borderToWhite = true;
       this.$refs.fullpage.api.moveSectionUp();
     },
     //跳轉頁
