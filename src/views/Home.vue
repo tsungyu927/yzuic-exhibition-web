@@ -53,7 +53,7 @@
             alt="大膽狂放"
           />
         </div>
-        <div class="home-con">
+        <div class="home-con" id="home-text-trigger">
           <!-- 堆積了此刻的變態border -->
           <img
             class="home-text home-text02-border1"
@@ -691,6 +691,11 @@ export default {
     RightFooter
   },
   mounted() {
+
+    gsap.config({
+      nullTargetWarn: false
+    });
+    
     // 判斷是否為橫式
     this.handleOrientationChange();
     window.addEventListener('resize', this.handleOrientationChange, false);
@@ -731,7 +736,6 @@ export default {
       trigger: '#pinkback-3',
       start: 'top 70%',
       end: 'bottom bottom',
-      markers: true,
       onEnter: () => this.handleChangeColor(true),
       onLeave: () => this.handleChangeColor(false),
       onEnterBack: () => this.handleChangeColor(true),
@@ -741,7 +745,6 @@ export default {
       trigger: '#pinkback-4',
       start: 'top 70%',
       end: 'bottom bottom',
-      markers: true,
       onEnter: () => this.handleChangeColor(true),
       onLeaveBack: () => this.handleChangeColor(false)
     });
@@ -808,7 +811,7 @@ export default {
 
     const timeLine0 = gsap.timeline({
       scrollTrigger: {
-        trigger: '.home-text',
+        trigger: '#home-text-trigger',
         start: 'top 50%',
         end: '+=300',
         toggleActions: 'play none complete reverse',

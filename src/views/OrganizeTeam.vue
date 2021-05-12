@@ -1,9 +1,9 @@
 <template>
   <div class="gallery-container">
+    <MenuBtn :toWhite="borderToWhite" />
     <full-page ref="fullpage" :options="options">
       <!-- [Section1] 液態金屬 -->
       <div data-anchor="cover" class="section section1">
-        <MenuBtn />
         <MobileHeader :title="''" class="p-absolute" />
         <!-- <img class="background" src="../assets/fluid.png" /> -->
       </div>
@@ -72,6 +72,7 @@ export default {
   name: 'OrganizeTeam',
   data() {
     return {
+      borderToWhite: true,
       options: {
         afterLoad: this.afterLoad,
         animateAnchor: false,
@@ -115,6 +116,7 @@ export default {
   methods: {
     afterLoad(origin, destination) {
       if (destination.isLast) {
+        this.borderToWhite = false;
         // 滑到最後一頁了
         // this.$refs.fullpage.api.setAllowScrolling(false, 'up');
         console.log('After load end');
@@ -122,6 +124,7 @@ export default {
     },
     moveSectionUp() {
       // this.$refs.fullpage.api.setAllowScrolling(true);
+      this.borderToWhite = true;
       this.$refs.fullpage.api.moveSectionUp();
     },
     toIntroduction(id) {

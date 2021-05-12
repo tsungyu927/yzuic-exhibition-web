@@ -37,6 +37,9 @@ export default {
         opacity: 0,
       });
       tl.to(this.$el, {
+        backgroundColor: '#fff',
+      });
+      tl.to(this.$el, {
         scale: 30,
         duration: 0.8,
         ease: "Ease.Linear",
@@ -74,6 +77,7 @@ export default {
   &:focus {
     outline: none;
   }
+
 
   &:hover {
     background-color: white;
