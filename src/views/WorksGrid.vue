@@ -21,7 +21,7 @@
         </div>
       </div>
       <!-- key 是 workID -->
-      <div class="workGroup col-md-10">
+      <div class="workGroup col-md-10 d-md-flex flex-wrap">
         <div
           class="work"
           v-for="work in worksGroup"
@@ -35,7 +35,9 @@
             <div
               class="d-flex justify-content-between align-items-center d-md-block"
             >
-              <div class="work__title">{{ work.title }}</div>
+              <div class="d-flex align-items-center work__title">
+                {{ work.title }}
+              </div>
               <div class="work__team">{{ work.team }}</div>
             </div>
             <div class="work__tag">{{ work.tag }}</div>
@@ -77,17 +79,15 @@ export default {
     this.$ajax.get('/data.json').then(
       (res) => {
         const works = res.data.works;
-        if($that.$route.query.type==='all') {
-          $that.worksGroup = works.filter(function(item){
+        if ($that.$route.query.type === 'all') {
+          $that.worksGroup = works.filter(function(item) {
             return item.id != 0;
           });
-        }
-        else {
+        } else {
           $that.worksGroup = works.filter(function(item) {
             return item.type == $that.$route.query.type;
           });
         }
-        
       },
       (res) => {
         console.log('error');
@@ -170,8 +170,7 @@ export default {
     margin-bottom: 25px;
     display: flex;
     flex-direction: column;
-    padding-bottom: 20px;
-    height: 380px;
+    box-shadow: 0 0 10px 1px rgba($gray, 40%);
     @include md-width() {
       width: calc((100% / 2) - 25px);
       background-color: #ffff;
@@ -180,17 +179,17 @@ export default {
       border-radius: 0;
       margin-left: 25px;
       float: left;
+      box-shadow: 0 0 10px 1px rgba($gray, 20%);
     }
     @include lg-width() {
       width: calc((100% / 3) - 25px);
-      height: 400px;
     }
     &__text {
       background-color: #eaebeb;
-      padding: 30px 30px 0 30px;
+      padding: 30px;
       @include md-width() {
         background-color: #ffff;
-        padding: 20px 20px 0 20px;
+        padding: 20px;
       }
     }
     &__title {
@@ -199,16 +198,13 @@ export default {
       line-height: 24px;
       font-weight: bold;
       position: relative;
-      padding-left: 20px;
       height: 40px;
       &::before {
         content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
         width: 13px;
         height: 24px;
         background-color: $exhibition-mainColor;
+        margin-right: 5px;
       }
     }
     &__team {
