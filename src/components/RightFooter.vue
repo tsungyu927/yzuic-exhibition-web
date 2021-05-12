@@ -13,7 +13,11 @@ export default {
       changeColor: '',
     };
   },
-  props: ['isShow'],
+  props: {
+    isShow: {
+      type: Boolean
+    },
+  },
   watch: {
     $route: {
       handler: function(to, from) {
@@ -26,6 +30,9 @@ export default {
             break;
           case '/organizeTeamIntro/':
             this.changeColor = 'organizeTeam__footer';
+            break;
+          case '/':
+            this.changeColor = 'home__footer';
             break;
           default:
             this.changeColor = 'exhibition__footer';
