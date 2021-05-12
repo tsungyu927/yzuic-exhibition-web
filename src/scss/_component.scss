@@ -67,3 +67,11 @@
     display: block;
   }
 }
+
+.home__footer {
+  display: none;
+  color: white;
+  @include md-width() {
+    display: block;
+  }
+}

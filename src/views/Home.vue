@@ -33,7 +33,7 @@
         />
       </div>
       <div class="home-container">
-        <div class="home-con">
+        <div class="home-con" id="home-begin">
           <img
             class="home-text00 home-text00-1"
             src="../assets/home/大膽狂放/每一刻的.svg"
@@ -288,6 +288,7 @@
         <div class="home-con">
           <!-- 粉紅區域 執著執著 痴狂痴狂 -->
           <img
+            id="pinkback-1"
             class="pink-back"
             v-lazy="require('../assets/home/pink-back1/pink-back.png')"
             alt="粉紅背框"
@@ -358,6 +359,7 @@
         <div class="home-con">
           <!-- 海報的地方 -->
           <img
+            id="pinkback-2"
             class="pink-back1"
             v-lazy="require('../assets/home/海報/pink-back2.png')"
             alt="pink-back2"
@@ -454,6 +456,7 @@
         <div class="home-con">
           <!-- 粉紅背景2 -->
           <img
+            id="pinkback-3"
             class="pink-back2"
             v-lazy="require('../assets/home/粉紅背景2/粉紅背景2.png')"
             alt="粉紅背景2"
@@ -614,7 +617,7 @@
           />
         </div>
         <div class="home-con"></div>
-        <div class="home-con"></div>
+        <div class="home-con" id="pinkback-4"></div>
         <div class="home-con">
           <!-- 結語 -->
           <img
@@ -656,8 +659,8 @@
       </div>
     </div>
 
-    <LeftBar />
-    <RightBar />
+    <LeftBar :toWhite="borderToWhite" />
+    <RightBar :toWhite="borderToWhite" />
     <RightFooter />
   </div>
 </template>
@@ -678,6 +681,7 @@ export default {
       openRotateTips: false,
       shakePos: false,
       openIntro: false,
+      borderToWhite: true,
     };
   },
   components: {
@@ -694,6 +698,55 @@ export default {
     // ===============================
     console.log('%c拜託不要搞我們(●’ω`●）',"color:#FF1A83; font-size: 35px; background-color: #fff;");
     gsap.registerPlugin(ScrollTrigger);
+
+    // ==================================
+    // Dynamically Change Color 動態改變左右bar顏色
+    // Change to Pink
+    ScrollTrigger.create({
+      trigger: '#home-begin',
+      start: 'top 70%',
+      end: 'bottom bottom',
+      onEnter: () => this.handleChangeColor(false),
+      onLeaveBack: () => this.handleChangeColor(true)
+    });
+    ScrollTrigger.create({
+      trigger: '#pinkback-1',
+      start: 'top 70%',
+      end: 'bottom bottom',
+      onEnter: () => this.handleChangeColor(true),
+      onLeave: () => this.handleChangeColor(false),
+      onEnterBack: () => this.handleChangeColor(true),
+      onLeaveBack: () => this.handleChangeColor(false)
+    });
+    ScrollTrigger.create({
+      trigger: '#pinkback-2',
+      start: 'top 70%',
+      end: 'bottom bottom',
+      onEnter: () => this.handleChangeColor(true),
+      onLeave: () => this.handleChangeColor(false),
+      onEnterBack: () => this.handleChangeColor(true),
+      onLeaveBack: () => this.handleChangeColor(false)
+    });
+    ScrollTrigger.create({
+      trigger: '#pinkback-3',
+      start: 'top 70%',
+      end: 'bottom bottom',
+      markers: true,
+      onEnter: () => this.handleChangeColor(true),
+      onLeave: () => this.handleChangeColor(false),
+      onEnterBack: () => this.handleChangeColor(true),
+      onLeaveBack: () => this.handleChangeColor(false)
+    });
+    ScrollTrigger.create({
+      trigger: '#pinkback-4',
+      start: 'top 70%',
+      end: 'bottom bottom',
+      markers: true,
+      onEnter: () => this.handleChangeColor(true),
+      onLeaveBack: () => this.handleChangeColor(false)
+    });
+
+    // ==================================
 
     const titleSeq = gsap.timeline({
       scrollTrigger: {
@@ -1322,6 +1375,9 @@ export default {
       // 可以滑動body
       document.querySelector('body').style.overflowY = 'scroll';
       this.openIntro = false;
+    },
+    handleChangeColor: function(toWhite) {
+      this.borderToWhite = toWhite;
     }
   }
 };

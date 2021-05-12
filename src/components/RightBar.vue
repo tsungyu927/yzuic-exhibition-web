@@ -1,5 +1,5 @@
 <template>
-  <div class="sideBar right" :class="[changeColor]">
+  <div class="sideBar right" :class="[changeColor, dynamicallyChangeColor]">
     <div class="right__bar">
       <span>元智大學</span>
       <span>資訊傳播學系</span>
@@ -14,7 +14,13 @@ export default {
   data() {
     return {
       changeColor: '',
+      dynamicallyChangeColor: this.toWhite ? 'whole-white': '',
     };
+  },
+  props: {
+    toWhite: {
+      type: Boolean
+    }
   },
   watch: {
     $route: {
@@ -36,6 +42,9 @@ export default {
       deep: true,
       immediate: true,
     },
+    toWhite: function(newVal, oldVal) { // watch it
+      this.dynamicallyChangeColor = this.toWhite ? 'whole-white': '';
+    }
   },
 };
 </script>
@@ -52,5 +61,8 @@ export default {
       margin-top: 10px;
     }
   }
+}
+.whole-white {
+  color: #fff;
 }
 </style>

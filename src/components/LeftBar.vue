@@ -1,7 +1,7 @@
 <template>
   <div
     class="left sideBar d-none d-md-flex flex-column justify-content-center"
-    :class="[changeColor]"
+    :class="[changeColor, dynamicallyChangeColor]"
   >
     <!--<router-link to="/">Home</router-link> | -->
     <router-link class="square__link" to="/exhibition">展覽作品</router-link>
@@ -18,7 +18,13 @@ export default {
   data() {
     return {
       changeColor: '',
+      dynamicallyChangeColor: this.toWhite ? 'whole-white-outline': '',
     };
+  },
+  props: {
+    toWhite: {
+      type: Boolean
+    }
   },
   watch: {
     $route: {
@@ -42,6 +48,9 @@ export default {
       deep: true,
       immediate: true,
     },
+    toWhite: function(newVal, oldVal) { // watch it
+      this.dynamicallyChangeColor = this.toWhite ? 'whole-white-outline': '';
+    }
   },
 };
 </script>
@@ -128,6 +137,18 @@ export default {
         color: $exhibition-mainColor;
         background-color: $white;
       }
+    }
+  }
+}
+
+// 全白
+.whole-white-outline {
+  > a {
+    border: 1px solid #fff;
+    color: #fff;
+    &:hover {
+      color: $exhibition-mainColor;
+      background-color: $white;
     }
   }
 }
