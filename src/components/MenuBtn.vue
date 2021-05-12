@@ -69,7 +69,11 @@ export default {
           opacity: 0,
           duration: 0.3
         }).then(()=>{
-          this.openColor = '';
+          if(this.toWhite){
+            this.openColor = 'whole-white-outline';
+          }else{
+            this.openColor = '';
+          }
           this.openCatalog = false;
         });
       } else{
