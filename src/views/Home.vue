@@ -372,6 +372,7 @@
             :class="shakePos ? 'shake-poster' : ''"
           />
           <img
+            id="concept"
             class="pink-poster"
             v-lazy="require('../assets/home/海報/poster.png')"
             alt="poster"
@@ -388,7 +389,7 @@
           v-lazy="require('../assets/home/colorback.png')"
           alt="color back"
         />
-        <div class="home-con">
+        <div class="home-con" id="info">
           <!-- 策展資訊 -->
           <img
             class="home-text11"
@@ -670,6 +671,7 @@
 import HomeIntro from '../modal/HomeIntro';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import ScrollToPlugin from 'gsap/ScrollToPlugin';
 import LeftBar from '../components/LeftBar';
 import RightBar from '../components/RightBar';
 import RightFooter from '../components/RightFooter';
@@ -692,21 +694,30 @@ export default {
   },
   mounted() {
 
+    // 判斷是否為橫式
+    this.handleOrientationChange();
+    window.addEventListener('resize', this.handleOrientationChange, false);
+
     gsap.config({
       nullTargetWarn: false
     });
 
-    // 判斷是否為橫式
-    this.handleOrientationChange();
-    window.addEventListener('resize', this.handleOrientationChange, false);
-    
+    gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+
+    // 判斷是否要跳到anchor
+    if(this.$route.query.anchor == "info"){
+      gsap.to(window, {duration: 2, scrollTo: '#info'});
+    }else if(this.$route.query.anchor == "concept"){
+      gsap.to(window, {duration: 2, scrollTo: {y: '#concept', offsetY: 50}});
+    }
+
     // ===============================
     console.log('%c拜託不要搞我們(●’ω`●）',"color:#FF1A83; font-size: 35px; background-color: #fff;");
-    gsap.registerPlugin(ScrollTrigger);
-
+    
     // ==================================
     // Dynamically Change Color 動態改變左右bar顏色
     // Change to Pink
+    
     ScrollTrigger.create({
       trigger: '#home-begin',
       start: 'top 70%',
@@ -721,7 +732,7 @@ export default {
       onEnter: () => this.handleChangeColor(true),
       onLeave: () => this.handleChangeColor(false),
       onEnterBack: () => this.handleChangeColor(true),
-      onLeaveBack: () => this.handleChangeColor(false)
+      onLeaveBack: () => this.handleChangeColor(false),
     });
     ScrollTrigger.create({
       trigger: '#pinkback-2',
@@ -1220,7 +1231,6 @@ export default {
     gsap.from('.home-text15-1', {
       scrollTrigger: {
         trigger: '#home-mess',
-        markers: true,
         start: '40% 60%',
         end: 'bottom 50%',
         toggleActions: 'play none none reset',
@@ -1353,6 +1363,13 @@ export default {
       opacity: 0,
       duration: 0.5,
     });
+
+    // 圖片載入完畢後refresh scrolltrigger
+    this.$Lazyload.$once('loaded', () => {
+      console.log('inin');
+      ScrollTrigger.refresh();
+    });
+    console.log(ScrollTrigger.getAll());
   },
   methods: {
     handleOrientationChange: function() {

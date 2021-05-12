@@ -4,8 +4,8 @@
     :class="[changeColor, dynamicallyChangeColor]"
   >
     <!--<router-link to="/">Home</router-link> | -->
-    <router-link class="square__link" to="/exhibition">展覽作品</router-link>
-    <router-link class="square__link" to="/organizeTeam">策展團隊</router-link>
+    <div @click="handleClick('/exhibition')" class="square__link">展覽作品</div>
+    <div @click="handleClick('/organizeTeam')" class="square__link">策展團隊</div>
     <router-link class="square__link circle" to="/organizeTeam">FB</router-link>
     <router-link class="square__link circle" to="/organizeTeam">IG</router-link>
     <router-link class="square__link circle" to="/organizeTeam">YT</router-link>
@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import ScrollTrigger from 'gsap/ScrollTrigger';
 export default {
   name: 'LeftBar',
   data() {
@@ -53,6 +54,16 @@ export default {
       this.dynamicallyChangeColor = this.toWhite ? 'whole-white-outline' : '';
     },
   },
+  methods: {
+    handleClick: function(place) {
+      if(this.$router.currentRoute.path == '/') {
+        ScrollTrigger.getAll().forEach(st => st.kill());
+      }
+      this.$router.push({
+        path: place,
+      });
+    }
+  }
 };
 </script>
 
@@ -72,6 +83,7 @@ export default {
 }
 
 .square__link {
+  cursor: pointer;
   display: block;
   padding: 5px;
   font-weight: bold;
@@ -98,7 +110,7 @@ export default {
 
 //粉邊粉字
 .pink-outline {
-  > a {
+  > a, > div {
     border: 1.5px solid $exhibition-mainColor;
     color: $exhibition-mainColor;
     &:hover {
@@ -109,7 +121,7 @@ export default {
 }
 //藍邊藍字
 .blue-outline {
-  > a {
+  > a, > div {
     border: 1.5px solid $organizeTeam-mainColor;
     color: $organizeTeam-mainColor;
     &:hover {
@@ -122,7 +134,7 @@ export default {
 .white-outline {
   //hover 藍
   &__blue {
-    > a {
+    > a, > div {
       @extend %defaultColor;
       &:hover {
         color: $organizeTeam-mainColor;
@@ -132,7 +144,7 @@ export default {
   }
   //hover 粉
   &__pink {
-    > a {
+    > a, > div {
       @extend %defaultColor;
       &:hover {
         color: $exhibition-mainColor;
@@ -144,7 +156,7 @@ export default {
 
 // 全白
 .whole-white-outline {
-  > a {
+  > a, > div {
     border: 1.5px solid #fff;
     color: #fff;
     &:hover {
