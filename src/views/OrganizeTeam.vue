@@ -41,6 +41,7 @@
           <!-- web navbar -->
           <div class="navbar d-none d-md-block">
             <NavBtn
+              class="web-navbtn"
               v-for="item in OTNavbar"
               :key="item.enName"
               :nav-item="item"
@@ -202,27 +203,35 @@ export default {
     }
   }
   &__poster {
-    max-width: 600px;
-    margin: auto;
+    width: 100%;
+    @include md-width() {
+      max-width: 400px;
+      margin: auto;
+    }
   }
   &__text {
     text-align: left;
     width: 70%;
+    @include md-width() {
+      width: 100%;
+    }
   }
   .title {
     margin: 30px 0;
     font-size: 30px;
     color: $organizeTeam-mainColor;
     @include md-width() {
+      font-size: 30px;
+      margin: 15px 0;
+    }
+    @include lg-width() {
       font-size: 48px;
     }
   }
   p {
+    margin-bottom: 0;
     font-size: 16px;
-    line-height: 30px;
-    @include md-width() {
-      width: 100%;
-    }
+    line-height: 28px;
   }
 }
 
@@ -239,14 +248,21 @@ export default {
   z-index: 2;
   width: 30%;
   display: inline-block;
+  padding: 0;
+}
+
+.web-navbtn {
+  width: 4rem;
+  height: 4rem;
+  font-size: 1rem;
+  @include lg-width() {
+    width: 6rem;
+    height: 6rem;
+    font-size: 1.3rem;
+  }
 }
 
 .selector-container {
-  .selector-btn {
-    width: 4rem;
-    height: 4rem;
-    font-size: 1rem;
-  }
   display: flex;
   flex-direction: column;
   align-items: center;

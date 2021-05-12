@@ -103,7 +103,7 @@
         <div class="px-xs-5">
           <div class="sub-title">{{ workText }}</div>
         </div>
-        <div class="img-grid col-md-9 col-xs-12">
+        <div class="img-grid col-md-11 col-xs-12">
           <div class="img-grid__group">
             <div
               class="preview-img"
@@ -379,9 +379,11 @@ export default {
     }
   }
   .sub-title {
+    margin: 20px 0;
     font-size: 30px;
     line-height: 30px;
     @include md-width() {
+      margin: 0 0 20px 0;
       font-size: 48px;
       line-height: 48px;
     }
