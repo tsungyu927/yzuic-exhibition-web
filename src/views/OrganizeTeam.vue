@@ -263,6 +263,11 @@ export default {
 }
 
 .selector-container {
+  .selector-btn {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1rem;
+  }
   display: flex;
   flex-direction: column;
   align-items: center;
