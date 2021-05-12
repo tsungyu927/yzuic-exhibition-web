@@ -731,7 +731,6 @@ export default {
       trigger: '#pinkback-3',
       start: 'top 70%',
       end: 'bottom bottom',
-      markers: true,
       onEnter: () => this.handleChangeColor(true),
       onLeave: () => this.handleChangeColor(false),
       onEnterBack: () => this.handleChangeColor(true),
@@ -741,7 +740,6 @@ export default {
       trigger: '#pinkback-4',
       start: 'top 70%',
       end: 'bottom bottom',
-      markers: true,
       onEnter: () => this.handleChangeColor(true),
       onLeaveBack: () => this.handleChangeColor(false)
     });
