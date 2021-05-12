@@ -35,12 +35,15 @@
           <div class="title">{{ introData.title }}</div>
           <div class="cover__team d-none d-md-block">{{ introData.team }}</div>
         </div>
-        <div class="d-none d-md-block cover__poster">
+        <div class="d-md-block cover__poster">
           <img class="img-fluid" :src="getPosterUrl(introData.poster)" />
         </div>
       </div>
       <!-- 策展團隊 封面-->
-      <div class="pg-block p-0 cover d-flex flex-column flex-md-row" v-if="!isWork">
+      <div
+        class="pg-block p-0 cover d-flex flex-column flex-md-row"
+        v-if="!isWork"
+      >
         <div class="order-2 order-md-1 cover__text mr-4">
           <div class="mb-4">
             <div class="title">{{ introData.team }}</div>
@@ -145,7 +148,7 @@
               <img class="img-fluid" src="../assets/logo/carousel-prev.svg" />
             </template>
             <template slot="nextButton">
-              <img class="img-fluid" src="../assets/logo/carousel-next.svg"/>
+              <img class="img-fluid" src="../assets/logo/carousel-next.svg" />
             </template>
           </agile>
         </div>
@@ -153,7 +156,7 @@
         <!-- mobile版 logo + team intro -->
         <div class="my-3 d-flex">
           <div class="d-md-none team__intro">{{ introData.teamIntro }}</div>
-          <div class="team__logo d-md-none logo__mobile" v-if="isWork">
+          <div class="team__logo d-md-none" v-if="isWork">
             <img class="img-fluid" :src="getLogoUrl(introData.logo)" />
           </div>
         </div>
@@ -376,7 +379,12 @@ export default {
     }
   }
   .sub-title {
-    font-size: 48px;
+    font-size: 30px;
+    line-height: 30px;
+    @include md-width() {
+      font-size: 48px;
+      line-height: 48px;
+    }
   }
 
   &:nth-child(even) {
@@ -466,17 +474,19 @@ export default {
     position: relative;
     font-size: 0px;
     line-height: 0;
+    padding: 0;
   }
   .img-grid__group {
-    margin-left: -3px;
-    margin-right: -3px;
+    // margin-left: -3px;
+    // margin-right: -3px;
+    margin: 0 -8px;
   }
   .preview-img {
     display: inline-block;
     width: 50%;
     overflow: hidden;
     position: relative;
-    padding: 3px;
+    padding: 8px;
     @include md-width {
       width: calc(100% / 2) !important;
     }
@@ -499,10 +509,11 @@ export default {
     padding-top: 5rem;
   }
   &__intro {
-    width: 70%;
+    flex: 1;
   }
   &__logo {
-    flex: 1;
+    width: 20%;
+    margin-right: 20px;
     @include md-width() {
       margin: auto;
       background: #333;
@@ -592,11 +603,6 @@ export default {
   width: 100%;
   max-width: 650px; /* Also helpful. Optional. */
   margin-right: 25px;
-}
-
-.logo__mobile {
-  width: 20%;
-  margin-right: 20px;
 }
 
 .agile {
