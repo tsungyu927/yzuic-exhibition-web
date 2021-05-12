@@ -543,7 +543,7 @@
             :style="{ top: '102%' }"
           />
         </div>
-        <div class="home-con">
+        <div class="home-con" id="home-mess">
           <!-- 亂亂的 -->
           <img
             class="home-text15-1"
@@ -1219,8 +1219,9 @@ export default {
     // 亂亂的
     gsap.from('.home-text15-1', {
       scrollTrigger: {
-        trigger: '.home-text15-1',
-        start: 'top 60%',
+        trigger: '#home-mess',
+        markers: true,
+        start: '40% 60%',
         end: 'bottom 50%',
         toggleActions: 'play none none reset',
       },
