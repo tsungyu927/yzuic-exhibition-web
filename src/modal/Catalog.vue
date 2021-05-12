@@ -10,7 +10,7 @@
             主頁
           </div>        
         </router-link>
-        <router-link class="catalog-btn" to="/">
+        <router-link class="catalog-btn" :to="{ path:'/', query: { anchor: 'info'}}">
           <div class="catalog-content" @click="handleCloseModal">
             展覽<br>資訊
           </div>        
@@ -22,7 +22,7 @@
         </router-link>
       </div>
       <div class="catalog-right-bar">
-        <router-link class="catalog-btn" to="/organizeTeam">
+        <router-link class="catalog-btn" :to="{ path:'/', query: { anchor: 'concept'}}">
           <div class="catalog-content" @click="handleCloseModal">
             策展<br>概念
           </div>        
