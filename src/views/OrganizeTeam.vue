@@ -9,7 +9,7 @@
       </div>
       <!-- [Section2] -->
       <div data-anchor="content" class="section section__waterFall ">
-        <MobileHeader :title="'策展團隊'" class="blue__scrolled "/>
+        <MobileHeader :title="'策展團隊'" class="blue__scrolled " />
         <!-- 上滑按鈕 -->
         <button class="arrowup-btn" @click="moveSectionUp">
           <img src="../assets/icons/arrow_up_blue.svg" />
@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="content d-md-flex">
-          <div class="content__left"> 
+          <div class="content__left">
             <div class="content___poster">
               <img class="img-fluid" src="../assets/img/allstaffimg.jpg" />
             </div>
@@ -120,7 +120,7 @@ export default {
         console.log('After load end');
       }
     },
-    moveSectionUp(){
+    moveSectionUp() {
       // this.$refs.fullpage.api.setAllowScrolling(true);
       this.$refs.fullpage.api.moveSectionUp();
     },
@@ -156,11 +156,11 @@ export default {
     background-color: #00cbf4;
   }
 }
-.section1{
+.section1 {
   background-color: #00cbf4;
 }
 
-.arrowup-btn{
+.arrowup-btn {
   position: absolute;
   z-index: 2;
   top: 5%;
@@ -170,7 +170,7 @@ export default {
   border-radius: 50%;
   border: none;
   padding: 0;
-  img{
+  img {
     max-width: 100%;
     max-height: 100%;
     display: block;
@@ -242,6 +242,11 @@ export default {
 }
 
 .selector-container {
+  .selector-btn {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1rem;
+  }
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -252,7 +257,6 @@ export default {
     height: auto;
   }
 }
-
 
 .selector-btn {
   @include md-width() {
