@@ -265,6 +265,17 @@ export default {
   }
 }
 
+.web-navbtn {
+  width: 4rem;
+  height: 4rem;
+  font-size: 1rem;
+  @include lg-width() {
+    width: 6rem;
+    height: 6rem;
+    font-size: 1.3rem;
+  }
+}
+
 .selector-container {
   display: flex;
   flex-direction: column;
