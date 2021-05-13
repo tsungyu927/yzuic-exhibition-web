@@ -1,5 +1,6 @@
 {
-    "works": [{
+    "works": [
+        {
             "id": 0,
             "title": "",
             "team": "",
@@ -9,7 +10,8 @@
             "projectShortIntro": "",
             "teamIntro": "",
             "instructor": "",
-            "members": [{
+            "members": [
+                {
                     "pic": "",
                     "name": "",
                     "saying": ""
@@ -45,8 +47,19 @@
                 "vertical": "",
                 "horizontal": ""
             },
-            "previewImg": ["", "", "", "", "", ""],
-            "teamImg": ["", "", ""],
+            "previewImg": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "teamImg": [
+                "",
+                "",
+                ""
+            ],
             "viedo": ""
         },
         {
@@ -59,7 +72,8 @@
             "projectShortIntro": "由於人類無止境地破壞山林，神在接受動物們的祈求後，將還未被破壞的土地飄浮到天空中，動物們開始在這與世隔絕的桃花源裡生活…",
             "teamIntro": "因為我們愛歹丸所以就叫愛歹丸工作室。",
             "instructor": "",
-            "members": [{
+            "members": [
+                {
                     "id": "1-1",
                     "pic": "1-1_member",
                     "name": "朱妤婷",
@@ -92,8 +106,21 @@
             ],
             "logo": "1_logo",
             "poster": "1_poster",
-            "previewImg": ["1_previewImg-1", "1_previewImg-2", "1_previewImg-3", "1_previewImg-4", "1_previewImg-5", "1_previewImg-6"],
-            "teamImg": ["1_teamImg-1", "1_teamImg-2", "1_teamImg-3", "1_teamImg-4", "1_teamImg-5"],
+            "previewImg": [
+                "1_previewImg-1",
+                "1_previewImg-2",
+                "1_previewImg-3",
+                "1_previewImg-4",
+                "1_previewImg-5",
+                "1_previewImg-6"
+            ],
+            "teamImg": [
+                "1_teamImg-1",
+                "1_teamImg-2",
+                "1_teamImg-3",
+                "1_teamImg-4",
+                "1_teamImg-5"
+            ],
             "viedo": "https://www.youtube.com/embed/uZP7_S_zFNo"
         },
         {
@@ -106,7 +133,8 @@
             "projectShortIntro": "這是一款VR跑步機結合海底冒險的遊戲，玩家必須戴上VR頭盔潛入海底並躲開層層難關將被奪走的琉埃石放回原本的位置。",
             "teamIntro": "在台灣這座島嶼上，偶然相遇的六位夥伴，分別來自桃園、樹林、鶯歌、高雄，因此各自取出一個字來成立工作室，這就是我們團隊名稱的由來。",
             "instructor": "",
-            "members": [{
+            "members": [
+                {
                     "id": "2-1",
                     "pic": "2-1_member",
                     "name": "徐秋沛",
@@ -145,8 +173,20 @@
             ],
             "logo": "2_logo",
             "poster": "2_poster",
-            "previewImg": ["2_previewImg-1", "2_previewImg-2", "2_previewImg-3", "2_previewImg-4", "2_previewImg-5", "2_previewImg-6"],
-            "teamImg": ["2_teamImg-1", "2_teamImg-2", "2_teamImg-3", "2_teamImg-4"],
+            "previewImg": [
+                "2_previewImg-1",
+                "2_previewImg-2",
+                "2_previewImg-3",
+                "2_previewImg-4",
+                "2_previewImg-5",
+                "2_previewImg-6"
+            ],
+            "teamImg": [
+                "2_teamImg-1",
+                "2_teamImg-2",
+                "2_teamImg-3",
+                "2_teamImg-4"
+            ],
             "viedo": "https://www.youtube.com/embed/fe2G-HEkAtE"
         },
         {
@@ -159,7 +199,8 @@
             "projectShortIntro": "「迴」是一款VR恐怖遊戲，題材參考了傳統的地獄，並以寫實風建構出場景及特效加上虛擬實境的特性使玩家有親身體驗地獄的感覺，搭配背景故事使玩家更有真實感，利用場景鋪陳加上怪物的模型，使臨場感更加逼真。",
             "teamIntro": "我們組是由四個科技組一個設計組組成，其中一位科技組人士是僞科技組......我們之所以會取這名字，是因為我們是一群爆肝熬夜型的人，臉上總是掛著黑眼圈",
             "instructor": "",
-            "members": [{
+            "members": [
+                {
                     "id": "3-1",
                     "pic": "3-1_member",
                     "name": "婷婷",
@@ -192,8 +233,22 @@
             ],
             "logo": "3_logo",
             "poster": "3_poster",
-            "previewImg": ["3_previewImg-1", "3_previewImg-2", "3_previewImg-3", "3_previewImg-4", "3_previewImg-5", "3_previewImg-6"],
-            "teamImg": ["3_teamImg-1", "3_teamImg-2", "3_teamImg-3","3_teamImg-4", "3_teamImg-5", "3_teamImg-6"],
+            "previewImg": [
+                "3_previewImg-1",
+                "3_previewImg-2",
+                "3_previewImg-3",
+                "3_previewImg-4",
+                "3_previewImg-5",
+                "3_previewImg-6"
+            ],
+            "teamImg": [
+                "3_teamImg-1",
+                "3_teamImg-2",
+                "3_teamImg-3",
+                "3_teamImg-4",
+                "3_teamImg-5",
+                "3_teamImg-6"
+            ],
             "viedo": "https://www.youtube.com/embed/HlNtaDB1fMA"
         },
         {
@@ -206,7 +261,8 @@
             "projectShortIntro": "從上帝視角去幫助路途艱辛的小鹿角兔度過難關，只需要動動腦，想出最佳路徑，再將其畫在移動拼圖上指引牠前進即可！想辦法避開障礙物以及敵人的追擊吧！",
             "teamIntro": "在Google的共用檔案中開會時，一群不愛發表意見的人們扮演著各自的無名動物。這天！他們看到了無名鹿角兔！那是什麼沒看過的奇妙生物？！於是，無名動物們突發奇想便把牠當作主角，構思出了「加卡洛普」這款益智遊戲......。",
             "instructor": "",
-            "members": [{
+            "members": [
+                {
                     "id": "4-1",
                     "pic": "4-1_member",
                     "name": "吳承翰",
@@ -245,8 +301,21 @@
             ],
             "logo": "4_logo",
             "poster": "4_poster",
-            "previewImg": ["4_previewImg-1", "4_previewImg-2", "4_previewImg-3", "4_previewImg-4", "4_previewImg-5", "4_previewImg-6"],
-            "teamImg": ["4_teamImg-1", "4_teamImg-2", "4_teamImg-3", "4_teamImg-4", "4_teamImg-5"],
+            "previewImg": [
+                "4_previewImg-1",
+                "4_previewImg-2",
+                "4_previewImg-3",
+                "4_previewImg-4",
+                "4_previewImg-5",
+                "4_previewImg-6"
+            ],
+            "teamImg": [
+                "4_teamImg-1",
+                "4_teamImg-2",
+                "4_teamImg-3",
+                "4_teamImg-4",
+                "4_teamImg-5"
+            ],
             "viedo": "https://www.youtube.com/embed/C26ZTiEJ4Lc "
         },
         {
@@ -259,7 +328,8 @@
             "projectShortIntro": "一款利用畫面切換的2D惡搞解謎遊戲，運用充滿嘲諷的對話內容與時事流行話題，腦洞類型的解謎玩法，絕對讓你沈迷其中！",
             "teamIntro": "我們的團隊組成很隨性，組員之間都尚未熟稔之前，在路上遇到就攔截問要不要一組，一個拉一個就湊到了六個人，毫無頭緒、毫無準則，就這樣從小畢製到大畢製都同一組，沒拆組也是算我們厲害吧。\n團隊名稱取名為「無情浣熊」是因為整組人都雙眼發直的在社會體制下庸庸碌碌的生活著，無情的工作、無情的生活、無情的處理人際關係，我們可是連早安跟再見都不說。而會有「浣熊」只是因為許國彬喜歡浣熊，大家也就隨便，這就是我們團隊名稱由來。",
             "instructor": "黃怡錚,陳崇文",
-            "members": [{
+            "members": [
+                {
                     "id": "5-1",
                     "pic": "5-1_member",
                     "name": "高筱婷",
@@ -298,8 +368,21 @@
             ],
             "logo": "5_logo",
             "poster": "5_poster",
-            "previewImg": ["5_previewImg-1", "5_previewImg-2", "5_previewImg-3", "5_previewImg-4", "5_previewImg-5", "5_previewImg-6"],
-            "teamImg": ["5_teamImg-1", "5_teamImg-2", "5_teamImg-3", "5_teamImg-4", "5_teamImg-5"],
+            "previewImg": [
+                "5_previewImg-1",
+                "5_previewImg-2",
+                "5_previewImg-3",
+                "5_previewImg-4",
+                "5_previewImg-5",
+                "5_previewImg-6"
+            ],
+            "teamImg": [
+                "5_teamImg-1",
+                "5_teamImg-2",
+                "5_teamImg-3",
+                "5_teamImg-4",
+                "5_teamImg-5"
+            ],
             "viedo": "https://www.youtube.com/embed/Yb4hxSAMmxg"
         },
         {
@@ -312,7 +395,8 @@
             "projectShortIntro": "影子騎士在燈火精靈的引導下，從囚禁之中起身反抗，用光與這個世界的光戰鬥",
             "teamIntro": "我們是最後組成的拼湊型團隊，成員各自有著缺陷而沒有辦法進入其他團隊。簡直就像是一群無法被別人記住名字的一群人，無名S有【無名氏】的諧音以及英文會在單字的後面加s表示複數的意思，意旨一群沒有名字的人映照人與人之間正常不過的關係",
             "instructor": "",
-            "members": [{
+            "members": [
+                {
                     "id": "6-1",
                     "pic": "6-1_member",
                     "name": "郭展成",
@@ -339,8 +423,21 @@
             ],
             "logo": "6_logo",
             "poster": "6_poster",
-            "previewImg": ["6_previewImg-1", "6_previewImg-2", "6_previewImg-3", "6_previewImg-4", "6_previewImg-5", "6_previewImg-6"],
-            "teamImg": ["6_teamImg-1", "6_teamImg-2", "6_teamImg-3", "6_teamImg-4", "6_teamImg-5"],
+            "previewImg": [
+                "6_previewImg-1",
+                "6_previewImg-2",
+                "6_previewImg-3",
+                "6_previewImg-4",
+                "6_previewImg-5",
+                "6_previewImg-6"
+            ],
+            "teamImg": [
+                "6_teamImg-1",
+                "6_teamImg-2",
+                "6_teamImg-3",
+                "6_teamImg-4",
+                "6_teamImg-5"
+            ],
             "viedo": "https://www.youtube.com/embed/qschjPFvHdg"
         },
         {
@@ -353,7 +450,8 @@
             "projectShortIntro": "在這廣闊的世界中，有許多未知的地方、怪物等著玩家去探索、挑戰，請盡情地在這世界中冒險，玩出屬於自己的風格吧！",
             "teamIntro": "一天的下午，在討論團隊名稱，突然想到我們的作品美術—體素，英文叫作voxel，於是就不多想直接用中文念會變成怎麼樣呢？挖可索這個詞彙就突然誕生在這世界上，想了想後覺得也挺適合我們，於是就決定變成我們的團隊名稱。",
             "instructor": "",
-            "members": [{
+            "members": [
+                {
                     "id": "7-1",
                     "pic": "7-1_member",
                     "name": "顏崇育",
@@ -392,8 +490,18 @@
             ],
             "logo": "7_logo",
             "poster": "7_poster",
-            "previewImg": ["7_previewImg-1", "7_previewImg-2", "7_previewImg-3", "7_previewImg-4", "7_previewImg-5", "7_previewImg-6"],
-            "teamImg": ["7_teamImg-1", "7_teamImg-2"],
+            "previewImg": [
+                "7_previewImg-1",
+                "7_previewImg-2",
+                "7_previewImg-3",
+                "7_previewImg-4",
+                "7_previewImg-5",
+                "7_previewImg-6"
+            ],
+            "teamImg": [
+                "7_teamImg-1",
+                "7_teamImg-2"
+            ],
             "viedo": "https://www.youtube.com/embed/VOdzpt0vsNI"
         },
         {
@@ -406,7 +514,8 @@
             "projectShortIntro": "一年一度的森林化裝舞會要用到好多植物，可是主辦人派對狂人的腳受傷了需要你的幫忙，從低海拔一路爬到高海拔，蒐集植物的路上還會認識新朋友唷！",
             "teamIntro": "原本一群互不相識的同學，在這次的畢業專題，透過組員彼此的連結，組成了Hide in Story這個團隊。\n藏在故事中的小小工作室是Hide in Story的意境。由於我們的作品以國小為目標族群，所以我們的logo以鮮豔、活潑、可愛為方向，製作出工作室的logo。",
             "instructor": "",
-            "members": [{
+            "members": [
+                {
                     "id": "8-1",
                     "pic": "8-1_member",
                     "name": "徐寶萱",
@@ -445,8 +554,21 @@
             ],
             "logo": "8_logo",
             "poster": "8_poster",
-            "previewImg": ["8_previewImg-1", "8_previewImg-2", "8_previewImg-3", "8_previewImg-4", "8_previewImg-5", "8_previewImg-6"],
-            "teamImg": ["8_teamImg-1", "8_teamImg-2", "8_teamImg-3", "8_teamImg-4", "8_teamImg-5"],
+            "previewImg": [
+                "8_previewImg-1",
+                "8_previewImg-2",
+                "8_previewImg-3",
+                "8_previewImg-4",
+                "8_previewImg-5",
+                "8_previewImg-6"
+            ],
+            "teamImg": [
+                "8_teamImg-1",
+                "8_teamImg-2",
+                "8_teamImg-3",
+                "8_teamImg-4",
+                "8_teamImg-5"
+            ],
             "viedo": " https://www.youtube.com/embed/UnmTY5vKHpg"
         },
         {
@@ -459,7 +581,8 @@
             "projectShortIntro": "艾勒門是一款多人即時連線的合作戰鬥手機遊戲，遊戲中，玩家們將在地圖中扮演守護家園的元素精靈，共同擊退前來侵略的敵人。",
             "teamIntro": "不具名的快樂與悲傷在雲端相遇，不論是水獺、海膽、吉娃娃，在匿名工作室裡，我們勇敢做自己。",
             "instructor": "",
-            "members": [{
+            "members": [
+                {
                     "id": "9-1",
                     "pic": "9-1_member",
                     "name": "珮瑄",
@@ -492,8 +615,18 @@
             ],
             "logo": "9_logo",
             "poster": "9_poster",
-            "previewImg": ["9_previewImg-1", "9_previewImg-2", "9_previewImg-3", "9_previewImg-4", "9_previewImg-5", "9_previewImg-6"],
-            "teamImg": ["9_teamImg-1", "9_teamImg-2"],
+            "previewImg": [
+                "9_previewImg-1",
+                "9_previewImg-2",
+                "9_previewImg-3",
+                "9_previewImg-4",
+                "9_previewImg-5",
+                "9_previewImg-6"
+            ],
+            "teamImg": [
+                "9_teamImg-1",
+                "9_teamImg-2"
+            ],
             "viedo": "https://www.youtube.com/embed/lfcMS5ZnMuo"
         },
         {
@@ -506,7 +639,8 @@
             "projectShortIntro": "一款2D橫向捲軸解謎遊戲，遊戲圍繞在主角莫萊森透過自己開發出的篡改記憶的技術來完成每個任務。",
             "teamIntro": "飛天肉球工作室是由一群愛打遊戲的宅宅組成的團隊，之所以會叫飛天肉球工作室是有一天在討論宗教的時候，有組員提出在國外有一宗教叫做「飛天義大利麵神教」，正好當天再討論團隊名稱，於是就改為「飛天肉球工作室」了。",
             "instructor": "",
-            "members": [{
+            "members": [
+                {
                     "id": "10-1",
                     "pic": "10-1_member",
                     "name": "林楚倩",
@@ -545,8 +679,19 @@
             ],
             "logo": "10_logo",
             "poster": "10_poster",
-            "previewImg": ["10_previewImg-1", "10_previewImg-2", "10_previewImg-3", "10_previewImg-4", "10_previewImg-5", "10_previewImg-6"],
-            "teamImg": ["10_teamImg-1", "10_teamImg-2", "10_teamImg-3"],
+            "previewImg": [
+                "10_previewImg-1",
+                "10_previewImg-2",
+                "10_previewImg-3",
+                "10_previewImg-4",
+                "10_previewImg-5",
+                "10_previewImg-6"
+            ],
+            "teamImg": [
+                "10_teamImg-1",
+                "10_teamImg-2",
+                "10_teamImg-3"
+            ],
             "viedo": "https://www.youtube.com/embed/ZV6TH2pCzuk"
         },
         {
@@ -559,7 +704,8 @@
             "projectShortIntro": "玩家將透過3種屬性之間的切換，打擊對應的敵人並推進關卡，遊戲關卡分別有森林地帶，海灘地帶以及最後的魔王城，考驗玩家的反映和判斷力。",
             "teamIntro": " 團隊組成原因：起初歷經了一些波折增減了一些人員後組成剛好設計組及科技組都各3人的團隊，新加入的成員退出原本組別是因為目標不同，起初退出後想繼續做互動裝置，但互動裝置的組別都差不多完成了申請因此輾轉來到了現在的組別，其他多數組員都在小畢製時就有合作的經驗因此決定接續先前的遊戲經驗，重新著手遊戲風格及美術設定，想做出不同於小畢製像素風格更加細膩的遊戲美術。\n團隊名稱由來：已經不太確定是為什麼了，似乎是突然決定使用Meing這個名字，可能是因為剛組成團隊時群組常會出現許多迷因圖片交流，又或是因為群組開會時時常有人沒有開麥克風常要確認人員是否到齊時，組員表達自己已經加入群組通話的內心me in吶喊吧?總之團隊的名稱由來就是一團謎。",
             "instructor": "",
-            "members": [{
+            "members": [
+                {
                     "id": "11-1",
                     "pic": "11-1_member",
                     "name": "李鴻德",
@@ -598,8 +744,18 @@
             ],
             "logo": "11_logo",
             "poster": "11_poster",
-            "previewImg": ["11_previewImg-1", "11_previewImg-2", "11_previewImg-3", "11_previewImg-4", "11_previewImg-5", "11_previewImg-6"],
-            "teamImg": ["11_teamImg-1", "11_teamImg-2"],
+            "previewImg": [
+                "11_previewImg-1",
+                "11_previewImg-2",
+                "11_previewImg-3",
+                "11_previewImg-4",
+                "11_previewImg-5",
+                "11_previewImg-6"
+            ],
+            "teamImg": [
+                "11_teamImg-1",
+                "11_teamImg-2"
+            ],
             "viedo": "https://www.youtube.com/embed/xGf2vqB8tx8"
         },
         {
@@ -612,7 +768,8 @@
             "projectShortIntro": "「宮夜隔命」是一個神秘的空間，體驗者將展開一趟崎嶇的旅程，每次選擇的道路都攸關著”生命”，成敗與否決定了故事的結局。",
             "teamIntro": "團隊中由五名來自桃園本地的女生，及一名來自新莊的男生組合而成，由於相約開會討論總會有人遲到，於是取名為慣性遲到工作室。",
             "instructor": "",
-            "members": [{
+            "members": [
+                {
                     "id": "12-1",
                     "pic": "12-1_member",
                     "name": "葉芃妘",
@@ -651,8 +808,21 @@
             ],
             "logo": "12_logo",
             "poster": "12_poster",
-            "previewImg": ["12_previewImg-1", "12_previewImg-2", "12_previewImg-3", "12_previewImg-4", "12_previewImg-5", "12_previewImg-6"],
-            "teamImg": ["12_teamImg-1", "12_teamImg-2", "12_teamImg-3", "12_teamImg-4", "12_teamImg-5"],
+            "previewImg": [
+                "12_previewImg-1",
+                "12_previewImg-2",
+                "12_previewImg-3",
+                "12_previewImg-4",
+                "12_previewImg-5",
+                "12_previewImg-6"
+            ],
+            "teamImg": [
+                "12_teamImg-1",
+                "12_teamImg-2",
+                "12_teamImg-3",
+                "12_teamImg-4",
+                "12_teamImg-5"
+            ],
             "viedo": "https://www.youtube.com/embed/vyp3twMV5vg"
         },
         {
@@ -665,7 +835,8 @@
             "projectShortIntro": "請用眼睛保持距離，用心來交流，作為生活在城市中的一份子，想為城市美學做些什麼的抱負心，就由我們一起把開關on起來吧",
             "teamIntro": "你在鍵盤上打打看，好按嗎，沒綽，好案。",
             "instructor": "",
-            "members": [{
+            "members": [
+                {
                     "id": "13-1",
                     "pic": "13-1_member",
                     "name": "泰安",
@@ -704,8 +875,22 @@
             ],
             "logo": "13_logo",
             "poster": "13_poster",
-            "previewImg": ["13_previewImg-1", "13_previewImg-2", "13_previewImg-3", "13_previewImg-4", "13_previewImg-5", "13_previewImg-6"],
-            "teamImg": ["13_teamImg-1", "13_teamImg-2", "13_teamImg-3","13_teamImg-4", "13_teamImg-5", "13_teamImg-6"],
+            "previewImg": [
+                "13_previewImg-1",
+                "13_previewImg-2",
+                "13_previewImg-3",
+                "13_previewImg-4",
+                "13_previewImg-5",
+                "13_previewImg-6"
+            ],
+            "teamImg": [
+                "13_teamImg-1",
+                "13_teamImg-2",
+                "13_teamImg-3",
+                "13_teamImg-4",
+                "13_teamImg-5",
+                "13_teamImg-6"
+            ],
             "viedo": "https://www.youtube.com/embed/sWqiyatleq0"
         },
         {
@@ -718,7 +903,8 @@
             "projectShortIntro": "聽說吃起司能讓心情變好，心情好了運氣就來了！身為台灣人，怎麼可能沒聽過「3、2、1 say cheese !」如果不考慮熱量，怎麼會有人不喜歡加料加起司呢！快來體驗好運起司，找到自己前所未有的好運能量吧！",
             "teamIntro": "由一群愛吃起司、愛溜冰、愛玩班級角色扮演的人所聚集而成的團隊⋯⋯（誤）誤打誤撞成形的團隊，個性意外的合拍、貪吃、笑聲不斷，秉持著緊要關頭點子總會來，審查前兩個禮拜幾乎每天通宵加班qq 溜了溜了工作室這名字起因是一張梗圖，但由於我已經找不到了，就讓他for fun吧～（誰來給我圖片支援一下）",
             "instructor": "",
-            "members": [{
+            "members": [
+                {
                     "id": "14-1",
                     "pic": "14-1_member",
                     "name": "李若彤",
@@ -757,8 +943,21 @@
             ],
             "logo": "14_logo",
             "poster": "14_poster",
-            "previewImg": ["14_previewImg-1", "14_previewImg-2", "14_previewImg-3", "14_previewImg-4", "14_previewImg-5", "14_previewImg-6"],
-            "teamImg": ["14_teamImg-1", "14_teamImg-2", "14_teamImg-3", "14_teamImg-4", "14_teamImg-5"],
+            "previewImg": [
+                "14_previewImg-1",
+                "14_previewImg-2",
+                "14_previewImg-3",
+                "14_previewImg-4",
+                "14_previewImg-5",
+                "14_previewImg-6"
+            ],
+            "teamImg": [
+                "14_teamImg-1",
+                "14_teamImg-2",
+                "14_teamImg-3",
+                "14_teamImg-4",
+                "14_teamImg-5"
+            ],
             "viedo": "https://www.youtube.com/embed/s7Vhdt3J9_Y"
         },
         {
@@ -771,7 +970,8 @@
             "projectShortIntro": "在我們充斥著乳房的展場中只要拼命的擠、用力地擠，結束時就可以換到相對應的獎勵，但這一切真的值得嗎？被擠壓的是牛？ 還是你呢？",
             "teamIntro": "這裡是一個充滿幻想的執行團隊，從天馬行空的草創階段到落實執行的製作階段我們都秉持著搞鬼、搞怪的精神集結6個心靈脆弱的個體每次沒辦法解決問題的時候，都會想要哭，但我們知道哭不能解決問題，也為了能讓我們進度繼續，並規定每次想哭時就倒立，這樣眼淚沒有流出來就不算哭了喔",
             "instructor": "",
-            "members": [{
+            "members": [
+                {
                     "id": "16-1",
                     "pic": "16-1_member",
                     "name": "鍾育翎",
@@ -810,8 +1010,21 @@
             ],
             "logo": "16_logo",
             "poster": "16_poster",
-            "previewImg": ["16_previewImg-1", "16_previewImg-2", "16_previewImg-3", "16_previewImg-4", "16_previewImg-5", "16_previewImg-6"],
-            "teamImg": ["16_teamImg-1", "16_teamImg-2", "16_teamImg-3", "16_teamImg-4", "16_teamImg-5"],
+            "previewImg": [
+                "16_previewImg-1",
+                "16_previewImg-2",
+                "16_previewImg-3",
+                "16_previewImg-4",
+                "16_previewImg-5",
+                "16_previewImg-6"
+            ],
+            "teamImg": [
+                "16_teamImg-1",
+                "16_teamImg-2",
+                "16_teamImg-3",
+                "16_teamImg-4",
+                "16_teamImg-5"
+            ],
             "viedo": "https://www.youtube.com/embed/wnGFzOQMtbI"
         },
         {
@@ -824,7 +1037,8 @@
             "projectShortIntro": "將聲音回歸純粹，透過觸碰牆面的振幅圖樣，播放出聲音及朦朧的影像，讓體驗者被各式聲音環繞，享受聲音帶來的悸動。",
             "teamIntro": "以聲音作為發想，讓體驗者聆聽各種聲音所帶來的悸動。團隊組成後才發現所有人都有厚道，但只有一個人沒有，故得名：）",
             "instructor": "",
-            "members": [{
+            "members": [
+                {
                     "id": "17-1",
                     "pic": "17-1_member",
                     "name": "楊舒涵",
@@ -863,8 +1077,21 @@
             ],
             "logo": "17_logo",
             "poster": "17_poster",
-            "previewImg": ["17_previewImg-1", "17_previewImg-2", "17_previewImg-3", "17_previewImg-4", "17_previewImg-5", "17_previewImg-6"],
-            "teamImg": ["17_teamImg-1", "17_teamImg-2", "17_teamImg-3", "17_teamImg-4", "17_teamImg-5"],
+            "previewImg": [
+                "17_previewImg-1",
+                "17_previewImg-2",
+                "17_previewImg-3",
+                "17_previewImg-4",
+                "17_previewImg-5",
+                "17_previewImg-6"
+            ],
+            "teamImg": [
+                "17_teamImg-1",
+                "17_teamImg-2",
+                "17_teamImg-3",
+                "17_teamImg-4",
+                "17_teamImg-5"
+            ],
             "viedo": "https://www.youtube.com/embed/GP7SJvOAmd0"
         },
         {
@@ -877,7 +1104,8 @@
             "projectShortIntro": "透過機械裝置模仿水母水中的律動，打造沉浸式體驗設計展覽，脫離機械既有的概念，設計仿生水母並結合互動。",
             "teamIntro": "我們是TUN LAB＂TUN＂在德文有＂去做＂的意思，我們的宗旨為『做就對了！』好啦，事實上，在一次的會議之中，我們正在聽當時很紅的歌＂How you like that＂，不知道是怎麼聽的，歌詞內也沒有TUN，也許是跟著氣氛使然，TUN就這樣出來啦！（組長搖頭…而為甚麼要稱自身為＂LAB實驗室＂呢？我們的作品是透過試驗中，反覆試出來的。所以對於我們的作品請大家拭目以待吧！",
             "instructor": "",
-            "members": [{
+            "members": [
+                {
                     "id": "18-1",
                     "pic": "18-1_member",
                     "name": "劉楷珉",
@@ -910,8 +1138,21 @@
             ],
             "logo": "18_logo",
             "poster": "18_poster",
-            "previewImg": ["18_previewImg-1", "18_previewImg-2", "18_previewImg-3", "18_previewImg-4", "18_previewImg-5", "18_previewImg-6"],
-            "teamImg": ["18_teamImg-1", "18_teamImg-2", "18_teamImg-3", "18_teamImg-4", "18_teamImg-5"],
+            "previewImg": [
+                "18_previewImg-1",
+                "18_previewImg-2",
+                "18_previewImg-3",
+                "18_previewImg-4",
+                "18_previewImg-5",
+                "18_previewImg-6"
+            ],
+            "teamImg": [
+                "18_teamImg-1",
+                "18_teamImg-2",
+                "18_teamImg-3",
+                "18_teamImg-4",
+                "18_teamImg-5"
+            ],
             "viedo": "https://www.youtube.com/embed/RhG9snYWgvY"
         },
         {
@@ -924,7 +1165,8 @@
             "projectShortIntro": "17歲少女逃家並度過一個瘋狂夜晚的故事。",
             "teamIntro": "我們是由六人組成的團隊，分別是三位設計組與三位科技組一起合作，兩個組別的相互碰撞，擦出不一樣的火花，創造出不一樣的想法，所以將團隊的名稱取為伴一半工作室。",
             "instructor": "",
-            "members": [{
+            "members": [
+                {
                     "id": "19-1",
                     "pic": "19-1_member",
                     "name": "簡伯諺",
@@ -963,8 +1205,21 @@
             ],
             "logo": "19_logo",
             "poster": "19_poster",
-            "previewImg": ["19_previewImg-1", "19_previewImg-2", "19_previewImg-3", "19_previewImg-4", "19_previewImg-5", "19_previewImg-6"],
-            "teamImg": ["19_teamImg-1", "19_teamImg-2", "19_teamImg-3", "19_teamImg-4", "19_teamImg-5"],
+            "previewImg": [
+                "19_previewImg-1",
+                "19_previewImg-2",
+                "19_previewImg-3",
+                "19_previewImg-4",
+                "19_previewImg-5",
+                "19_previewImg-6"
+            ],
+            "teamImg": [
+                "19_teamImg-1",
+                "19_teamImg-2",
+                "19_teamImg-3",
+                "19_teamImg-4",
+                "19_teamImg-5"
+            ],
             "viedo": "https://www.youtube.com/embed/IBqhD45ze9M"
         },
         {
@@ -977,7 +1232,8 @@
             "projectShortIntro": "在面對道德與自尊的兩難之間，青少年會如何做出選擇，又會經歷怎樣的心境轉變？這是一部可以給人帶來勇氣以及教人學會放下的作品。",
             "teamIntro": "由眾多工作室名稱選項(ex.18天、不要再吃、媽媽樂...)中脫穎而出的〈不要吵架工作室〉，聚集了各種'有個性'的成員們。〈不要吵架工作室〉除了有著對彼此的期許，更是提醒自己這裡是個需要修生養性的修羅場呀><",
             "instructor": "",
-            "members": [{
+            "members": [
+                {
                     "id": "20-1",
                     "pic": "20-1_member",
                     "name": "黃紀嘉",
@@ -1016,8 +1272,21 @@
             ],
             "logo": "20_logo",
             "poster": "20_poster",
-            "previewImg": ["20_previewImg-1", "20_previewImg-2", "20_previewImg-3", "20_previewImg-4", "20_previewImg-5", "20_previewImg-6"],
-            "teamImg": ["20_teamImg-1", "20_teamImg-2", "20_teamImg-3", "20_teamImg-4", "20_teamImg-5"],
+            "previewImg": [
+                "20_previewImg-1",
+                "20_previewImg-2",
+                "20_previewImg-3",
+                "20_previewImg-4",
+                "20_previewImg-5",
+                "20_previewImg-6"
+            ],
+            "teamImg": [
+                "20_teamImg-1",
+                "20_teamImg-2",
+                "20_teamImg-3",
+                "20_teamImg-4",
+                "20_teamImg-5"
+            ],
             "viedo": "https://www.youtube.com/embed/jWNAN_p5U5E"
         },
         {
@@ -1030,7 +1299,8 @@
             "projectShortIntro": "我們以海豹作為我們冰店的形象物，設計了三套桌遊與其他許多周邊，畢製會以桌遊跟互動濾鏡為主來介紹。",
             "teamIntro": "沒有什麼錢，但有個夢，別人總是以為你是富二代，實際上沒有負債就會偷笑了",
             "instructor": "",
-            "members": [{
+            "members": [
+                {
                     "id": "21-1",
                     "pic": "21-1_member",
                     "name": "李孟珊",
@@ -1063,266 +1333,319 @@
             ],
             "logo": "21_logo",
             "poster": "21_poster",
-            "previewImg": ["21_previewImg-1", "21_previewImg-2", "21_previewImg-3", "21_previewImg-4", "21_previewImg-5", "21_previewImg-6"],
-            "teamImg": ["21_teamImg-1"],
+            "previewImg": [
+                "21_previewImg-1",
+                "21_previewImg-2",
+                "21_previewImg-3",
+                "21_previewImg-4",
+                "21_previewImg-5",
+                "21_previewImg-6"
+            ],
+            "teamImg": [
+                "21_teamImg-1"
+            ],
             "viedo": "https://www.youtube.com/embed/N1jcEadcohE"
         }
     ],
-    "staff": [{
-            "id": 1,
-            "type": "pr",
-            "team": "公關組",
-            "projectIntro": "A.經營粉專B.線上企劃C.舉辦講座D.廠商洽談A＞B＞C蛤？你說D勒？D已經跟著疫情Say byebye！",
-            "projectShortIntro": "台灣的這裡是想了一堆企劃與文案還總是被退件修改的公關。主要負責線上行銷營運以及講座策劃的部分。原以為經營粉專是件很有趣的事情，但後來才發現還好，而且挑戰挺多的，罪過罪過。街道充滿人情味，但是人情味卻時常跟雜亂的街景產生連結，我們認為「台灣味」的街道，不一定非得是負面的形容詞。未來簡單市便是一項基於賦予街道其他可能性為前提的互動設計。我們展開了一連串的研究、田調，並透過沉浸式投影的方式預覽美化後的街道，吸引大眾眼球。另外，搭配我們整理成冊的《簡單公式》，觀者能夠更加詳細的了解街道物件及廣告物等等的設計建議。\n\n投影的內容除了街道的樣貌，還增加了一些特效畫面，讓體驗者在展場中獲得視覺衝擊、對我們想傳達的理念更加印象深刻——街道美學的培養，身在城市中的我們，每個人都是主角。",
-            "teamIntro": "喵喵哞哞咩咩咩（以下翻譯開會都會有各種狀況，有的忘記、有的睡覺、有的用木工...等等，等大家集合完畢已經凌晨，是一個慣性熬夜又金魚腦的team，超重度顏文字使用者們(´థ౪థ)σ",
-            "coverPic": "1_coverPic",
-            "teamImg": ["1_steamImg-1","1_steamImg-2","1_steamImg-3","1_steamImg-4","1_steamImg-5"],
-            "members": [{
-                    "id": "1-1",
-                    "name": "羅家穎",
-                    "pic": "s1-1_member",
-                    "saying": "慶功我想吃燒烤。樓下的願望真奢侈 (╬☉д☉)"
-                },
-                {
-                    "id": "1-2",
-                    "name": "林言秉",
-                    "pic": "s1-2_member",
-                    "saying": "我想要增加體重，樓下也許個願望吧，電梯下樓 ,,Ծ‸Ծ,,"
-                },
-                {
-                    "id": "1-3",
-                    "name": "劉郁萱",
-                    "pic": "s1-3_member",
-                    "saying": "我想要...吃飽...睡好...吃燒烤...樓下...請接棒..._(´ཀ`」 ∠)_"
-                },
-                {
-                    "id": "1-4",
-                    "name": "謝淳安",
-                    "pic": "s1-4_member",
-                    "saying": "小孩子才做選擇，朕要吃生魚片拉麵壽司燒烤火鍋冰淇淋。。。其實就是什麼都想吃，然後我要出去玩٩(๑`^´๑)۶出去玩！！！！心塞(´-ωก`)"
-                },
-                {
-                    "id": "1-5",
-                    "name": "王愉涵",
-                    "pic": "s1-5_member",
-                    "saying": "我想要買服飾。一樓到了，電梯開門(｡◕‿◕｡)➜"
-                }
-            ]
-        },
+    "staff": [
         {
-            "id": 2,
+            "id": 1,
             "type": "administration",
             "team": "行政組",
             "projectIntro": "行政組在一個團隊裡被稱做領導者，搞行政、聽抱怨、被抱怨、煩惱東煩惱西、開會開會開會！哪裡需要幫忙我們就哪裡出現！雖然出一張嘴，但身體力行也少不了！",
             "projectShortIntro": "我們與系上對洽辦展細項，撰寫企劃書，統籌籌會大小事，不定時追蹤籌會各組進度，大概是籌會裡最煩人的組別、壓力的來源(開玩笑的)。我們帶領全體籌會，艱辛的往辦好展覽的目的地前進。",
             "teamIntro": "團名代定行政組，本來應該是要有名字的，沒想到一用就是一年，後來才發現根本就沒時間好好想名字，我們超忙、超多事、心超累，但還是想要把展覽辦好，我們以統籌全體之實，但其實還是下海做了許多事情，感謝籌會全體人員的配合，因為一路上的義氣相挺，讓我們走到今天！內心之澎湃，難以一言以蔽之，所有罵過我們的人，我們都放下了，共勉之！（註：君子報仇10年不晚）",
-            "coverPic": "2_coverPic",
-            "teamImg": ["2_steamImg-1","2_steamImg-2","2_steamImg-3","2_steamImg-4","2_steamImg-5","2_steamImg-6"],
-            "members": [{
-                    "id": "2-1",
+            "coverPic": "1_coverPic",
+            "teamImg": [
+                "1_steamImg-1",
+                "1_steamImg-2",
+                "1_steamImg-3",
+                "1_steamImg-4",
+                "1_steamImg-5",
+                "1_steamImg-6"
+            ],
+            "members": [
+                {
+                    "id": "1-1",
                     "name": "黃紀嘉",
-                    "pic": "s2-1_member",
+                    "pic": "s1-1_member",
                     "saying": "每次開會的時候都會講話講到腦袋放空，還以爲自己是自動公播機，腦袋沒在動，嘴裡卻滔滔不絕，謝謝一直支持我的行政夥伴，這份江湖之情，小弟必定加倍奉還。"
                 },
                 {
-                    "id": "2-2",
+                    "id": "1-2",
                     "name": "陳竹妗",
-                    "pic": "s2-2_member",
+                    "pic": "s1-2_member",
                     "saying": "開會開到一半有時候會迷惘是誰我怎麼在當副召，哈哈好讚喔"
                 },
                 {
-                    "id": "2-3",
+                    "id": "1-3",
                     "name": "朱妤婷",
-                    "pic": "s2-3_member",
+                    "pic": "s1-3_member",
                     "saying": "原本以為只要做做紀錄的事，沒想到一腳踏進來已經收不回去，這裡是什麼世界，今天要開會是不是!!!"
                 }
             ]
         },
         {
-            "id": 3,
-            "type": "activity",
-            "team": "活動組",
-            "projectIntro": "主要從校內到校外展覽的串連活動規劃，包括線下活動、羅馬旗、梯貼、拍照牆…等等。到中後期開始經營YouTube頻道，從街頭訪問、主題遊戲，到快問快答，題材相當豐富。",
-            "projectShortIntro": "活動的事情幾乎都是我們完成啦！包含發想活動企劃、執行線下活動、展期前的線下宣傳，更重要的是還有拍攝短片記錄，你想得到有關活動的都是我們執行包辦！",
-            "teamIntro": "我們是一群五人團隊，每一個人常常一人兼身數職，絞盡腦汁企劃發想怎知道最後還有多少可執行，拍攝過程主持還要控場、攝影還要收音，頻道剪片永遠剪不完，一個禮拜上片還有下個禮拜，梯貼貼到天荒到老，檔案跟廠商喬老半天，雖然好像很多問題，但我們就是負責一一解決這些煩人的難題啦！我們的精神名言就是笑著說“沒事可以啦“。",
-            "coverPic": "3_coverPic",
-            "teamImg": ["3_steamImg-1","3_steamImg-2","3_steamImg-3","3_steamImg-4","3_steamImg-5","3_steamImg-6","3_steamImg-7"],
-            "members": [{
-                    "id": "3-1",
-                    "name": "林洧盈",
-                    "pic": "s3-1_member",
-                    "saying": "很開心能在活動組一起和大家執行很多活動，我們勇於做了很多創新的事，或許還有很多地方需要改進，過程雖辛苦也享受，活動組開會宗旨就是絕對不能超過一個半小時，要求大家都要效率做事！實際是我不喜歡開會開太久啦哈哈哈。"
-                },
-                {
-                    "id": "3-2",
-                    "name": "鍾佳蓉",
-                    "pic": "s3-2_member",
-                    "saying": "雖然我們人少但我們很堅強！很高興跟大家共事也很感謝，尤其是我可能很常搞麻煩哈哈哈，一起嘗試了很多新事物真的是希望活動能夠辦更好也更能夠推廣給大家多多關注我們用肝換來的畢製！辛苦活動組也辛苦畢籌的各位了！"
-                },
-                {
-                    "id": "3-3",
-                    "name": "林語萱",
-                    "pic": "s3-3_member",
-                    "saying": "很開心可以跟大家一起在活動組共事，雖然因為人力不足常常需要一人身兼多職，剪片也剪到要發芬，但組內的氣氛總是蠻歡樂，各位讚讚啦。"
-                },
-                {
-                    "id": "3-4",
-                    "name": "蔡維仁",
-                    "pic": "s3-4_member",
-                    "saying": "對我來說最辛苦的莫過於YouTube頻道了！尤其是總共也才7支影片，我自己就剪了3支！真的是耗盡精神與體力，不過也當作是訓練自己剪片的技術！還有跟活動組組員拍片的過程也很開心。"
-                },
-                {
-                    "id": "3-5",
-                    "name": "許國彬",
-                    "pic": "s3-5_member",
-                    "saying": "氣氛好、做得好，個個學習情緒高，組長對我們如父母、如兄弟、如師長。"
-                }
-            ]
-        },
-        {
-            "id": 4,
+            "id": 2,
             "type": "art",
             "team": "美術組",
             "projectIntro": "主視覺發想以及理念表達花最多時間，定義了許多元素的含意、理念的圖像表現，配合各畢籌組製作展覽相關活動的輸出圖，也參與了場務組展覽裝潢的規劃，以及周邊商品，從發想企劃、設計、輸出製作的全部流程。",
             "projectShortIntro": "我們是這個畢業展覽的主題發想者、周邊商品設計、製圖勞工，今年很感謝同學們的信任，由美術組決定展覽主題，因此我們也更加投入，反覆的討論及修改，完成大家的畢業展！",
             "teamIntro": "大家可能有聽說設計系的畢製很爆肝，美術組的每一位幾乎是同時做了兩個畢製，欲哭無淚。最崩潰的美術組如果相處順利的話，可以打造出一批心理素質很好的人們，每天的心情都在七上八下，心裡覺得乾還是會理性溝通！",
-            "coverPic": "4_coverPic",
-            "teamImg": ["4_steamImg-1","4_steamImg-2","4_steamImg-3"],
-            "members": [{
-                    "id": "4-1",
+            "coverPic": "2_coverPic",
+            "teamImg": [
+                "2_steamImg-1",
+                "2_steamImg-2",
+                "2_steamImg-3"
+            ],
+            "members": [
+                {
+                    "id": "2-1",
                     "name": "林欣儒",
-                    "pic": "s4-1_member",
+                    "pic": "s2-1_member",
                     "saying": "謝謝大家！大家好棒！辛苦了！我喜歡吃拉麵。"
                 },
                 {
-                    "id": "4-2",
+                    "id": "2-2",
                     "name": "林凡雅",
-                    "pic": "s4-2_member",
+                    "pic": "s2-2_member",
                     "saying": "很開心透過畢籌認識了大家～想吃拉麵！"
                 },
                 {
-                    "id": "4-3",
+                    "id": "2-3",
                     "name": "高筱婷",
-                    "pic": "s4-3_member",
+                    "pic": "s2-3_member",
                     "saying": "希望大家以後偶爾可以一起出去吃拉麵。"
                 },
                 {
-                    "id": "4-4",
+                    "id": "2-4",
                     "name": "宋芷誼",
-                    "pic": "s4-4_member",
+                    "pic": "s2-4_member",
                     "saying": "大家真的棒到！可以！吃兩碗拉麵！"
                 },
                 {
-                    "id": "4-5",
+                    "id": "2-5",
                     "name": "簡伯諺",
-                    "pic": "s4-5_member",
+                    "pic": "s2-5_member",
                     "saying": "讚啦！此刻拉麵！"
                 },
                 {
-                    "id": "4-6",
+                    "id": "2-6",
                     "name": "楊冬雪",
-                    "pic": "s4-6_member",
+                    "pic": "s2-6_member",
                     "saying": "我不愛拉麵但還是可以吃，就愛這樣不受控的你們！"
                 },
                 {
-                    "id": "4-7",
+                    "id": "2-7",
                     "name": "邱云",
-                    "pic": "s4-7_member",
+                    "pic": "s2-7_member",
                     "saying": "大家辛苦了～"
                 }
             ]
         },
         {
-            "id": 5,
+            "id": 3,
             "type": "equipment",
             "team": "場務組",
             "projectIntro": "這次場務除了上述雜七雜八的工作之外，今年突發奇想，規劃了光雕投影作為主視覺的另類呈現方式，在平面的主視覺中增加了動態與材質結合的特效，期望作為展覽的亮點屏風，這部分也希望大家記得多喵一眼(=｀ω´=)",
             "projectShortIntro": "周旋在各組同學、系上師長、策展廠商、設備廠商、場地負責人之中，在這六角關係裡與惡勢力對抗（誤）場務簡單來說就是負責場地爭取、廠商比價、展場規劃、多方溝通（ps.六角關係...）、設備管理、不斷殺價、指揮進撤場等等，可能還有其他工作但我腦容量爆炸了(°ー°〃)ps.廠商會用商業手段製作估價單，大家千萬要小心謹慎",
             "teamIntro": "場務是個需要動腦、出力、砸錢、溝通、解決問題等多方面能力的團隊，雖然感覺吃力不討好，又需要把同學、師長及廠商安撫得服服貼貼，但人多好辦事，大家一點一滴地分散掉工作，看到展場逐漸成形，這個團隊存在的意義就值得了！(*TーT)b",
-            "coverPic": "5_coverPic",
-            "teamImg": ["5_steamImg-1","5_steamImg-2","5_steamImg-3","5_steamImg-4","5_steamImg-5","5_steamImg-6","5_steamImg-7","5_steamImg-8"],
-            "members": [{
-                    "id": "5-1",
+            "coverPic": "3_coverPic",
+            "teamImg": [
+                "3_steamImg-1",
+                "3_steamImg-2",
+                "3_steamImg-3",
+                "3_steamImg-4",
+                "3_steamImg-5",
+                "3_steamImg-6",
+                "3_steamImg-7",
+                "3_steamImg-8"
+            ],
+            "members": [
+                {
+                    "id": "3-1",
                     "name": "李若彤",
-                    "pic": "s5-1_member",
+                    "pic": "s3-1_member",
                     "saying": "很累但學到很多，現在的夢想是把Line刪掉大睡特睡！"
                 },
                 {
-                    "id": "5-2",
+                    "id": "3-2",
                     "name": "楊蕙瑜",
-                    "pic": "s5-2_member",
+                    "pic": "s3-2_member",
                     "saying": "開會！開會！！Always開會ε===(っ≧ω≦)っㄎㄎ"
                 },
                 {
-                    "id": "5-3",
+                    "id": "3-3",
                     "name": "梁晉瑜",
-                    "pic": "s5-3_member",
+                    "pic": "s3-3_member",
                     "saying": "大家都辛苦了，希望一切順利。"
                 },
                 {
-                    "id": "5-4",
+                    "id": "3-4",
                     "name": "黃韋婷",
-                    "pic": "s5-4_member",
+                    "pic": "s3-4_member",
                     "saying": "吃飽睡飽就是幸福的所在。"
                 },
                 {
-                    "id": "5-5",
+                    "id": "3-5",
                     "name": "劉采綺",
-                    "pic": "s5-5_member",
+                    "pic": "s3-5_member",
                     "saying": "好累。"
                 },
                 {
-                    "id": "5-6",
+                    "id": "3-6",
                     "name": "林庚翰",
-                    "pic": "s5-6_member",
+                    "pic": "s3-6_member",
                     "saying": "抽一個美眉吃遍全台拉麵"
                 },
                 {
-                    "id": "5-7",
+                    "id": "3-7",
                     "name": "李明軒",
-                    "pic": "s5-7_member",
+                    "pic": "s3-7_member",
                     "saying": "難忘的經驗，一切順利"
                 },
                 {
-                    "id": "5-8",
+                    "id": "3-8",
                     "name": "吳宜峻",
-                    "pic": "s5-8_member",
+                    "pic": "s3-8_member",
                     "saying": "你看到我 媽的 巨...你看到我大槌達瑞斯 都不會怕的欸、還在他mom還在前面那邊洗兵耶、嗚哇～墮 欸幹?怎麼墮到李星嗚挖阿 Double Kill !!巨槌瑞斯!!!!誇抓 !! 哈哈哈哈哈哈哈哈!!"
                 },
                 {
-                    "id": "5-9",
+                    "id": "3-9",
                     "name": "郭展成",
-                    "pic": "s5-9_member",
+                    "pic": "s3-9_member",
                     "saying": "很棒的收穫"
                 },
                 {
-                    "id": "5-10",
+                    "id": "3-10",
                     "name": "顏崇育",
-                    "pic": "s5-10_member",
+                    "pic": "s3-10_member",
                     "saying": "畢籌的各位辛苦了！在場務組體驗到許多東西，光雕非常有趣酷炫、展場規發想令人頭痛欲絕等等，真是令人難忘，希望畢展一切順利～"
                 }
             ]
         },
         {
-            "id": 6,
+            "id": 4,
+            "type": "activity",
+            "team": "活動組",
+            "projectIntro": "主要從校內到校外展覽的串連活動規劃，包括線下活動、羅馬旗、梯貼、拍照牆…等等。到中後期開始經營YouTube頻道，從街頭訪問、主題遊戲，到快問快答，題材相當豐富。",
+            "projectShortIntro": "活動的事情幾乎都是我們完成啦！包含發想活動企劃、執行線下活動、展期前的線下宣傳，更重要的是還有拍攝短片記錄，你想得到有關活動的都是我們執行包辦！",
+            "teamIntro": "我們是一群五人團隊，每一個人常常一人兼身數職，絞盡腦汁企劃發想怎知道最後還有多少可執行，拍攝過程主持還要控場、攝影還要收音，頻道剪片永遠剪不完，一個禮拜上片還有下個禮拜，梯貼貼到天荒到老，檔案跟廠商喬老半天，雖然好像很多問題，但我們就是負責一一解決這些煩人的難題啦！我們的精神名言就是笑著說“沒事可以啦“。",
+            "coverPic": "4_coverPic",
+            "teamImg": [
+                "4_steamImg-1",
+                "4_steamImg-2",
+                "4_steamImg-3",
+                "4_steamImg-4",
+                "4_steamImg-5",
+                "4_steamImg-6",
+                "4_steamImg-7"
+            ],
+            "members": [
+                {
+                    "id": "4-1",
+                    "name": "林洧盈",
+                    "pic": "s4-1_member",
+                    "saying": "很開心能在活動組一起和大家執行很多活動，我們勇於做了很多創新的事，或許還有很多地方需要改進，過程雖辛苦也享受，活動組開會宗旨就是絕對不能超過一個半小時，要求大家都要效率做事！實際是我不喜歡開會開太久啦哈哈哈。"
+                },
+                {
+                    "id": "4-2",
+                    "name": "鍾佳蓉",
+                    "pic": "s4-2_member",
+                    "saying": "雖然我們人少但我們很堅強！很高興跟大家共事也很感謝，尤其是我可能很常搞麻煩哈哈哈，一起嘗試了很多新事物真的是希望活動能夠辦更好也更能夠推廣給大家多多關注我們用肝換來的畢製！辛苦活動組也辛苦畢籌的各位了！"
+                },
+                {
+                    "id": "4-3",
+                    "name": "林語萱",
+                    "pic": "s4-3_member",
+                    "saying": "很開心可以跟大家一起在活動組共事，雖然因為人力不足常常需要一人身兼多職，剪片也剪到要發芬，但組內的氣氛總是蠻歡樂，各位讚讚啦。"
+                },
+                {
+                    "id": "4-4",
+                    "name": "蔡維仁",
+                    "pic": "s4-4_member",
+                    "saying": "對我來說最辛苦的莫過於YouTube頻道了！尤其是總共也才7支影片，我自己就剪了3支！真的是耗盡精神與體力，不過也當作是訓練自己剪片的技術！還有跟活動組組員拍片的過程也很開心。"
+                },
+                {
+                    "id": "4-5",
+                    "name": "許國彬",
+                    "pic": "s4-5_member",
+                    "saying": "氣氛好、做得好，個個學習情緒高，組長對我們如父母、如兄弟、如師長。"
+                }
+            ]
+        },
+        {
+            "id": 5,
             "type": "affair",
             "team": "總務組",
             "projectIntro": "向同學收取籌備金的路曲曲折折，預算規劃都希望能有多點預算，審核預算總是害怕跟預估預算差一點，廠商匯款三天兩頭跑銀行，幾十萬新台幣每天都在飛，錢永遠都不夠多。",
             "projectShortIntro": "總務組負責保管畢業籌備會使用的籌備金，以及分配籌備金預算，審核各組的企劃預算評估，讓任何一分錢也不會浪費。(開玩笑的)。我們帶領全體籌會，艱辛的往辦好展覽的目的地前進。",
             "teamIntro": "兩個人的團隊真是開心，就算只有兩個人我們還是會打架，開會都吵吵鬧鬧的，最痛苦的經驗就是收不到錢還聯絡不到同學，總是得不到回應QQ。我們的辛苦是背負著很大的責任，在每個預算評估下總害怕金額差太多，很有可能會導致整體預算不足，好想要能有更多預算噢。",
-            "coverPic": "6_coverPic",
-            "teamImg": ["6_steamImg-1","6_steamImg-2"],
-            "members": [{
-                    "id": "6-1",
+            "coverPic": "5_coverPic",
+            "teamImg": [
+                "5_steamImg-1",
+                "5_steamImg-2"
+            ],
+            "members": [
+                {
+                    "id": "5-1",
                     "name": "陳宜姍",
-                    "pic": "s6-1_member",
+                    "pic": "s5-1_member",
                     "saying": "我的帳戶好多錢呦，噢！不對那都是畢籌的，好想一夜致富"
                 },
                 {
-                    "id": "6-2",
+                    "id": "5-2",
                     "name": "盧柏魁",
-                    "pic": "s6-2_member",
+                    "pic": "s5-2_member",
                     "saying": "感謝組長收留怕麻煩的我，除了裝黑道瘋狂討債基本0作用很對不起大家，但是討債怎麼那麼難，怎麼到處都有歸回虛無找不到人的狀況？"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "type": "pr",
+            "team": "公關組",
+            "projectIntro": "A.經營粉專B.線上企劃C.舉辦講座D.廠商洽談A＞B＞C蛤？你說D勒？D已經跟著疫情Say byebye！",
+            "projectShortIntro": "台灣的這裡是想了一堆企劃與文案還總是被退件修改的公關。主要負責線上行銷營運以及講座策劃的部分。原以為經營粉專是件很有趣的事情，但後來才發現還好，而且挑戰挺多的，罪過罪過。街道充滿人情味，但是人情味卻時常跟雜亂的街景產生連結，我們認為「台灣味」的街道，不一定非得是負面的形容詞。未來簡單市便是一項基於賦予街道其他可能性為前提的互動設計。我們展開了一連串的研究、田調，並透過沉浸式投影的方式預覽美化後的街道，吸引大眾眼球。另外，搭配我們整理成冊的《簡單公式》，觀者能夠更加詳細的了解街道物件及廣告物等等的設計建議。\n\n投影的內容除了街道的樣貌，還增加了一些特效畫面，讓體驗者在展場中獲得視覺衝擊、對我們想傳達的理念更加印象深刻——街道美學的培養，身在城市中的我們，每個人都是主角。",
+            "teamIntro": "喵喵哞哞咩咩咩（以下翻譯開會都會有各種狀況，有的忘記、有的睡覺、有的用木工...等等，等大家集合完畢已經凌晨，是一個慣性熬夜又金魚腦的team，超重度顏文字使用者們(´థ౪థ)σ",
+            "coverPic": "6_coverPic",
+            "teamImg": [
+                "6_steamImg-1",
+                "6_steamImg-2",
+                "6_steamImg-3",
+                "6_steamImg-4",
+                "6_steamImg-5"
+            ],
+            "members": [
+                {
+                    "id": "6-1",
+                    "name": "羅家穎",
+                    "pic": "s6-1_member",
+                    "saying": "慶功我想吃燒烤。樓下的願望真奢侈 (╬☉д☉)"
+                },
+                {
+                    "id": "6-2",
+                    "name": "林言秉",
+                    "pic": "s6-2_member",
+                    "saying": "我想要增加體重，樓下也許個願望吧，電梯下樓 ,,Ծ‸Ծ,,"
+                },
+                {
+                    "id": "6-3",
+                    "name": "劉郁萱",
+                    "pic": "s6-3_member",
+                    "saying": "我想要...吃飽...睡好...吃燒烤...樓下...請接棒..._(´ཀ`」 ∠)_"
+                },
+                {
+                    "id": "6-4",
+                    "name": "謝淳安",
+                    "pic": "s6-4_member",
+                    "saying": "小孩子才做選擇，朕要吃生魚片拉麵壽司燒烤火鍋冰淇淋。。。其實就是什麼都想吃，然後我要出去玩٩(๑`^´๑)۶出去玩！！！！心塞(´-ωก`)"
+                },
+                {
+                    "id": "6-5",
+                    "name": "王愉涵",
+                    "pic": "s6-5_member",
+                    "saying": "我想要買服飾。一樓到了，電梯開門(｡◕‿◕｡)➜"
                 }
             ]
         }
