@@ -124,20 +124,27 @@ export default {
 
 //粉邊粉字
 .pink-outline {
-  border: 1.5px solid $exhibition-mainColor;
+  
   color: $exhibition-mainColor;
-  &:hover {
+  > div{
+    border: 1.5px solid $exhibition-mainColor;
+    border-radius: 50%;
+    &:hover {
     color: $white;
     background-color: $exhibition-mainColor;
+  }
   }
 }
 //藍邊藍字
 .blue-outline {
-  border: 1.5px solid $organizeTeam-mainColor;
   color: $organizeTeam-mainColor;
-  &:hover {
+  > div{
+    border: 1.5px solid $organizeTeam-mainColor;
+    border-radius: 50%;
+    &:hover {
     color: $white;
     background-color: $organizeTeam-mainColor;
+  }
   }
 }
 

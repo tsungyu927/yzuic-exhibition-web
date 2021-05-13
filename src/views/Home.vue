@@ -1,6 +1,7 @@
 <template>
   <div class="con">
     <HomeIntro v-if="openIntro" v-on:handleCloseModal="handleCloseModal" />
+    <MenuBtn :toWhite="borderToWhite" />
     <div class="content">
       <div class="rotate-tips" v-if="openRotateTips">
         請將手機轉向
@@ -669,6 +670,7 @@
 <script>
 // @ is an alias to /v-lazy
 import HomeIntro from '../modal/HomeIntro';
+import MenuBtn from '../components/MenuBtn';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
@@ -688,6 +690,7 @@ export default {
   },
   components: {
     HomeIntro,
+    MenuBtn,
     LeftBar, 
     RightBar, 
     RightFooter
