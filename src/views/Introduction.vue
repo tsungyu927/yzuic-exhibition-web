@@ -161,7 +161,7 @@
           </div>
         </div>
       </div>
-      <div class="pg-block my-3 my-md-5 d-none d-md-block">
+      <div class="pg-block my-3 d-none d-md-block">
         {{ introData.teamIntro }}
       </div>
       <!-- 組員介紹區 -->
@@ -532,7 +532,7 @@ export default {
 .memberGroup {
   margin-left: -1rem;
   margin-right: -1rem;
-  padding: 0 40px;
+  padding: 40px;
   .member {
     width: 50%;
     overflow: hidden;

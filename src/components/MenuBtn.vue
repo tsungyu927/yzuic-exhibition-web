@@ -1,7 +1,11 @@
 <template>
   <div>
     <!-- 目錄modal -->
-    <Catalog v-if="openCatalog" class="catalogModal" v-on:handleCloseModal="handleOpenCatalog"  />
+    <Catalog
+      v-if="openCatalog"
+      class="catalogModal"
+      v-on:handleCloseModal="handleOpenCatalog"
+    />
     <div
       class="menu-btn d-none d-md-block"
       :class="[changeColor, openColor]"
@@ -23,18 +27,18 @@ export default {
     return {
       changeColor: '',
       openColor: '',
-      openCatalog: false
+      openCatalog: false,
     };
   },
-  mounted(){
-    if(this.toWhite){
+  mounted() {
+    if (this.toWhite) {
       this.openColor = 'whole-white-outline';
     }
   },
   props: {
     toWhite: {
-      type: Boolean
-    }
+      type: Boolean,
+    },
   },
   watch: {
     $route: {
@@ -58,25 +62,28 @@ export default {
       deep: true,
       immediate: true,
     },
-    toWhite: function(newVal, oldVal) { // watch it
-      this.openColor = this.toWhite ? 'whole-white-outline': '';
-    }
+    toWhite: function(newVal, oldVal) {
+      // watch it
+      this.openColor = this.toWhite ? 'whole-white-outline' : '';
+    },
   },
   methods: {
-    handleOpenCatalog: function(){
-      if(this.openCatalog){
-        gsap.to('.catalogModal',{
-          opacity: 0,
-          duration: 0.3
-        }).then(()=>{
-          if(this.toWhite){
-            this.openColor = 'whole-white-outline';
-          }else{
-            this.openColor = '';
-          }
-          this.openCatalog = false;
-        });
-      } else{
+    handleOpenCatalog: function() {
+      if (this.openCatalog) {
+        gsap
+          .to('.catalogModal', {
+            opacity: 0,
+            duration: 0.3,
+          })
+          .then(() => {
+            if (this.toWhite) {
+              this.openColor = 'whole-white-outline';
+            } else {
+              this.openColor = '';
+            }
+            this.openCatalog = false;
+          });
+      } else {
         this.openColor = 'whole-white-outline';
         this.openCatalog = true;
       }
@@ -84,7 +91,7 @@ export default {
   },
   components: {
     Catalog,
-  }
+  },
 };
 </script>
 
@@ -115,7 +122,7 @@ export default {
 
 //粉邊粉字
 .pink-outline {
-  border: 1px solid $exhibition-mainColor;
+  border: 1.5px solid $exhibition-mainColor;
   color: $exhibition-mainColor;
   &:hover {
     color: $white;
@@ -124,7 +131,7 @@ export default {
 }
 //藍邊藍字
 .blue-outline {
-  border: 1px solid $organizeTeam-mainColor;
+  border: 1.5px solid $organizeTeam-mainColor;
   color: $organizeTeam-mainColor;
   &:hover {
     color: $white;
@@ -136,7 +143,7 @@ export default {
 .whole-white-outline {
   color: #fff;
   > div {
-    border: 1px solid #fff;
+    border: 1.5px solid #fff;
     border-radius: 50%;
     &:hover {
       color: $exhibition-mainColor;

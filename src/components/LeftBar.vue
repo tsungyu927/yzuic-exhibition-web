@@ -5,7 +5,9 @@
   >
     <!--<router-link to="/">Home</router-link> | -->
     <div @click="handleClick('/exhibition')" class="square__link">展覽作品</div>
-    <div @click="handleClick('/organizeTeam')" class="square__link">策展團隊</div>
+    <div @click="handleClick('/organizeTeam')" class="square__link">
+      策展團隊
+    </div>
     <router-link class="square__link circle" to="/organizeTeam">FB</router-link>
     <router-link class="square__link circle" to="/organizeTeam">IG</router-link>
     <router-link class="square__link circle" to="/organizeTeam">YT</router-link>
@@ -56,18 +58,18 @@ export default {
   },
   methods: {
     handleClick: function(place) {
-      if(this.$router.currentRoute.path == '/') {
-        ScrollTrigger.getAll().forEach(st => st.kill());
+      if (this.$router.currentRoute.path == '/') {
+        ScrollTrigger.getAll().forEach((st) => st.kill());
       }
       this.$router.push({
         path: place,
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .left {
   left: 2%;
   bottom: 10%;
@@ -110,7 +112,8 @@ export default {
 
 //粉邊粉字
 .pink-outline {
-  > a, > div {
+  > a,
+  > div {
     border: 1.5px solid $exhibition-mainColor;
     color: $exhibition-mainColor;
     &:hover {
@@ -121,7 +124,8 @@ export default {
 }
 //藍邊藍字
 .blue-outline {
-  > a, > div {
+  > a,
+  > div {
     border: 1.5px solid $organizeTeam-mainColor;
     color: $organizeTeam-mainColor;
     &:hover {
@@ -134,7 +138,8 @@ export default {
 .white-outline {
   //hover 藍
   &__blue {
-    > a, > div {
+    > a,
+    > div {
       @extend %defaultColor;
       &:hover {
         color: $organizeTeam-mainColor;
@@ -144,7 +149,8 @@ export default {
   }
   //hover 粉
   &__pink {
-    > a, > div {
+    > a,
+    > div {
       @extend %defaultColor;
       &:hover {
         color: $exhibition-mainColor;
@@ -156,7 +162,8 @@ export default {
 
 // 全白
 .whole-white-outline {
-  > a, > div {
+  > a,
+  > div {
     border: 1.5px solid #fff;
     color: #fff;
     &:hover {
