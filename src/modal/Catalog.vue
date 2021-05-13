@@ -82,6 +82,7 @@ export default {
 
 <style lang="scss" scoped>
 .catalog{
+  pointer-events: all;
   position: absolute;
   left: 0;
   top: 0;
@@ -92,6 +93,9 @@ export default {
   animation:  0.3s linear openAnim;
   display: flex;
   flex-direction: column;
+  @include xs-width() {
+    flex-direction: row;
+  }
   @include md-width() {
     flex-direction: row;
   }
@@ -105,6 +109,11 @@ export default {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    @include xs-width(){
+      width: 30%;
+      height: 100%;
+      justify-content: center;
+    }
     @include md-width() {
       width: 30%;
       height: 100%;
@@ -116,6 +125,12 @@ export default {
     margin-top: 2em;
     width: 80%;
     height: auto;
+    @include xs-width(){
+      margin-left: 2em;
+      margin-top: 0em;
+      width: auto;
+      height: 80%;
+    }
     @include md-width() {
       margin-left: 2em;
       margin-top: 0em;
@@ -132,6 +147,10 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    @include xs-width(){
+      width: 70%;
+      height: 100%;
+    }
     @include md-width() {
       width: 70%;
       height: 100%;
@@ -144,6 +163,9 @@ export default {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    @include xs-width(){
+      width: 80%;
+    }
     @include md-width() {
       width: 80%;
     }

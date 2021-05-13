@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="menu-outer">
     <!-- 目錄modal -->
     <Catalog
       v-if="openCatalog"
@@ -7,8 +7,8 @@
       v-on:handleCloseModal="handleOpenCatalog"
     />
     <div
-      class="menu-btn d-none d-md-block"
-      :class="[changeColor, openColor]"
+      class="menu-btn d-md-block"
+      :class="[changeColor, openColor, mobileIconClass]"
       @click="handleOpenCatalog"
     >
       <div class="d-none d-md-block">目錄</div>
@@ -28,11 +28,15 @@ export default {
       changeColor: '',
       openColor: '',
       openCatalog: false,
+      mobileIconClass: 'd-none'
     };
   },
   mounted() {
     if (this.toWhite) {
       this.openColor = 'whole-white-outline';
+    }
+    if(this.$router.currentRoute.path == '/'){
+      this.mobileIconClass = '';
     }
   },
   props: {
@@ -98,11 +102,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.menu-outer{
+  pointer-events: none;
+  position: fixed;
+  z-index: 21;
+  width: 100%;
+  height: 100%;
+}
 //手機板漢堡選單
 .menu-btn {
+  pointer-events: all;
   cursor: pointer;
   display: flex;
-  position: fixed;
+  position: absolute;
   z-index: 21;
   font-weight: bold;
   line-height: 2.8rem;
