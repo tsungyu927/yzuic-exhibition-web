@@ -34,6 +34,9 @@ export default {
           case '/':
             this.changeColor = 'home__footer';
             break;
+          case '/contactus':
+            this.changeColor = 'home__footer';
+            break;
           default:
             this.changeColor = 'exhibition__footer';
         }

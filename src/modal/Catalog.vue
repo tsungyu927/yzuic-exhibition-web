@@ -32,7 +32,7 @@
             策展<br>團隊
           </div>        
         </router-link>
-        <router-link class="catalog-btn" to="">
+        <router-link class="catalog-btn" to="/contactus">
           <div class="catalog-content" @click="handleCloseModal">
             聯絡<br>我們
           </div>        
