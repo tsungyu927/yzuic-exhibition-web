@@ -81,9 +81,11 @@ export default {
             } else {
               this.openColor = '';
             }
+            document.querySelector('body').style.overflowY = 'scroll';
             this.openCatalog = false;
           });
       } else {
+        document.querySelector('body').style.overflowY = 'hidden';
         this.openColor = 'whole-white-outline';
         this.openCatalog = true;
       }

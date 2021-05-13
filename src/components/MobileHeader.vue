@@ -1,30 +1,42 @@
 <template>
-  <!-- 手機板 header -->
-  <div class="pg-header d-flex d-md-none" :class="[changeColor]">
-    <!-- previous arrow btn -->
-    <div class="header__icon previous">
-      <font-awesome-icon
-        :icon="['fas', 'arrow-left']"
-        class="m-auto"
-        size="lg"
-        @click="previous"
+
+    <!-- 手機板 header -->
+    <div class="pg-header d-flex d-md-none" :class="[changeColor]">
+      <Catalog
+        v-if="openCatalog"
+        class="catalogModal"
+        v-on:handleCloseModal="handleOpenCatalog"
       />
+      <!-- previous arrow btn -->
+      <div class="header__icon previous">
+        <font-awesome-icon
+          :icon="['fas', 'arrow-left']"
+          class="m-auto"
+          size="lg"
+          @click="previous"
+        />
+      </div>
+      <!-- title -->
+      <div class="title">{{ title }}</div>
+      <!-- menu btn -->
+      <div class="header__icon menu" @click="handleOpenCatalog">
+        <font-awesome-icon icon="bars" size="lg" class="m-auto" />
+      </div>
     </div>
-    <!-- title -->
-    <div class="title">{{ title }}</div>
-    <!-- menu btn -->
-    <div class="header__icon menu">
-      <font-awesome-icon icon="bars" size="lg" class="m-auto" />
-    </div>
-  </div>
+  
 </template>
 
 <script>
+import gsap from 'gsap';
+import Catalog from '../modal/Catalog';
+
 export default {
   name: 'MobileHeader',
   data() {
     return {
       changeColor: '',
+      openCatalog: false,
+      openColor: '',
     };
   },
   props: ['title'],
@@ -42,6 +54,23 @@ export default {
   methods: {
     previous() {
       this.$router.go(-1);
+    },
+    handleOpenCatalog: function() {
+      if (this.openCatalog) {
+        gsap
+          .to('.catalogModal', {
+            opacity: 0,
+            duration: 0.3,
+          })
+          .then(() => {
+            document.querySelector('body').style.overflowY = 'scroll';
+            this.openCatalog = false;
+          });
+      } else {
+        document.querySelector('body').style.overflowY = 'hidden';
+        this.openColor = 'whole-white-outline';
+        this.openCatalog = true;
+      }
     },
   },
   watch: {
@@ -68,6 +97,9 @@ export default {
       immediate: true,
     },
   },
+  components: {
+    Catalog,
+  }
 };
 </script>
 
@@ -84,6 +116,7 @@ export default {
 }
 
 .header__icon {
+  position: relative;
   display: flex;
   z-index: 1;
   font-weight: bold;
@@ -110,6 +143,7 @@ export default {
     color: $exhibition-mainColor;
     background-color: $white;
     border: $white 1px solid;
+    z-index: 21;
   }
   //滾動 粉
   &.pink__scrolled {
@@ -131,6 +165,7 @@ export default {
     color: $organizeTeam-mainColor;
     background-color: $white;
     border: $white 1px solid;
+    z-index: 21;
   }
   //滾動 藍
   &.blue__scrolled {
@@ -152,6 +187,7 @@ export default {
     background-color: $organizeTeam-mainColor;
     color: $white;
     border: $organizeTeam-mainColor 1px solid;
+    z-index: 21;
   }
 }
 
@@ -169,6 +205,8 @@ export default {
     background-color: $exhibition-mainColor;
     color: $white;
     border: $exhibition-mainColor 1px solid;
+    z-index: 21;
   }
 }
+
 </style>
