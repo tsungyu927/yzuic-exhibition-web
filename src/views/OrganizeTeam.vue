@@ -22,7 +22,7 @@
               :key="item.enName"
               :nav-item="item"
               :main-color="'#00cbf4'"
-              @click.native="toIntroduction(item.id)"
+              v-on:handleClick="toIntroduction(item.id)"
             />
           </div>
         </div>
@@ -167,9 +167,9 @@ export default {
 .arrowup-btn {
   position: absolute;
   z-index: 2;
-  top: 5%;
-  left: 5%;
-  width: 5%;
+  top: 12%;
+  left: 4%;
+  width: 10%;
   background-color: transparent;
   border-radius: 50%;
   border: none;
@@ -179,6 +179,11 @@ export default {
     max-height: 100%;
     display: block;
     border-radius: 50%;
+  }
+  @include md-width() {
+    top: 5%;
+    left: 5%;
+    width: 5%;
   }
 }
 
@@ -240,7 +245,7 @@ export default {
 
 .navbar-fixed {
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   right: 20px;
   height: 100%;
   bottom: -130%;
