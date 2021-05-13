@@ -54,7 +54,7 @@ export default {
     };
   },
   mounted() {
-    document.querySelector('body').style.overflowY = 'hidden';
+    // document.querySelector('body').style.overflowY = 'hidden';
     // 確認方向
     this.handleOrientationChange();
     window.addEventListener('resize', this.handleOrientationChange, false);
@@ -70,7 +70,7 @@ export default {
       }
     },
     handleCloseModal(){
-      document.querySelector('body').style.overflowY = 'scroll';
+      // document.querySelector('body').style.overflowY = 'scroll';
       // call close
       this.$emit('handleCloseModal');
     }
@@ -82,7 +82,7 @@ export default {
 
 <style lang="scss" scoped>
 .catalog{
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   z-index: 20;
