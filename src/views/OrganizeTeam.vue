@@ -83,34 +83,34 @@ export default {
       OTNavbar: [
         {
           id: 1,
-          chName: '公關',
-          enName: 'PR',
-        },
-        {
-          id: 2,
           chName: '行政',
           enName: 'Administration',
         },
         {
-          id: 3,
-          chName: '活動',
-          enName: 'Activity',
-        },
-        {
-          id: 4,
+          id: 2,
           chName: '美術',
           enName: 'Art',
         },
         {
-          id: 5,
+          id: 3,
           chName: '場務',
           enName: 'Equipment',
         },
         {
-          id: 6,
+          id: 4,
+          chName: '活動',
+          enName: 'Activity',
+        },
+        {
+          id: 5,
           chName: '總務',
           enName: 'Affair',
         },
+        {
+          id: 6,
+          chName: '公關',
+          enName: 'PR',
+        }
       ],
     };
   },
