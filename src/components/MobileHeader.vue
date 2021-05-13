@@ -57,6 +57,9 @@ export default {
           case '/organizeTeamIntro/':
             this.changeColor = 'white-bg__blue';
             break;
+          case '/contactus':
+            this.changeColor = 'fluid-pink';
+            break;
           default:
             this.changeColor = 'white-bg__pink';
         }

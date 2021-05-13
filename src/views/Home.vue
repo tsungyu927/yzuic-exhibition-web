@@ -1369,7 +1369,7 @@ export default {
       console.log('inin');
       ScrollTrigger.refresh();
     });
-    console.log(ScrollTrigger.getAll());
+    // console.log(ScrollTrigger.getAll());
   },
   methods: {
     handleOrientationChange: function() {

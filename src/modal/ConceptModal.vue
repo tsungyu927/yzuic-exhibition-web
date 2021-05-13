@@ -31,6 +31,7 @@ export default {
   methods: {
     // using ref attribute and then call the show(), hide()
     hideModal() {
+      document.querySelector('body').style.overflowY = 'scroll';
       this.$refs[this.modalId].hide();
     },
   },
