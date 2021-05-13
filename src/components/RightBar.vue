@@ -35,6 +35,9 @@ export default {
           case '/organizeTeamIntro/':
             this.changeColor = 'organizeTeam__footer';
             break;
+          case '/contactus':
+            this.changeColor = 'fluid__footer';
+            break;
           default:
             this.changeColor = 'exhibition__footer';
         }

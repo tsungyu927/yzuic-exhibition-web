@@ -4,6 +4,7 @@ import Home from '../views/Home.vue';
 import OrganizeTeam from '../views/OrganizeTeam.vue';
 import WorksGrid from '../views/WorksGrid.vue';
 import Introduction from '../views/Introduction.vue';
+import ContactUs from '../views/ContactUs.vue';
 
 Vue.use(VueRouter);
 
@@ -45,6 +46,11 @@ const routes = [
     name: 'OrganizeTeamIntro',
     component: Introduction,
   },
+  {
+    path: '/contactus',
+    name: 'ContactUs',
+    component: ContactUs,
+  }
 ];
 
 const router = new VueRouter({
