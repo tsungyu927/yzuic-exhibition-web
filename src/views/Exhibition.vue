@@ -3,12 +3,12 @@
     <MenuBtn :main-color="'#ff1a83'" :toWhite="borderToWhite" />
     <full-page ref="fullpage" :options="options">
       <!-- [Section1] 液態金屬 -->
-      <div data-anchor="cover" class="section section1">
+      <div  class="section section1">
         <MobileHeader :title="''" class="p-absolute " />
         <!-- <img class="background" src="../assets/fluid.png" /> -->
       </div>
       <!-- [Section2] 瀑布流 -->
-      <div data-anchor="gallery" class="section section__waterFall">
+      <div  class="section section__waterFall">
         <button class="arrowup-btn" @click="moveSectionUp">
           <img src="../assets/icons/arrow_up_pink.svg" />
         </button>
@@ -53,7 +53,7 @@ export default {
       options: {
         afterLoad: this.afterLoad,
         animateAnchor: false,
-        anchors: ['cover', 'gallery'],
+        //anchors: ['cover', 'gallery'],
         normalScrollElements: '#waterfall', // 讓waterfall滑動的部分不會影響到fullpage而導致上滑到上面一頁
       },
       exhibitionNavbar: [
