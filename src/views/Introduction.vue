@@ -79,7 +79,11 @@
             <p v-if="introData.projectIntro">
               {{ introData.projectIntro | readMoreFun }}
             </p>
-            <b-button @click="handleOpenConceptModal" v-b-modal="'concept-modal'">more</b-button>
+            <b-button
+              @click="handleOpenConceptModal"
+              v-b-modal="'concept-modal'"
+              >more</b-button
+            >
           </div>
           <ConceptModal
             :content="introData.projectIntro"
@@ -283,9 +287,9 @@ export default {
       return `${process.env.VUE_APP_CONTEXT_PATH}${process.env.VUE_APP_IMG}/teamImg/${fileName}.jpg`;
     },
     handleSlideModal(i) {
-      if(this.openSlideModal){
+      if (this.openSlideModal) {
         document.querySelector('body').style.overflowY = 'scroll';
-      }else{
+      } else {
         document.querySelector('body').style.overflowY = 'hidden';
       }
       if (i !== undefined) {
@@ -293,9 +297,9 @@ export default {
       }
       this.openSlideModal = !this.openSlideModal;
     },
-    handleOpenConceptModal(){
+    handleOpenConceptModal() {
       document.querySelector('body').style.overflowY = 'hidden';
-    }
+    },
   },
   watch: {
     $route: {

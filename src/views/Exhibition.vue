@@ -13,11 +13,6 @@
           <img src="../assets/icons/arrow_up_pink.svg" />
         </button>
         <MobileHeader :title="'展覽作品'" class="pink__scrolled" />
-        <!-- <NavBar
-          :main-color="'#ff1a83'"
-          :navbar-data="exhibitionNavbar"
-          :navbar-page="'/worksGrid'"
-        /> -->
         <div class="navbar">
           <div class="selector-container">
             <NavBtn
@@ -50,7 +45,6 @@ import RightFooter from '../components/RightFooter';
 import PageTitle from '../components/PageTitle';
 import MobileHeader from '../components/MobileHeader';
 
-
 export default {
   name: 'Exhibition',
   data() {
@@ -60,7 +54,7 @@ export default {
         afterLoad: this.afterLoad,
         animateAnchor: false,
         anchors: ['cover', 'gallery'],
-        normalScrollElements: "#waterfall",  // 讓waterfall滑動的部分不會影響到fullpage而導致上滑到上面一頁
+        normalScrollElements: '#waterfall', // 讓waterfall滑動的部分不會影響到fullpage而導致上滑到上面一頁
       },
       exhibitionNavbar: [
         {
@@ -90,9 +84,7 @@ export default {
       ],
     };
   },
-  mounted(){
-
-  },
+  mounted() {},
   methods: {
     afterLoad(origin, destination) {
       if (destination.isLast) {
@@ -103,7 +95,7 @@ export default {
         // console.log('After load end');
       }
     },
-    moveSectionUp(){
+    moveSectionUp() {
       // this.$refs.fullpage.api.setAllowScrolling(true);
       this.borderToWhite = true;
       this.$refs.fullpage.api.moveSectionUp();
@@ -146,7 +138,7 @@ export default {
     background-color: #ff1a83;
   }
 }
-.section1{
+.section1 {
   background-color: #ff1a83;
 }
 
@@ -154,7 +146,7 @@ export default {
   position: relative;
 }
 
-.arrowup-btn{
+.arrowup-btn {
   position: absolute;
   z-index: 2;
   width: 10%;
@@ -164,7 +156,7 @@ export default {
   background-color: transparent;
   border: none;
   padding: 0;
-  img{
+  img {
     max-width: 100%;
     max-height: 100%;
     display: block;

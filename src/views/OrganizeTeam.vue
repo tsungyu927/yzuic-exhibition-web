@@ -110,7 +110,7 @@ export default {
           id: 6,
           chName: '公關',
           enName: 'PR',
-        }
+        },
       ],
     };
   },
