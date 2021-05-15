@@ -22,7 +22,7 @@
     <!-- preview img 放大的彈窗 -->
     <SlideModal
       v-if="openSlideModal"
-      v-on:handleSlideModal="handleSlideModal"
+      v-on:handleSlideModalClose="handleSlideModal('close')"
       :index="sliderNum"
       :image="introData.previewImg"
     />
@@ -79,8 +79,12 @@
             <p v-if="introData.projectIntro">
               {{ introData.projectIntro | readMoreFun }}
             </p>
-            <b-button
+            <!-- <b-button
               @click="handleOpenConceptModal"
+              v-b-modal="'concept-modal'"
+              >more</b-button
+            > -->
+            <b-button
               v-b-modal="'concept-modal'"
               >more</b-button
             >
@@ -117,7 +121,7 @@
               <img
                 class="img-fluid"
                 :src="getPreviewUrl(image)"
-                @click="handleSlideModal(index)"
+                @click="handleSlideModal('open',index)"
               />
             </div>
           </div>
@@ -286,20 +290,32 @@ export default {
     getTeamUrl(fileName) {
       return `${process.env.VUE_APP_CONTEXT_PATH}${process.env.VUE_APP_IMG}/teamImg/${fileName}.jpg`;
     },
-    handleSlideModal(i) {
-      if (this.openSlideModal) {
-        document.querySelector('body').style.overflowY = 'scroll';
-      } else {
-        document.querySelector('body').style.overflowY = 'hidden';
+    handleSlideModal(control,i) {
+      switch(control){
+        case 'open':
+          if (i !== undefined) {
+            this.sliderNum = i;
+          }
+          document.querySelector('body').classList.add('modal-open');
+          this.openSlideModal = true;
+          break;
+        case 'close':
+          document.querySelector('body').classList.remove('modal-open');
+          this.openSlideModal = false;
+          break;
       }
-      if (i !== undefined) {
-        this.sliderNum = i;
-      }
-      this.openSlideModal = !this.openSlideModal;
-    },
-    handleOpenConceptModal() {
-      document.querySelector('body').style.overflowY = 'hidden';
-    },
+      
+      // if (this.openSlideModal) {
+      //   document.querySelector('body').style.overflowY = 'scroll';
+      // } else {
+      //   document.querySelector('body').style.overflowY = 'hidden';
+      // }
+      
+      // this.openSlideModal = !this.openSlideModal;
+    },  
+    // handleOpenConceptModal() {
+    //   document.querySelector('body').style.overflowY = 'hidden';
+    // },
   },
   watch: {
     $route: {

@@ -7,7 +7,7 @@
       @click="previous"
     />
     <!-- 右上角的btn -->
-    <MenuBtn :main-color="'#ff1a83'" />
+    <MenuBtn/>
     <!-- 手機板 header -->
     <MobileHeader :title="getTypeState.chName" />
 
