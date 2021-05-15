@@ -695,6 +695,9 @@ export default {
     RightBar, 
     RightFooter
   },
+  beforeDestroy(){
+    window.removeEventListener('resize', this.handleOrientationChange, false);
+  },
   mounted() {
 
     // 判斷是否為橫式
