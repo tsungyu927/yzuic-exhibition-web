@@ -695,14 +695,11 @@ export default {
     RightBar, 
     RightFooter
   },
-  beforeDestroy(){
-    window.removeEventListener('resize', this.handleOrientationChange, false);
-  },
   mounted() {
 
     // 判斷是否為橫式
     this.handleOrientationChange();
-    // window.addEventListener('resize', this.handleOrientationChange, false);
+    window.addEventListener('resize', this.handleOrientationChange, false);
 
     gsap.config({
       nullTargetWarn: false
