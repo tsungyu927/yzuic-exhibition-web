@@ -10,54 +10,56 @@ import ContactUs from '../views/ContactUs.vue';
 Vue.use(VueRouter);
 
 const routes = [
-  //index
-  {
-    path: '/',
-    name: 'Home',
-    component: Home,
-  },
-  //展覽作品
-  {
-    path: '/exhibition',
-    name: 'Exhibition',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: Exhibition,
-  },
-  //策展團隊
-  {
-    path: '/organizeTeam',
-    name: 'OrganizeTeam',
-    component: OrganizeTeam,
-  },
-  {
-    path: '/worksGrid',
-    name: 'WorksGrid',
-    component: WorksGrid,
-    // props: (route) => ({ query: route.query.type }),
-  },
-  {
-    path: '/exhibitionIntro',
-    name: 'ExhibitionIntro',
-    component: Introduction,
-  },
-  {
-    path: '/organizeTeamIntro',
-    name: 'OrganizeTeamIntro',
-    component: Introduction,
-  },
-  {
-    path: '/contactus',
-    name: 'ContactUs',
-    component: ContactUs,
-  }
+    //index
+    {
+        path: '/',
+        name: 'Home',
+        component: Home,
+    },
+    //展覽作品
+    {
+        path: '/exhibition',
+        name: 'Exhibition',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () =>
+            import ( /* webpackChunkName: "Exhibition" */ '../views/Exhibition.vue'),
+    },
+    //策展團隊
+    {
+        path: '/organizeTeam',
+        name: 'OrganizeTeam',
+        component: () =>
+            import ('../views/OrganizeTeam.vue'),
+    },
+    {
+        path: '/worksGrid',
+        name: 'WorksGrid',
+        component: WorksGrid,
+        // props: (route) => ({ query: route.query.type }),
+    },
+    {
+        path: '/exhibitionIntro',
+        name: 'ExhibitionIntro',
+        component: Introduction,
+    },
+    {
+        path: '/organizeTeamIntro',
+        name: 'OrganizeTeamIntro',
+        component: Introduction,
+    },
+    {
+        path: '/contactus',
+        name: 'ContactUs',
+        component: ContactUs,
+    }
 ];
 
 const router = new VueRouter({
-  // mode: 'history',
-  base: process.env.BASE_URL,
-  routes,
+    mode: 'hash',
+    base: process.env.BASE_URL,
+    routes,
 });
 
 export default router;

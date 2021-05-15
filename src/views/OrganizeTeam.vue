@@ -3,12 +3,12 @@
     <MenuBtn :toWhite="borderToWhite" />
     <full-page ref="fullpage" :options="options">
       <!-- [Section1] 液態金屬 -->
-      <div data-anchor="covertop" class="section section1">
+      <div class="section section1">
         <MobileHeader :title="''" class="p-absolute" />
         <!-- <img class="background" src="../assets/fluid.png" /> -->
       </div>
       <!-- [Section2] -->
-      <div data-anchor="content" class="section section__waterFall ">
+      <div  class="section section__waterFall ">
         <MobileHeader :title="'策展團隊'" class="blue__scrolled " />
         <!-- 上滑按鈕 -->
         <button class="arrowup-btn" @click="moveSectionUp">
@@ -77,7 +77,7 @@ export default {
       options: {
         afterLoad: this.afterLoad,
         animateAnchor: false,
-        // anchors: ['cover', 'content'],
+        //anchors: ['cover', 'content'],
       },
       //OrgnaizeTeamNavbar
       OTNavbar: [
@@ -110,7 +110,7 @@ export default {
           id: 6,
           chName: '公關',
           enName: 'PR',
-        }
+        },
       ],
     };
   },

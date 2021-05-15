@@ -8,9 +8,17 @@
     <div @click="handleClick('/organizeTeam')" class="square__link">
       策展團隊
     </div>
-    <router-link class="square__link circle" to="/organizeTeam">FB</router-link>
-    <router-link class="square__link circle" to="/organizeTeam">IG</router-link>
-    <router-link class="square__link circle" to="/organizeTeam">YT</router-link>
+    <a href="https://www.facebook.com/yzuic24th" class="square__link circle"
+      >FB</a
+    >
+    <a href="https://www.instagram.com/yzuic_24/" class="square__link circle"
+      >IG</a
+    >
+    <a
+      href="https://www.youtube.com/channel/UCdnPnYCHciWlADGldtMtZBA/"
+      class="square__link circle"
+      >YT</a
+    >
   </div>
 </template>
 

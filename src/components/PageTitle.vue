@@ -23,6 +23,7 @@ export default {
 
 <style lang="scss" scoped>
 .title {
+  align-items: center;
   left: 10%;
   top: 10%;
   color: #ffffff;
@@ -33,7 +34,7 @@ export default {
   &__ch {
     writing-mode: vertical-lr;
     font-size: 90px;
-    @include md-width() {
+    @include lg-width() {
       font-size: 130px;
     }
   }

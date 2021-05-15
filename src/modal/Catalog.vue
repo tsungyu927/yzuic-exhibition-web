@@ -1,41 +1,49 @@
 <template>
-  <div class="catalog">
-    <div class="catalog-left">
-      <img class="catalog-logo" :src="imgSrc" />
+  <div class="catalog d-flex flex-column flex-md-row">
+    <div class="catalog-left d-flex">
+      <div class="catalog-logo">
+        <img class="img-fluid" :src="imgSrc" />
+      </div>
     </div>
     <div class="catalog-right">
       <div class="catalog-right-bar">
         <router-link class="catalog-btn" to="/">
           <div class="catalog-content" @click="handleCloseModal">
             主頁
-          </div>        
+          </div>
         </router-link>
-        <router-link class="catalog-btn" :to="{ path:'/', query: { anchor: 'info'}}">
+        <router-link
+          class="catalog-btn"
+          :to="{ path: '/', query: { anchor: 'info' } }"
+        >
           <div class="catalog-content" @click="handleCloseModal">
-            展覽<br>資訊
-          </div>        
+            展覽<br />資訊
+          </div>
         </router-link>
         <router-link class="catalog-btn" to="/exhibition">
           <div class="catalog-content" @click="handleCloseModal">
-            展覽<br>作品
-          </div>        
+            展覽<br />作品
+          </div>
         </router-link>
       </div>
       <div class="catalog-right-bar">
-        <router-link class="catalog-btn" :to="{ path:'/', query: { anchor: 'concept'}}">
+        <router-link
+          class="catalog-btn"
+          :to="{ path: '/', query: { anchor: 'concept' } }"
+        >
           <div class="catalog-content" @click="handleCloseModal">
-            策展<br>概念
-          </div>        
+            策展<br />概念
+          </div>
         </router-link>
         <router-link class="catalog-btn" to="/organizeTeam">
           <div class="catalog-content" @click="handleCloseModal">
-            策展<br>團隊
-          </div>        
+            策展<br />團隊
+          </div>
         </router-link>
         <router-link class="catalog-btn" to="/contactus">
           <div class="catalog-content" @click="handleCloseModal">
-            聯絡<br>我們
-          </div>        
+            聯絡<br />我們
+          </div>
         </router-link>
       </div>
     </div>
@@ -49,8 +57,8 @@ import verImg from '../assets/logo/vertical-logo.png';
 export default {
   name: 'Catalog',
   data() {
-    return{
-      imgSrc: verImg
+    return {
+      imgSrc: verImg,
     };
   },
   mounted() {
@@ -69,19 +77,18 @@ export default {
         this.imgSrc = horImg;
       }
     },
-    handleCloseModal(){
+    handleCloseModal() {
       // document.querySelector('body').style.overflowY = 'scroll';
       // call close
       this.$emit('handleCloseModal');
-    }
+    },
   },
-  components: {
-  }
+  components: {},
 };
 </script>
 
 <style lang="scss" scoped>
-.catalog{
+.catalog {
   pointer-events: all;
   position: absolute;
   left: 0;
@@ -89,107 +96,65 @@ export default {
   z-index: 20;
   width: 100vw;
   height: 100vh;
-  background-color: #FF1B82;
-  animation:  0.3s linear openAnim;
-  display: flex;
-  flex-direction: column;
-  @include xs-width() {
-    flex-direction: row;
-  }
-  @include md-width() {
-    flex-direction: row;
-  }
-
+  background-color: #ff1b82;
+  animation: 0.3s linear openAnim;
   $catalog-font-color: #fff;
   // left top
-  &-left{
+  &-left {
     width: 100%;
     height: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    @include xs-width(){
-      width: 30%;
-      height: 100%;
-      justify-content: center;
-    }
     @include md-width() {
       width: 30%;
       height: 100%;
-      justify-content: center;
     }
-  }
-  &-logo{
-    margin-left: 0;
-    margin-top: 2em;
-    width: 80%;
-    height: auto;
-    @include xs-width(){
-      margin-left: 2em;
-      margin-top: 0em;
-      width: auto;
-      height: 80%;
-    }
-    @include md-width() {
-      margin-left: 2em;
-      margin-top: 0em;
-      width: auto;
-      height: 80%;
+    .catalog-logo {
+      margin: auto;
+      width: 80%;
+      @include md-width() {
+        max-width: 40%;
+      }
     }
   }
 
   // right bottom
-  &-right{
-    width: 100%;
-    height: 70%;
+  &-right {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    @include xs-width(){
-      width: 70%;
-      height: 100%;
-    }
-    @include md-width() {
-      width: 70%;
-      height: 100%;
-    }
+    align-items: center;
   }
-  &-right-bar{
+  &-right-bar {
     width: 100%;
     height: 30%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    @include xs-width(){
-      width: 80%;
-    }
     @include md-width() {
       width: 80%;
     }
   }
-  &-btn{
+  &-btn {
     cursor: pointer;
     position: relative;
     width: 20%;
   }
-  &-btn:after{
-    content: "";
+  &-btn:after {
+    content: '';
     display: block;
     padding-bottom: 100%;
     border: 3px solid #fff;
     border-radius: 50%;
   }
-  &-btn:hover{
+  &-btn:hover {
     background-color: #fff;
     border-radius: 50%;
-    & > div{
-      color: #FF1B82;
+    & > div {
+      color: #ff1b82;
     }
   }
-  &-content{
+  &-content {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -203,11 +168,11 @@ export default {
   }
 }
 
-@keyframes openAnim{
-  from{
+@keyframes openAnim {
+  from {
     opacity: 0;
   }
-  to{
+  to {
     opacity: 1;
   }
 }
