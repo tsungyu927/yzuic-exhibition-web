@@ -73,6 +73,8 @@ export default {
     };
   },
   mounted() {
+    document.querySelector('body').style.overflowY = 'scroll';
+    
     let $that = this;
     // console.log(this.$route.query.type);
     //讀本地端json

@@ -240,6 +240,7 @@ export default {
     };
   },
   mounted() {
+    document.querySelector('body').style.overflowY = 'scroll';
     // console.log(this.$route.query.id);
     let $that = this;
     let type = '';
