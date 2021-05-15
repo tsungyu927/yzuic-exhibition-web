@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
+import Exhibition from '../views/Exhibition.vue';
 import OrganizeTeam from '../views/OrganizeTeam.vue';
 import WorksGrid from '../views/WorksGrid.vue';
 import Introduction from '../views/Introduction.vue';
@@ -22,13 +23,13 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "Exhibition" */ '../views/Exhibition.vue'),
+    component: Exhibition,
   },
   //策展團隊
   {
     path: '/organizeTeam',
     name: 'OrganizeTeam',
-    component: () => import('../views/OrganizeTeam.vue'),
+    component: OrganizeTeam,
   },
   {
     path: '/worksGrid',
@@ -54,7 +55,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
   base: process.env.BASE_URL,
   routes,
 });

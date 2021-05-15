@@ -59,7 +59,7 @@ export default {
       options: {
         afterLoad: this.afterLoad,
         animateAnchor: false,
-        anchors: ['cover', 'gallery'],
+        // anchors: ['cover', 'gallery'],
         normalScrollElements: "#waterfall",  // 讓waterfall滑動的部分不會影響到fullpage而導致上滑到上面一頁
       },
       exhibitionNavbar: [

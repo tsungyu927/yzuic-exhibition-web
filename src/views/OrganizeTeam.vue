@@ -3,7 +3,7 @@
     <MenuBtn :toWhite="borderToWhite" />
     <full-page ref="fullpage" :options="options">
       <!-- [Section1] 液態金屬 -->
-      <div data-anchor="cover" class="section section1">
+      <div data-anchor="covertop" class="section section1">
         <MobileHeader :title="''" class="p-absolute" />
         <!-- <img class="background" src="../assets/fluid.png" /> -->
       </div>
@@ -77,7 +77,7 @@ export default {
       options: {
         afterLoad: this.afterLoad,
         animateAnchor: false,
-        anchors: ['cover', 'content'],
+        // anchors: ['cover', 'content'],
       },
       //OrgnaizeTeamNavbar
       OTNavbar: [
