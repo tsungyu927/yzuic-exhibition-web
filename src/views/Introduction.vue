@@ -1,5 +1,5 @@
 <template>
-  <div class="pg-intro col-md-10 px-0" :class="[changeColor]">
+  <div class="pg-intro" :class="[changeColor]">
     
     <!-- 展覽作品 Header -->
     <template v-if="isWork">
@@ -32,7 +32,7 @@
       :image="introData.previewImg"
     />
 
-    <div class="pg-intro-container">
+    <div class="pg-intro-container col-md-10 px-0">
       <!-- 封面 -->
       <!-- 展覽作品 封面-->
       <div class="pg-block p-0 cover d-md-flex flex-md-column" v-if="isWork">
@@ -60,7 +60,7 @@
             <p v-if="introData.projectIntro">
               {{ introData.projectIntro | readMoreFun }}
             </p>
-            <b-button v-b-modal="'concept-modal'">more</b-button>
+            <div class="more-btn" v-b-modal="'concept-modal'">more</div>
           </div>
           <ConceptModal
             :content="introData.projectIntro"
@@ -89,9 +89,10 @@
               v-b-modal="'concept-modal'"
               >more</b-button
             > -->
-            <b-button
+            <div
+              class="more-btn"
               v-b-modal="'concept-modal'"
-              >more</b-button
+              >more</div
             >
           </div>
           <ConceptModal
@@ -381,9 +382,9 @@ export default {
   position: relative;
   width: 100%;
   min-height: 100%;
-  margin: auto;
 
   .pg-intro-container {
+    margin: auto;
     text-align: left;
     font-size: 14px;
     line-height: 1.5rem;

@@ -91,7 +91,7 @@ export default {
 <style lang="scss" scoped>
 .catalog {
   pointer-events: all;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   z-index: 20;

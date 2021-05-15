@@ -200,14 +200,22 @@ export default {
 }
 
 .content {
+  
   @include md-width() {
     height: 100%;
     align-items: center;
     justify-content: space-around;
-    &__left {
-      width: 70%;
-      padding: 70px;
-      max-width: 900px;
+  }
+  &__left {
+    overflow-y: scroll;
+    height: 100vh;
+    padding-bottom: 60px;
+    @include md-width() {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 80vmin;
+      margin: auto;
     }
   }
   &__poster {

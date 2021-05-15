@@ -33,9 +33,9 @@ export default {
   font-weight: bold;
   &__ch {
     writing-mode: vertical-lr;
-    font-size: 90px;
+    font-size: 23vmin;
     @include lg-width() {
-      font-size: 130px;
+      font-size: 17vmin;
     }
   }
   &__en {
