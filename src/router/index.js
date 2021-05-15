@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
+import Exhibition from '../views/Exhibition.vue';
 import OrganizeTeam from '../views/OrganizeTeam.vue';
 import WorksGrid from '../views/WorksGrid.vue';
 import Introduction from '../views/Introduction.vue';

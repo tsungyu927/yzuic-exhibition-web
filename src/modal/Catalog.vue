@@ -61,6 +61,9 @@ export default {
       imgSrc: verImg,
     };
   },
+  beforeDestroy(){
+    window.removeEventListener('resize', this.handleOrientationChange, false);
+  },
   mounted() {
     // document.querySelector('body').style.overflowY = 'hidden';
     // 確認方向
@@ -81,7 +84,7 @@ export default {
       // document.querySelector('body').style.overflowY = 'scroll';
       // call close
       this.$emit('handleCloseModal');
-    },
+    }
   },
   components: {},
 };

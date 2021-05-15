@@ -3,7 +3,7 @@
     <MenuBtn :toWhite="borderToWhite" />
     <full-page ref="fullpage" :options="options">
       <!-- [Section1] 液態金屬 -->
-      <div  class="section section1">
+      <div class="section section1">
         <MobileHeader :title="''" class="p-absolute" />
         <!-- <img class="background" src="../assets/fluid.png" /> -->
       </div>
