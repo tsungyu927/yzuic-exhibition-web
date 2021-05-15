@@ -1,5 +1,6 @@
 <template>
   <div class="pg-intro col-md-10 px-0" :class="[changeColor]">
+    
     <!-- 展覽作品 Header -->
     <template v-if="isWork">
       <img
@@ -7,6 +8,8 @@
         src="../assets/icons/web-arrow_pink.svg"
         @click="previous"
       />
+      <!-- 右上角的btn -->
+      <MenuBtn/>
       <MobileHeader :title="introData.title" />
     </template>
     <!-- 策展團隊 Header -->
@@ -16,6 +19,8 @@
         src="../assets/icons/web-arrow_blue.svg"
         @click="previous"
       />
+      <!-- 右上角的btn -->
+      <MenuBtn/>
       <MobileHeader :title="introData.team" />
     </template>
 
@@ -211,6 +216,7 @@ import RightBar from '../components/RightBar';
 import RightFooter from '../components/RightFooter';
 import MobileHeader from '../components/MobileHeader';
 import SlideModal from '../modal/SlideModal';
+import MenuBtn from '../components/MenuBtn';
 
 export default {
   name: 'Introduction',
@@ -348,6 +354,7 @@ export default {
   },
   computed: {},
   components: {
+    MenuBtn,
     Footer,
     ConceptModal,
     LeftBar,

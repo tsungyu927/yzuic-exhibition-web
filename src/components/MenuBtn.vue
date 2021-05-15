@@ -107,7 +107,7 @@ export default {
   pointer-events: all;
   cursor: pointer;
   display: flex;
-  position: absolute;
+  position: fixed;
   z-index: 21;
   font-weight: bold;
   line-height: 2.8rem;
