@@ -55,7 +55,7 @@ export default {
   },
   methods: {
     handleClose() {
-      this.$emit('handleSlideModal');
+      this.$emit('handleSlideModalClose');
     },
   },
 };

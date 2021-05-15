@@ -54,8 +54,11 @@ export default {
 
 <style lang="scss" scoped>
 .right {
-  right: 2%;
+  right: 10%;
   bottom: 10%;
+  @include md-width() {
+    right: 4%;
+  }
 }
 .right__bar {
   writing-mode: vertical-lr;

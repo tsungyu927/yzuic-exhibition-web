@@ -1,5 +1,5 @@
 <template>
-  <div class="menu-outer">
+  <div>
     <!-- 目錄modal -->
     <Catalog
       v-if="openCatalog"
@@ -102,13 +102,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.menu-outer{
-  pointer-events: none;
-  position: fixed;
-  z-index: 21;
-  width: 100%;
-  height: 100%;
-}
 //手機板漢堡選單
 .menu-btn {
   pointer-events: all;

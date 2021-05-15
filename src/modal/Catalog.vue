@@ -2,7 +2,8 @@
   <div class="catalog d-flex flex-column flex-md-row">
     <div class="catalog-left d-flex">
       <div class="catalog-logo">
-        <img class="img-fluid" :src="imgSrc" />
+        <img class="img-fluid horizontal d-block d-md-none" src="../assets/logo/horizontal-logo.png" />
+        <img class="img-fluid vertical d-none d-md-block" src="../assets/logo/vertical-logo.png" />
       </div>
     </div>
     <div class="catalog-right">
@@ -64,19 +65,19 @@ export default {
   mounted() {
     // document.querySelector('body').style.overflowY = 'hidden';
     // 確認方向
-    this.handleOrientationChange();
-    window.addEventListener('resize', this.handleOrientationChange, false);
+    // this.handleOrientationChange();
+    // window.addEventListener('resize', this.handleOrientationChange, false);
   },
   methods: {
-    handleOrientationChange: function() {
-      if (window.innerWidth > window.innerHeight) {
-        // landscape
-        this.imgSrc = verImg;
-      } else {
-        // portrait
-        this.imgSrc = horImg;
-      }
-    },
+    // handleOrientationChange: function() {
+    //   if (window.innerWidth > window.innerHeight) {
+    //     // landscape
+    //     this.imgSrc = verImg;
+    //   } else {
+    //     // portrait
+    //     this.imgSrc = horImg;
+    //   }
+    // },
     handleCloseModal() {
       // document.querySelector('body').style.overflowY = 'scroll';
       // call close
@@ -126,7 +127,7 @@ export default {
   }
   &-right-bar {
     width: 100%;
-    height: 30%;
+    // height: 30%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -138,15 +139,13 @@ export default {
   &-btn {
     cursor: pointer;
     position: relative;
-    width: 20%;
+    width: 20vmin;
+    min-width: 80px;
+    height: 20vmin;
+    min-height: 80px;
+    margin: 10px;
   }
-  &-btn:after {
-    content: '';
-    display: block;
-    padding-bottom: 100%;
-    border: 3px solid #fff;
-    border-radius: 50%;
-  }
+
   &-btn:hover {
     background-color: #fff;
     border-radius: 50%;
@@ -155,18 +154,23 @@ export default {
     }
   }
   &-content {
-    position: absolute;
     width: 100%;
     height: 100%;
+    border: 3px solid #fff;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
-    line-height: 1.3em;
+    @include sm-width() {
+      font-size: 1.5em;
+    }
   }
 }
+
+
 
 @keyframes openAnim {
   from {

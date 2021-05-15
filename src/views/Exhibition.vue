@@ -1,6 +1,6 @@
 <template>
   <div class="gallery-container">
-    <MenuBtn :main-color="'#ff1a83'" :toWhite="borderToWhite" />
+    <MenuBtn :toWhite="borderToWhite" />
     <full-page ref="fullpage" :options="options">
       <!-- [Section1] 液態金屬 -->
       <div  class="section section1">

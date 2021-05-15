@@ -79,7 +79,7 @@ export default {
 
 <style lang="scss" scoped>
 .left {
-  left: 2%;
+  left: 4%;
   bottom: 10%;
   display: none;
   @include md-width() {
