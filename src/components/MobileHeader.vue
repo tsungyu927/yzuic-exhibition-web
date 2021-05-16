@@ -108,6 +108,8 @@ export default {
 .pg-header {
   width: 100%;
   padding: 0.8rem;
+  position: fixed;
+  z-index: 20;
   .title {
     flex: 1;
     font-size: 2rem;

@@ -50,6 +50,7 @@ export default {
 
 <style lang="scss">
 .bottom {
+  display: none;
   bottom: 2%;
   min-height: 30px;
   right: 4%;
@@ -57,6 +58,7 @@ export default {
   line-height: 20px;
   text-align: right;
   @include md-width() {
+    display: block;
     bottom: 4%;
     right: 4%;
     line-height: 30px;

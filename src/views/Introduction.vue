@@ -384,6 +384,7 @@ export default {
   min-height: 100%;
 
   .pg-intro-container {
+    padding-top: 73px;
     margin: auto;
     text-align: left;
     font-size: 14px;

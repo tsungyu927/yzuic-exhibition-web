@@ -132,6 +132,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.workGrid-container {
+  padding-top: 73px;
+}
 .worksGrid {
   position: relative;
   width: 100%;
