@@ -1,7 +1,7 @@
 <template>
   <!-- 右下角的 footer -->
   <div class="sideBar bottom" :class="[changeColor]" v-if="isShow">
-    Yan Ze University Information Communication 24th Graduation Exhibition
+    Yuan Ze University Information Communication 24th Graduation Exhibition
   </div>
 </template>
 
